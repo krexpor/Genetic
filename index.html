@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krexpor | Projects</title>
     <style>
         body { 
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            background: #0f172a; 
+            font-family: 'Inter', -apple-system, sans-serif; 
+            /* Додаємо градієнтний фон для глибини */
+            background: radial-gradient(circle at top right, #1e293b, #0f172a); 
             color: #f8fafc;
             display: flex; 
             justify-content: center; 
@@ -16,16 +17,17 @@
             margin: 0; 
         }
         .container { 
-            background: #1e293b; 
+            background: rgba(30, 41, 59, 0.7); 
+            backdrop-filter: blur(10px); /* Ефект розмиття фону */
             padding: 40px; 
             border-radius: 20px; 
             box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3); 
             text-align: center; 
             max-width: 400px; 
             width: 90%; 
-            border: 1px solid #334155;
+            border: 1px solid rgba(255,255,255,0.1);
         }
-        h1 { color: #f8fafc; margin-bottom: 10px; letter-spacing: -0.5px; }
+        h1 { color: #f8fafc; margin-bottom: 10px; }
         p { color: #94a3b8; margin-bottom: 30px; }
         
         .btn { 
@@ -39,7 +41,7 @@
             font-weight: 600; 
             transition: all 0.3s ease; 
         }
-        .btn:hover { background: #2563eb; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); }
+        .btn:hover { background: #2563eb; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4); }
         
         .social-links { margin-top: 30px; display: flex; justify-content: center; gap: 15px; }
         .social-link { 
@@ -47,7 +49,7 @@
             text-decoration: none; 
             font-weight: 500; 
             padding: 8px 16px; 
-            border: 1px solid #334155; 
+            border: 1px solid #475569; 
             border-radius: 8px; 
             transition: all 0.3s; 
         }
@@ -59,10 +61,10 @@
 <body>
     <div class="container">
         <h1>Krexpor</h1>
-        <p>Front-End Development & Projects</p>
+        <p>Front-End разработка и проекты</p>
         
-        <a href="genetic/index.html" class="btn">🧬 Генетичні калькулятори</a>
-        <a href="#" class="btn" style="background: #475569;">🎸 Навчання (скоро)</a>
+        <a href="genetic/index.html" class="btn">🧬 Генетические калькуляторы</a>
+        <a href="#" class="btn" style="background: #475569;">🎸 Обучение (скоро)</a>
         
         <div class="social-links">
             <a href="https://www.youtube.com/@Krexpor" class="social-link" target="_blank">YouTube</a>
