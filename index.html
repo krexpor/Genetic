@@ -19,7 +19,7 @@
     <style>
         body { 
             font-family: 'Inter', -apple-system, sans-serif; 
-            background: #111318; /* Темний фон як на вашому скріншоті */
+            background: #111318;
             color: #f8fafc;
             display: flex; 
             justify-content: center; 
@@ -29,30 +29,29 @@
         }
 
         .container { 
-            background: #1a1d24; /* Колір самої картки */
+            background: #1a1d24;
             padding: 40px; 
             border-radius: 16px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
             text-align: center; 
             max-width: 400px; 
             width: 90%; 
-            position: relative; /* Важливо для позиціонування пташки */
-            overflow: hidden; /* Обрізає пташку, якщо вона виходить за краї */
+            position: relative; 
+            overflow: hidden; 
         }
 
-        /* --- КОЛІБРІ ВСЕРЕДИНІ КАРТКИ --- */
+        /* Колибри внутри карточки */
         .bg-hummingbird {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 85%; /* Розмір пташки відносно картки */
-            opacity: 0.05; /* Ледь помітна, як водяний знак */
+            width: 85%;
+            opacity: 0.05;
             pointer-events: none; 
             z-index: 0;
         }
 
-        /* Обгортка для контенту, щоб він був ПОВЕРХ пташки */
         .content-wrapper {
             position: relative;
             z-index: 1;
@@ -107,46 +106,7 @@
         }
         .footer a { color: #475569; text-decoration: none; transition: 0.3s; }
         .footer a:hover { color: #8b949e; }
-
-        /* Стилі для повідомлення Cookie */
-        .cookie-toast {
-            position: fixed;
-            bottom: 20px;
-            right: -400px;
-            background: rgba(26, 28, 35, 0.9);
-            backdrop-filter: blur(10px);
-            border: 1px solid #30363d;
-            padding: 20px;
-            border-radius: 12px;
-            width: 280px;
-            z-index: 1000;
-            transition: right 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.4s ease;
-            opacity: 0;
-            text-align: left;
-        }
-
-        .cookie-toast.show { right: 20px; opacity: 1; }
-        .cookie-toast.hide { opacity: 0; right: -400px; }
-        .cookie-toast p { color: #8b949e; font-size: 0.85rem; margin: 0 0 15px 0; line-height: 1.5; }
-        .cookie-buttons { display: flex; gap: 15px; align-items: center; }
-        
-        .cookie-btn {
-            background: transparent;
-            color: #da3633;
-            border: 1px solid #da3633;
-            padding: 8px 15px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.8rem;
-            transition: 0.3s;
-        }
-        .cookie-btn:hover { background: #da3633; color: #fff; }
-        .cookie-link { color: #64748b; font-size: 0.8rem; text-decoration: none; }
-        .cookie-link:hover { color: #f8fafc; }
     </style>
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    
 </head>
 <body>
 
@@ -175,31 +135,6 @@
             </div>
         </div>
     </div>
-
-    <div id="cookie-toast" class="cookie-toast">
-        <p>Мы используем немного cookies для аналитики Google. Никакой магии, только базовая статистика. 🍪</p>
-        <div class="cookie-buttons">
-            <button id="accept-cookies" class="cookie-btn">Ок, понятно</button>
-            <a href="privacy.html" class="cookie-link">Подробнее</a>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const cookieToast = document.getElementById("cookie-toast");
-            const acceptBtn = document.getElementById("accept-cookies");
-
-            if (!localStorage.getItem("cookieAccepted")) {
-                setTimeout(() => { cookieToast.classList.add("show"); }, 1000);
-            }
-
-            acceptBtn.addEventListener("click", function() {
-                localStorage.setItem("cookieAccepted", "true");
-                cookieToast.classList.remove("show");
-                setTimeout(() => { cookieToast.style.display = 'none'; }, 500);
-            });
-        });
-    </script>
 
 </body>
 </html>
