@@ -1,3 +1,16 @@
+// 1. Автоматически загружаем данные при открытии страницы
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('fatherHeight')) {
+        document.getElementById('father').value = localStorage.getItem('fatherHeight');
+    }
+    if (localStorage.getItem('motherHeight')) {
+        document.getElementById('mother').value = localStorage.getItem('motherHeight');
+    }
+    if (localStorage.getItem('childGender')) {
+        document.getElementById('gender').value = localStorage.getItem('childGender');
+    }
+});
+
 function calculateHeight() {
     const fatherHeight = parseFloat(document.getElementById('father').value);
     const motherHeight = parseFloat(document.getElementById('mother').value);
@@ -7,6 +20,11 @@ function calculateHeight() {
         alert("Пожалуйста, введите корректный рост родителей!");
         return;
     }
+
+    // 2. Сохраняем введенные данные в память браузера (Local Storage)
+    localStorage.setItem('fatherHeight', fatherHeight);
+    localStorage.setItem('motherHeight', motherHeight);
+    localStorage.setItem('childGender', gender);
 
     let predictedHeight = 0;
 
