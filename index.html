@@ -5,24 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Генетические калькуляторы</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0WPCS9G55D');
-</script>
-</head>
+    
+    </head>
 <body>
+
     <div class="calculator-card">
         <h2>🧬 Генетика для всех</h2>
         <p class="subtitle">Узнайте, что передастся по наследству. Выберите инструмент:</p>
+        
         <hr>
+
         <a href="height.html" class="menu-btn">📏 Калькулятор роста</a>
         <a href="blood.html" class="menu-btn">🩸 Группа крови и Резус</a>
         <a href="eyes.html" class="menu-btn">👁 Вероятность цвета глаз</a>
+
+        <hr style="margin-top: 30px; border-top: 1px solid #333;">
+        
+        <button onclick="shareSite()" class="share-btn">📲 Поделиться калькулятором</button>
+
     </div>
+
+    <script>
+        function shareSite() {
+            if (navigator.share) {
+                // Если телефон поддерживает нативное меню "Поделиться"
+                navigator.share({
+                    title: 'Генетические калькуляторы',
+                    text: 'Смотри, какой крутой калькулятор! Узнай рост и цвет глаз будущего ребенка 🧬',
+                    url: 'https://krexpor.github.io/Genetic/'
+                }).catch(console.error);
+            } else {
+                // Если браузер старый или человек сидит с ПК — просто копируем ссылку
+                navigator.clipboard.writeText('https://krexpor.github.io/Genetic/');
+                alert('Ссылка скопирована в буфер обмена!');
+            }
+        }
+    </script>
 </body>
 </html>
