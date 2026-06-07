@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <!-- Фон (темна тема GitHub) із закругленими кутами -->
+    <rect width="100" height="100" rx="20" fill="#0d1117" />
+    
+    <!-- Лінії (гілки) -->
+    <line x1="25" y1="28" x2="25" y2="72" stroke="#f0f6fc" stroke-width="6" stroke-linecap="round" />
+    <line x1="25" y1="50" x2="40" y2="50" stroke="#f0f6fc" stroke-width="6" stroke-linecap="round" />
+    <line x1="45" y1="42" x2="70" y2="25" stroke="#f0f6fc" stroke-width="6" stroke-linecap="round" />
+    <line x1="45" y1="58" x2="70" y2="75" stroke="#f0f6fc" stroke-width="6" stroke-linecap="round" />
+    
+    <!-- Вузли (коміти) -->
+    <circle cx="25" cy="20" r="8" fill="#f0f6fc" />
+    <circle cx="25" cy="80" r="8" fill="#f0f6fc" />
+    <circle cx="75" cy="20" r="8" fill="#f0f6fc" />
+    <circle cx="75" cy="80" r="8" fill="#f0f6fc" />
+    <circle cx="45" cy="50" r="10" fill="#f0f6fc" />
+</svg>
