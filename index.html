@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krexpor | Projects</title>
     
-    <!-- Google tag (gtag.js) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -18,68 +19,179 @@
     <style>
         body { 
             font-family: 'Inter', -apple-system, sans-serif; 
-            background: radial-gradient(circle at top right, #1e293b, #0f172a); 
-            color: #f8fafc;
+            background-color: #0b0c10;
+            background-image: radial-gradient(circle at 50% 0%, #1a1c23 0%, #08090a 80%);
+            color: #c5c6c7;
             display: flex; 
             justify-content: center; 
             align-items: center; 
             min-height: 100vh; 
             margin: 0; 
+            overflow-x: hidden;
+            position: relative;
         }
+
+        /* Фоновый силуэт колибри */
+        .bg-hummingbird {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vmin;
+            height: 80vmin;
+            opacity: 0.03; 
+            pointer-events: none; 
+            z-index: 1;
+        }
+
+        /* Легкий эффект уличной пыли */
+        .particles {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            background-image: 
+                radial-gradient(1.5px 1.5px at 20px 30px, rgba(218,54,51,0.5), transparent),
+                radial-gradient(1.5px 1.5px at 150px 170px, rgba(255,255,255,0.2), transparent),
+                radial-gradient(2px 2px at 250px 80px, rgba(218,54,51,0.4), transparent);
+            background-repeat: repeat;
+            background-size: 300px 300px;
+            opacity: 0.4;
+            z-index: 2;
+        }
+
         .container { 
-            background: rgba(30, 41, 59, 0.7); 
-            backdrop-filter: blur(10px); 
+            background: rgba(11, 12, 16, 0.85); 
+            backdrop-filter: blur(12px); 
             padding: 40px; 
-            border-radius: 20px; 
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3); 
+            border-radius: 12px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8), inset 0 0 0 1px rgba(218, 54, 51, 0.15); 
             text-align: center; 
             max-width: 400px; 
             width: 90%; 
-            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            z-index: 10;
         }
-        h1 { color: #f8fafc; margin-bottom: 10px; }
-        p { color: #94a3b8; margin-bottom: 30px; }
+
+        h1 { 
+            color: #f8fafc; 
+            margin-bottom: 5px; 
+            font-size: 2.2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(255,255,255,0.1);
+        }
+
+        p { 
+            color: #8b949e; 
+            margin-bottom: 35px; 
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
         
+        /* Основные кнопки */
         .btn { 
             display: block; 
             padding: 15px; 
-            margin: 12px 0; 
-            background: #3b82f6; 
-            color: white; 
+            margin: 15px 0; 
+            background: transparent; 
+            color: #da3633; 
             text-decoration: none; 
-            border-radius: 10px; 
-            font-weight: 600; 
+            border-radius: 6px; 
+            font-weight: 700; 
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border: 2px solid #da3633;
             transition: all 0.3s ease; 
         }
-        .btn:hover { background: #2563eb; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4); }
-        
-        .social-links { margin-top: 30px; display: flex; justify-content: center; gap: 15px; }
-        .social-link { 
-            color: #94a3b8; 
-            text-decoration: none; 
-            font-weight: 500; 
-            padding: 8px 16px; 
-            border: 1px solid #475569; 
-            border-radius: 8px; 
-            transition: all 0.3s; 
+
+        .btn:hover { 
+            background: #da3633; 
+            color: #0b0c10;
+            box-shadow: 0 0 20px rgba(218, 54, 51, 0.4); 
+            transform: translateY(-2px); 
         }
-        .social-link:hover { background: #334155; color: #fff; }
+
+        /* Неактивная кнопка (Обучение) */
+        .btn-disabled {
+            border-color: #30363d;
+            color: #8b949e;
+            cursor: default;
+        }
+        .btn-disabled:hover {
+            background: transparent;
+            color: #8b949e;
+            box-shadow: none;
+            transform: none;
+        }
         
-        .footer { margin-top: 30px; font-size: 0.8em; color: #475569; line-height: 1.5; }
-        .footer a { color: #64748b; text-decoration: none; transition: 0.3s; }
-        .footer a:hover { color: #94a3b8; text-decoration: underline; }
+        /* Социальные сети */
+        .social-links { 
+            margin-top: 35px; 
+            display: flex; 
+            justify-content: center; 
+            gap: 15px; 
+        }
+
+        .social-link { 
+            color: #c5c6c7; 
+            text-decoration: none; 
+            font-weight: 600; 
+            padding: 10px 20px; 
+            border: 1px solid #30363d; 
+            border-radius: 6px; 
+            transition: all 0.3s; 
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .social-link:hover { 
+            background: #1a1c23; 
+            border-color: #c5c6c7;
+            color: #fff; 
+        }
+        
+        /* Подвал */
+        .footer { 
+            margin-top: 35px; 
+            font-size: 0.75rem; 
+            color: #475569; 
+            line-height: 1.8; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer a { 
+            color: #64748b; 
+            text-decoration: none; 
+            transition: 0.3s; 
+        }
+
+        .footer a:hover { 
+            color: #da3633; 
+            text-decoration: none;
+            text-shadow: 0 0 8px rgba(218, 54, 51, 0.4);
+        }
     </style>
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
 </head>
 <body>
+    <svg class="bg-hummingbird" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 35 45 Q 65 15 85 15 Q 70 30 55 50 Z" fill="#da3633" />
+        <path d="M 20 40 Q 35 35 45 45 Q 55 55 60 80 Q 50 65 35 55 Q 25 50 20 40 Z" fill="#da3633" />
+        <path d="M 45 55 Q 75 60 85 80 Q 65 70 50 65 Z" fill="#da3633" />
+    </svg>
+
+    <div class="particles"></div>
+
     <div class="container">
         <h1>Krexpor</h1>
         <p>Проекты и жизнь 20-ти летнего парня</p>
         
         <a href="genetic/index.html" class="btn">🧬 Генетические калькуляторы</a>
-        <a href="#" class="btn" style="background: #475569; cursor: default;">🎸 Обучение (скоро)</a>
+        <a href="#" class="btn btn-disabled">🎸 Обучение (скоро)</a>
         
         <div class="social-links">
             <a href="https://www.youtube.com/@Krexpor" class="social-link" target="_blank">YouTube</a>
