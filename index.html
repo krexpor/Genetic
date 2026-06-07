@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krexpor | Projects</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0WPCS9G55D');
+    </script>
+
     <style>
         body { 
             font-family: 'Inter', -apple-system, sans-serif; 
-            /* Додаємо градієнтний фон для глибини */
             background: radial-gradient(circle at top right, #1e293b, #0f172a); 
             color: #f8fafc;
             display: flex; 
@@ -18,7 +28,7 @@
         }
         .container { 
             background: rgba(30, 41, 59, 0.7); 
-            backdrop-filter: blur(10px); /* Ефект розмиття фону */
+            backdrop-filter: blur(10px); 
             padding: 40px; 
             border-radius: 20px; 
             box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3); 
@@ -55,34 +65,28 @@
         }
         .social-link:hover { background: #334155; color: #fff; }
         
-        .footer { margin-top: 30px; font-size: 0.8em; color: #475569; }
+        .footer { margin-top: 30px; font-size: 0.8em; color: #475569; line-height: 1.5; }
+        .footer a { color: #64748b; text-decoration: none; transition: 0.3s; }
+        .footer a:hover { color: #94a3b8; text-decoration: underline; }
     </style>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-0WPCS9G55D');
-    </script>
-    
 </head>
 <body>
     <div class="container">
         <h1>Krexpor</h1>
-            <p>Проекты и жизнь 20-ти летнего парня</p>
+        <p>Проекты и жизнь 20-ти летнего парня</p>
         
         <a href="genetic/index.html" class="btn">🧬 Генетические калькуляторы</a>
-        <a href="#" class="btn" style="background: #475569;">🎸 Обучение (скоро)</a>
+        <a href="#" class="btn" style="background: #475569; cursor: default;">🎸 Обучение (скоро)</a>
         
         <div class="social-links">
             <a href="https://www.youtube.com/@Krexpor" class="social-link" target="_blank">YouTube</a>
             <a href="https://t.me/krexpor" class="social-link" target="_blank">Telegram</a>
         </div>
         
-        <div class="footer">© 2026 Krexpor</div>
+        <div class="footer">
+            © 2026 Krexpor <br>
+            <a href="privacy.html" style="margin-top: 8px; display: inline-block;">Политика конфиденциальности</a>
+        </div>
     </div>
 </body>
 </html>
