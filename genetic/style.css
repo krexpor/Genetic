@@ -78,7 +78,7 @@ input[type="number"]:focus, select:focus {
     border-color: #da3633; /* Фірмове червоне підсвічування при введенні */
 }
 
-/* Головна Кнопка */
+/* Головна Кнопка (в самих калькуляторах) */
 button {
     width: 100%;
     padding: 15px;
@@ -91,12 +91,11 @@ button {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
     margin-top: 10px;
-    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 button:hover {
-    background-color: #b92b29;
+    background-color: #a92422; /* Приглушений, темніший червоний */
 }
 
 button:active {
@@ -135,28 +134,30 @@ button:active {
     margin: 0;
 }
 
-/* --- СТИЛІ ДЛЯ МЕНЮ (Якщо використовуєте) --- */
+/* --- СТИЛІ ДЛЯ МЕНЮ --- */
 .menu-btn {
     display: block;
     width: 100%;
     padding: 15px;
     margin-bottom: 15px;
-    background-color: transparent;
-    color: #da3633;
+    background-color: #111318; /* Спокійний темний фон */
+    color: #f8fafc; /* Світлий текст */
     text-decoration: none;
     border-radius: 8px;
     text-align: center;
-    font-weight: bold;
-    border: 2px solid #da3633;
+    font-weight: 600;
+    border: 1px solid #30363d; /* Тонка сіра рамка */
     transition: all 0.3s ease;
     box-sizing: border-box;
-    text-transform: uppercase;
+    font-size: 16px;
+    text-transform: none; /* Примусово відключає КАПСЛОК */
 }
 
 .menu-btn:hover {
-    background-color: #da3633;
-    color: #0b0c10;
-    box-shadow: 0 0 15px rgba(218, 54, 51, 0.4);
+    background-color: #a92422; /* Приглушений, благородний червоний */
+    border-color: #a92422;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(169, 36, 34, 0.3); /* Легке світіння в тон кнопки */
 }
 
 /* Посилання "Назад" в калькуляторах */
