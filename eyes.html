@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор цвета глаз</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-card">
+        <a href="index.html" class="back-link">⬅ Назад в меню</a>
+        <h2>Цвет глаз</h2>
+        <p class="subtitle">Выберите цвет глаз родителей</p>
+        <hr>
+        
+        <div class="input-group">
+            <label>Глаза отца:</label>
+            <select id="dad-eyes">
+                <option value="brown">Карие</option>
+                <option value="green">Зеленые</option>
+                <option value="blue">Голубые</option>
+                <option value="grey">Серые</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Глаза матери:</label>
+            <select id="mom-eyes">
+                <option value="brown">Карие</option>
+                <option value="green">Зеленые</option>
+                <option value="blue">Голубые</option>
+                <option value="grey">Серые</option>
+            </select>
+        </div>
+
+        <button onclick="calculateEyes()">Показать вероятность</button>
+
+        <div id="result-box" class="result-box" style="display: none;">
+            <h3>Шансы для ребенка:</h3>
+            <div id="eye-result" style="margin-top: 15px; font-size: 16px; font-weight: bold; line-height: 1.8; text-align: left; display: inline-block;">
+                </div>
+            <p class="note" style="margin-top: 15px;">*Расчет основан на расширенной генетической модели.</p>
+        </div>
+    </div>
+
+    <script>
+        // Расширенная логика калькулятора цвета глаз
+        const eyeRules = {
+            // Если оба карие
+            "brown+brown": "🟤 Карие: 75%<br>🟢 Зеленые: 18%<br>🔵 Голубые: 4%<br>⚪ Серые: 3%",
+            
+            // Карие + другие
+            "brown+blue": "🟤 Карие: 50%<br>🔵 Голубые: 50%<br>🟢 Зеленые: 0%<br>⚪ Серые: 0%",
+            "blue+brown": "🟤 Карие: 50%<br>🔵 Голубые: 50%<br>🟢 Зеленые: 0%<br>⚪ Серые: 0%",
+            "brown+grey": "🟤 Карие: 50%<br>⚪ Серые: 50%<br>🟢 Зеленые: 0%<br>🔵 Голубые: 0%",
+            "grey+brown": "🟤 Карие: 50%<br>⚪ Серые: 50%<br>🟢 Зеленые: 0%<br>🔵 Голубые: 0%",
+            "brown+green": "🟤 Карие: 50%<br>🟢 Зеленые: 37%<br>🔵 Голубые: 9%<br>⚪ Серые: 4%",
+            "green+brown": "🟤 Карие: 50%<br>🟢 Зеленые: 37%<br>🔵 Голубые: 9%<br>⚪ Серые: 4%",
+
+            // Зеленые + другие
+            "green+green": "🟢 Зеленые: 75%<br>🔵 Голубые: 18%<br>⚪ Серые: 7%<br>🟤 Карие: <1%",
+            "green+blue": "🟢 Зеленые: 50%<br>🔵 Голубые: 50%<br>⚪ Серые: 0%<br>🟤 Карие: 0%",
+            "blue+green": "🟢 Зеленые: 50%<br>🔵 Голубые: 50%<br>⚪ Серые: 0%<br>🟤 Карие: 0%",
+            "green+grey": "🟢 Зеленые: 50%<br>⚪ Серые: 50%<br>🔵 Голубые: 0%<br>🟤 Карие: 0%",
+            "grey+green": "🟢 Зеленые: 50%<br>⚪ Серые: 50%<br>🔵 Голубые: 0%<br>🟤 Карие: 0%",
+
+            // Светлые (Голубые и Серые)
+            "blue+blue": "🔵 Голубые: 99%<br>⚪ Серые: 1%<br>🟢 Зеленые: 0%<br>🟤 Карие: 0%",
+            "grey+grey": "⚪ Серые: 99%<br>🔵 Голубые: 1%<br>🟢 Зеленые: 0%<br>🟤 Карие: 0%",
+            "blue+grey": "🔵 Голубые: 50%<br>⚪ Серые: 50%<br>🟢 Зеленые: 0%<br>🟤 Карие: 0%",
+            "grey+blue": "🔵 Голубые: 50%<br>⚪ Серые: 50%<br>🟢 Зеленые: 0%<br>🟤 Карие: 0%"
+        };
+
+        function calculateEyes() {
+            const dadE = document.getElementById("dad-eyes").value;
+            const momE = document.getElementById("mom-eyes").value;
+            
+            const combo = dadE + "+" + momE;
+            
+            document.getElementById("eye-result").innerHTML = eyeRules[combo];
+            document.getElementById("result-box").style.display = "block";
+        }
+    </script>
+</body>
+</html>

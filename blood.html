@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор группы крови</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-card">
+        <a href="index.html" class="back-link">⬅ Назад в меню</a>
+        <h2>Группа крови и Резус</h2>
+        <p class="subtitle">Укажите данные родителей</p>
+        <hr>
+        
+        <div class="input-group">
+            <label>Группа крови отца:</label>
+            <select id="dad-blood">
+                <option value="I">I (0)</option>
+                <option value="II">II (A)</option>
+                <option value="III">III (B)</option>
+                <option value="IV">IV (AB)</option>
+            </select>
+            <select id="dad-rh" style="margin-top: 5px;">
+                <option value="+">Rh (+)</option>
+                <option value="-">Rh (-)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Группа крови матери:</label>
+            <select id="mom-blood">
+                <option value="I">I (0)</option>
+                <option value="II">II (A)</option>
+                <option value="III">III (B)</option>
+                <option value="IV">IV (AB)</option>
+            </select>
+            <select id="mom-rh" style="margin-top: 5px;">
+                <option value="+">Rh (+)</option>
+                <option value="-">Rh (-)</option>
+            </select>
+        </div>
+
+        <button onclick="calculateBlood()">Узнать результат</button>
+
+        <div id="result-box" class="result-box" style="display: none;">
+            <h3>Возможная группа крови ребенка:</h3>
+            <div id="blood-result" class="highlight-value" style="font-size: 20px;">--</div>
+            <h3>Возможный резус-фактор:</h3>
+            <div id="rh-result" class="highlight-value" style="font-size: 20px;">--</div>
+        </div>
+    </div>
+
+    <script>
+        // Логика калькулятора группы крови
+        const bloodRules = {
+            "I+I": "I (100%)", "I+II": "I (50%), II (50%)", "I+III": "I (50%), III (50%)", "I+IV": "II (50%), III (50%)",
+            "II+I": "I (50%), II (50%)", "II+II": "I (25%), II (75%)", "II+III": "I (25%), II (25%), III (25%), IV (25%)", "II+IV": "II (50%), III (25%), IV (25%)",
+            "III+I": "I (50%), III (50%)", "III+II": "I (25%), II (25%), III (25%), IV (25%)", "III+III": "I (25%), III (75%)", "III+IV": "II (25%), III (50%), IV (25%)",
+            "IV+I": "II (50%), III (50%)", "IV+II": "II (50%), III (25%), IV (25%)", "IV+III": "II (25%), III (50%), IV (25%)", "IV+IV": "II (25%), III (25%), IV (50%)"
+        };
+
+        function calculateBlood() {
+            const dadB = document.getElementById("dad-blood").value;
+            const momB = document.getElementById("mom-blood").value;
+            const dadRh = document.getElementById("dad-rh").value;
+            const momRh = document.getElementById("mom-rh").value;
+
+            // Считаем группу
+            const combo = dadB + "+" + momB;
+            document.getElementById("blood-result").innerText = bloodRules[combo];
+
+            // Считаем резус
+            let rhText = "";
+            if (dadRh === "-" && momRh === "-") {
+                rhText = "Только Rh (-) (100%)";
+            } else {
+                rhText = "Rh (+) (75%) или Rh (-) (25%)";
+            }
+            document.getElementById("rh-result").innerText = rhText;
+            document.getElementById("result-box").style.display = "block";
+        }
+    </script>
+</body>
+</html>
