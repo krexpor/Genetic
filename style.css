@@ -177,3 +177,21 @@ button:active {
 .share-btn:hover {
     background-color: #059669; 
 }
+
+
+/* --- АНІМАЦІЇ --- */
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Додаємо анімацію до блоку результатів */
+.result-box {
+    animation: slideUpFade 0.5s ease-out forwards;
+}
