@@ -166,3 +166,14 @@ button:active {
 .back-link:hover {
     color: #ffffff;
 }
+
+/* Кнопка "Поделиться" в главном меню */
+.share-btn {
+    background-color: #10b981; 
+    color: white;
+    margin-top: 10px;
+}
+
+.share-btn:hover {
+    background-color: #059669; 
+}
