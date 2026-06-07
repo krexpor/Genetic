@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Перевіряємо, чи користувач вже погодився
+    // Проверяем, согласился ли уже пользователь
     if (localStorage.getItem("cookieAccepted")) return;
 
-    // 1. Автоматично додаємо стилі плашки
+    // 1. Автоматически добавляем стили плашки
     const style = document.createElement('style');
     style.innerHTML = `
         .cookie-toast {
@@ -49,30 +49,30 @@ document.addEventListener("DOMContentLoaded", function() {
     `;
     document.head.appendChild(style);
 
-    // 2. Автоматично додаємо HTML плашки
+    // 2. Автоматически добавляем HTML плашки
     const cookieHtml = `
     <div id="cookie-toast" class="cookie-toast">
-        <p>Ми використовуємо трохи cookies для аналітики Google. Ніякої магії, тільки базова статистика. 🍪</p>
+        <p>Мы используем немного cookies для аналитики Google. Никакой магии, только базовая статистика. 🍪</p>
         <div class="cookie-buttons">
-            <button id="accept-cookies" class="cookie-btn">Ок, зрозуміло</button>
-            <a href="/privacy.html" class="cookie-link">Детальніше</a>
+            <button id="accept-cookies" class="cookie-btn">Ок, понятно</button>
+            <a href="/privacy.html" class="cookie-link">Подробнее</a>
         </div>
     </div>`;
     document.body.insertAdjacentHTML('beforeend', cookieHtml);
 
-    // 3. Логіка появи та зникнення
+    // 3. Логика появления и скрытия
     const cookieToast = document.getElementById("cookie-toast");
     const acceptBtn = document.getElementById("accept-cookies");
 
-    // Плавно показуємо через 1 секунду
+    // Плавно показываем через 1 секунду
     setTimeout(() => { cookieToast.classList.add("show"); }, 1000);
 
-    // Ховаємо при кліку і запам'ятовуємо вибір
+    // Прячем при клике и запоминаем выбор
     acceptBtn.addEventListener("click", function() {
         localStorage.setItem("cookieAccepted", "true");
         cookieToast.classList.remove("show");
         
-        // Повністю видаляємо елемент з коду після завершення анімації
+        // Полностью удаляем элемент из кода после завершения анимации
         setTimeout(() => cookieToast.remove(), 500); 
     });
 });
