@@ -11,15 +11,12 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-0WPCS9G55D');
     </script>
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-
     <script src="/cookies.js" defer></script>
-    
-    </head>
+</head>
 <body>
     <div class="calculator-card">
         
@@ -55,7 +52,7 @@
             <h3>Шансы для ребенка:</h3>
             
             <div id="eye-result" style="margin-top: 15px; font-size: 16px; font-weight: bold; line-height: 1.8; text-align: left; display: inline-block;">
-                </div>
+            </div>
             
             <div id="fact-box" style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed #444; text-align: left; font-size: 13px; color: #a0a0a0; line-height: 1.5;">
                 <b style="color: #60a5fa;">💡 Интересный факт:</b> <span id="fact-text"></span>
@@ -63,6 +60,19 @@
 
             <p class="note" style="margin-top: 15px;">*Расчет основан на расширенной генетической модели.</p>
         </div>
+
+        <!-- SEO-контент для поисковиков -->
+        <div class="seo-text-block">
+            <h3>Как работает генетика цвета глаз?</h3>
+            <p>Наследование цвета глаз у ребенка — это сложный полигенный процесс. Долгое время считалось, что цвет определяется по простой модели Менделя, где карий цвет является доминантным, а голубой — рецессивным. Однако современная генетика доказала, что в этом процессе участвует до 16 различных генов.</p>
+            
+            <h4>Ключевые гены OCA2 и HERC2</h4>
+            <p>Большая часть вариаций цвета зависит от двух генов, расположенных на 15-й хромосоме: OCA2 и HERC2. Они контролируют выработку меланина в радужной оболочке. Высокий уровень меланина дает карие глаза, средний — зеленые или ореховые, а низкий или его полное отсутствие — синие и серые оттенки.</p>
+            
+            <h4>Насколько точен этот калькулятор?</h4>
+            <p>Данный генетический калькулятор использует статистические модели и алгоритмы вероятности, основанные на фенотипах родителей. Хотя он предоставляет наиболее вероятный прогноз в процентах, природа всегда оставляет место для генетических мутаций и сюрпризов, поэтому стопроцентную гарантию может дать только ДНК-тест.</p>
+        </div>
+
     </div>
 
     <script>
@@ -100,24 +110,17 @@
             const momE = document.getElementById("mom-eyes").value;
             const combo = dadE + "+" + momE;
             
-            // Выводим проценты
             document.getElementById("eye-result").innerHTML = eyeRules[combo];
             
-            // Подбираем правильный факт
             let selectedFact = facts["mixed"]; 
-            
             if (dadE === "blue" || momE === "blue") selectedFact = facts["blue"];
             if (dadE === "grey" || momE === "grey") selectedFact = facts["grey"];
             if (dadE === "green" || momE === "green") selectedFact = facts["green"];
             if (dadE === "brown" && momE === "brown") selectedFact = facts["brown"];
             
-            // Вставляем текст факта
             document.getElementById("fact-text").innerText = selectedFact;
-            
-            // Показываем блок с результатом
             document.getElementById("result-box").style.display = "block";
         }
     </script>
 </body>
 </html>
-
