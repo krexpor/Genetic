@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор волос</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0WPCS9G55D');
+    </script>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>">
+    
+    </head>
+<body>
+    <div class="calculator-card">
+        <a href="index.html" class="back-link">⬅ Назад в меню</a>
+        
+        <h2>Генетика волос</h2>
+        <p class="subtitle">Узнайте цвет и структуру волос ребенка</p>
+        <hr>
+        
+        <div class="input-group">
+            <label>Волосы отца:</label>
+            <select id="dad-color">
+                <option value="black">Черные</option>
+                <option value="brown">Каштановые/Русые</option>
+                <option value="blonde">Светлые (Блонд)</option>
+                <option value="red">Рыжие</option>
+            </select>
+            <select id="dad-type" style="margin-top: 5px;">
+                <option value="straight">Прямые</option>
+                <option value="wavy">Волнистые</option>
+                <option value="curly">Кудрявые</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Волосы матери:</label>
+            <select id="mom-color">
+                <option value="black">Черные</option>
+                <option value="brown">Каштановые/Русые</option>
+                <option value="blonde">Светлые (Блонд)</option>
+                <option value="red">Рыжие</option>
+            </select>
+            <select id="mom-type" style="margin-top: 5px;">
+                <option value="straight">Прямые</option>
+                <option value="wavy">Волнистые</option>
+                <option value="curly">Кудрявые</option>
+            </select>
+        </div>
+
+        <button onclick="calculateHair()">Узнать вероятность</button>
+
+        <div id="result-box" class="result-box" style="display: none;">
+            <h3>Прогноз для ребенка:</h3>
+            
+            <div id="hair-result" style="margin-top: 15px; font-size: 15px; font-weight: bold; line-height: 1.8; text-align: left; display: inline-block;">
+                </div>
+
+            <div id="fact-box" style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed #444; text-align: left; font-size: 13px; color: #a0a0a0; line-height: 1.5;">
+                <b style="color: #f59e0b;">💡 Интересный факт:</b> <span id="fact-text"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Матрица цвета (упрощенная модель доминирования)
+        const colorRules = {
+            "black+black": "⚫ Черные: 75%<br>🟤 Каштановые: 24%<br>🟡 Светлые/Рыжие: 1%",
+            "black+brown": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
+            "brown+black": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
+            "black+blonde": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
+            "blonde+black": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
+            "black+red": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
+            "red+black": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
+            "brown+brown": "🟤 Каштановые: 75%<br>🟡 Светлые: 15%<br>🟠 Рыжие: 10%",
+            "brown+blonde": "🟤 Каштановые: 50%<br>🟡 Светлые: 50%",
+            "blonde+brown": "🟤 Каштановые: 50%<br>🟡 Светлые: 50%",
+            "brown+red": "🟤 Каштановые: 50%<br>🟠 Рыжие: 50%",
+            "red+brown": "🟤 Каштановые: 50%<br>🟠 Рыжие: 50%",
+            "blonde+blonde": "🟡 Светлые: 99%<br>🟠 Рыжие: 1%",
+            "blonde+red": "🟡 Светлые: 50%<br>🟠 Рыжие: 50%",
+            "red+blonde": "🟡 Светлые: 50%<br>🟠 Рыжие: 50%",
+            "red+red": "🟠 Рыжие: 99%<br>🟡 Светлые: 1%"
+        };
+
+        // Матрица структуры (неполное доминирование)
+        const typeRules = {
+            "straight+straight": "〰️ <b>Структура:</b> Прямые (99%)",
+            "curly+curly": "➰ <b>Структура:</b> Кудрявые (99%)",
+            "straight+curly": "➿ <b>Структура:</b> Волнистые (100%)",
+            "curly+straight": "➿ <b>Структура:</b> Волнистые (100%)",
+            "wavy+wavy": "➿ <b>Структура:</b> Волнистые (50%), Прямые (25%), Кудрявые (25%)",
+            "wavy+straight": "➿ <b>Структура:</b> Волнистые (50%), Прямые (50%)",
+            "straight+wavy": "➿ <b>Структура:</b> Волнистые (50%), Прямые (50%)",
+            "wavy+curly": "➰ <b>Структура:</b> Кудрявые (50%), Волнистые (50%)",
+            "curly+wavy": "➰ <b>Структура:</b> Кудрявые (50%), Волнистые (50%)"
+        };
+
+        const hairFacts = [
+            "Ген рыжих волос (MC1R) — это генетическая мутация. Рыжие люди более чувствительны к боли и температурным изменениям, а седеют они не так, как все — их волосы сначала становятся розово-золотистыми, а потом чисто белыми.",
+            "Форма ваших волос зависит исключительно от формы волосяного фолликула: если он круглый — волосы растут прямыми, если овальный — волнистыми, а если почти плоский — они становятся кудрявыми.",
+            "Светлые волосы растут гуще! У натуральных блондинов на голове в среднем 150 000 волосяных луковиц, у брюнетов — около 110 000, а у рыжих — всего 90 000.",
+            "Цвет волос ребенка может кардинально измениться. Дети, рожденные со светлыми волосами, часто темнеют к подростковому возрасту из-за возрастных изменений выработки пигмента эумеланина."
+        ];
+
+        function calculateHair() {
+            const dColor = document.getElementById("dad-color").value;
+            const mColor = document.getElementById("mom-color").value;
+            const dType = document.getElementById("dad-type").value;
+            const mType = document.getElementById("mom-type").value;
+
+            const colorCombo = dColor + "+" + mColor;
+            const typeCombo = dType + "+" + mType;
+
+            const colorResult = colorRules[colorCombo];
+            const typeResult = typeRules[typeCombo];
+
+            // Собираем результаты вместе
+            document.getElementById("hair-result").innerHTML = 
+                colorResult + "<br><br>" + typeResult;
+
+            // Выбираем случайный факт
+            const randomFact = hairFacts[Math.floor(Math.random() * hairFacts.length)];
+            document.getElementById('fact-text').innerText = randomFact;
+
+            document.getElementById("result-box").style.display = "block";
+        }
+    </script>
+</body>
+</html>
+
