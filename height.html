@@ -3,41 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Генетический калькулятор роста</title>
+    <title>Калькулятор роста</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0WPCS9G55D');
-</script>
-</head>
+    
+    </head>
 <body>
-
     <div class="calculator-card">
-        
         <a href="index.html" class="back-link">⬅ Назад в меню</a>
-
-        <h2>Генетический калькулятор</h2>
-        <p class="subtitle">Узнайте ориентировочный рост будущего ребенка на основе данных родителей</p>
         
+        <h2>Калькулятор роста</h2>
+        <p class="subtitle">Введите рост родителей (в см)</p>
         <hr>
-
+        
         <div class="input-group">
-            <label for="father">Рост отца (см):</label>
+            <label>Рост отца:</label>
             <input type="number" id="father" placeholder="Например, 180">
         </div>
 
         <div class="input-group">
-            <label for="mother">Рост матери (см):</label>
+            <label>Рост матери:</label>
             <input type="number" id="mother" placeholder="Например, 165">
         </div>
 
         <div class="input-group">
-            <label for="gender">Пол ребенка:</label>
+            <label>Пол ребенка:</label>
             <select id="gender">
                 <option value="boy">Мальчик</option>
                 <option value="girl">Девочка</option>
@@ -47,12 +36,60 @@
         <button onclick="calculateHeight()">Рассчитать рост</button>
 
         <div id="result-box" class="result-box" style="display: none;">
-            <h3>Прогнозируемый рост:</h3>
-            <div id="final-height" class="highlight-value">-- см</div>
-            <p class="note">Средняя погрешность составляет ±8.5 см из-за уникальной комбинации генов.</p>
+            <h3>Ожидаемый рост:</h3>
+            <div id="final-height" style="font-size: 24px; font-weight: bold; color: #3b82f6; margin-top: 10px;"></div>
+            
+            <div id="fact-box" style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed #444; text-align: left; font-size: 13px; color: #a0a0a0; line-height: 1.5;">
+                <b style="color: #10b981;">💡 Интересный факт:</b> <span id="fact-text"></span>
+            </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Восстанавливаем данные из памяти при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('fatherHeight')) document.getElementById('father').value = localStorage.getItem('fatherHeight');
+            if (localStorage.getItem('motherHeight')) document.getElementById('mother').value = localStorage.getItem('motherHeight');
+            if (localStorage.getItem('childGender')) document.getElementById('gender').value = localStorage.getItem('childGender');
+        });
+
+        const heightFacts = [
+            "Утренний бонус: Утром каждый человек примерно на 1-2 сантиметра выше, чем вечером. За ночь межпозвоночные диски расправляются, как губка в воде.",
+            "Космические гиганты: В условиях невесомости на МКС астронавты могут вырасти на 3-5 сантиметров! Без гравитации позвоночник максимально растягивается.",
+            "Правило 80/20: Рост человека лишь на 80% зависит от генетики. Остальные 20% — это питание, физическая активность и достаточный сон в период взросления.",
+            "Быстрая эволюция: Сегодня нидерландцы — самая высокая нация в мире. Но всего 200 лет назад они были одними из самых низких в Европе!"
+        ];
+
+        function calculateHeight() {
+            const fatherHeight = parseFloat(document.getElementById('father').value);
+            const motherHeight = parseFloat(document.getElementById('mother').value);
+            const gender = document.getElementById('gender').value;
+
+            if (!fatherHeight || !motherHeight || fatherHeight <= 0 || motherHeight <= 0) {
+                alert("Пожалуйста, введите корректный рост родителей!");
+                return;
+            }
+
+            // Сохраняем в память
+            localStorage.setItem('fatherHeight', fatherHeight);
+            localStorage.setItem('motherHeight', motherHeight);
+            localStorage.setItem('childGender', gender);
+
+            let predictedHeight = 0;
+            if (gender === 'boy') {
+                predictedHeight = (fatherHeight + motherHeight + 13) / 2;
+            } else {
+                predictedHeight = (fatherHeight + motherHeight - 13) / 2;
+            }
+
+            document.getElementById('final-height').innerText = predictedHeight.toFixed(1) + " см";
+            
+            // Выбираем случайный факт
+            const randomFact = heightFacts[Math.floor(Math.random() * heightFacts.length)];
+            document.getElementById('fact-text').innerText = randomFact;
+
+            document.getElementById('result-box').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
