@@ -7,7 +7,6 @@
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -28,22 +27,23 @@
             min-height: 100vh; 
             margin: 0; 
             position: relative;
-            overflow: hidden;
+            overflow: hidden; /* Чтобы фон не создавал прокрутку */
         }
 
-        /* Фоновий силует колібрі */
+        /* Фоновый силуэт колибри */
         .bg-hummingbird {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 80vmin;
+            width: 80vmin; /* Адаптивный размер */
             height: 80vmin;
-            opacity: 0.03; 
-            pointer-events: none; 
+            opacity: 0.03; /* Едва заметный, не мешает чтению */
+            pointer-events: none; /* Чтобы не перекрывал клики по кнопкам */
             z-index: 1;
         }
 
+        /* Главная карточка */
         .container { 
             background: rgba(26, 28, 35, 0.7); 
             backdrop-filter: blur(10px); 
@@ -58,9 +58,10 @@
             z-index: 10;
         }
 
-        h1 { color: #f8fafc; margin-bottom: 10px; }
+        h1 { color: #f8fafc; margin-bottom: 10px; font-size: 2rem;}
         p { color: #8b949e; margin-bottom: 30px; }
         
+        /* Кнопки */
         .btn { 
             display: block; 
             padding: 15px; 
@@ -79,6 +80,7 @@
             box-shadow: 0 4px 15px rgba(218, 54, 51, 0.4); 
         }
         
+        /* Социальные сети */
         .social-links { margin-top: 30px; display: flex; justify-content: center; gap: 15px; }
         .social-link { 
             color: #8b949e; 
@@ -91,16 +93,88 @@
         }
         .social-link:hover { background: #1a1c23; color: #fff; }
         
+        /* Подвал */
         .footer { margin-top: 30px; font-size: 0.8em; color: #475569; line-height: 1.5; }
         .footer a { color: #64748b; text-decoration: none; transition: 0.3s; }
         .footer a:hover { color: #da3633; text-decoration: underline; }
+
+        /* --- СТИЛИ ДЛЯ УВЕДОМЛЕНИЯ COOKIE --- */
+        .cookie-toast {
+            position: fixed;
+            bottom: 20px;
+            right: -400px; /* Спрятано за экраном по умолчанию */
+            background: rgba(26, 28, 35, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(218, 54, 51, 0.2);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            padding: 20px;
+            border-radius: 12px;
+            width: 280px;
+            z-index: 1000;
+            transition: right 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.4s ease;
+            opacity: 0;
+            text-align: left;
+        }
+
+        .cookie-toast.show {
+            right: 20px;
+            opacity: 1;
+        }
+
+        .cookie-toast.hide {
+            opacity: 0;
+            right: -400px;
+        }
+
+        .cookie-toast p {
+            color: #8b949e;
+            font-size: 0.85rem;
+            margin: 0 0 15px 0;
+            line-height: 1.5;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .cookie-btn {
+            background: transparent;
+            color: #da3633;
+            border: 1px solid #da3633;
+            padding: 8px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .cookie-btn:hover {
+            background: #da3633;
+            color: #0b0c10;
+        }
+
+        .cookie-link {
+            color: #64748b;
+            font-size: 0.8rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .cookie-link:hover {
+            color: #c5c6c7;
+            text-decoration: underline;
+        }
     </style>
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
 </head>
 <body>
-    <!-- Фоновий силует птаха -->
+
     <svg class="bg-hummingbird" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <path d="M 35 45 Q 65 15 85 15 Q 70 30 55 50 Z" fill="#da3633" />
         <path d="M 20 40 Q 35 35 45 45 Q 55 55 60 80 Q 50 65 35 55 Q 25 50 20 40 Z" fill="#da3633" />
@@ -124,5 +198,33 @@
             <a href="privacy.html" style="margin-top: 8px; display: inline-block;">Политика конфиденциальности</a>
         </div>
     </div>
+
+    <div id="cookie-toast" class="cookie-toast">
+        <p>Мы используем немного cookies для аналитики Google. Никакой магии, только базовая статистика. 🍪</p>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="cookie-btn">Ок, понятно</button>
+            <a href="privacy.html" class="cookie-link">Подробнее</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cookieToast = document.getElementById("cookie-toast");
+            const acceptBtn = document.getElementById("accept-cookies");
+
+            if (!localStorage.getItem("cookieAccepted")) {
+                setTimeout(() => {
+                    cookieToast.classList.add("show");
+                }, 1000); // Появляется через 1 секунду
+            }
+
+            acceptBtn.addEventListener("click", function() {
+                localStorage.setItem("cookieAccepted", "true");
+                cookieToast.classList.remove("show");
+                cookieToast.classList.add("hide");
+            });
+        });
+    </script>
+
 </body>
 </html>
