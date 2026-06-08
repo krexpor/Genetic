@@ -3,82 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang="menu-title">Генетические калькуляторы</title>
+    <title data-lang="menu-title">Генетические калькуляторы | Krexpor</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://krexpor.com/">
     <meta property="og:title" content="Krexpor | Genetic Calculators">
     <meta property="og:description" content="Узнай, что передастся по наследству. Генетические калькуляторы: цвет глаз, группа крови, рост и уникальные черты лица.">
     <meta property="og:image" content="https://krexpor.com/preview.jpg">
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://krexpor.com/">
-    <meta property="twitter:title" content="Krexpor | Genetic Calculators">
-    <meta property="twitter:description" content="Узнай, что передастся по наследству. Генетические калькуляторы: цвет глаз, группа крови, рост и уникальные черты лица.">
-    <meta property="twitter:image" content="https://krexpor.com/preview.jpg">
-    
-    <link rel="stylesheet" href="style.css">
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-0WPCS9G55D');
     </script>
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-
     <script src="/cookies.js" defer></script>
-
     <script src="/lang.js" defer></script>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
-    
-    </head>
+    <style>
+        /* Стиль для новой кнопки перехода на главную */
+        .hub-card {
+            display: flex;
+            align-items: center;
+            background: #111318;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin-top: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .hub-card:hover {
+            border-color: #da3633;
+            transform: translateY(-2px);
+        }
+        .hub-icon {
+            font-size: 1.8rem;
+            margin-right: 15px;
+        }
+        .hub-title {
+            color: #f8fafc;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 2px;
+        }
+        .hub-desc {
+            color: #8b949e;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
 <body>
 
     <div class="calculator-card">
-        <h2 data-lang="menu-h2">🧬 Генетика для всех</h2>
-        <p class="subtitle" data-lang="menu-subtitle">Узнайте, что передастся по наследству. Выберите инструмент:</p>
         
-        <hr>
+        <h2 style="text-align: center; margin-top: 0; margin-bottom: 10px;" data-lang="menu-header">🧬 Генетика для каждого</h2>
+        <p style="text-align: center; color: #8b949e; margin-bottom: 30px; font-size: 0.95rem;" data-lang="menu-desc">Узнайте, что передастся по наследству. Выберите инструмент:</p>
 
-        <a href="height.html" class="menu-btn" data-lang="menu-btn-height">📏 Калькулятор роста</a>
-        <a href="blood.html" class="menu-btn" data-lang="menu-btn-blood">🩸 Группа крови и Резус</a>
-        <a href="eyes.html" class="menu-btn" data-lang="menu-btn-eyes">👁 Вероятность цвета глаз</a>
-        <a href="hair.html" class="menu-btn" data-lang="menu-btn-hair">💇 Генетика волос (Цвет и Тип)</a>
-        <a href="face.html" class="menu-btn" data-lang="menu-btn-face">🧩 Конструктор лица (Особые приметы)</a>
-        <a href="hands.html" class="menu-btn" data-lang="menu-btn-hands">✋ Левша или правша?</a>
+        <div class="tools-list">
+            <!-- БАЗА ЗНАНИЙ (Новая кнопка) -->
+            <a href="knowledge.html" class="tool-card" style="border-left: 3px solid #2AABEE;">
+                <span class="tool-icon">📚</span>
+                <span class="tool-name" data-lang="menu-knowledge">База знаний (Словарь)</span>
+            </a>
 
-        <hr style="margin-top: 30px; border-top: 1px solid #333;">
-        
-        <button onclick="shareSite()" class="share-btn" data-lang="menu-btn-share">📲 Поделиться калькулятором</button>
+            <!-- Старые калькуляторы -->
+            <a href="height.html" class="tool-card">
+                <span class="tool-icon">📏</span>
+                <span class="tool-name" data-lang="menu-height">Калькулятор роста</span>
+            </a>
+            
+            <a href="blood.html" class="tool-card">
+                <span class="tool-icon">🩸</span>
+                <span class="tool-name" data-lang="menu-blood">Группа крови и Резус-фактор</span>
+            </a>
+            
+            <a href="eyes.html" class="tool-card">
+                <span class="tool-icon">👁️</span>
+                <span class="tool-name" data-lang="menu-eyes">Вероятность цвета глаз</span>
+            </a>
+
+            <a href="hair.html" class="tool-card">
+                <span class="tool-icon">👱‍♀️</span>
+                <span class="tool-name" data-lang="menu-hair">Генетика волос (Цвет и тип)</span>
+            </a>
+
+            <a href="face.html" class="tool-card">
+                <span class="tool-icon">🎭</span>
+                <span class="tool-name" data-lang="menu-face">Конструктор лица (Особые черты)</span>
+            </a>
+
+            <a href="hands.html" class="tool-card">
+                <span class="tool-icon">✨</span>
+                <span class="tool-name" data-lang="menu-hands">Левша или Правша?</span>
+            </a>
+        </div>
+
+        <!-- Кнопка Поделиться -->
+        <button class="btn" style="margin-top: 30px; background: #30363d; color: #8b949e;" onclick="navigator.share({title: 'Genetic Calculators', url: window.location.href})" data-lang="btn-share">🔗 Поделиться калькулятором</button>
+
+        <!-- КРАСИВЫЙ ПЕРЕХОД НА ГЛАВНУЮ -->
+        <a href="../index.html" class="hub-card">
+            <div class="hub-icon">🌐</div>
+            <div>
+                <div class="hub-title">Krexpor Hub</div>
+                <div class="hub-desc" data-lang="hub-desc">Все проекты и личный блог</div>
+            </div>
+        </a>
 
     </div>
 
-    <script>
-        function shareSite() {
-            // Для мультиязычности мы будем брать эти строки из глобального словаря, 
-            // если он подключен, иначе оставляем русский по умолчанию
-            const shareTitle = window.currentLang === 'en' ? 'Genetic Calculators' : 'Генетические калькуляторы';
-            const shareText = window.currentLang === 'en' ? 'Check out this cool calculator! Find out the height and eye color of your future child 🧬' : 'Смотри, какой крутой калькулятор! Узнай рост и цвет глаз будущего ребенка 🧬';
-            const alertText = window.currentLang === 'en' ? 'Link copied to clipboard!' : 'Ссылка скопирована в буфер обмена!';
-
-            if (navigator.share) {
-                // Если телефон поддерживает нативное меню "Поделиться"
-                navigator.share({
-                    title: shareTitle,
-                    text: shareText,
-                    url: 'https://krexpor.com'
-                }).catch(console.error);
-            } else {
-                // Если браузер старый или человек сидит с ПК — просто копируем ссылку
-                navigator.clipboard.writeText('https://krexpor.com');
-                alert(alertText);
-            }
-        }
-    </script>
 </body>
 </html>
