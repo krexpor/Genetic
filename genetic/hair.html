@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор волос</title>
+    <title data-lang="hair-title">Калькулятор волос</title>
     <link rel="stylesheet" href="style.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
@@ -24,126 +24,169 @@
 </head>
 <body>
     <div class="calculator-card">
-        <a href="index.html" class="back-link">⬅ Назад в меню</a>
+        <a href="index.html" class="back-link" data-lang="back-menu">⬅ Назад в меню</a>
         
-        <h2>Генетика волос</h2>
-        <p class="subtitle">Узнайте цвет и структуру волос ребенка</p>
+        <h2 data-lang="hair-h2">Генетика волос</h2>
+        <p class="subtitle" data-lang="hair-subtitle">Узнайте цвет и структуру волос ребенка</p>
         <hr>
         
         <div class="input-group">
-            <label>Волосы отца:</label>
+            <label data-lang="hair-label-dad">Волосы отца:</label>
             <select id="dad-color">
-                <option value="black">Черные</option>
-                <option value="brown">Каштановые/Русые</option>
-                <option value="blonde">Светлые (Блонд)</option>
-                <option value="red">Рыжие</option>
+                <option value="black" data-lang="hair-opt-black">Черные</option>
+                <option value="brown" data-lang="hair-opt-brown">Каштановые/Русые</option>
+                <option value="blonde" data-lang="hair-opt-blonde">Светлые (Блонд)</option>
+                <option value="red" data-lang="hair-opt-red">Рыжие</option>
             </select>
             <select id="dad-type" style="margin-top: 5px;">
-                <option value="straight">Прямые</option>
-                <option value="wavy">Волнистые</option>
-                <option value="curly">Кудрявые</option>
+                <option value="straight" data-lang="hair-opt-straight">Прямые</option>
+                <option value="wavy" data-lang="hair-opt-wavy">Волнистые</option>
+                <option value="curly" data-lang="hair-opt-curly">Кудрявые</option>
             </select>
         </div>
 
         <div class="input-group">
-            <label>Волосы матери:</label>
+            <label data-lang="hair-label-mom">Волосы матери:</label>
             <select id="mom-color">
-                <option value="black">Черные</option>
-                <option value="brown">Каштановые/Русые</option>
-                <option value="blonde">Светлые (Блонд)</option>
-                <option value="red">Рыжие</option>
+                <option value="black" data-lang="hair-opt-black">Черные</option>
+                <option value="brown" data-lang="hair-opt-brown">Каштановые/Русые</option>
+                <option value="blonde" data-lang="hair-opt-blonde">Светлые (Блонд)</option>
+                <option value="red" data-lang="hair-opt-red">Рыжие</option>
             </select>
             <select id="mom-type" style="margin-top: 5px;">
-                <option value="straight">Прямые</option>
-                <option value="wavy">Волнистые</option>
-                <option value="curly">Кудрявые</option>
+                <option value="straight" data-lang="hair-opt-straight">Прямые</option>
+                <option value="wavy" data-lang="hair-opt-wavy">Волнистые</option>
+                <option value="curly" data-lang="hair-opt-curly">Кудрявые</option>
             </select>
         </div>
 
-        <button onclick="calculateHair()">Узнать вероятность</button>
+        <button onclick="calculateHair()" data-lang="hair-btn-calc">Узнать вероятность</button>
 
         <div id="result-box" class="result-box" style="display: none;">
-            <h3>Прогноз для ребенка:</h3>
+            <h3 data-lang="hair-result-title">Прогноз для ребенка:</h3>
             
             <div id="hair-result" style="margin-top: 15px; font-size: 15px; font-weight: bold; line-height: 1.8; text-align: left; display: inline-block;">
                 </div>
 
             <div id="fact-box" style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed #444; text-align: left; font-size: 13px; color: #a0a0a0; line-height: 1.5;">
-                <b style="color: #f59e0b;">💡 Интересный факт:</b> <span id="fact-text"></span>
+                <b style="color: #f59e0b;" data-lang="hair-fact-title">💡 Интересный факт:</b> <span id="fact-text"></span>
             </div>
         </div>
 
         <div class="seo-text-block">
-            <h3>Как наследуется цвет и структура волос?</h3>
-            <p>Генетика волос — это увлекательный процесс, в котором участвуют десятки генов. Цвет определяется двумя типами пигмента меланина: эумеланином (отвечает за темные оттенки, от каштанового до черного) и феомеланином (отвечает за рыжие и желтые оттенки). Темные цвета волос являются генетически доминантными над светлыми, поэтому у брюнетов вероятность передачи своего цвета выше.</p>
+            <h3 data-lang="hair-seo-h3-1">Как наследуется цвет и структура волос?</h3>
+            <p data-lang="hair-seo-p-1">Генетика волос — это увлекательный процесс, в котором участвуют десятки генов. Цвет определяется двумя типами пигмента меланина: эумеланином (отвечает за темные оттенки, от каштанового до черного) и феомеланином (отвечает за рыжие и желтые оттенки). Темные цвета волос являются генетически доминантными над светлыми, поэтому у брюнетов вероятность передачи своего цвета выше.</p>
             
-            <h4>Форма и структура волос</h4>
-            <p>Структура волоса (прямые, волнистые или кудрявые) зависит от физической формы волосяного фолликула. Ген кудрявых волос обладает так называемым «неполным доминированием». Это значит, что если ребенок унаследует ген прямых волос от одного родителя и ген кудрявых от другого, результатом станут волнистые волосы — идеальный компромисс природы.</p>
+            <h4 data-lang="hair-seo-h4-1">Форма и структура волос</h4>
+            <p data-lang="hair-seo-p-2">Структура волоса (прямые, волнистые или кудрявые) зависит от физической формы волосяного фолликула. Ген кудрявых волос обладает так называемым «неполным доминированием». Это значит, что если ребенок унаследует ген прямых волос от одного родителя и ген кудрявых от другого, результатом станут волнистые волосы — идеальный компромисс природы.</p>
             
-            <h4>Точность расчета</h4>
-            <p>Наш калькулятор цвета и типа волос опирается на классические вероятностные модели наследования признаков. Однако стоит учитывать, что цвет может меняться со временем: многие дети, рожденные светловолосыми, темнеют в подростковом возрасте из-за возрастной активации генов, отвечающих за выработку пигмента.</p>
+            <h4 data-lang="hair-seo-h4-2">Точность расчета</h4>
+            <p data-lang="hair-seo-p-3">Наш калькулятор цвета и типа волос опирается на классические вероятностные модели наследования признаков. Однако стоит учитывать, что цвет может меняться со временем: многие дети, рожденные светловолосыми, темнеют в подростковом возрасте из-за возрастной активации генов, отвечающих за выработку пигмента.</p>
         </div>
     </div>
 
     <script>
         // Матрица цвета (упрощенная модель доминирования)
         const colorRules = {
-            "black+black": "⚫ Черные: 75%<br>🟤 Каштановые: 24%<br>🟡 Светлые/Рыжие: 1%",
-            "black+brown": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
-            "brown+black": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
-            "black+blonde": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
-            "blonde+black": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
-            "black+red": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
-            "red+black": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
-            "brown+brown": "🟤 Каштановые: 75%<br>🟡 Светлые: 15%<br>🟠 Рыжие: 10%",
-            "brown+blonde": "🟤 Каштановые: 50%<br>🟡 Светлые: 50%",
-            "blonde+brown": "🟤 Каштановые: 50%<br>🟡 Светлые: 50%",
-            "brown+red": "🟤 Каштановые: 50%<br>🟠 Рыжие: 50%",
-            "red+brown": "🟤 Каштановые: 50%<br>🟠 Рыжие: 50%",
-            "blonde+blonde": "🟡 Светлые: 99%<br>🟠 Рыжие: 1%",
-            "blonde+red": "🟡 Светлые: 50%<br>🟠 Рыжие: 50%",
-            "red+blonde": "🟡 Светлые: 50%<br>🟠 Рыжие: 50%",
-            "red+red": "🟠 Рыжие: 99%<br>🟡 Светлые: 1%"
+            ru: {
+                "black+black": "⚫ Черные: 75%<br>🟤 Каштановые: 24%<br>🟡 Светлые/Рыжие: 1%",
+                "black+brown": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
+                "brown+black": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
+                "black+blonde": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
+                "blonde+black": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
+                "black+red": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
+                "red+black": "⚫ Черные: 50%<br>🟤 Каштановые: 50%",
+                "brown+brown": "🟤 Каштановые: 75%<br>🟡 Светлые: 15%<br>🟠 Рыжие: 10%",
+                "brown+blonde": "🟤 Каштановые: 50%<br>🟡 Светлые: 50%",
+                "blonde+brown": "🟤 Каштановые: 50%<br>🟡 Светлые: 50%",
+                "brown+red": "🟤 Каштановые: 50%<br>🟠 Рыжие: 50%",
+                "red+brown": "🟤 Каштановые: 50%<br>🟠 Рыжие: 50%",
+                "blonde+blonde": "🟡 Светлые: 99%<br>🟠 Рыжие: 1%",
+                "blonde+red": "🟡 Светлые: 50%<br>🟠 Рыжие: 50%",
+                "red+blonde": "🟡 Светлые: 50%<br>🟠 Рыжие: 50%",
+                "red+red": "🟠 Рыжие: 99%<br>🟡 Светлые: 1%"
+            },
+            en: {
+                "black+black": "⚫ Black: 75%<br>🟤 Brown: 24%<br>🟡 Blonde/Red: 1%",
+                "black+brown": "⚫ Black: 50%<br>🟤 Brown: 50%",
+                "brown+black": "⚫ Black: 50%<br>🟤 Brown: 50%",
+                "black+blonde": "⚫ Black: 50%<br>🟤 Brown: 50%",
+                "blonde+black": "⚫ Black: 50%<br>🟤 Brown: 50%",
+                "black+red": "⚫ Black: 50%<br>🟤 Brown: 50%",
+                "red+black": "⚫ Black: 50%<br>🟤 Brown: 50%",
+                "brown+brown": "🟤 Brown: 75%<br>🟡 Blonde: 15%<br>🟠 Red: 10%",
+                "brown+blonde": "🟤 Brown: 50%<br>🟡 Blonde: 50%",
+                "blonde+brown": "🟤 Brown: 50%<br>🟡 Blonde: 50%",
+                "brown+red": "🟤 Brown: 50%<br>🟠 Red: 50%",
+                "red+brown": "🟤 Brown: 50%<br>🟠 Red: 50%",
+                "blonde+blonde": "🟡 Blonde: 99%<br>🟠 Red: 1%",
+                "blonde+red": "🟡 Blonde: 50%<br>🟠 Red: 50%",
+                "red+blonde": "🟡 Blonde: 50%<br>🟠 Red: 50%",
+                "red+red": "🟠 Red: 99%<br>🟡 Blonde: 1%"
+            }
         };
 
         // Матрица структуры (неполное доминирование)
         const typeRules = {
-            "straight+straight": "〰️ <b>Структура:</b> Прямые (99%)",
-            "curly+curly": "➰ <b>Структура:</b> Кудрявые (99%)",
-            "straight+curly": "➿ <b>Структура:</b> Волнистые (100%)",
-            "curly+straight": "➿ <b>Структура:</b> Волнистые (100%)",
-            "wavy+wavy": "➿ <b>Структура:</b> Волнистые (50%), Прямые (25%), Кудрявые (25%)",
-            "wavy+straight": "➿ <b>Структура:</b> Волнистые (50%), Прямые (50%)",
-            "straight+wavy": "➿ <b>Структура:</b> Волнистые (50%), Прямые (50%)",
-            "wavy+curly": "➰ <b>Структура:</b> Кудрявые (50%), Волнистые (50%)",
-            "curly+wavy": "➰ <b>Структура:</b> Кудрявые (50%), Волнистые (50%)"
+            ru: {
+                "straight+straight": "〰️ <b>Структура:</b> Прямые (99%)",
+                "curly+curly": "➰ <b>Структура:</b> Кудрявые (99%)",
+                "straight+curly": "➿ <b>Структура:</b> Волнистые (100%)",
+                "curly+straight": "➿ <b>Структура:</b> Волнистые (100%)",
+                "wavy+wavy": "➿ <b>Структура:</b> Волнистые (50%), Прямые (25%), Кудрявые (25%)",
+                "wavy+straight": "➿ <b>Структура:</b> Волнистые (50%), Прямые (50%)",
+                "straight+wavy": "➿ <b>Структура:</b> Волнистые (50%), Прямые (50%)",
+                "wavy+curly": "➰ <b>Структура:</b> Кудрявые (50%), Волнистые (50%)",
+                "curly+wavy": "➰ <b>Структура:</b> Кудрявые (50%), Волнистые (50%)"
+            },
+            en: {
+                "straight+straight": "〰️ <b>Texture:</b> Straight (99%)",
+                "curly+curly": "➰ <b>Texture:</b> Curly (99%)",
+                "straight+curly": "➿ <b>Texture:</b> Wavy (100%)",
+                "curly+straight": "➿ <b>Texture:</b> Wavy (100%)",
+                "wavy+wavy": "➿ <b>Texture:</b> Wavy (50%), Straight (25%), Curly (25%)",
+                "wavy+straight": "➿ <b>Texture:</b> Wavy (50%), Straight (50%)",
+                "straight+wavy": "➿ <b>Texture:</b> Wavy (50%), Straight (50%)",
+                "wavy+curly": "➰ <b>Texture:</b> Curly (50%), Wavy (50%)",
+                "curly+wavy": "➰ <b>Texture:</b> Curly (50%), Wavy (50%)"
+            }
         };
 
-        const hairFacts = [
-            "Ген рыжих волос (MC1R) — это генетическая мутация. Рыжие люди более чувствительны к боли и температурным изменениям, а седеют они не так, как все — их волосы сначала становятся розово-золотистыми, а потом чисто белыми.",
-            "Форма ваших волос зависит исключительно от формы волосяного фолликула: если он круглый — волосы растут прямыми, если овальный — волнистыми, а если почти плоский — они становятся кудрявыми.",
-            "Светлые волосы растут гуще! У натуральных блондинов на голове в среднем 150 000 волосяных луковиц, у брюнетов — около 110 000, а у рыжих — всего 90 000.",
-            "Цвет волос ребенка может кардинально измениться. Дети, рожденные со светлыми волосами, часто темнеют к подростковому возрасту из-за возрастных изменений выработки пигмента эумеланина."
-        ];
+        const hairFacts = {
+            ru: [
+                "Ген рыжих волос (MC1R) — это генетическая мутация. Рыжие люди более чувствительны к боли и температурным изменениям, а седеют они не так, как все — их волосы сначала становятся розово-золотистыми, а потом чисто белыми.",
+                "Форма ваших волос зависит исключительно от формы волосяного фолликула: если он круглый — волосы растут прямыми, если овальный — волнистыми, а если почти плоский — они становятся кудрявыми.",
+                "Светлые волосы растут гуще! У натуральных блондинов на голове в среднем 150 000 волосяных луковиц, у брюнетов — около 110 000, а у рыжих — всего 90 000.",
+                "Цвет волос ребенка может кардинально измениться. Дети, рожденные со светлыми волосами, часто темнеют к подростковому возрасту из-за возрастных изменений выработки пигмента эумеланина."
+            ],
+            en: [
+                "The red hair gene (MC1R) is a genetic mutation. Redheads are more sensitive to pain and temperature changes, and they go gray differently—their hair first turns rose-gold, and then pure white.",
+                "The shape of your hair depends entirely on the shape of the hair follicle: if it's round, hair grows straight; if oval, wavy; and if almost flat, it becomes curly.",
+                "Blonde hair grows thicker! Natural blondes have an average of 150,000 hair follicles on their head, brunettes about 110,000, and redheads only 90,000.",
+                "A child's hair color can change dramatically. Children born with light hair often darken by adolescence due to age-related changes in the production of the eumelanin pigment."
+            ]
+        };
 
         function calculateHair() {
             const dColor = document.getElementById("dad-color").value;
             const mColor = document.getElementById("mom-color").value;
             const dType = document.getElementById("dad-type").value;
             const mType = document.getElementById("mom-type").value;
+            const currentLang = window.currentLang || 'ru';
 
             const colorCombo = dColor + "+" + mColor;
             const typeCombo = dType + "+" + mType;
 
-            const colorResult = colorRules[colorCombo];
-            const typeResult = typeRules[typeCombo];
+            const colorResult = colorRules[currentLang][colorCombo];
+            const typeResult = typeRules[currentLang][typeCombo];
 
             // Собираем результаты вместе
             document.getElementById("hair-result").innerHTML = 
                 colorResult + "<br><br>" + typeResult;
 
             // Выбираем случайный факт
-            const randomFact = hairFacts[Math.floor(Math.random() * hairFacts.length)];
+            const factsArray = hairFacts[currentLang];
+            const randomFact = factsArray[Math.floor(Math.random() * factsArray.length)];
             document.getElementById('fact-text').innerText = randomFact;
 
             document.getElementById("result-box").style.display = "block";
