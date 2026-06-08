@@ -48,16 +48,16 @@ const langArr = {
     "404-btn": { "ru": "Вернуться на старт", "en": "Return to start" },
 
     // --- МЕНЮ КАЛЬКУЛЯТОРОВ ---
-    "menu-title": { "ru": "Генетические калькуляторы", "en": "Genetic Calculators" },
-    "menu-h2": { "ru": "🧬 Генетика для всех", "en": "🧬 Genetics for everyone" },
-    "menu-subtitle": { "ru": "Узнайте, что передастся по наследству. Выберите инструмент:", "en": "Find out what will be inherited. Choose a tool:" },
-    "menu-btn-height": { "ru": "📏 Калькулятор роста", "en": "📏 Height Calculator" },
-    "menu-btn-blood": { "ru": "🩸 Группа крови и Резус", "en": "🩸 Blood Type and Rh Factor" },
-    "menu-btn-eyes": { "ru": "👁 Вероятность цвета глаз", "en": "👁 Eye Color Probability" },
-    "menu-btn-hair": { "ru": "💇 Генетика волос (Цвет и Тип)", "en": "💇 Hair Genetics (Color & Type)" },
-    "menu-btn-face": { "ru": "🧩 Конструктор лица (Особые приметы)", "en": "🧩 Face Constructor (Special Traits)" },
-    "menu-btn-hands": { "ru": "✋ Левша или правша?", "en": "✋ Left-handed or Right-handed?" },
-    "menu-btn-share": { "ru": "📲 Поделиться калькулятором", "en": "📲 Share Calculator" },
+    "menu-title": { "ru": "Генетические калькуляторы | Krexpor", "en": "Genetic Calculators | Krexpor" },
+    "menu-header": { "ru": "🧬 Генетика для каждого", "en": "🧬 Genetics for everyone" },
+    "menu-desc": { "ru": "Узнайте, что передастся по наследству. Выберите инструмент:", "en": "Find out what will be inherited. Choose a tool:" },
+    "menu-height": { "ru": "Калькулятор роста", "en": "Height Calculator" },
+    "menu-blood": { "ru": "Группа крови и Резус-фактор", "en": "Blood Type and Rh Factor" },
+    "menu-eyes": { "ru": "Вероятность цвета глаз", "en": "Eye Color Probability" },
+    "menu-hair": { "ru": "Генетика волос (Цвет и тип)", "en": "Hair Genetics (Color & Type)" },
+    "menu-face": { "ru": "Конструктор лица (Особые черты)", "en": "Face Constructor (Special Traits)" },
+    "menu-hands": { "ru": "Левша или Правша?", "en": "Left-handed or Right-handed?" },
+    "btn-share": { "ru": "🔗 Поделиться калькулятором", "en": "🔗 Share Calculator" },
 
     // Новые элементы меню
     "menu-knowledge": { "ru": "База знаний (Словарь)", "en": "Knowledge Base (Dictionary)" },
