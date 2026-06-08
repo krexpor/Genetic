@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Конструктор лица</title>
+    <title data-lang="face-title">Конструктор лица</title>
     <link rel="stylesheet" href="style.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
@@ -24,95 +24,114 @@
 </head>
 <body>
     <div class="calculator-card">
-        <a href="index.html" class="back-link">⬅ Назад в меню</a>
+        <a href="index.html" class="back-link" data-lang="back-menu">⬅ Назад в меню</a>
         
-        <h2>Конструктор лица</h2>
-        <p class="subtitle">Узнайте вероятность наследования особых примет</p>
+        <h2 data-lang="face-h2">Конструктор лица</h2>
+        <p class="subtitle" data-lang="face-subtitle">Узнайте вероятность наследования особых примет</p>
         <hr>
         
         <div class="input-group">
-            <label>😊 Ямочки на щеках:</label>
+            <label data-lang="face-label-dimples">😊 Ямочки на щеках:</label>
             <div style="display: flex; gap: 10px; margin-top: 5px;">
                 <select id="dad-dimples" style="flex: 1;">
-                    <option value="yes">Отец: Есть</option>
-                    <option value="no" selected>Отец: Нет</option>
+                    <option value="yes" data-lang="face-opt-dad-yes">Отец: Есть</option>
+                    <option value="no" selected data-lang="face-opt-dad-no">Отец: Нет</option>
                 </select>
                 <select id="mom-dimples" style="flex: 1;">
-                    <option value="yes">Мать: Есть</option>
-                    <option value="no" selected>Мать: Нет</option>
+                    <option value="yes" data-lang="face-opt-mom-yes">Мать: Есть</option>
+                    <option value="no" selected data-lang="face-opt-mom-no">Мать: Нет</option>
                 </select>
             </div>
         </div>
 
         <div class="input-group">
-            <label>☀️ Веснушки:</label>
+            <label data-lang="face-label-freckles">☀️ Веснушки:</label>
             <div style="display: flex; gap: 10px; margin-top: 5px;">
                 <select id="dad-freckles" style="flex: 1;">
-                    <option value="yes">Отец: Есть</option>
-                    <option value="no" selected>Отец: Нет</option>
+                    <option value="yes" data-lang="face-opt-dad-yes">Отец: Есть</option>
+                    <option value="no" selected data-lang="face-opt-dad-no">Отец: Нет</option>
                 </select>
                 <select id="mom-freckles" style="flex: 1;">
-                    <option value="yes">Мать: Есть</option>
-                    <option value="no" selected>Мать: Нет</option>
+                    <option value="yes" data-lang="face-opt-mom-yes">Мать: Есть</option>
+                    <option value="no" selected data-lang="face-opt-mom-no">Мать: Нет</option>
                 </select>
             </div>
         </div>
 
         <div class="input-group">
-            <label>🦸‍♂️ Ямочка на подбородке:</label>
+            <label data-lang="face-label-chin">🦸‍♂️ Ямочка на подбородке:</label>
             <div style="display: flex; gap: 10px; margin-top: 5px;">
                 <select id="dad-chin" style="flex: 1;">
-                    <option value="yes">Отец: Есть</option>
-                    <option value="no" selected>Отец: Нет</option>
+                    <option value="yes" data-lang="face-opt-dad-yes">Отец: Есть</option>
+                    <option value="no" selected data-lang="face-opt-dad-no">Отец: Нет</option>
                 </select>
                 <select id="mom-chin" style="flex: 1;">
-                    <option value="yes">Мать: Есть</option>
-                    <option value="no" selected>Мать: Нет</option>
+                    <option value="yes" data-lang="face-opt-mom-yes">Мать: Есть</option>
+                    <option value="no" selected data-lang="face-opt-mom-no">Мать: Нет</option>
                 </select>
             </div>
         </div>
 
-        <button onclick="calculateFace()">Собрать профиль</button>
+        <button onclick="calculateFace()" data-lang="face-btn-calc">Собрать профиль</button>
 
         <div id="result-box" class="result-box" style="display: none;">
-            <h3>Вероятность для ребенка:</h3>
+            <h3 data-lang="face-result-title">Вероятность для ребенка:</h3>
             
             <div id="face-result" style="margin-top: 15px; font-size: 15px; font-weight: bold; line-height: 1.8; text-align: left; display: inline-block;">
                 </div>
 
             <div id="fact-box" style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed #444; text-align: left; font-size: 13px; color: #a0a0a0; line-height: 1.5;">
-                <b style="color: #a855f7;">💡 Интересный факт:</b> <span id="fact-text"></span>
+                <b style="color: #a855f7;" data-lang="face-fact-title">💡 Интересный факт:</b> <span id="fact-text"></span>
             </div>
         </div>
 
         <div class="seo-text-block">
-            <h3>Как наследуются уникальные черты лица?</h3>
-            <p>Генетика лица определяется сложной комбинацией ДНК обоих родителей. Многие «особые приметы», которые делают нашу внешность уникальной, передаются по наследству благодаря доминантным генам. Это означает, что если хотя бы один из родителей обладает этим признаком, вероятность его проявления у ребенка значительно возрастает.</p>
+            <h3 data-lang="face-seo-h3-1">Как наследуются уникальные черты лица?</h3>
+            <p data-lang="face-seo-p-1">Генетика лица определяется сложной комбинацией ДНК обоих родителей. Многие «особые приметы», которые делают нашу внешность уникальной, передаются по наследству благодаря доминантным генам. Это означает, что если хотя бы один из родителей обладает этим признаком, вероятность его проявления у ребенка значительно возрастает.</p>
             
-            <h4>Ямочки, веснушки и подбородок</h4>
-            <p>Ямочки на щеках и раздвоенный подбородок являются классическими примерами анатомических особенностей строения лицевых мышц или костей, которые передаются генетически. Веснушки же зависят от гена MC1R, который регулирует баланс пигмента. Интересно, что склонность к веснушкам закладывается в геноме, но для их появления на коже необходим внешний фактор — воздействие ультрафиолета (солнца).</p>
+            <h4 data-lang="face-seo-h4-1">Ямочки, веснушки и подбородок</h4>
+            <p data-lang="face-seo-p-2">Ямочки на щеках и раздвоенный подбородок являются классическими примерами анатомических особенностей строения лицевых мышц или костей, которые передаются генетически. Веснушки же зависят от гена MC1R, который регулирует баланс пигмента. Интересно, что склонность к веснушкам закладывается в геноме, но для их появления на коже необходим внешний фактор — воздействие ультрафиолета (солнца).</p>
             
-            <h4>Полигенное наследование</h4>
-            <p>Этот калькулятор черт лица использует базовые принципы наследования аутосомно-доминантных признаков. На практике на формирование внешности влияет множество генов-модификаторов, поэтому даже у родителей с ярко выраженными ямочками может родиться ребенок без них, если сыграет роль скрытая рецессивная генетика.</p>
+            <h4 data-lang="face-seo-h4-2">Полигенное наследование</h4>
+            <p data-lang="face-seo-p-3">Этот калькулятор черт лица использует базовые принципы наследования аутосомно-доминантных признаков. На практике на формирование внешности влияет множество генов-модификаторов, поэтому даже у родителей с ярко выраженными ямочками может родиться ребенок без них, если сыграет роль скрытая рецессивная генетика.</p>
         </div>
     </div>
 
     <script>
-        // Функция расчета для доминантных признаков
-        function getProbability(dad, mom) {
-            if (dad === 'yes' && mom === 'yes') return "<span style='color: #10b981;'>Высокая (75-100%)</span>";
-            if (dad === 'yes' || mom === 'yes') return "<span style='color: #f59e0b;'>Средняя (50%)</span>";
-            return "<span style='color: #ef4444;'>Низкая (< 5%)</span>";
+        // Функция расчета для доминантных признаков (с поддержкой языков)
+        function getProbability(dad, mom, lang) {
+            if (dad === 'yes' && mom === 'yes') {
+                return lang === 'en' ? "<span style='color: #10b981;'>High (75-100%)</span>" : "<span style='color: #10b981;'>Высокая (75-100%)</span>";
+            }
+            if (dad === 'yes' || mom === 'yes') {
+                return lang === 'en' ? "<span style='color: #f59e0b;'>Medium (50%)</span>" : "<span style='color: #f59e0b;'>Средняя (50%)</span>";
+            }
+            return lang === 'en' ? "<span style='color: #ef4444;'>Low (< 5%)</span>" : "<span style='color: #ef4444;'>Низкая (< 5%)</span>";
         }
 
-        const faceFacts = [
-            "Анатомически ямочки на щеках — это генетический дефект! Они появляются из-за раздвоения большой скуловой мышцы (Zygomaticus major). При улыбке кожа проваливается между двумя пучками этой мышцы.",
-            "Ни один ребенок в мире не рождается с веснушками. Они проявляются только после того, как кожа впервые подвергается воздействию ультрафиолетовых лучей (солнца).",
-            "Ямочка на подбородке образуется еще на стадии эмбриона, когда левая и правая половины челюстной кости (или мышцы) не срастаются до конца. Это абсолютно безопасная и очень красивая особенность.",
-            "Доминантные гены не обязательно означают, что они самые частые. Например, наличие шести пальцев — это доминантный ген, но он встречается крайне редко, так как его почти нет в популяции."
-        ];
+        const faceFacts = {
+            ru: [
+                "Анатомически ямочки на щеках — это генетический дефект! Они появляются из-за раздвоения большой скуловой мышцы (Zygomaticus major). При улыбке кожа проваливается между двумя пучками этой мышцы.",
+                "Ни один ребенок в мире не рождается с веснушками. Они проявляются только после того, как кожа впервые подвергается воздействию ультрафиолетовых лучей (солнца).",
+                "Ямочка на подбородке образуется еще на стадии эмбриона, когда левая и правая половины челюстной кости (или мышцы) не срастаются до конца. Это абсолютно безопасная и очень красивая особенность.",
+                "Доминантные гены не обязательно означают, что они самые частые. Например, наличие шести пальцев — это доминантный ген, но он встречается крайне редко, так как его почти нет в популяции."
+            ],
+            en: [
+                "Anatomically, cheek dimples are a genetic defect! They appear due to the bifurcation of the zygomaticus major muscle. When smiling, the skin falls between the two bundles of this muscle.",
+                "No child in the world is born with freckles. They appear only after the skin is first exposed to ultraviolet (sun) rays.",
+                "A cleft chin is formed at the embryonic stage when the left and right halves of the jawbone (or muscle) do not fuse completely. This is an absolutely safe and very beautiful feature.",
+                "Dominant genes do not necessarily mean they are the most common. For example, having six fingers is a dominant gene, but it is extremely rare as it is almost absent in the population."
+            ]
+        };
+
+        const resultLabels = {
+            ru: { dimples: "😊 <b>Ямочки на щеках:</b> ", freckles: "☀️ <b>Веснушки:</b> ", chin: "🦸‍♂️ <b>Ямочка на подбородке:</b> " },
+            en: { dimples: "😊 <b>Cheek dimples:</b> ", freckles: "☀️ <b>Freckles:</b> ", chin: "🦸‍♂️ <b>Cleft chin:</b> " }
+        };
 
         function calculateFace() {
+            const currentLang = window.currentLang || 'ru';
+
             // Получаем данные
             const dDimples = document.getElementById("dad-dimples").value;
             const mDimples = document.getElementById("mom-dimples").value;
@@ -124,17 +143,18 @@
             const mChin = document.getElementById("mom-chin").value;
 
             // Формируем результат
-            const resDimples = getProbability(dDimples, mDimples);
-            const resFreckles = getProbability(dFreckles, mFreckles);
-            const resChin = getProbability(dChin, mChin);
+            const resDimples = getProbability(dDimples, mDimples, currentLang);
+            const resFreckles = getProbability(dFreckles, mFreckles, currentLang);
+            const resChin = getProbability(dChin, mChin, currentLang);
 
             document.getElementById("face-result").innerHTML = 
-                "😊 <b>Ямочки на щеках:</b> " + resDimples + "<br>" +
-                "☀️ <b>Веснушки:</b> " + resFreckles + "<br>" +
-                "🦸‍♂️ <b>Ямочка на подбородке:</b> " + resChin;
+                resultLabels[currentLang].dimples + resDimples + "<br>" +
+                resultLabels[currentLang].freckles + resFreckles + "<br>" +
+                resultLabels[currentLang].chin + resChin;
 
             // Выбираем случайный факт
-            const randomFact = faceFacts[Math.floor(Math.random() * faceFacts.length)];
+            const factsArray = faceFacts[currentLang];
+            const randomFact = factsArray[Math.floor(Math.random() * factsArray.length)];
             document.getElementById('fact-text').innerText = randomFact;
 
             // Показываем результат
