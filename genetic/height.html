@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор роста</title>
+    <title data-lang="height-title">Калькулятор роста</title>
     <link rel="stylesheet" href="style.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
@@ -24,51 +24,50 @@
 </head>
 <body>
     <div class="calculator-card">
-        <a href="index.html" class="back-link">⬅ Назад в меню</a>
+        <a href="index.html" class="back-link" data-lang="back-menu">⬅ Назад в меню</a>
         
-        <h2>Калькулятор роста</h2>
-        <p class="subtitle">Введите рост родителей (в см)</p>
+        <h2 data-lang="height-h2">Калькулятор роста</h2>
+        <p class="subtitle" data-lang="height-subtitle">Введите рост родителей (в см)</p>
         <hr>
         
         <div class="input-group">
-            <label>Рост отца:</label>
-            <input type="number" id="father" placeholder="Например, 180">
+            <label data-lang="height-label-father">Рост отца:</label>
+            <input type="number" id="father" placeholder="180">
         </div>
 
         <div class="input-group">
-            <label>Рост матери:</label>
-            <input type="number" id="mother" placeholder="Например, 165">
+            <label data-lang="height-label-mother">Рост матери:</label>
+            <input type="number" id="mother" placeholder="165">
         </div>
 
         <div class="input-group">
-            <label>Пол ребенка:</label>
+            <label data-lang="height-label-gender">Пол ребенка:</label>
             <select id="gender">
-                <option value="boy">Мальчик</option>
-                <option value="girl">Девочка</option>
+                <option value="boy" data-lang="height-opt-boy">Мальчик</option>
+                <option value="girl" data-lang="height-opt-girl">Девочка</option>
             </select>
         </div>
 
-        <button onclick="calculateHeight()">Рассчитать рост</button>
+        <button onclick="calculateHeight()" data-lang="height-btn-calc">Рассчитать рост</button>
 
         <div id="result-box" class="result-box" style="display: none;">
-            <h3>Ожидаемый рост:</h3>
+            <h3 data-lang="height-result-title">Ожидаемый рост:</h3>
             <div id="final-height" style="font-size: 24px; font-weight: bold; color: #3b82f6; margin-top: 10px;"></div>
             
             <div id="fact-box" style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed #444; text-align: left; font-size: 13px; color: #a0a0a0; line-height: 1.5;">
-                <b style="color: #10b981;">💡 Интересный факт:</b> <span id="fact-text"></span>
+                <b style="color: #10b981;" data-lang="height-fact-title">💡 Интересный факт:</b> <span id="fact-text"></span>
             </div>
         </div>
 
-        <!-- SEO-контент для поисковиков -->
         <div class="seo-text-block">
-            <h3>Как рассчитать будущий рост ребенка?</h3>
-            <p>Генетика играет ключевую роль в формировании параметров тела человека. До 80% нашего финального роста заложено в ДНК, переданной по наследству от родителей. Для прогнозирования наиболее часто используется среднеродительский метод (модифицированная формула Таннера), который учитывает пол ребенка и физические данные отца и матери.</p>
+            <h3 data-lang="height-seo-h3-1">Как рассчитать будущий рост ребенка?</h3>
+            <p data-lang="height-seo-p-1">Генетика играет ключевую роль в формировании параметров тела человека. До 80% нашего финального роста заложено в ДНК, переданной по наследству от родителей. Для прогнозирования наиболее часто используется среднеродительский метод (модифицированная формула Таннера), который учитывает пол ребенка и физические данные отца и матери.</p>
             
-            <h4>Влияние внешних факторов</h4>
-            <p>Несмотря на сильную генетическую предрасположенность, оставшиеся 20% зависят от образа жизни. Сбалансированное питание, богатое кальцием и белком, регулярная физическая активность и качественный сон (именно в фазе глубокого сна вырабатывается соматотропин — гормон роста) помогают ребенку достичь своего генетического максимума.</p>
+            <h4 data-lang="height-seo-h4-1">Влияние внешних факторов</h4>
+            <p data-lang="height-seo-p-2">Несмотря на сильную генетическую предрасположенность, оставшиеся 20% зависят от образа жизни. Сбалансированное питание, богатое кальцием и белком, регулярная физическая активность и качественный сон (именно в фазе глубокого сна вырабатывается соматотропин — гормон роста) помогают ребенку достичь своего генетического максимума.</p>
             
-            <h4>Ограничения калькулятора</h4>
-            <p>Этот онлайн-калькулятор роста предоставляет статистически наиболее вероятный математический прогноз. Однако стоит помнить, что дети растут неравномерно (скачками). На итоговые сантиметры могут повлиять индивидуальные особенности эндокринной системы, перенесенные заболевания или генетические мутации, поэтому результат является ориентировочным.</p>
+            <h4 data-lang="height-seo-h4-2">Ограничения калькулятора</h4>
+            <p data-lang="height-seo-p-3">Этот онлайн-калькулятор роста предоставляет статистически наиболее вероятный математический прогноз. Однако стоит помнить, что дети растут неравномерно (скачками). На итоговые сантиметры могут повлиять индивидуальные особенности эндокринной системы, перенесенные заболевания или генетические мутации, поэтому результат является ориентировочным.</p>
         </div>
     </div>
 
@@ -80,20 +79,32 @@
             if (localStorage.getItem('childGender')) document.getElementById('gender').value = localStorage.getItem('childGender');
         });
 
-        const heightFacts = [
-            "Утренний бонус: Утром каждый человек примерно на 1-2 сантиметра выше, чем вечером. За ночь межпозвоночные диски расправляются, как губка в воде.",
-            "Космические гиганты: В условиях невесомости на МКС астронавты могут вырасти на 3-5 сантиметров! Без гравитации позвоночник максимально растягивается.",
-            "Правило 80/20: Рост человека лишь на 80% зависит от генетики. Остальные 20% — это питание, физическая активность и достаточный сон в период взросления.",
-            "Быстрая эволюция: Сегодня нидерландцы — самая высокая нация в мире. Но всего 200 лет назад они были одними из самых низких в Европе!"
-        ];
+        const heightFacts = {
+            ru: [
+                "Утренний бонус: Утром каждый человек примерно на 1-2 сантиметра выше, чем вечером. За ночь межпозвоночные диски расправляются, как губка в воде.",
+                "Космические гиганты: В условиях невесомости на МКС астронавты могут вырасти на 3-5 сантиметров! Без гравитации позвоночник максимально растягивается.",
+                "Правило 80/20: Рост человека лишь на 80% зависит от генетики. Остальные 20% — это питание, физическая активность и достаточный сон в период взросления.",
+                "Быстрая эволюция: Сегодня нидерландцы — самая высокая нация в мире. Но всего 200 лет назад они были одними из самых низких в Европе!"
+            ],
+            en: [
+                "Morning bonus: In the morning, everyone is about 1-2 centimeters taller than in the evening. Overnight, the intervertebral discs expand like a sponge in water.",
+                "Space giants: In zero gravity on the ISS, astronauts can grow 3-5 centimeters! Without gravity, the spine stretches to its maximum.",
+                "80/20 rule: Human height is only 80% dependent on genetics. The remaining 20% is nutrition, physical activity, and sufficient sleep during growing years.",
+                "Rapid evolution: Today, the Dutch are the tallest nation in the world. But just 200 years ago, they were among the shortest in Europe!"
+            ]
+        };
 
         function calculateHeight() {
             const fatherHeight = parseFloat(document.getElementById('father').value);
             const motherHeight = parseFloat(document.getElementById('mother').value);
             const gender = document.getElementById('gender').value;
+            const currentLang = window.currentLang || 'ru'; // Берем текущий язык или русский по умолчанию
+
+            const alertMsg = currentLang === 'en' ? "Please enter correct parents' height!" : "Пожалуйста, введите корректный рост родителей!";
+            const cmSuffix = currentLang === 'en' ? " cm" : " см";
 
             if (!fatherHeight || !motherHeight || fatherHeight <= 0 || motherHeight <= 0) {
-                alert("Пожалуйста, введите корректный рост родителей!");
+                alert(alertMsg);
                 return;
             }
 
@@ -109,10 +120,11 @@
                 predictedHeight = (fatherHeight + motherHeight - 13) / 2;
             }
 
-            document.getElementById('final-height').innerText = predictedHeight.toFixed(1) + " см";
+            document.getElementById('final-height').innerText = predictedHeight.toFixed(1) + cmSuffix;
             
-            // Выбираем случайный факт
-            const randomFact = heightFacts[Math.floor(Math.random() * heightFacts.length)];
+            // Выбираем случайный факт с учетом языка
+            const factsArray = heightFacts[currentLang];
+            const randomFact = factsArray[Math.floor(Math.random() * factsArray.length)];
             document.getElementById('fact-text').innerText = randomFact;
 
             document.getElementById('result-box').style.display = 'block';
