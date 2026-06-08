@@ -208,6 +208,14 @@ const langArr = {
     "chords-title": { "ru": "Справочник аккордов | Krexpor", "en": "Chord Dictionary | Krexpor" },
     "chords-h2": { "ru": "🎸 Базовые аккорды", "en": "🎸 Basic Chords" },
     "chords-desc": { "ru": "Выберите аккорд, чтобы увидеть правильную постановку пальцев.", "en": "Select a chord to see the correct finger placement." }
+
+    // Текст для справочника аккордов
+    "chords-seo-h3-1": { "ru": "Как читать схемы аккордов?", "en": "How to read chord diagrams?" },
+    "chords-seo-p-1": { "ru": "Аккорды на открытых струнах — это база, с которой начинает каждый гитарист. На схеме выше изображен гриф гитары: вертикальные линии — это струны (от самой толстой 6-й слева до самой тонкой 1-й справа), а горизонтальные — металлические порожки (лады). Красными точками отмечены места, где нужно прижать струну пальцами.", "en": "Open chords are the foundation every guitarist starts with. The diagram above shows a guitar fretboard: the vertical lines are strings (from the thickest 6th on the left to the thinnest 1st on the right), and the horizontal lines are frets. The red dots indicate where you need to press the string with your fingers." },
+    "chords-seo-h4-1": { "ru": "Что значат символы X и O?", "en": "What do the X and O symbols mean?" },
+    "chords-seo-p-2": { "ru": "<strong>Крестик (X)</strong> над струной означает, что она не должна звучать в этом аккорде. Её нужно либо не задевать при игре правой рукой, либо слегка приглушить левой. <br><strong>Нолик (O)</strong> означает «открытую» струну — она должна звучать свободно, не прижатая ни на одном ладу.", "en": "An <strong>X (cross)</strong> above a string means it shouldn't be played in this chord. You should either avoid strumming it or lightly mute it. <br>An <strong>O (circle)</strong> means an 'open' string—it should ring out freely without being fretted." },
+    "chords-seo-h4-2": { "ru": "Советы по постановке пальцев", "en": "Finger placement tips" },
+    "chords-seo-p-3": { "ru": "Старайтесь ставить пальцы почти перпендикулярно грифу (на самые подушечки), чтобы случайно не заглушить соседние струны. Прижимайте струну чуть ближе к нижнему металлическому порожку нужного лада — так звук будет чище, а усилий потребуется гораздо меньше.", "en": "Try to place your fingers almost perpendicular to the fretboard (on the very tips) so you don't accidentally mute adjacent strings. Press the string slightly closer to the lower metal fret line—this will produce a cleaner sound with much less effort." }
 };
 
 // Механизм переключения языков
