@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="tuner-title">Тюнер | Krexpor</title>
+    
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0WPCS9G55D');
+    </script>
+
+    <script src="/cookies.js" defer></script>
+    <script src="/lang.js" defer></script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/pitchfinder@2.3.0/dist/pitchfinder.min.js"></script>
+
+    <style>
+        .tuner-display { text-align: center; margin: 30px 0; }
+        .note-name { font-size: 5rem; font-weight: bold; color: #da3633; margin-bottom: 10px; }
+        .tuner-scale { margin: 30px 0; position: relative; }
+        .scale-labels { display: flex; justify-content: space-between; color: #8b949e; font-size: 12px; margin-bottom: 8px; }
+        .meter { height: 12px; background: #30363d; border-radius: 6px; position: relative; }
+        .needle { 
+            height: 100%; width: 4px; background: #da3633; 
+            position: absolute; left: 50%; transition: left 0.1s ease-out;
+            box-shadow: 0 0 10px #da3633;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator-card">
+        <a href="index.html" class="back-link" data-lang="back-menu">← Вернуться в меню</a>
+        <h2 data-lang="tuner-h2">🎸 Гитарный тюнер</h2>
+        
+        <div class="tuner-display">
+            <div id="note" class="note-name">--</div>
+            <div class="tuner-scale">
+                <div class="scale-labels"><span>-50</span><span>0</span><span>+50</span></div>
+                <div class="meter"><div id="needle" class="needle"></div></div>
+            </div>
+        </div>
+        
+        <button onclick="startTuner()" class="btn" id="tuner-btn" data-lang="tuner-start">Включить микрофон 🎙️</button>
+        <p style="font-size: 11px; color: #475569; text-align: center; margin-top: 15px;">
+            <span data-lang="tuner-note">Доступ нужен только для анализа звука в реальном времени.</span>
+        </p>
+    </div>
+
+    <script>
+        async function startTuner() {
+            const btn = document.getElementById('tuner-btn');
+            btn.disabled = true;
+            btn.innerText = "Слушаю...";
+
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            const analyser = audioCtx.createAnalyser();
+            const source = audioCtx.createMediaStreamSource(stream);
+            source.connect(analyser);
+            
+            const detectPitch = window.Pitchfinder.AMDF();
+            const buffer = new Float32Array(2048);
+
+            function update() {
+                analyser.getFloatTimeDomainData(buffer);
+                const pitch = detectPitch(buffer);
+                
+                if (pitch) {
+                    document.getElementById('note').innerText = "Hz: " + Math.round(pitch);
+                    // Логика движения стрелки будет здесь
+                }
+                requestAnimationFrame(update);
+            }
+            update();
+        }
+    </script>
+</body>
+</html>
