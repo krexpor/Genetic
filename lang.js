@@ -197,9 +197,27 @@ function changeLanguage(lang) {
     }
 }
 
-// Автоматическая проверка языка при загрузке каждой страницы
+// Автоматическая проверка и установка языка при загрузке каждой страницы
 document.addEventListener('DOMContentLoaded', () => {
-    // Проверяем, выбирал ли пользователь язык ранее
-    const savedLang = localStorage.getItem('selectedLang') || 'ru';
+    // 1. Проверяем, выбирал ли пользователь язык вручную (сохранено ли это в браузере)
+    let savedLang = localStorage.getItem('selectedLang');
+
+    // 2. Если ручного выбора еще не было, определяем язык его устройства
+    if (!savedLang) {
+        // Получаем код языка браузера (например, 'ru-RU', 'en-US', 'uk-UA')
+        const browserLang = navigator.language || navigator.userLanguage;
+        
+        // Если язык устройства русский, украинский или белорусский — ставим русский.
+        // Для всех остальных стран мира по умолчанию включаем английский.
+        if (browserLang.toLowerCase().startsWith('ru') || 
+            browserLang.toLowerCase().startsWith('uk') || 
+            browserLang.toLowerCase().startsWith('be')) {
+            savedLang = 'ru';
+        } else {
+            savedLang = 'en';
+        }
+    }
+
+    // 3. Применяем выбранный или определенный язык
     changeLanguage(savedLang);
 });
