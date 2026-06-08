@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Генетические калькуляторы</title>
+    <title data-lang="menu-title">Генетические калькуляторы</title>
     <link rel="stylesheet" href="style.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
@@ -25,37 +25,43 @@
 <body>
 
     <div class="calculator-card">
-        <h2>🧬 Генетика для всех</h2>
-        <p class="subtitle">Узнайте, что передастся по наследству. Выберите инструмент:</p>
+        <h2 data-lang="menu-h2">🧬 Генетика для всех</h2>
+        <p class="subtitle" data-lang="menu-subtitle">Узнайте, что передастся по наследству. Выберите инструмент:</p>
         
         <hr>
 
-        <a href="height.html" class="menu-btn">📏 Калькулятор роста</a>
-        <a href="blood.html" class="menu-btn">🩸 Группа крови и Резус</a>
-        <a href="eyes.html" class="menu-btn">👁 Вероятность цвета глаз</a>
-        <a href="hair.html" class="menu-btn">💇 Генетика волос (Цвет и Тип)</a>
-        <a href="face.html" class="menu-btn">🧩 Конструктор лица (Особые приметы)</a>
-        <a href="hands.html" class="menu-btn">✋ Левша или правша?</a>
+        <a href="height.html" class="menu-btn" data-lang="menu-btn-height">📏 Калькулятор роста</a>
+        <a href="blood.html" class="menu-btn" data-lang="menu-btn-blood">🩸 Группа крови и Резус</a>
+        <a href="eyes.html" class="menu-btn" data-lang="menu-btn-eyes">👁 Вероятность цвета глаз</a>
+        <a href="hair.html" class="menu-btn" data-lang="menu-btn-hair">💇 Генетика волос (Цвет и Тип)</a>
+        <a href="face.html" class="menu-btn" data-lang="menu-btn-face">🧩 Конструктор лица (Особые приметы)</a>
+        <a href="hands.html" class="menu-btn" data-lang="menu-btn-hands">✋ Левша или правша?</a>
 
         <hr style="margin-top: 30px; border-top: 1px solid #333;">
         
-        <button onclick="shareSite()" class="share-btn">📲 Поделиться калькулятором</button>
+        <button onclick="shareSite()" class="share-btn" data-lang="menu-btn-share">📲 Поделиться калькулятором</button>
 
     </div>
 
     <script>
         function shareSite() {
+            // Для мультиязычности мы будем брать эти строки из глобального словаря, 
+            // если он подключен, иначе оставляем русский по умолчанию
+            const shareTitle = window.currentLang === 'en' ? 'Genetic Calculators' : 'Генетические калькуляторы';
+            const shareText = window.currentLang === 'en' ? 'Check out this cool calculator! Find out the height and eye color of your future child 🧬' : 'Смотри, какой крутой калькулятор! Узнай рост и цвет глаз будущего ребенка 🧬';
+            const alertText = window.currentLang === 'en' ? 'Link copied to clipboard!' : 'Ссылка скопирована в буфер обмена!';
+
             if (navigator.share) {
                 // Если телефон поддерживает нативное меню "Поделиться"
                 navigator.share({
-                    title: 'Генетические калькуляторы',
-                    text: 'Смотри, какой крутой калькулятор! Узнай рост и цвет глаз будущего ребенка 🧬',
-                    url: 'https://krexpor.github.io/Genetic/'
+                    title: shareTitle,
+                    text: shareText,
+                    url: 'https://krexpor.com'
                 }).catch(console.error);
             } else {
                 // Если браузер старый или человек сидит с ПК — просто копируем ссылку
-                navigator.clipboard.writeText('https://krexpor.github.io/Genetic/');
-                alert('Ссылка скопирована в буфер обмена!');
+                navigator.clipboard.writeText('https://krexpor.com');
+                alert(alertText);
             }
         }
     </script>
