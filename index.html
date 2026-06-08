@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krexpor | Projects</title>
+    <title data-lang="page-title">Krexpor | Projects</title>
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
@@ -15,6 +15,9 @@
 
       gtag('config', 'G-0WPCS9G55D');
     </script>
+
+    <!-- ПОДКЛЮЧАЕМ НАШ СЛОВАРЬ -->
+    <script src="lang.js" defer></script>
 
     <style>
         body { 
@@ -38,6 +41,35 @@
             width: 90%; 
             position: relative; 
             overflow: hidden; 
+        }
+
+        /* Переключатель языков */
+        .lang-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid #30363d;
+            color: #8b949e;
+            border-radius: 6px;
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        .lang-btn:hover {
+            background: #30363d;
+            color: #f8fafc;
+            border-color: #8b949e;
         }
 
         /* Колибри внутри карточки */
@@ -116,6 +148,13 @@
 <body>
 
     <div class="container">
+        
+        <!-- Кнопки переключения языков -->
+        <div class="lang-switcher">
+            <button onclick="changeLanguage('ru')" class="lang-btn">RU</button>
+            <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+        </div>
+
         <svg class="bg-hummingbird" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <path d="M 35 45 Q 65 15 85 15 Q 70 30 55 50 Z" fill="#da3633" />
             <path d="M 20 40 Q 35 35 45 45 Q 55 55 60 80 Q 50 65 35 55 Q 25 50 20 40 Z" fill="#da3633" />
@@ -124,10 +163,10 @@
 
         <div class="content-wrapper">
             <h1>Krexpor</h1>
-            <p>Проекты и жизнь 20-ти летнего парня</p>
+            <p data-lang="bio">Проекты и жизнь 20-ти летнего парня</p>
             
-            <a href="genetic/index.html" class="btn">🧬 Генетические калькуляторы</a>
-            <a href="#" class="btn" style="background: #30363d; color: #8b949e; cursor: default;">🎸 Обучение (скоро)</a>
+            <a href="genetic/index.html" class="btn" data-lang="btn-genetic">🧬 Генетические калькуляторы</a>
+            <a href="#" class="btn" style="background: #30363d; color: #8b949e; cursor: default;" data-lang="btn-edu">🎸 Обучение (скоро)</a>
             
             <div class="social-links">
                 <a href="https://www.youtube.com/@Krexpor" class="social-link" target="_blank">YouTube</a>
@@ -136,7 +175,7 @@
             
             <div class="footer">
                 © 2026 Krexpor <br>
-                <a href="privacy.html" style="margin-top: 8px; display: inline-block;">Политика конфиденциальности</a>
+                <a href="privacy.html" style="margin-top: 8px; display: inline-block;" data-lang="privacy">Политика конфиденциальности</a>
             </div>
         </div>
     </div>
