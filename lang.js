@@ -59,6 +59,27 @@ const langArr = {
     "menu-btn-hands": { "ru": "✋ Левша или правша?", "en": "✋ Left-handed or Right-handed?" },
     "menu-btn-share": { "ru": "📲 Поделиться калькулятором", "en": "📲 Share Calculator" },
 
+    // Новые элементы меню
+    "menu-knowledge": { "ru": "База знаний (Словарь)", "en": "Knowledge Base (Dictionary)" },
+    "hub-desc": { "ru": "Все проекты и личный блог", "en": "All projects and personal blog" },
+
+    // База знаний (knowledge.html)
+    "know-title": { "ru": "База знаний | Krexpor", "en": "Knowledge Base | Krexpor" },
+    "know-h1": { "ru": "📚 База знаний", "en": "📚 Knowledge Base" },
+    "know-desc": { "ru": "Мини-словарь генетических терминов, которые используются в наших калькуляторах.", "en": "A mini-dictionary of genetic terms used in our calculators." },
+    
+    "know-t1": { "ru": "ДНК и Гены", "en": "DNA and Genes" },
+    "know-d1": { "ru": "Ген — это участок ДНК, который содержит инструкцию по созданию определенного признака (например, цвета глаз). У каждого человека есть две копии каждого гена: одна от матери, другая от отца.", "en": "A gene is a segment of DNA that contains instructions for a specific trait (e.g., eye color). Every person has two copies of each gene: one from the mother and one from the father." },
+    
+    "know-t2": { "ru": "Доминантный ген", "en": "Dominant Gene" },
+    "know-d2": { "ru": "Сильный ген. Если ребенок получает хотя бы один доминантный ген (например, карих глаз), этот признак обязательно проявится, подавив более слабый ген.", "en": "A strong gene. If a child receives at least one dominant gene (e.g., for brown eyes), this trait will manifest, suppressing the weaker gene." },
+    
+    "know-t3": { "ru": "Рецессивный ген", "en": "Recessive Gene" },
+    "know-d3": { "ru": "Слабый (скрытый) ген. Чтобы признак проявился (например, голубые глаза), ребенок должен получить два таких гена — и от мамы, и от папы. Если он один, то останется скрытым носителем.", "en": "A weak (hidden) gene. For a trait to manifest (e.g., blue eyes), a child must inherit two such genes—one from mom and one from dad. If there's only one, they become a hidden carrier." },
+    
+    "know-t4": { "ru": "Генотип и Фенотип", "en": "Genotype and Phenotype" },
+    "know-d4": { "ru": "Генотип — это ваш скрытый набор генов (то, что записано в ДНК). Фенотип — это то, как эти гены проявляются внешне (ваша реальная внешность).", "en": "Genotype is your hidden set of genes (what is written in your DNA). Phenotype is how these genes physically manifest (your actual appearance)." },
+
     // --- КАЛЬКУЛЯТОР РОСТА ---
     "height-title": { "ru": "Калькулятор роста", "en": "Height Calculator" },
     "height-h2": { "ru": "Калькулятор роста", "en": "Height Calculator" },
