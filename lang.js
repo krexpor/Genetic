@@ -196,7 +196,7 @@ const langArr = {
     "blood-seo-h4-1": { "ru": "Что такое резус-фактор (Rh)?", "en": "What is the Rh factor?" },
     "blood-seo-p-2": { "ru": "Резус-фактор — это белок на поверхности эритроцитов. Положительный резус (Rh+) является доминантным признаком, а отрицательный (Rh-) — рецессивным. Важно знать: у двух родителей с положительным резусом вполне может родиться ребенок с отрицательным, если оба скрыто несут рецессивный ген.", "en": "The Rh factor is a protein on the surface of red blood cells. A positive Rh (Rh+) is a dominant trait, and a negative (Rh-) is a recessive one. It is important to know: two parents with a positive Rh can easily have a child with a negative one if both secretly carry the recessive gene." },
     "blood-seo-h4-2": { "ru": "Точность генетического прогноза", "en": "Accuracy of the genetic forecast" },
-    "blood-seo-p-3": { "ru": "Наш онлайн-калькулятор использует классические законы наследования Менделя для расчета вероятностей. Однако биология иногда преподносит сюрпризы: в редких случаях возможны генетические исключения, такие как «бомбейский феномен». Поэтому для медицинских целей и 100% подтверждения всегда требуется лабораторный анализ крови.", "en": "Our online calculator uses classic Mendelian laws of inheritance to calculate probabilities. However, biology sometimes presents surprises: in rare cases, genetic exceptions are possible, such as the 'Bombay phenotype'. Therefore, a laboratory blood test is always required for medical purposes and 100% confirmation." }
+    "blood-seo-p-3": { "ru": "Наш онлайн-калькулятор использует классические законы наследования Менделя для расчета вероятностей. Однако биология иногда преподносит сюрпризы: в редких случаях возможны генетические исключения, такие как «бомбейский феномен». Поэтому для медицинских целей и 100% подтверждения всегда требуется лабораторный анализ крови.", "en": "Our online calculator uses classic Mendelian laws of inheritance to calculate probabilities. However, biology sometimes presents surprises: in rare cases, genetic exceptions are possible, such as the 'Bombay phenotype'. Therefore, a laboratory blood test is always required for medical purposes and 100% confirmation." },
 
     // --- ГИТАРНЫЙ РАЗДЕЛ ---
     "guitar-menu-title": { "ru": "Гитара | Krexpor", "en": "Guitar | Krexpor" },
@@ -207,7 +207,7 @@ const langArr = {
     // Справочник аккордов
     "chords-title": { "ru": "Справочник аккордов | Krexpor", "en": "Chord Dictionary | Krexpor" },
     "chords-h2": { "ru": "🎸 Базовые аккорды", "en": "🎸 Basic Chords" },
-    "chords-desc": { "ru": "Выберите аккорд, чтобы увидеть правильную постановку пальцев.", "en": "Select a chord to see the correct finger placement." }
+    "chords-desc": { "ru": "Выберите аккорд, чтобы увидеть правильную постановку пальцев.", "en": "Select a chord to see the correct finger placement." },
 
     // Текст для справочника аккордов
     "chords-seo-h3-1": { "ru": "Как читать схемы аккордов?", "en": "How to read chord diagrams?" },
