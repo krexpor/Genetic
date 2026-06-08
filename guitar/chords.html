@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="chords-title">Справочник аккордов | Krexpor</title>
+    
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0WPCS9G55D');
+    </script>
+    <script src="/cookies.js" defer></script>
+    <script src="/lang.js" defer></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
+
+    <style>
+        .chord-btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .chord-btn {
+            background: #111318;
+            color: #8b949e;
+            border: 1px solid #30363d;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+        .chord-btn:hover { border-color: #da3633; color: #f8fafc; }
+        .chord-btn.active {
+            background: #da3633;
+            color: white;
+            border-color: #da3633;
+            box-shadow: 0 0 15px rgba(218, 54, 51, 0.4);
+        }
+        .fretboard-container {
+            background: #111318;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator-card">
+        <a href="index.html" class="back-link" data-lang="back-menu">← Вернуться в меню</a>
+        
+        <h2 data-lang="chords-h2">🎸 Базовые аккорды</h2>
+        <p class="subtitle" data-lang="chords-desc">Выберите аккорд, чтобы увидеть правильную постановку пальцев.</p>
+
+        <div class="chord-btn-group">
+            <button class="chord-btn active" id="btn-Am" onclick="drawChord('Am')">Am</button>
+            <button class="chord-btn" id="btn-C" onclick="drawChord('C')">C</button>
+            <button class="chord-btn" id="btn-Em" onclick="drawChord('Em')">Em</button>
+            <button class="chord-btn" id="btn-G" onclick="drawChord('G')">G</button>
+            <button class="chord-btn" id="btn-F" onclick="drawChord('F')">F</button>
+        </div>
+
+        <div class="fretboard-container">
+            <svg id="fretboard" viewBox="0 0 120 160" width="100%" style="max-width: 220px; display: block; margin: 0 auto; overflow: visible;">
+                <line x1="10" y1="20" x2="10" y2="160" stroke="#475569" stroke-width="2.5"/>
+                <line x1="30" y1="20" x2="30" y2="160" stroke="#475569" stroke-width="2"/>
+                <line x1="50" y1="20" x2="50" y2="160" stroke="#475569" stroke-width="2"/>
+                <line x1="70" y1="20" x2="70" y2="160" stroke="#475569" stroke-width="1.5"/>
+                <line x1="90" y1="20" x2="90" y2="160" stroke="#475569" stroke-width="1.5"/>
+                <line x1="110" y1="20" x2="110" y2="160" stroke="#475569" stroke-width="1"/>
+                
+                <line x1="8" y1="20" x2="112" y2="20" stroke="#f8fafc" stroke-width="4"/>
+                
+                <line x1="10" y1="55" x2="110" y2="55" stroke="#30363d" stroke-width="2"/>
+                <line x1="10" y1="90" x2="110" y2="90" stroke="#30363d" stroke-width="2"/>
+                <line x1="10" y1="125" x2="110" y2="125" stroke="#30363d" stroke-width="2"/>
+                <line x1="10" y1="160" x2="110" y2="160" stroke="#30363d" stroke-width="2"/>
+                
+                <g id="chord-symbols"></g>
+                <g id="chord-dots"></g>
+            </svg>
+        </div>
+    </div>
+
+    <script>
+        const chordData = {
+            'Am': ['x', 0, 2, 2, 1, 0],
+            'C':  ['x', 3, 2, 0, 1, 0],
+            'Em': [0, 2, 2, 0, 0, 0],
+            'G':  [3, 2, 0, 0, 0, 3],
+            'F':  ['x', 3, 3, 2, 1, 1]
+        };
+
+        const stringsX = [10, 30, 50, 70, 90, 110];
+        const fretsY = [37.5, 72.5, 107.5, 142.5];
+
+        function drawChord(chordName) {
+            const data = chordData[chordName];
+            const dotsGroup = document.getElementById('chord-dots');
+            const symGroup = document.getElementById('chord-symbols');
+            
+            dotsGroup.innerHTML = '';
+            symGroup.innerHTML = '';
+            
+            data.forEach((val, index) => {
+                const x = stringsX[index];
+                if (val === 'x') {
+                    symGroup.innerHTML += `<text x="${x}" y="8" fill="#8b949e" font-size="12" font-family="sans-serif" text-anchor="middle">X</text>`;
+                } else if (val === 0) {
+                    symGroup.innerHTML += `<text x="${x}" y="8" fill="#8b949e" font-size="12" font-family="sans-serif" text-anchor="middle">O</text>`;
+                } else {
+                    const y = fretsY[val - 1];
+                    dotsGroup.innerHTML += `<circle cx="${x}" cy="${y}" r="7" fill="#da3633" />`;
+                }
+            });
+            
+            document.querySelectorAll('.chord-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + chordName).classList.add('active');
+        }
+
+        drawChord('Am');
+    </script>
+</body>
+</html>
