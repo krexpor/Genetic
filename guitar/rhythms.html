@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="rhythms-title">Гитарные бои | Krexpor</title>
+    
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0WPCS9G55D');
+    </script>
+    <script src="/cookies.js" defer></script>
+    <script src="/lang.js" defer></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
+
+    <style>
+        .rhythm-card {
+            background: #111318;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 25px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .rhythm-name {
+            color: #f8fafc;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .rhythm-desc {
+            color: #8b949e;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+        .arrows-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            font-size: 2.2rem;
+        }
+        .arrow {
+            color: #475569;
+            transition: color 0.1s, transform 0.1s;
+        }
+        .arrow.active {
+            color: #da3633;
+            transform: scale(1.2);
+            text-shadow: 0 0 15px rgba(218, 54, 51, 0.6);
+        }
+        .play-btn {
+            background: transparent;
+            color: #8b949e;
+            border: 1px solid #30363d;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .play-btn:hover, .play-btn.playing {
+            border-color: #da3633;
+            color: #f8fafc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator-card">
+        <a href="index.html" class="back-link" data-lang="back-menu">← Вернуться в меню</a>
+        
+        <h2 data-lang="rhythms-h2">🥁 Гитарные бои</h2>
+        <p class="subtitle" data-lang="rhythms-sub">Основные рисунки для правой руки. Нажмите Play, чтобы увидеть визуализацию ритма.</p>
+
+        <div class="rhythm-card">
+            <div class="rhythm-name" data-lang="rhythm-4">Бой «Четверка» (Базовый)</div>
+            <div class="rhythm-desc" data-lang="rhythm-4-desc">Простой и ровный бой для новичков.</div>
+            <div class="arrows-container" id="arr-4">
+                <span class="arrow">↓</span>
+                <span class="arrow">↑</span>
+                <span class="arrow">↓</span>
+                <span class="arrow">↑</span>
+            </div>
+            <button class="play-btn" onclick="playRhythm('arr-4', this)" data-lang="rhythm-play">▶ Показать ритм</button>
+        </div>
+
+        <div class="rhythm-card">
+            <div class="rhythm-name" data-lang="rhythm-6">Бой «Шестерка» (Эстрадный)</div>
+            <div class="rhythm-desc" data-lang="rhythm-6-desc">Самый популярный бой в мире. Подходит для 80% песен.</div>
+            <div class="arrows-container" id="arr-6">
+                <span class="arrow">↓</span>
+                <span class="arrow">↓</span>
+                <span class="arrow">↑</span>
+                <span class="arrow" style="margin-left: 10px;">↑</span>
+                <span class="arrow">↓</span>
+                <span class="arrow">↑</span>
+            </div>
+            <button class="play-btn" onclick="playRhythm('arr-6', this)" data-lang="rhythm-play">▶ Показать ритм</button>
+        </div>
+
+        <div class="rhythm-card">
+            <div class="rhythm-name" data-lang="rhythm-8">Бой «Восьмерка»</div>
+            <div class="rhythm-desc" data-lang="rhythm-8-desc">Длинный и красивый рисунок для баллад.</div>
+            <div class="arrows-container" id="arr-8">
+                <span class="arrow">↓</span>
+                <span class="arrow">↓</span>
+                <span class="arrow">↑</span>
+                <span class="arrow">↓</span>
+                <span class="arrow" style="margin-left: 10px;">↓</span>
+                <span class="arrow">↑</span>
+                <span class="arrow">↓</span>
+                <span class="arrow">↑</span>
+            </div>
+            <button class="play-btn" onclick="playRhythm('arr-8', this)" data-lang="rhythm-play">▶ Показать ритм</button>
+        </div>
+
+        <div class="seo-text-block">
+            <h3 data-lang="rhythms-seo-h3">Как читать стрелочки?</h3>
+            <p data-lang="rhythms-seo-p1">Стрелка вниз (↓) означает удар по струнам сверху вниз (от 6-й толстой струны к 1-й тонкой). Стрелка вверх (↑) — возвратное движение снизу вверх.</p>
+            <h4 data-lang="rhythms-seo-h4">Паузы и глушение</h4>
+            <p data-lang="rhythms-seo-p2">Пробелы между стрелочками визуализируют микро-паузу. Ваша рука всегда должна двигаться вверх-вниз как маятник, даже если вы не задеваете струны — это называется «холостой взмах». Именно он помогает держать ровный ритм.</p>
+        </div>
+
+    </div>
+
+    <script>
+        let currentInterval = null;
+        let activeBtn = null;
+
+        function playRhythm(containerId, btnElement) {
+            // Останавливаем предыдущую анимацию, если она была
+            if (currentInterval) {
+                clearInterval(currentInterval);
+                document.querySelectorAll('.arrow').forEach(a => a.classList.remove('active'));
+            }
+            if (activeBtn) activeBtn.classList.remove('playing');
+
+            const container = document.getElementById(containerId);
+            const arrows = container.querySelectorAll('.arrow');
+            let i = 0;
+
+            activeBtn = btnElement;
+            activeBtn.classList.add('playing');
+
+            // Запускаем пульсацию с шагом в 400мс
+            currentInterval = setInterval(() => {
+                arrows.forEach(a => a.classList.remove('active')); // гасим все
+                if (arrows[i]) {
+                    arrows[i].classList.add('active'); // зажигаем текущую
+                }
+                i++;
+                if (i >= arrows.length) {
+                    i = 0; // Начинаем заново по кругу
+                }
+            }, 400); 
+
+            // Автоматически останавливаем через 10 секунд, чтобы не сажать батарею телефона
+            setTimeout(() => {
+                clearInterval(currentInterval);
+                arrows.forEach(a => a.classList.remove('active'));
+                activeBtn.classList.remove('playing');
+            }, 10000);
+        }
+    </script>
+</body>
+</html>
