@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Левша или правша</title>
+    <title data-lang="hands-title">Левша или правша</title>
     <link rel="stylesheet" href="style.css">
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
@@ -24,79 +24,98 @@
 </head>
 <body>
     <div class="calculator-card">
-        <a href="index.html" class="back-link">⬅ Назад в меню</a>
+        <a href="index.html" class="back-link" data-lang="back-menu">⬅ Назад в меню</a>
         
-        <h2>Левша или правша?</h2>
-        <p class="subtitle">Узнайте вероятность ведущей руки у ребенка</p>
+        <h2 data-lang="hands-h2">Левша или правша?</h2>
+        <p class="subtitle" data-lang="hands-subtitle">Узнайте вероятность ведущей руки у ребенка</p>
         <hr>
         
         <div class="input-group">
-            <label>Ведущая рука отца:</label>
+            <label data-lang="hands-label-dad">Ведущая рука отца:</label>
             <select id="dad-hand">
-                <option value="right">Правша</option>
-                <option value="left">Левша</option>
+                <option value="right" data-lang="hands-opt-right">Правша</option>
+                <option value="left" data-lang="hands-opt-left">Левша</option>
             </select>
         </div>
 
         <div class="input-group">
-            <label>Ведущая рука матери:</label>
+            <label data-lang="hands-label-mom">Ведущая рука матери:</label>
             <select id="mom-hand">
-                <option value="right">Правша</option>
-                <option value="left">Левша</option>
+                <option value="right" data-lang="hands-opt-right">Правша</option>
+                <option value="left" data-lang="hands-opt-left">Левша</option>
             </select>
         </div>
 
-        <button onclick="calculateHands()">Узнать вероятность</button>
+        <button onclick="calculateHands()" data-lang="hands-btn-calc">Узнать вероятность</button>
 
         <div id="result-box" class="result-box" style="display: none;">
-            <h3>Прогноз для ребенка:</h3>
+            <h3 data-lang="hands-result-title">Прогноз для ребенка:</h3>
             
             <div id="hand-result" style="margin-top: 15px; font-size: 16px; font-weight: bold; line-height: 1.8; text-align: left; display: inline-block;">
                 </div>
 
             <div id="fact-box" style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed #444; text-align: left; font-size: 13px; color: #a0a0a0; line-height: 1.5;">
-                <b style="color: #fbbf24;">💡 Интересный факт:</b> <span id="fact-text"></span>
+                <b style="color: #fbbf24;" data-lang="hands-fact-title">💡 Интересный факт:</b> <span id="fact-text"></span>
             </div>
         </div>
 
         <div class="seo-text-block">
-            <h3>Передается ли леворукость по наследству?</h3>
-            <p>Генетика леворукости — одна из самых интересных загадок биологии. В отличие от группы крови, ведущая рука не определяется одним единственным геном. Это сложный полигенный признак, на который влияет комбинация из более чем 40 различных участков ДНК, а также факторы окружающей среды в период внутриутробного развития.</p>
+            <h3 data-lang="hands-seo-h3-1">Передается ли леворукость по наследству?</h3>
+            <p data-lang="hands-seo-p-1">Генетика леворукости — одна из самых интересных загадок биологии. В отличие от группы крови, ведущая рука не определяется одним единственным геном. Это сложный полигенный признак, на который влияет комбинация из более чем 40 различных участков ДНК, а также факторы окружающей среды в период внутриутробного развития.</p>
             
-            <h4>Асимметрия мозга и моторные функции</h4>
-            <p>Выбор ведущей руки тесно связан с функциональной асимметрией головного мозга. У большинства правшей за моторику и речь отвечает левое полушарие. У левшей распределение этих функций более сложное. Статистика показывает, что если оба родителя — левши, вероятность рождения леворукого ребенка составляет около 26%, что значительно выше, чем в среднем по популяции (около 10%).</p>
+            <h4 data-lang="hands-seo-h4-1">Асимметрия мозга и моторные функции</h4>
+            <p data-lang="hands-seo-p-2">Выбор ведущей руки тесно связан с функциональной асимметрией головного мозга. У большинства правшей за моторику и речь отвечает левое полушарие. У левшей распределение этих функций более сложное. Статистика показывает, что если оба родителя — левши, вероятность рождения леворукого ребенка составляет около 26%, что значительно выше, чем в среднем по популяции (около 10%).</p>
             
-            <h4>Точность прогноза</h4>
-            <p>Данный онлайн-калькулятор базируется на глобальных статистических исследованиях наследования рукости. Важно понимать, что даже у двух родителей-правшей с вероятностью около 9% может родиться ребенок-левша из-за случайной комбинации генов или эпигенетических факторов.</p>
+            <h4 data-lang="hands-seo-h4-2">Точность прогноза</h4>
+            <p data-lang="hands-seo-p-3">Данный онлайн-калькулятор базируется на глобальных статистических исследованиях наследования рукости. Важно понимать, что даже у двух родителей-правшей с вероятностью около 9% может родиться ребенок-левша из-за случайной комбинации генов или эпигенетических факторов.</p>
         </div>
     </div>
 
     <script>
-        // Статистическая матрица наследования рукости
+        // Статистическая матрица наследования рукости (Мультиязычная)
         const handRules = {
-            "right+right": "🫱 Правша: ~91%<br>🫲 Левша: ~9%",
-            "right+left": "🫱 Правша: ~81%<br>🫲 Левша: ~19%",
-            "left+right": "🫱 Правша: ~81%<br>🫲 Левша: ~19%",
-            "left+left": "🫱 Правша: ~74%<br>🫲 Левша: ~26%"
+            ru: {
+                "right+right": "🫱 Правша: ~91%<br>🫲 Левша: ~9%",
+                "right+left": "🫱 Правша: ~81%<br>🫲 Левша: ~19%",
+                "left+right": "🫱 Правша: ~81%<br>🫲 Левша: ~19%",
+                "left+left": "🫱 Правша: ~74%<br>🫲 Левша: ~26%"
+            },
+            en: {
+                "right+right": "🫱 Right-handed: ~91%<br>🫲 Left-handed: ~9%",
+                "right+left": "🫱 Right-handed: ~81%<br>🫲 Left-handed: ~19%",
+                "left+right": "🫱 Right-handed: ~81%<br>🫲 Left-handed: ~19%",
+                "left+left": "🫱 Right-handed: ~74%<br>🫲 Left-handed: ~26%"
+            }
         };
 
-        const handFacts = [
-            "Около 10% населения Земли — левши. Интересно, что среди мужчин леворукость встречается примерно на 23% чаще, чем среди женщин.",
-            "Парадокс близнецов: Даже у абсолютно идентичных близнецов с одинаковой ДНК один может родиться правшой, а второй — левшой. Это доказывает, что на леворукость влияет не только генетика.",
-            "Асимметрия мозга: У 95% правшей за речь отвечает левое полушарие. У левшей все сложнее: у 70% это также левое полушарие, у 15% — правое, а у 15% функции распределены поровну.",
-            "Древняя пропорция: Археологи изучили сколы на каменных орудиях древних людей и выяснили, что соотношение левшей и правшей (10 к 90) остается неизменным последние 500 000 лет!"
-        ];
+        const handFacts = {
+            ru: [
+                "Около 10% населения Земли — левши. Интересно, что среди мужчин леворукость встречается примерно на 23% чаще, чем среди женщин.",
+                "Парадокс близнецов: Даже у абсолютно идентичных близнецов с одинаковой ДНК один может родиться правшой, а второй — левшой. Это доказывает, что на леворукость влияет не только генетика.",
+                "Асимметрия мозга: У 95% правшей за речь отвечает левое полушарие. У левшей все сложнее: у 70% это также левое полушарие, у 15% — правое, а у 15% функции распределены поровну.",
+                "Древняя пропорция: Археологи изучили сколы на каменных орудиях древних людей и выяснили, что соотношение левшей и правшей (10 к 90) остается неизменным последние 500 000 лет!"
+            ],
+            en: [
+                "About 10% of the world's population is left-handed. Interestingly, left-handedness is about 23% more common among men than women.",
+                "The twin paradox: Even absolutely identical twins with the same DNA can be born one right-handed and the other left-handed. This proves that left-handedness is influenced by more than just genetics.",
+                "Brain asymmetry: In 95% of right-handers, the left hemisphere is responsible for speech. For left-handers, it is more complicated: in 70% it is also the left hemisphere, in 15% it is the right, and in 15% the functions are distributed equally.",
+                "Ancient proportion: Archaeologists have studied chips on the stone tools of ancient people and found that the ratio of left-handers to right-handers (10 to 90) has remained unchanged for the last 500,000 years!"
+            ]
+        };
 
         function calculateHands() {
             const dadH = document.getElementById("dad-hand").value;
             const momH = document.getElementById("mom-hand").value;
             const combo = dadH + "+" + momH;
+            
+            const currentLang = window.currentLang || 'ru';
 
             // Выводим результат
-            document.getElementById("hand-result").innerHTML = handRules[combo];
+            document.getElementById("hand-result").innerHTML = handRules[currentLang][combo];
 
             // Случайный факт
-            const randomFact = handFacts[Math.floor(Math.random() * handFacts.length)];
+            const factsArray = handFacts[currentLang];
+            const randomFact = factsArray[Math.floor(Math.random() * factsArray.length)];
             document.getElementById('fact-text').innerText = randomFact;
 
             // Показываем блок с анимацией
