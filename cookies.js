@@ -52,10 +52,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // 2. Автоматически добавляем HTML плашки
     const cookieHtml = `
     <div id="cookie-toast" class="cookie-toast">
-        <p>Мы используем немного cookies для аналитики Google. Никакой магии, только базовая статистика. 🍪</p>
+        <p data-lang="cookie-text">Мы используем немного cookies для аналитики Google. Никакой магии, только базовая статистика. 🍪</p>
         <div class="cookie-buttons">
-            <button id="accept-cookies" class="cookie-btn">Ок, понятно</button>
-            <a href="/privacy.html" class="cookie-link">Подробнее</a>
+            <button id="accept-cookies" class="cookie-btn" data-lang="cookie-btn-accept">Ок, понятно</button>
+            <a href="/privacy.html" class="cookie-link" data-lang="cookie-link">Подробнее</a>
         </div>
     </div>`;
     document.body.insertAdjacentHTML('beforeend', cookieHtml);
