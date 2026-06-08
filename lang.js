@@ -3,7 +3,7 @@ const langArr = {
     "page-title": { "ru": "Krexpor | Projects", "en": "Krexpor | Projects" },
     "bio": { "ru": "Проекты и жизнь 20-ти летнего парня", "en": "Projects and life of a 20-year-old guy" },
     "btn-genetic": { "ru": "🧬 Генетические калькуляторы", "en": "🧬 Genetic Calculators" },
-    "btn-edu": { "ru": "🎸 Обучение (скоро)", "en": "🎸 Education (soon)" },
+    "btn-guitar-hub": { "ru": "🎸 Гитара и музыка", "en": "🎸 Guitar & Music" },
     "privacy": { "ru": "Политика конфиденциальности", "en": "Privacy Policy" },
     "back-home": { "ru": "← Вернуться на главную", "en": "← Back to home" },
     "back-menu": { "ru": "⬅ Назад в меню", "en": "⬅ Back to menu" },
@@ -199,7 +199,6 @@ const langArr = {
     "blood-seo-p-3": { "ru": "Наш онлайн-калькулятор использует классические законы наследования Менделя для расчета вероятностей. Однако биология иногда преподносит сюрпризы: в редких случаях возможны генетические исключения, такие как «бомбейский феномен». Поэтому для медицинских целей и 100% подтверждения всегда требуется лабораторный анализ крови.", "en": "Our online calculator uses classic Mendelian laws of inheritance to calculate probabilities. However, biology sometimes presents surprises: in rare cases, genetic exceptions are possible, such as the 'Bombay phenotype'. Therefore, a laboratory blood test is always required for medical purposes and 100% confirmation." }
 
     // --- ГИТАРНЫЙ РАЗДЕЛ ---
-    "btn-guitar-hub": { "ru": "🎸 Гитара и музыка", "en": "🎸 Guitar & Music" },
     "guitar-menu-title": { "ru": "Гитара | Krexpor", "en": "Guitar | Krexpor" },
     "guitar-menu-h2": { "ru": "🎸 Гитарный уголок", "en": "🎸 Guitar Corner" },
     "guitar-menu-desc": { "ru": "Мой путь обучения и полезные утилиты для игры на гитаре.", "en": "My learning path and useful guitar utilities." },
