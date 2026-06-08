@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор группы крови</title>
+    <title data-lang="blood-title">Калькулятор группы крови</title>
     <link rel="stylesheet" href="style.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
@@ -24,14 +24,14 @@
 </head>
 <body>
     <div class="calculator-card">
-        <a href="index.html" class="back-link">⬅ Назад в меню</a>
+        <a href="index.html" class="back-link" data-lang="back-menu">⬅ Назад в меню</a>
         
-        <h2>Группа крови</h2>
-        <p class="subtitle">Узнайте возможную группу крови ребенка</p>
+        <h2 data-lang="blood-h2">Группа крови</h2>
+        <p class="subtitle" data-lang="blood-subtitle">Узнайте возможную группу крови ребенка</p>
         <hr>
         
         <div class="input-group">
-            <label>Группа крови отца:</label>
+            <label data-lang="blood-label-dad">Группа крови отца:</label>
             <select id="dad-blood">
                 <option value="O">I (O)</option>
                 <option value="A">II (A)</option>
@@ -45,7 +45,7 @@
         </div>
 
         <div class="input-group">
-            <label>Группа крови матери:</label>
+            <label data-lang="blood-label-mom">Группа крови матери:</label>
             <select id="mom-blood">
                 <option value="O">I (O)</option>
                 <option value="A">II (A)</option>
@@ -58,28 +58,27 @@
             </select>
         </div>
 
-        <button onclick="calculateBlood()">Показать возможные варианты</button>
+        <button onclick="calculateBlood()" data-lang="blood-btn-calc">Показать возможные варианты</button>
 
         <div id="result-box" class="result-box" style="display: none;">
-            <h3>Возможная группа крови:</h3>
+            <h3 data-lang="blood-result-title">Возможная группа крови:</h3>
             <div id="blood-result" style="margin-top: 15px; font-size: 16px; font-weight: bold; line-height: 1.8; text-align: left; display: inline-block;">
                 </div>
 
             <div id="fact-box" style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed #444; text-align: left; font-size: 13px; color: #a0a0a0; line-height: 1.5;">
-                <b style="color: #ef4444;">💡 Интересный факт:</b> <span id="fact-text"></span>
+                <b style="color: #ef4444;" data-lang="blood-fact-title">💡 Интересный факт:</b> <span id="fact-text"></span>
             </div>
         </div>
 
-        <!-- SEO-контент для поисковиков -->
         <div class="seo-text-block">
-            <h3>Как наследуется группа крови ребенка?</h3>
-            <p>Группа крови человека определяется генами, переданными от обоих родителей по системе AB0. Существует три основных аллеля: A, B и 0. Гены A и B являются доминантными, а ген 0 — рецессивным. Именно их комбинация формирует одну из четырех групп крови: I(0), II(A), III(B) или IV(AB).</p>
+            <h3 data-lang="blood-seo-h3-1">Как наследуется группа крови ребенка?</h3>
+            <p data-lang="blood-seo-p-1">Группа крови человека определяется генами, переданными от обоих родителей по системе AB0. Существует три основных аллеля: A, B и 0. Гены A и B являются доминантными, а ген 0 — рецессивным. Именно их комбинация формирует одну из четырех групп крови: I(0), II(A), III(B) или IV(AB).</p>
             
-            <h4>Что такое резус-фактор (Rh)?</h4>
-            <p>Резус-фактор — это белок на поверхности эритроцитов. Положительный резус (Rh+) является доминантным признаком, а отрицательный (Rh-) — рецессивным. Важно знать: у двух родителей с положительным резусом вполне может родиться ребенок с отрицательным, если оба скрыто несут рецессивный ген.</p>
+            <h4 data-lang="blood-seo-h4-1">Что такое резус-фактор (Rh)?</h4>
+            <p data-lang="blood-seo-p-2">Резус-фактор — это белок на поверхности эритроцитов. Положительный резус (Rh+) является доминантным признаком, а отрицательный (Rh-) — рецессивным. Важно знать: у двух родителей с положительным резусом вполне может родиться ребенок с отрицательным, если оба скрыто несут рецессивный ген.</p>
             
-            <h4>Точность генетического прогноза</h4>
-            <p>Наш онлайн-калькулятор использует классические законы наследования Менделя для расчета вероятностей. Однако биология иногда преподносит сюрпризы: в редких случаях возможны генетические исключения, такие как «бомбейский феномен». Поэтому для медицинских целей и 100% подтверждения всегда требуется лабораторный анализ крови.</p>
+            <h4 data-lang="blood-seo-h4-2">Точность генетического прогноза</h4>
+            <p data-lang="blood-seo-p-3">Наш онлайн-калькулятор использует классические законы наследования Менделя для расчета вероятностей. Однако биология иногда преподносит сюрпризы: в редких случаях возможны генетические исключения, такие как «бомбейский феномен». Поэтому для медицинских целей и 100% подтверждения всегда требуется лабораторный анализ крови.</p>
         </div>
     </div>
 
@@ -104,20 +103,42 @@
         };
 
         const rhMatrix = {
-            "++": "Положительный (+) или Отрицательный (-)",
-            "+-": "Положительный (+) или Отрицательный (-)",
-            "-+": "Положительный (+) или Отрицательный (-)",
-            "--": "Только Отрицательный (-)"
+            ru: {
+                "++": "Положительный (+) или Отрицательный (-)",
+                "+-": "Положительный (+) или Отрицательный (-)",
+                "-+": "Положительный (+) или Отрицательный (-)",
+                "--": "Только Отрицательный (-)"
+            },
+            en: {
+                "++": "Positive (+) or Negative (-)",
+                "+-": "Positive (+) or Negative (-)",
+                "-+": "Positive (+) or Negative (-)",
+                "--": "Only Negative (-)"
+            }
         };
 
-        const bloodFacts = [
-            "Золотая кровь (Rh-null): Это самая редкая кровь в мире. В ней вообще нет резус-антигенов. За последние 50 лет ее нашли лишь у ~40 человек на всей планете.",
-            "Комары-гурманы: Исследования показывают, что людей с первой группой крови (O) комары кусают почти в два раза чаще, чем людей со второй группой (А).",
-            "Японский гороскоп (Ketsueki-gata): В Японии группа крови играет роль знака зодиака. На собеседовании или свидании вас могут серьезно спросить о вашей группе.",
-            "Универсальные доноры: Люди с первой отрицательной группой (O-) — универсальные доноры, их кровь подходит всем. А люди с AB+ могут принимать любую кровь."
-        ];
+        const bloodFacts = {
+            ru: [
+                "Золотая кровь (Rh-null): Это самая редкая кровь в мире. В ней вообще нет резус-антигенов. За последние 50 лет ее нашли лишь у ~40 человек на всей планете.",
+                "Комары-гурманы: Исследования показывают, что людей с первой группой крови (O) комары кусают почти в два раза чаще, чем людей со второй группой (А).",
+                "Японский гороскоп (Ketsueki-gata): В Японии группа крови играет роль знака зодиака. На собеседовании или свидании вас могут серьезно спросить о вашей группе.",
+                "Универсальные доноры: Люди с первой отрицательной группой (O-) — универсальные доноры, их кровь подходит всем. А люди с AB+ могут принимать любую кровь."
+            ],
+            en: [
+                "Golden blood (Rh-null): This is the rarest blood in the world. It has no Rh antigens at all. Over the past 50 years, it has been found in only ~40 people worldwide.",
+                "Gourmet mosquitoes: Studies show that people with blood type O are bitten by mosquitoes almost twice as often as people with type A.",
+                "Japanese horoscope (Ketsueki-gata): In Japan, blood type plays the role of a zodiac sign. At a job interview or a date, you might be seriously asked about your blood type.",
+                "Universal donors: People with O- negative blood are universal donors; their blood is suitable for everyone. And people with AB+ can receive any blood."
+            ]
+        };
+
+        const resultLabels = {
+            ru: { group: "🩸 Группа: ", rh: "🧬 Резус-фактор: " },
+            en: { group: "🩸 Blood Type: ", rh: "🧬 Rh Factor: " }
+        };
 
         function calculateBlood() {
+            const currentLang = window.currentLang || 'ru';
             const dadB = document.getElementById("dad-blood").value;
             const momB = document.getElementById("mom-blood").value;
             const dadRh = document.getElementById("dad-rh").value;
@@ -126,14 +147,15 @@
             const bloodCombo = dadB + "+" + momB;
             const rhCombo = dadRh + momRh;
 
-            const possibleBlood = bloodMatrix[bloodCombo];
-            const possibleRh = rhMatrix[rhCombo];
+            const possibleBlood = bloodMatrix[bloodCombo]; // Названия групп крови универсальны I(O), II(A)
+            const possibleRh = rhMatrix[currentLang][rhCombo];
 
             document.getElementById("blood-result").innerHTML = 
-                "🩸 Группа: <span style='color:#ef4444;'>" + possibleBlood + "</span><br>" +
-                "🧬 Резус-фактор: <span style='color:#ef4444;'>" + possibleRh + "</span>";
+                resultLabels[currentLang].group + "<span style='color:#ef4444;'>" + possibleBlood + "</span><br>" +
+                resultLabels[currentLang].rh + "<span style='color:#ef4444;'>" + possibleRh + "</span>";
 
-            const randomFact = bloodFacts[Math.floor(Math.random() * bloodFacts.length)];
+            const factsArray = bloodFacts[currentLang];
+            const randomFact = factsArray[Math.floor(Math.random() * factsArray.length)];
             document.getElementById('fact-text').innerText = randomFact;
 
             document.getElementById("result-box").style.display = "block";
