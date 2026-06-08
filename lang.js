@@ -29,6 +29,18 @@ const langArr = {
     "privacy-h2-5": { "ru": "5. Контакты", "en": "5. Contacts" },
     "privacy-p-5": { "ru": "Если у вас возникли вопросы относительно данной политики, вы можете связаться с нами через <a href='https://t.me/krexpor' target='_blank'>Telegram</a>.", "en": "If you have any questions regarding this policy, you can contact us via <a href='https://t.me/krexpor' target='_blank'>Telegram</a>." },
 
+    // --- О ПРОЕКТЕ ---
+    "footer-about": { "ru": "О проекте", "en": "About Us" },
+    "about-title": { "ru": "О проекте | Krexpor", "en": "About | Krexpor" },
+    "about-h2": { "ru": "О проекте Krexpor", "en": "About Krexpor" },
+    "about-h3-1": { "ru": "Наша миссия", "en": "Our Mission" },
+    "about-p-1": { "ru": "Проект Krexpor создан с целью популяризации науки и генетики. Мы переводим сложные академические модели наследования в простой, удобный и интерактивный формат, доступный каждому.", "en": "The Krexpor project was created to popularize science and genetics. We translate complex academic inheritance models into a simple, user-friendly, and interactive format accessible to everyone." },
+    "about-h3-2": { "ru": "Медицинский отказ от ответственности (Disclaimer)", "en": "Medical Disclaimer" },
+    "about-p-2": { "ru": "Обратите внимание: все генетические калькуляторы на этом сайте предоставляются исключительно в образовательных и развлекательных целях. Результаты расчетов базируются на статистических вероятностях и классических законах Менделя.", "en": "Please note: all genetic calculators on this site are provided strictly for educational and entertainment purposes. The calculation results are based on statistical probabilities and classical Mendelian laws." },
+    "about-p-3": { "ru": "Эти инструменты <strong>не являются заменой профессиональной медицинской консультации, диагностики или генетического тестирования (ДНК-теста)</strong>. Природа генетики сложна, и всегда существуют исключения, мутации и влияние скрытых генов.", "en": "These tools <strong>are not a substitute for professional medical advice, diagnosis, or genetic testing (DNA test)</strong>. The nature of genetics is complex, and there are always exceptions, mutations, and the influence of hidden genes." },
+    "about-h3-3": { "ru": "Связь с нами", "en": "Contact Us" },
+    "about-p-4": { "ru": "Мы всегда открыты к предложениям по улучшению. Вы можете связаться с нами напрямую через <a href='https://t.me/krexpor' target='_blank'>Telegram</a>.", "en": "We are always open to suggestions for improvement. You can contact us directly via <a href='https://t.me/krexpor' target='_blank'>Telegram</a>." },
+
     // --- ОШИБКА 404 ---
     "404-title": { "ru": "Страница не найдена | Krexpor", "en": "Page not found | Krexpor" },
     "404-h1": { "ru": "Тупик", "en": "Dead End" },
