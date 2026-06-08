@@ -241,21 +241,14 @@ const langArr = {
 
 // Механизм переключения языков
 function changeLanguage(lang) {
-    // Сохраняем выбор в браузере, чтобы при переходе на другие страницы язык сохранялся
-// Механизм переключения языков
-function changeLanguage(lang) {
-    // Сохраняем выбор в браузере, чтобы при переходе на другие страницы язык сохранялся
     localStorage.setItem('selectedLang', lang);
     window.currentLang = lang; 
 
-    // Находим все элементы на странице, у которых есть атрибут data-lang
     const elements = document.querySelectorAll('[data-lang]');
     
     elements.forEach(el => {
         const key = el.getAttribute('data-lang');
-        // Если такой ключ есть в словаре, подменяем текст
         if (langArr[key]) {
-            // Для тегов title, input и т.д. используем textContent или innerHTML
             if (el.tagName === "TITLE") {
                 document.title = langArr[key][lang];
             } else {
@@ -264,8 +257,6 @@ function changeLanguage(lang) {
         }
     });
 
-    // Опционально: Если на странице открыт блок с результатом калькулятора, 
-    // эмулируем нажатие кнопки "рассчитать", чтобы обновить результат на нужном языке
     const resultBox = document.getElementById("result-box");
     if (resultBox && resultBox.style.display === "block") {
         const btn = document.querySelector('button[onclick^="calculate"]');
@@ -273,18 +264,10 @@ function changeLanguage(lang) {
     }
 }
 
-// Автоматическая проверка и установка языка при загрузке каждой страницы
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Проверяем, выбирал ли пользователь язык вручную (сохранено ли это в браузере)
     let savedLang = localStorage.getItem('selectedLang');
-
-    // 2. Если ручного выбора еще не было, определяем язык его устройства
     if (!savedLang) {
-        // Получаем код языка браузера (например, 'ru-RU', 'en-US', 'uk-UA')
         const browserLang = navigator.language || navigator.userLanguage;
-        
-        // Если язык устройства русский, украинский или белорусский — ставим русский.
-        // Для всех остальных стран мира по умолчанию включаем английский.
         if (browserLang.toLowerCase().startsWith('ru') || 
             browserLang.toLowerCase().startsWith('uk') || 
             browserLang.toLowerCase().startsWith('be')) {
@@ -293,7 +276,5 @@ document.addEventListener('DOMContentLoaded', () => {
             savedLang = 'en';
         }
     }
-
-    // 3. Применяем выбранный или определенный язык
     changeLanguage(savedLang);
 });
