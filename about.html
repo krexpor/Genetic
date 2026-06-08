@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang="about-title">О проекте | Krexpor</title>
     
-    <!-- Иконка сайта -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    
-    <!-- Подключение скриптов перевода и куки -->
-    <script src="/lang.js" defer></script>
-    <script src="/cookies.js" defer></script>
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
@@ -21,70 +16,89 @@
       gtag('config', 'G-0WPCS9G55D');
     </script>
 
+    <script src="/cookies.js" defer></script>
+    <script src="/lang.js" defer></script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
+
     <style>
-        /* Единая темная тема */
         body { 
             font-family: 'Inter', -apple-system, sans-serif; 
-            background: #111318;
-            color: #f8fafc;
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-            margin: 0; 
-            padding: 20px;
+            background: #111318; 
+            color: #f8fafc; 
+            line-height: 1.6; 
+            padding: 40px 20px; 
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
         .container { 
-            background: #1a1d24;
+            background: #1a1d24; 
             padding: 40px; 
             border-radius: 16px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
-            max-width: 600px; 
+            max-width: 700px; 
             width: 100%; 
-            position: relative; 
+            box-sizing: border-box;
         }
-        .back-link {
-            display: inline-block;
-            color: #8b949e;
-            text-decoration: none;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            transition: color 0.3s;
+
+        h1 { 
+            color: #f8fafc; 
+            font-size: 1.8rem; 
+            margin-top: 0;
+            margin-bottom: 25px; 
+            text-align: center;
         }
-        .back-link:hover { color: #f8fafc; }
-        
-        h2 { color: #f8fafc; margin-top: 0; margin-bottom: 15px; font-size: 1.5rem; }
-        h3 { color: #da3633; margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem; }
-        hr { border: none; border-top: 1px solid #30363d; margin-bottom: 25px; }
-        p { color: #8b949e; line-height: 1.6; font-size: 0.95rem; margin-bottom: 15px; }
+
+        h2 { 
+            color: #f8fafc; 
+            font-size: 1.2rem; 
+            margin-top: 30px; 
+            margin-bottom: 15px;
+            border-left: 3px solid #da3633; 
+            padding-left: 10px;
+        }
+
+        p { color: #8b949e; margin-bottom: 15px; font-size: 0.95rem; }
         
         a { color: #da3633; text-decoration: none; transition: 0.3s; }
         a:hover { color: #b92b29; text-decoration: underline; }
+        
+        .back-btn { 
+            align-self: flex-start;
+            margin-bottom: 20px; 
+            color: #8b949e; 
+            text-decoration: none; 
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .back-btn:hover { color: #f8fafc; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Кнопка назад -->
-        <a href="index.html" class="back-link" data-lang="back-home">← Вернуться на главную</a>
-        
-        <!-- Заголовок страницы -->
-        <h2 data-lang="about-h2">О проекте</h2>
-        <hr>
-        
-        <div class="seo-text-block">
-            <!-- Блок 1: Миссия -->
-            <h3 data-lang="about-h3-1">Что такое Krexpor?</h3>
-            <p data-lang="about-p-1">Krexpor — это моя личная цифровая площадка для реализации идей. Сейчас здесь собраны интерактивные генетические утилиты, но проект не стоит на месте. В будущем здесь будут появляться новые сервисы, трекеры, проекты и образовательные форматы. Это живое портфолио, которое растет и развивается.</p>
-            
-            <!-- Блок 2: Дисклеймер для Google AdSense -->
-            <h3 data-lang="about-h3-2">Отказ от ответственности (Для калькуляторов)</h3>
-            <p data-lang="about-p-2">Обратите внимание: раздел генетических калькуляторов предоставляется исключительно в образовательных и развлекательных целях. Результаты расчетов базируются на статистических вероятностях и классических законах наследования.</p>
-            <p data-lang="about-p-3">Эти инструменты <strong>не являются заменой профессиональной медицинской диагностики или ДНК-теста</strong>. Природа сложна, и всегда существуют исключения и мутации.</p>
-            
-            <!-- Блок 3: Контакты -->
-            <h3 data-lang="about-h3-3">Связь</h3>
-            <p data-lang="about-p-4">Открыт к предложениям, идеям и обратной связи. Вы можете связаться со мной через <a href="https://t.me/krexpor" target="_blank">Telegram</a>.</p>
-        </div>
+
+    <div style="max-width: 700px; width: 100%;">
+        <a href="index.html" class="back-btn" data-lang="back-home">← Вернуться на главную</a>
     </div>
+    
+    <div class="container">
+        <h1 data-lang="about-h2">О проекте</h1>
+        
+        <h2 data-lang="about-h3-1">Что такое Krexpor?</h2>
+        <p data-lang="about-p-1">Krexpor — это моя личная цифровая площадка для реализации идей. Сейчас здесь собраны интерактивные генетические утилиты, но проект не стоит на месте. В будущем здесь будут появляться новые сервисы, трекеры, проекты и образовательные форматы. Это живое портфолио, которое растет и развивается.</p>
+        
+        <h2 data-lang="about-h3-2">Отказ от ответственности (Для калькуляторов)</h2>
+        <p data-lang="about-p-2">Обратите внимание: раздел генетических калькуляторов предоставляется исключительно в образовательных и развлекательных целях. Результаты расчетов базируются на статистических вероятностях и классических законах наследования.</p>
+        <p data-lang="about-p-3">Эти инструменты <strong>не являются заменой профессиональной медицинской диагностики или ДНК-теста</strong>. Природа сложна, и всегда существуют исключения и мутации.</p>
+        
+        <h2 data-lang="about-h3-3">Связь</h2>
+        <p data-lang="about-p-4">Открыт к предложениям, идеям и обратной связи. Вы можете связаться со мной через <a href="https://t.me/krexpor" target="_blank">Telegram</a>.</p>
+    </div>
+
 </body>
 </html>
