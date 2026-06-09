@@ -7,14 +7,14 @@
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://krexpor.com/">
-    <meta property="og:title" content="Krexpor | Genetic Calculators">
-    <meta property="og:description" content="Узнай, что передастся по наследству. Генетические калькуляторы: цвет глаз, группа крови, рост и уникальные черты лица.">
+    <meta property="og:title" content="Krexpor | Genetic Calculators & AI Tests">
+    <meta property="og:description" content="Узнай, что передастся по наследству, и пройди глубокие психологические тесты с помощью нейросетей.">
     <meta property="og:image" content="https://krexpor.com/preview.jpg">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://krexpor.com/">
-    <meta property="twitter:title" content="Krexpor | home page">
-    <meta property="twitter:description" content="Домашняя страница с сылками на соц-сети">
+    <meta property="twitter:title" content="Krexpor | Projects">
+    <meta property="twitter:description" content="Генетические калькуляторы и AI-профайлинг личности.">
     <meta property="twitter:image" content="https://krexpor.com/preview.jpg">
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -22,13 +22,12 @@
     <script>
     (function() {
         let savedTheme = localStorage.getItem('site-theme');
-        // Якщо теми немає, примусово ставимо 'dark'
         if (!savedTheme) {
             savedTheme = 'dark';
         }
         document.documentElement.setAttribute('data-theme', savedTheme);
     })();
-</script>
+    </script>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
     <script>
@@ -43,7 +42,7 @@
     <script src="theme.js" defer></script>
 
     <style>
-        /* Змінні для Світлої теми */
+        /* Переменные для Светлой темы */
         :root {
             --bg-color: #f8fafc;
             --card-bg: #ffffff;
@@ -54,7 +53,7 @@
             --shadow: 0 10px 40px rgba(0,0,0,0.05);
         }
 
-        /* Змінні для Темної теми (Krexpor Style) */
+        /* Переменные для Темной темы (Krexpor Style) */
         [data-theme="dark"] {
             --bg-color: #111318;
             --card-bg: #1a1d24;
@@ -74,6 +73,7 @@
             align-items: center; 
             min-height: 100vh; 
             margin: 0; 
+            padding: 20px 0;
             transition: background-color 0.3s, color 0.3s;
         }
 
@@ -83,7 +83,7 @@
             border-radius: 16px; 
             box-shadow: var(--shadow); 
             text-align: center; 
-            max-width: 400px; 
+            max-width: 500px; /* Увеличили ширину для удобного чтения текста */
             width: 90%; 
             position: relative; 
             overflow: hidden; 
@@ -91,7 +91,6 @@
             transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
         }
 
-        /* Панель керування (Мови + Тема) */
         .top-controls {
             position: absolute;
             top: 20px;
@@ -123,7 +122,6 @@
             border-color: var(--text-muted);
         }
 
-        /* Колібрі всередині картки */
         .bg-hummingbird {
             position: absolute;
             top: 50%;
@@ -175,6 +173,37 @@
 
         .tool-icon { font-size: 1.4rem; margin-right: 15px; }
         .tool-name { font-weight: 500; font-size: 0.95rem; }
+
+        /* Стили для нового SEO-блока */
+        .info-block {
+            margin-top: 35px;
+            padding: 20px;
+            background: var(--hover-bg);
+            border-radius: 12px;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+        .info-block h2 {
+            font-size: 1.1rem;
+            margin-top: 0;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+        .info-block p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        .info-block ul {
+            padding-left: 20px;
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .info-block li { margin-bottom: 8px; }
+        .info-block strong { color: var(--text-main); }
         
         .social-links { margin-top: 30px; display: flex; justify-content: center; gap: 15px; }
         .social-link { 
@@ -234,27 +263,38 @@
                     <a href="tests/relationship.html" class="tool-card">
                         <span class="tool-icon">❤️</span>
                         <div>
-                            <div class="tool-name">Мова стосунків та кордони</div>
-                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Тип прив'язаності та емоційні тригери</div>
+                            <div class="tool-name" data-lang="rel-h1">Язык отношений и границы</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;" data-lang="rel-desc">Тип привязанности и эмоциональные триггеры</div>
                         </div>
                     </a>
 
                     <a href="tests/shadow.html" class="tool-card">
                         <span class="tool-icon" style="color: #1e293b;">🌑</span>
                         <div>
-                            <div class="tool-name">Тіньова сторона особистості</div>
-                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Аналіз прихованих емоцій та масок</div>
+                            <div class="tool-name" data-lang="shad-h1">Теневая сторона личности</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;" data-lang="shad-desc">Анализ подавленных эмоций и масок</div>
                         </div>
                     </a>
 
                     <a href="tests/aesthetics.html" class="tool-card">
                         <span class="tool-icon" style="color: #eab308;">✨</span>
                         <div>
-                            <div class="tool-name">Естетика вашої душі</div>
-                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Візуальний AI-код вашого внутрішнього світу</div>
+                            <div class="tool-name" data-lang="aes-h1">Эстетика вашей души</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;" data-lang="aes-desc">Визуальный AI-код вашего внутреннего мира</div>
                         </div>
                     </a>
                 </div>
+            </div>
+
+            <!-- НОВЫЙ БЛОК С КОНТЕНТОМ ДЛЯ ADSENSE -->
+            <div class="info-block">
+                <h2 data-lang="index-about-h2">О платформе Krexpor</h2>
+                <p data-lang="index-about-p1">Krexpor — это интерактивное пространство, где классическая наука встречается с передовым искусственным интеллектом. Мы создаем инструменты для самопознания и анализа.</p>
+                <ul>
+                    <li data-lang="index-about-li1"><strong>🧬 Генетика:</strong> Рассчитайте вероятности наследования внешности (рост, цвет глаз, группа крови) на основе биометрических данных.</li>
+                    <li data-lang="index-about-li2"><strong>🧠 AI-Тесты:</strong> Пройдите тесты, в которых нейросети анализируют семантику ваших ответов для создания уникального профиля.</li>
+                    <li data-lang="index-about-li3"><strong>🔒 Приватность:</strong> Ваши данные не сохраняются. Все алгоритмы работают локально или через безопасные шлюзы.</li>
+                </ul>
             </div>
             
             <div class="social-links">
