@@ -20,14 +20,15 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
     <script>
-        (function() {
-            let savedTheme = localStorage.getItem('site-theme');
-            if (!savedTheme) {
-                savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            }
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        })();
-    </script>
+    (function() {
+        let savedTheme = localStorage.getItem('site-theme');
+        // Якщо теми немає, примусово ставимо 'dark'
+        if (!savedTheme) {
+            savedTheme = 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+</script>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
     <script>
