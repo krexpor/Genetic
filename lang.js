@@ -237,6 +237,13 @@ const langArr = {
     "rhythms-seo-p1": { "ru": "Стрелка вниз (↓) означает удар по струнам сверху вниз (от 6-й толстой струны к 1-й тонкой). Стрелка вверх (↑) — возвратное движение снизу вверх.", "en": "A down arrow (↓) means strumming the strings downwards (from the 6th thick string to the 1st thin one). An up arrow (↑) is the upward return stroke." },
     "rhythms-seo-h4": { "ru": "Паузы и глушение", "en": "Pauses and muting" },
     "rhythms-seo-p2": { "ru": "Пробелы между стрелочками визуализируют микро-паузу. Ваша рука всегда должна двигаться вверх-вниз как маятник, даже если вы не задеваете струны — это называется «холостой взмах». Именно он помогает держать ровный ритм.", "en": "Spaces between the arrows visualize a micro-pause. Your hand should always move up and down like a pendulum, even if you don't hit the strings—this is called a 'ghost strum'. It's what helps you keep a steady rhythm." }
+
+    // --- ТЮНЕР ---
+    "menu-tuner": { "ru": "Гитарный тюнер", "en": "Guitar Tuner" },
+    "tuner-title": { "ru": "Тюнер | Krexpor", "en": "Tuner | Krexpor" },
+    "tuner-h2": { "ru": "🎸 Гитарный тюнер", "en": "🎸 Guitar Tuner" },
+    "tuner-start": { "ru": "Включить микрофон 🎙️", "en": "Enable Microphone 🎙️" },
+    "tuner-note": { "ru": "Доступ нужен только для анализа звука в реальном времени.", "en": "Access is only needed to analyze sound in real-time." }
 };
 
 // Механизм переключения языков
