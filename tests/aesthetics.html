@@ -8,21 +8,16 @@
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-    <!-- Захист від "блимання" екрану, ТЕМНА тема за замовчуванням -->
     <script>
         (function() {
             let savedTheme = localStorage.getItem('site-theme');
-            if (!savedTheme) {
-                savedTheme = 'dark';
-            }
+            if (!savedTheme) savedTheme = 'dark';
             document.documentElement.setAttribute('data-theme', savedTheme);
         })();
     </script>
 
-    <!-- Підключення глобального стилю -->
     <link rel="stylesheet" href="tests.css">
 
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -31,38 +26,33 @@
       gtag('config', 'G-0WPCS9G55D');
     </script>
 
-    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="../lang.js" defer></script>
     <script src="../cookies.js" defer></script>
-    <script src="../theme.js" defer></script>
+    <script src="theme.js" defer></script>
 
     <style>
-        /* У файлі залишається ТІЛЬКИ акцентний колір конкретного тесту */
         :root {
-            --accent-color: #eab308; /* Золотий для естетики */
+            --accent-color: #eab308; 
             --accent-hover: #ca8a04;
         }
     </style>
 </head>
 <body>
 
-    <!-- Панель керування: Мови + Тема -->
     <div class="top-controls">
         <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
-        <button onclick="changeLanguage('en')" class="control-btn">EN</button>
         <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
+        <button onclick="changeLanguage('en')" class="control-btn">EN</button>
         <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
     </div>
 
-    <!-- БЛОК ТЕСТА -->
     <div class="container">
         <a href="../index.html" data-lang="back-home" style="display: inline-block; margin-bottom: 20px; color: var(--text-muted); text-decoration: none; font-weight: 600;">← Вернуться на главную</a>
         
         <div class="title-wrapper">
-            <!-- Іконка іскор/естетики -->
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
             </svg>
@@ -74,7 +64,6 @@
         </p>
 
         <div id="form-container">
-            <!-- Питання 1 -->
             <div class="question-block">
                 <span class="question-title" data-lang="aes-q1">1. Если бы ваше внутреннее состояние было комнатой, как бы она выглядела?</span>
                 <div class="options-grid">
@@ -85,7 +74,6 @@
                 </div>
             </div>
 
-            <!-- Питання 2 -->
             <div class="question-block">
                 <span class="question-title" data-lang="aes-q2">2. Какой саундтрек играл бы на фоне вашей жизни в моменты наивысшего напряжения?</span>
                 <div class="options-grid">
@@ -96,7 +84,6 @@
                 </div>
             </div>
 
-            <!-- Питання 3 -->
             <div class="question-block">
                 <span class="question-title" data-lang="aes-q3">3. Если бы вам пришлось носить одежду только одного стиля всю жизнь, что бы это было?</span>
                 <div class="options-grid">
@@ -107,7 +94,6 @@
                 </div>
             </div>
 
-            <!-- Питання 4 -->
             <div class="question-block">
                 <span class="question-title" data-lang="aes-q4">4. Какая погода за окном идеально отражает вашу зону комфорта?</span>
                 <div class="options-grid">
@@ -118,7 +104,6 @@
                 </div>
             </div>
 
-            <!-- Питання 5 -->
             <div class="question-block">
                 <span class="question-title" data-lang="aes-q5">5. Какой предмет несет для вас наибольшую эмоциональную ценность?</span>
                 <div class="options-grid">
@@ -136,7 +121,6 @@
         <div id="ai-response" class="result-box"></div>
     </div>
 
-    <!-- SEO БЛОК -->
     <article class="seo-article">
         <h2 data-lang="aes-seo-h2">Что такое психологическая эстетика (Core Vibe)?</h2>
         <p data-lang="aes-seo-p1">В современном интернете визуальные эстетики (такие как Dark Academia, Cottagecore, Cyberpunk, Ethereal, Soft Minimalism) стали новым способом самовыражения. Это не просто стиль одежды, это визуальный язык, который переводит наше внутреннее психологическое состояние в образы, цвета и звуки.</p>
@@ -147,7 +131,27 @@
             <li data-lang="aes-seo-li-2"><strong>Звуковой профиль:</strong> Музыка при напряжении раскрывает ваши механизмы преодоления стресса (эскапизм, меланхолия или агрессия).</li>
             <li data-lang="aes-seo-li-3"><strong>Атмосферный комфорт:</strong> Погода и предметы отражают ваши отношения со временем — вы живете прошлым (винтаж/дождь), будущим (гаджеты/неон) или настоящим (растения/солнце).</li>
         </ul>
-        <p data-lang="aes-seo-p2">Наш алгоритм анализирует пересечение этих 5 визуальных маркеров и находит ту самую "Core" эстетику, которая наиболее точно резонирует с вашей уникальной личностью. Это арт-терапия в формате тестирования.</p>
+        <p data-lang="aes-seo-p2">Наш алгоритм анализирует пересечение этих 5 визуальных маркеров и находит ту самую "Core" эстетику, которая наиболее точно резонирует с вашей уникальной личностью.</p>
+
+        <div class="faq-section">
+            <h3 data-lang="aes-faq-title">Часто задаваемые вопросы (FAQ)</h3>
+            
+            <details class="faq-item">
+                <summary data-lang="aes-faq-q1">Насколько точно алгоритм определяет мою эстетику?</summary>
+                <p data-lang="aes-faq-a1">Нейросеть анализирует скрытые психологические паттерны в ваших ответах. Если вы выбираете темные цвета и классическую музыку, алгоритм с высокой точностью определит вас к стилю вроде Dark Academia. ИИ также умеет распознавать "смешанные" стили (миксы эстетик).</p>
+            </details>
+            
+            <details class="faq-item">
+                <summary data-lang="aes-faq-q2">Что такое Core Aesthetic?</summary>
+                <p data-lang="aes-faq-a2">Это визуальное выражение вашего внутреннего мира. В современной интернет-культуре эстетика объединяет моду, музыку, архитектуру и образ жизни в единую концепцию. Понимание своей Core Aesthetic помогает лучше осознать свои потребности в комфорте.</p>
+            </details>
+            
+            <details class="faq-item">
+                <summary data-lang="aes-faq-q3">Сохраняются ли мои ответы и результаты?</summary>
+                <p data-lang="aes-faq-a3">Нет. Платформа Krexpor строго соблюдает конфиденциальность. Ваши ассоциации обрабатываются нейросетью транзитом исключительно для генерации результата. Как только вы закроете страницу, ваши данные будут безвозвратно удалены.</p>
+            </details>
+        </div>
+
     </article>
 
     <script>
