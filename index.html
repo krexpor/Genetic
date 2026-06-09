@@ -119,9 +119,45 @@
         .btn:hover { 
             background: #b92b29; 
         }
+
+        /* Стили для карточек (интегрированы из твоего CSS) */
+        .tools-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .tool-card {
+            display: flex;
+            align-items: center;
+            background: transparent;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 14px 20px;
+            text-decoration: none;
+            color: #f8fafc;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .tool-card:hover {
+            background: #1a1d24;
+            border-color: #8b949e;
+            transform: translateY(-2px);
+        }
+
+        .tool-icon {
+            font-size: 1.4rem;
+            margin-right: 15px;
+        }
+
+        .tool-name {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
         
         .social-links { 
-            margin-top: 25px; 
+            margin-top: 30px; 
             display: flex; 
             justify-content: center; 
             gap: 15px; 
@@ -177,23 +213,38 @@
             <h1>Krexpor</h1>
             <p data-lang="bio">Проекты и жизнь 20-ти летнего парня</p>
             
+            <!-- Основные кнопки -->
             <a href="genetic/index.html" class="btn" data-lang="btn-genetic">🧬 Генетические калькуляторы</a>
             <a href="guitar/index.html" class="btn" style="background: #30363d; color: #8b949e;" data-lang="btn-guitar-hub">🎸 Гитара и музыка</a>
+            
+            <!-- НОВА СЕКЦІЯ: AI та Психологія -->
+            <div style="margin-top: 30px; padding-top: 25px; border-top: 1px solid #30363d; text-align: left;">
+                <h3 style="color: #8b949e; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 0; margin-bottom: 15px;" data-lang="tests-title">AI & Психология</h3>
+                
+                <div class="tools-list">
+                    <a href="profiler.html" class="tool-card">
+                        <span class="tool-icon">🔮</span>
+                        <div>
+                            <div class="tool-name" data-lang="profiler-title">Глубокий анализ личности</div>
+                            <div style="font-size: 0.75rem; color: #8b949e; margin-top: 4px;" data-lang="profiler-desc">Психологический портрет от нейросети</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
             
             <div class="social-links">
                 <a href="https://www.youtube.com/@Krexpor" class="social-link" target="_blank">YouTube</a>
                 <a href="https://t.me/krexpor" class="social-link" target="_blank">Telegram</a>
             </div>
             <div class="footer">
-    © 2026 Krexpor <br>
-    <div style="margin-top: 10px; display: flex; justify-content: center; align-items: center;">
-        <a href="about.html" style="padding-right: 12px; border-right: 1px solid #475569;" data-lang="footer-about">О проекте</a>
-        <a href="privacy.html" style="padding-left: 12px;" data-lang="privacy">Политика конфиденциальности</a>
-    </div>
-</div>
+                © 2026 Krexpor <br>
+                <div style="margin-top: 10px; display: flex; justify-content: center; align-items: center;">
+                    <a href="about.html" style="padding-right: 12px; border-right: 1px solid #475569;" data-lang="footer-about">О проекте</a>
+                    <a href="privacy.html" style="padding-left: 12px;" data-lang="privacy">Политика конфиденциальности</a>
+                </div>
+            </div>
         </div>
     </div>
 
 </body>
 </html>
-
