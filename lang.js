@@ -494,7 +494,6 @@ const langArr = {
 
     "btn-blog": { "ru": "📚 Блог и Статьи", "en": "📚 Blog & Articles", "uk": "📚 Блог та Статті" },
 
-    ,
     // --- СТОРІНКА БЛОГУ ---
     "blog-meta-title": { 
         "ru": "Блог и Статьи | Krexpor", 
