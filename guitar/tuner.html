@@ -19,12 +19,10 @@
     <script src="/lang.js" defer></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
 
-    <script src="https://unpkg.com/pitchfinder@2.3.0/dist/pitchfinder.min.js"></script>
-
     <style>
         .tuner-display { text-align: center; margin: 20px 0; }
         
-        /* Стили для статуса (Тяни/Ослабь/Идеально) */
+        /* Стили для статуса */
         .tune-status { font-size: 2.5rem; font-weight: bold; color: #da3633; margin-bottom: 5px; transition: color 0.2s; }
         .tune-status.perfect { color: #10b981; text-shadow: 0 0 15px rgba(16, 185, 129, 0.4); }
         .freq-display { color: #8b949e; font-size: 14px; margin-bottom: 20px; font-family: monospace; }
@@ -71,7 +69,7 @@
         .tuner-scale { margin: 30px 0; position: relative; }
         .scale-labels { display: flex; justify-content: space-between; color: #8b949e; font-size: 12px; margin-bottom: 8px; font-weight: 600; }
         .meter { height: 12px; background: #30363d; border-radius: 6px; position: relative; overflow: hidden; }
-        .meter::after { /* Центральная метка идеального звука */
+        .meter::after { 
             content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: rgba(255,255,255,0.2); transform: translateX(-50%);
         }
         .needle { 
@@ -123,10 +121,8 @@
     <script>
         let isRunning = false;
         let audioCtx;
-        // По умолчанию выбрана 6-я струна E (Ми)
         let targetFreq = 82.41; 
 
-        // Словари для статусов (так как они меняются динамически, мы задаем их тут)
         const dict = {
             up: { ru: "↑ Тяни", en: "↑ Tune Up" },
             down: { ru: "↓ Ослабь", en: "↓ Tune Down" },
@@ -139,18 +135,17 @@
             document.querySelectorAll('.string-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             
-            // Если тюнер еще не запущен, показываем прочерки
             if(!isRunning) return; 
-            
-            // СбрасываемUI
             document.getElementById('needle').style.left = '50%';
             updateStatusText('waiting');
         }
 
         function updateStatusText(statusType) {
-            const lang = window.currentLang || 'ru'; // Берем текущий язык из вашей системы
+            const lang = window.currentLang || 'ru'; 
             const statusEl = document.getElementById('tune-status');
-            statusEl.innerText = dict[statusType][lang];
+            if (dict[statusType] && dict[statusType][lang]) {
+                statusEl.innerText = dict[statusType][lang];
+            }
             
             if (statusType === 'perfect') {
                 statusEl.classList.add('perfect');
@@ -159,6 +154,42 @@
                 statusEl.classList.remove('perfect');
                 document.getElementById('needle').classList.remove('perfect');
             }
+        }
+
+        // Встроенный алгоритм автокорреляции (Pitch Detection)
+        function autoCorrelate(buf, sampleRate) {
+            let SIZE = buf.length;
+            let rms = 0;
+            for (let i = 0; i < SIZE; i++) rms += buf[i] * buf[i];
+            rms = Math.sqrt(rms / SIZE);
+            if (rms < 0.01) return -1; // Тишина
+
+            let r1 = 0, r2 = SIZE - 1, thres = 0.2;
+            for (let i = 0; i < SIZE / 2; i++) if (Math.abs(buf[i]) < thres) { r1 = i; break; }
+            for (let i = 1; i < SIZE / 2; i++) if (Math.abs(buf[SIZE - i]) < thres) { r2 = SIZE - i; break; }
+
+            buf = buf.slice(r1, r2);
+            SIZE = buf.length;
+
+            let c = new Array(SIZE).fill(0);
+            for (let i = 0; i < SIZE; i++) {
+                for (let j = 0; j < SIZE - i; j++) {
+                    c[i] = c[i] + buf[j] * buf[j + i];
+                }
+            }
+
+            let d = 0; while (c[d] > c[d + 1]) d++;
+            let maxval = -1, maxpos = -1;
+            for (let i = d; i < SIZE; i++) {
+                if (c[i] > maxval) { maxval = c[i]; maxpos = i; }
+            }
+            let T0 = maxpos;
+            let x1 = c[T0 - 1], x2 = c[T0], x3 = c[T0 + 1];
+            let a = (x1 + x3 - 2 * x2) / 2;
+            let b = (x3 - x1) / 2;
+            if (a) T0 = T0 - b / (2 * a);
+
+            return sampleRate / T0;
         }
 
         async function startTuner() {
@@ -172,36 +203,37 @@
                 btn.style.color = "#8b949e";
                 isRunning = true;
 
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                
+                // Принудительное пробуждение аудио (решает баги на телефонах)
+                if (audioCtx.state === 'suspended') {
+                    await audioCtx.resume();
+                }
+
                 updateStatusText('waiting');
 
-                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
                 const analyser = audioCtx.createAnalyser();
+                analyser.fftSize = 2048;
                 const source = audioCtx.createMediaStreamSource(stream);
                 source.connect(analyser);
                 
-                const detectPitch = window.Pitchfinder.YIN({ sampleRate: audioCtx.sampleRate });
                 const buffer = new Float32Array(analyser.fftSize);
-                
                 const freqDisplay = document.getElementById('freq-display');
                 const needle = document.getElementById('needle');
 
                 function update() {
                     analyser.getFloatTimeDomainData(buffer);
-                    const pitch = detectPitch(buffer);
+                    let pitch = autoCorrelate(buffer, audioCtx.sampleRate);
                     
-                    if (pitch && pitch > 40 && pitch < 1000) { 
+                    if (pitch !== -1 && pitch > 40 && pitch < 1000) { 
                         freqDisplay.innerText = pitch.toFixed(1) + " Hz";
                         
-                        // Математика тюнера: вычисляем разницу в центах
                         let cents = 1200 * Math.log2(pitch / targetFreq);
-                        
-                        // Ограничиваем стрелку от -50 до +50 центов, чтобы она не улетала за экран
                         let leftPos = 50 + cents;
                         leftPos = Math.max(0, Math.min(100, leftPos));
                         needle.style.left = leftPos + "%";
 
-                        // Логика цвета и текста
-                        if (Math.abs(cents) < 5) { // Погрешность 5 центов считается идеальной
+                        if (Math.abs(cents) < 5) { 
                             updateStatusText('perfect');
                         } else if (cents < -5) {
                             updateStatusText('up');
@@ -214,7 +246,8 @@
                 update();
 
             } catch (err) {
-                alert("Ошибка доступа к микрофону. Разрешите его использование в браузере.");
+                alert("Ошибка доступа к микрофону. Убедитесь, что вы дали разрешение в браузере.");
+                console.error(err);
             }
         }
     </script>
