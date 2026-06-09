@@ -415,7 +415,106 @@ const langArr = {
     "height-faq-q2": { "ru": "До какого возраста мы продолжаем расти?", "en": "Until what age do we continue to grow?", "uk": "До якого віку ми продовжуємо рости?" },
     "height-faq-a2": { "ru": "Девочки обычно перестают расти к 15-16 годам, вскоре после завершения основного этапа полового созревания. Мальчики же продолжают расти дольше — часто до 18, а иногда и до 20-21 года.", "en": "Girls usually stop growing by the age of 15-16, shortly after completing the main stage of puberty. Boys, however, continue to grow longer — often until 18, and sometimes up to 20-21 years old.", "uk": "Дівчатка зазвичай перестають рости до 15-16 років, невдовзі після завершення основного етапу статевого дозрівання. Хлопчики ж продовжують рости довше — часто до 18, а іноді й до 20-21 року." },
     "height-faq-q3": { "ru": "Правда ли, что тяжелая атлетика останавливает рост?", "en": "Is it true that weightlifting stunts growth?", "uk": "Чи правда, що важка атлетика зупиняє ріст?" },
-    "height-faq-a3": { "ru": "Нет, это популярный миф. Сами по себе силовые тренировки с адекватным весом не останавливают рост. Однако поднятие экстремальных весов (штанги) с плохой техникой может травмировать зоны роста в костях (эпифизарные пластинки) у подростков.", "en": "No, this is a popular myth. Strength training with adequate weights does not stunt growth by itself. However, lifting extreme weights (barbells) with poor technique can injure the growth plates in bones in teenagers.", "uk": "Ні, це популярний міф. Самі по собі силові тренування з адекватною вагою не зупиняють ріст. Однак підняття екстремальних ваг (штанги) з поганою технікою може травмувати зони росту в кістках (епіфізарні пластинки) у підлітків." }
+    "height-faq-a3": { "ru": "Нет, это популярный миф. Сами по себе силовые тренировки с адекватным весом не останавливают рост. Однако поднятие экстремальных весов (штанги) с плохой техникой может травмировать зоны роста в костях (эпифизарные пластинки) у подростков.", "en": "No, this is a popular myth. Strength training with adequate weights does not stunt growth by itself. However, lifting extreme weights (barbells) with poor technique can injure the growth plates in bones in teenagers.", "uk": "Ні, це популярний міф. Самі по собі силові тренування з адекватною вагою не зупиняють ріст. Однак підняття екстремальних ваг (штанги) з поганою технікою може травмувати зони росту в кістках (епіфізарні пластинки) у підлітків." },
+
+    ,
+    // --- СТАТЬИ ПОД КАЛЬКУЛЯТОРАМИ ---
+    
+    // ЦВЕТ ГЛАЗ
+    "eyes-seo-h3-1": { 
+        "ru": "Как работает генетика цвета глаз?", 
+        "en": "How does eye color genetics work?", 
+        "uk": "Як працює генетика кольору очей?" 
+    },
+    "eyes-seo-p-1": { 
+        "ru": "Наследование цвета глаз у ребенка — это сложный полигенный процесс. Долгое время считалось, что цвет определяется по простой модели Менделя, где карий цвет является доминантным, а голубой — рецессивным. Однако современная генетика доказала, что в этом процессе участвует до 16 различных генов.", 
+        "en": "Inheriting eye color in a child is a complex polygenic process. For a long time, it was believed that color was determined by a simple Mendelian model, where brown is dominant and blue is recessive. However, modern genetics has proven that up to 16 different genes are involved in this process.", 
+        "uk": "Успадкування кольору очей у дитини — це складний полігенний процес. Довгий час вважалося, що колір визначається за простою моделлю Менделя, де карий колір є домінантним, а блакитний — рецесивним. Проте сучасна генетика довела, що в цьому процесі бере участь до 16 різних генів." 
+    },
+    "eyes-seo-h4-1": { 
+        "ru": "Ключевые гены OCA2 и HERC2", 
+        "en": "Key genes OCA2 and HERC2", 
+        "uk": "Ключові гени OCA2 та HERC2" 
+    },
+    "eyes-seo-p-2": { 
+        "ru": "Большая часть вариаций цвета зависит от двух генов, расположенных на 15-й хромосоме: OCA2 и HERC2. Они контролируют выработку меланина в радужной оболочке. Высокий уровень меланина дает карие глаза, средний — зеленые или ореховые, а низкий или его полное отсутствие — синие и серые оттенки.", 
+        "en": "Most of the color variations depend on two genes located on the 15th chromosome: OCA2 and HERC2. They control the production of melanin in the iris. A high level of melanin results in brown eyes, a medium level in green or hazel, and a low level or complete absence in blue and gray shades.", 
+        "uk": "Більша частина варіацій кольору залежить від двох генів, розташованих на 15-й хромосомі: OCA2 і HERC2. Вони контролюють вироблення меланіну в райдужній оболонці. Високий рівень меланіну дає карі очі, середній — зелені або горіхові, а низький або його повна відсутність — сині та сірі відтінки." 
+    },
+    "eyes-seo-h4-2": { 
+        "ru": "Насколько точен этот калькулятор?", 
+        "en": "How accurate is this calculator?", 
+        "uk": "Наскільки точний цей калькулятор?" 
+    },
+    "eyes-seo-p-3": { 
+        "ru": "Данный генетический калькулятор использует статистические модели и алгоритмы вероятности, основанные на фенотипах родителей. Хотя он предоставляет наиболее вероятный прогноз в процентах, природа всегда оставляет место для генетических мутаций и сюрпризов, поэтому стопроцентную гарантию может дать только ДНК-тест.", 
+        "en": "This genetic calculator uses statistical models and probability algorithms based on the parents' phenotypes. Although it provides the most likely forecast in percentages, nature always leaves room for genetic mutations and surprises, so only a DNA test can provide a 100% guarantee.", 
+        "uk": "Цей генетичний калькулятор використовує статистичні моделі та алгоритми ймовірності, засновані на фенотипах батьків. Хоча він надає найімовірніший прогноз у відсотках, природа завжди залишає місце для генетичних мутацій і сюрпризів, тому стовідсоткову гарантію може дати тільки ДНК-тест." 
+    },
+
+    // ГРУППА КРОВИ
+    "blood-seo-h3-1": { 
+        "ru": "Как наследуется группа крови ребенка?", 
+        "en": "How is a child's blood type inherited?", 
+        "uk": "Як успадковується група крові дитини?" 
+    },
+    "blood-seo-p-1": { 
+        "ru": "Группа крови человека определяется генами, переданными от обоих родителей по системе AB0. Существует три основных аллеля: A, B и 0. Гены A и B являются доминантными, а ген 0 — рецессивным. Именно их комбинация формирует одну из четырех групп крови: I(0), II(A), III(B) или IV(AB).", 
+        "en": "Human blood type is determined by genes passed down from both parents according to the ABO system. There are three main alleles: A, B, and 0. Genes A and B are dominant, while gene 0 is recessive. It is their combination that forms one of the four blood types: I(0), II(A), III(B), or IV(AB).", 
+        "uk": "Група крові людини визначається генами, переданими від обох батьків за системою AB0. Існує три основних алелі: A, B і 0. Гени A і B є домінантними, а ген 0 — рецесивним. Саме їх комбінація формує одну з чотирьох груп крові: I(0), II(A), III(B) або IV(AB)." 
+    },
+    "blood-seo-h4-1": { 
+        "ru": "Что такое резус-фактор (Rh)?", 
+        "en": "What is the Rh factor?", 
+        "uk": "Що таке резус-фактор (Rh)?" 
+    },
+    "blood-seo-p-2": { 
+        "ru": "Резус-фактор — это белок на поверхности эритроцитов. Положительный резус (Rh+) является доминантным признаком, а отрицательный (Rh-) — рецессивным. Важно знать: у двух родителей с положительным резусом вполне может родиться ребенок с отрицательным, если оба скрыто несут рецессивный ген.", 
+        "en": "The Rh factor is a protein on the surface of red blood cells. A positive Rh factor (Rh+) is a dominant trait, while a negative one (Rh-) is recessive. Important to know: two Rh-positive parents can have an Rh-negative child if both silently carry the recessive gene.", 
+        "uk": "Резус-фактор — це білок на поверхні еритроцитів. Позитивний резус (Rh+) є домінантним признаком, а негативний (Rh-) — рецесивним. Важливо знати: у двох батьків з позитивним резусом цілком може народитися дитина з негативним, якщо обидва приховано несуть рецесивний ген." 
+    },
+    "blood-seo-h4-2": { 
+        "ru": "Точность генетического прогноза", 
+        "en": "Accuracy of genetic prediction", 
+        "uk": "Точність генетичного прогнозу" 
+    },
+    "blood-seo-p-3": { 
+        "ru": "Наш онлайн-калькулятор использует классические законы наследования Менделя для расчета вероятностей. Однако биология иногда преподносит сюрпризы: в редких случаях возможны генетические исключения, такие как «бомбейский феномен». Поэтому для медицинских целей и 100% подтверждения всегда требуется лабораторный анализ крови.", 
+        "en": "Our online calculator uses classical Mendelian laws of inheritance to calculate probabilities. However, biology sometimes holds surprises: in rare cases, genetic exceptions such as the 'Bombay phenotype' are possible. Therefore, for medical purposes and 100% confirmation, a laboratory blood test is always required.", 
+        "uk": "Наш онлайн-калькулятор використовує класичні закони успадкування Менделя для розрахунку ймовірностей. Однак біологія іноді підносить сюрпризи: у рідкісних випадках можливі генетичні винятки, такі як «бомбейський феномен». Тому для медичних цілей і 100% підтвердження завжди потрібен лабораторний аналіз крові." 
+    },
+
+    // ЛИЦО
+    "face-seo-h3-1": { "ru": "Как наследуются уникальные черты лица?", "en": "How are unique facial features inherited?", "uk": "Як успадковуються унікальні риси обличчя?" },
+    "face-seo-p-1": { "ru": "Генетика лица определяется сложной комбинацией ДНК обоих родителей. Многие «особые приметы» передаются по наследству благодаря доминантным генам.", "en": "Facial genetics are determined by a complex combination of both parents' DNA. Many 'special features' are inherited due to dominant genes.", "uk": "Генетика обличчя визначається складною комбінацією ДНК обох батьків. Багато «особливих прикмет» передаються у спадок завдяки домінантним генам." },
+    "face-seo-h4-1": { "ru": "Ямочки, веснушки и подбородок", "en": "Dimples, freckles, and cleft chin", "uk": "Ямочки, веснянки та підборіддя" },
+    "face-seo-p-2": { "ru": "Ямочки на щеках и раздвоенный подбородок являются примерами анатомических особенностей, которые передаются генетически. Веснушки же зависят от гена MC1R.", "en": "Cheek dimples and a cleft chin are examples of anatomical features that are passed down genetically. Freckles depend on the MC1R gene.", "uk": "Ямочки на щоках і роздвоєне підборіддя є прикладами анатомічних особливостей, які передаються генетично. Веснянки ж залежать від гена MC1R." },
+    "face-seo-h4-2": { "ru": "Полигенное наследование", "en": "Polygenic inheritance", "uk": "Полігенне успадкування" },
+    "face-seo-p-3": { "ru": "Этот калькулятор черт лица использует базовые принципы наследования аутосомно-доминантных признаков.", "en": "This facial feature calculator uses the basic principles of autosomal dominant inheritance.", "uk": "Цей калькулятор рис обличчя використовує базові принципи успадкування аутосомно-домінантних ознак." },
+
+    // ВОЛОСЫ
+    "hair-seo-h3-1": { "ru": "Как наследуется цвет и структура волос?", "en": "How are hair color and texture inherited?", "uk": "Як успадковується колір і структура волосся?" },
+    "hair-seo-p-1": { "ru": "Генетика волос — это увлекательный процесс. Темные цвета волос являются генетически доминантными над светлыми.", "en": "Hair genetics is a fascinating process. Dark hair colors are genetically dominant over light ones.", "uk": "Генетика волосся — це захопливий процес. Темні кольори волосся є генетично домінантними над світлими." },
+    "hair-seo-h4-1": { "ru": "Форма и структура волос", "en": "Hair shape and texture", "uk": "Форма і структура волосся" },
+    "hair-seo-p-2": { "ru": "Структура волоса зависит от физической формы волосяного фолликула. Ген кудрявых волос обладает неполным доминированием.", "en": "Hair structure depends on the physical shape of the hair follicle. The curly hair gene has incomplete dominance.", "uk": "Структура волосся залежить від фізичної форми волосяного фолікула. Ген кучерявого волосся має неповне домінування." },
+    "hair-seo-h4-2": { "ru": "Точность расчета", "en": "Calculation accuracy", "uk": "Точність розрахунку" },
+    "hair-seo-p-3": { "ru": "Наш калькулятор опирается на классические вероятностные модели наследования признаков.", "en": "Our calculator is based on classical probability models of trait inheritance.", "uk": "Наш калькулятор спирається на класичні ймовірнісні моделі успадкування ознак." },
+
+    // РУКИ (ЛЕВША/ПРАВША)
+    "hands-seo-h3-1": { "ru": "Передается ли леворукость по наследству?", "en": "Is left-handedness inherited?", "uk": "Чи передається ліворукість у спадок?" },
+    "hands-seo-p-1": { "ru": "Генетика леворукости — одна из загадок биологии. Это сложный полигенный признак.", "en": "The genetics of left-handedness is one of biology's mysteries. It is a complex polygenic trait.", "uk": "Генетика ліворукості — одна із загадок біології. Це складна полігенна ознака." },
+    "hands-seo-h4-1": { "ru": "Асимметрия мозга и моторные функции", "en": "Brain asymmetry and motor functions", "uk": "Асиметрія мозку і моторні функції" },
+    "hands-seo-p-2": { "ru": "Выбор ведущей руки тесно связан с функциональной асимметрией головного мозга.", "en": "The choice of the dominant hand is closely related to the functional asymmetry of the brain.", "uk": "Вибір провідної руки тісно пов'язаний з функціональною асиметрією головного мозку." },
+    "hands-seo-h4-2": { "ru": "Точность прогноза", "en": "Forecast accuracy", "uk": "Точність прогнозу" },
+    "hands-seo-p-3": { "ru": "Данный онлайн-калькулятор базируется на глобальных статистических исследованиях.", "en": "This online calculator is based on global statistical studies.", "uk": "Даний онлайн-калькулятор базується на глобальних статистичних дослідженнях." },
+
+    // РОСТ
+    "height-seo-h3-1": { "ru": "Как рассчитать будущий рост ребенка?", "en": "How to calculate a child's future height?", "uk": "Як розрахувати майбутній зріст дитини?" },
+    "height-seo-p-1": { "ru": "Генетика играет ключевую роль в формировании параметров тела человека. До 80% нашего финального роста заложено в ДНК.", "en": "Genetics plays a key role in shaping human body parameters. Up to 80% of our final height is encoded in DNA.", "uk": "Генетика відіграє ключову роль у формуванні параметрів тіла людини. До 80% нашого фінального зросту закладено в ДНК." },
+    "height-seo-h4-1": { "ru": "Влияние внешних факторов", "en": "Influence of external factors", "uk": "Вплив зовнішніх факторів" },
+    "height-seo-p-2": { "ru": "Несмотря на сильную генетическую предрасположенность, оставшиеся 20% зависят от образа жизни, питания и сна.", "en": "Despite a strong genetic predisposition, the remaining 20% depends on lifestyle, nutrition, and sleep.", "uk": "Незважаючи на сильну генетичну схильність, решта 20% залежать від способу життя, харчування та сну." },
+    "height-seo-h4-2": { "ru": "Ограничения калькулятора", "en": "Calculator limitations", "uk": "Обмеження калькулятора" },
+    "height-seo-p-3": { "ru": "Этот онлайн-калькулятор роста предоставляет статистически наиболее вероятный математический прогноз.", "en": "This online height calculator provides a statistically most probable mathematical forecast.", "uk": "Цей онлайн-калькулятор зросту надає статистично найімовірніший математичний прогноз." }
 };
 
 // Механизм переключения языков
