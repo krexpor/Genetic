@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang="hands-title">Левша или правша</title>
     
-    <!-- Защита от мерцания экрана, ТЕМНАЯ тема по умолчанию -->
     <script>
         (function() {
             let savedTheme = localStorage.getItem('site-theme');
@@ -35,7 +34,6 @@
 </head>
 <body>
 
-    <!-- Панель управления (Языки + Тема) -->
     <div class="top-controls">
         <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
         <button onclick="changeLanguage('en')" class="control-btn">EN</button>
@@ -88,6 +86,22 @@
             
             <h4 data-lang="hands-seo-h4-2">Точность прогноза</h4>
             <p data-lang="hands-seo-p-3">Данный онлайн-калькулятор базируется на глобальных статистических исследованиях наследования рукости. Важно понимать, что даже у двух родителей-правшей с вероятностью около 9% может родиться ребенок-левша из-за случайной комбинации генов или эпигенетических факторов.</p>
+
+            <div class="faq-section">
+                <h3 data-lang="hands-faq-title">Часто задаваемые вопросы (FAQ)</h3>
+                <details class="faq-item">
+                    <summary data-lang="hands-faq-q1">Можно ли переучивать левшу на правшу?</summary>
+                    <p data-lang="hands-faq-a1">Современная медицина и психология категорически не рекомендуют этого делать. Насильственное переучивание ломает естественную работу полушарий мозга, что может привести к заиканию, задержке речи, стрессу и проблемам с концентрацией у ребенка.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-lang="hands-faq-q2">Что такое амбидекстрия?</summary>
+                    <p data-lang="hands-faq-a2">Амбидекстрия — это редкая способность одинаково хорошо и эффективно использовать как правую, так и левую руку. Она встречается примерно у 1% людей в мире и может быть как врожденной, так и натренированной.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-lang="hands-faq-q3">Отличается ли мозг левшей от правшей?</summary>
+                    <p data-lang="hands-faq-a3">У левшей мозолистое тело (мост, соединяющий два полушария мозга) обычно больше, что обеспечивает более быструю связь между правой и левой половинами. Это часто связывают с креативностью и нестандартным мышлением.</p>
+                </details>
+            </div>
         </div>
     </div>
 
@@ -129,15 +143,12 @@
             
             const currentLang = window.currentLang || 'ru';
 
-            // Выводим результат
             document.getElementById("hand-result").innerHTML = handRules[currentLang] ? handRules[currentLang][combo] : handRules['ru'][combo];
 
-            // Случайный факт
             const factsArray = handFacts[currentLang] ? handFacts[currentLang] : handFacts['ru'];
             const randomFact = factsArray[Math.floor(Math.random() * factsArray.length)];
             document.getElementById('fact-text').innerText = randomFact;
 
-            // Показываем блок с анимацией
             document.getElementById("result-box").style.display = "block";
         }
     </script>
