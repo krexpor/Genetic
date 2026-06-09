@@ -35,7 +35,6 @@
 </head>
 <body>
 
-    <!-- Панель управления (Языки + Тема) -->
     <div class="top-controls">
         <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
         <button onclick="changeLanguage('en')" class="control-btn">EN</button>
@@ -114,11 +113,27 @@
             
             <h4 data-lang="face-seo-h4-2">Полигенное наследование</h4>
             <p data-lang="face-seo-p-3">Этот калькулятор черт лица использует базовые принципы наследования аутосомно-доминантных признаков. На практике на формирование внешности влияет множество генов-модификаторов, поэтому даже у родителей с ярко выраженными ямочками может родиться ребенок без них, если сыграет роль скрытая рецессивная генетика.</p>
+
+            <!-- БЛОК FAQ -->
+            <div class="faq-section">
+                <h3 data-lang="face-faq-title">Часто задаваемые вопросы (FAQ)</h3>
+                <details class="faq-item">
+                    <summary data-lang="face-faq-q1">Почему ямочки на щеках могут исчезнуть с возрастом?</summary>
+                    <p data-lang="face-faq-a1">У детей ямочки часто более выражены из-за детского жирка на щеках. По мере взросления мышцы лица удлиняются, а жировая прослойка истончается, из-за чего ямочки могут стать менее заметными или вовсе исчезнуть.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-lang="face-faq-q2">Являются ли веснушки чисто генетической чертой?</summary>
+                    <p data-lang="face-faq-a2">Генетика (преимущественно ген MC1R) дает предрасположенность к их появлению. Однако сами веснушки проявляются только под воздействием ультрафиолета. Если ребенок с такой предрасположенностью не бывает на солнце, веснушек у него не будет.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-lang="face-faq-q3">Может ли признак передаться через поколение?</summary>
+                    <p data-lang="face-faq-a3">Доминантные признаки (такие как ямочки или раздвоенный подбородок) обычно проявляются в каждом поколении. А вот рецессивные черты могут скрыто передаваться от бабушек и дедушек, «перепрыгивая» поколения, и внезапно проявиться у внуков.</p>
+                </details>
+            </div>
         </div>
     </div>
 
     <script>
-        // Функция расчета для доминантных признаков (с поддержкой языков)
         function getProbability(dad, mom, lang) {
             if (dad === 'yes' && mom === 'yes') {
                 return lang === 'en' ? "<span style='color: #10b981;'>High (75-100%)</span>" : "<span style='color: #10b981;'>Высокая (75-100%)</span>";
@@ -152,7 +167,6 @@
         function calculateFace() {
             const currentLang = window.currentLang || 'ru';
 
-            // Получаем данные
             const dDimples = document.getElementById("dad-dimples").value;
             const mDimples = document.getElementById("mom-dimples").value;
             
@@ -162,7 +176,6 @@
             const dChin = document.getElementById("dad-chin").value;
             const mChin = document.getElementById("mom-chin").value;
 
-            // Формируем результат
             const resDimples = getProbability(dDimples, mDimples, currentLang);
             const resFreckles = getProbability(dFreckles, mFreckles, currentLang);
             const resChin = getProbability(dChin, mChin, currentLang);
@@ -172,12 +185,10 @@
                 resultLabels[currentLang].freckles + resFreckles + "<br>" +
                 resultLabels[currentLang].chin + resChin;
 
-            // Выбираем случайный факт
             const factsArray = faceFacts[currentLang] ? faceFacts[currentLang] : faceFacts['ru'];
             const randomFact = factsArray[Math.floor(Math.random() * factsArray.length)];
             document.getElementById('fact-text').innerText = randomFact;
 
-            // Показываем результат
             document.getElementById("result-box").style.display = "block";
         }
     </script>
