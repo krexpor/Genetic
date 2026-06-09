@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang="face-title">Конструктор лица</title>
+    
+    <!-- Защита от мерцания экрана, ТЕМНАЯ тема по умолчанию -->
+    <script>
+        (function() {
+            let savedTheme = localStorage.getItem('site-theme');
+            if (!savedTheme) savedTheme = 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
     <link rel="stylesheet" href="/style.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
@@ -11,20 +21,28 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-0WPCS9G55D');
     </script>
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
     <script src="/cookies.js" defer></script>
-
     <script src="/lang.js" defer></script>
+    <script src="/theme.js" defer></script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
     
 </head>
 <body>
+
+    <!-- Панель управления (Языки + Тема) -->
+    <div class="top-controls">
+        <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
+        <button onclick="changeLanguage('en')" class="control-btn">EN</button>
+        <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
+        <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
+    </div>
+
     <div class="calculator-card">
         <a href="index.html" class="back-link" data-lang="back-menu">⬅ Назад в меню</a>
         
@@ -82,8 +100,8 @@
             <div id="face-result" style="margin-top: 15px; font-size: 15px; font-weight: bold; line-height: 1.8; text-align: left; display: inline-block;">
                 </div>
 
-            <div id="fact-box" style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed #444; text-align: left; font-size: 13px; color: #a0a0a0; line-height: 1.5;">
-                <b style="color: #a855f7;" data-lang="face-fact-title">💡 Интересный факт:</b> <span id="fact-text"></span>
+            <div id="fact-box" style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); text-align: left; font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+                <b style="color: var(--accent);" data-lang="face-fact-title">💡 Интересный факт:</b> <span id="fact-text"></span>
             </div>
         </div>
 
@@ -155,7 +173,7 @@
                 resultLabels[currentLang].chin + resChin;
 
             // Выбираем случайный факт
-            const factsArray = faceFacts[currentLang];
+            const factsArray = faceFacts[currentLang] ? faceFacts[currentLang] : faceFacts['ru'];
             const randomFact = factsArray[Math.floor(Math.random() * factsArray.length)];
             document.getElementById('fact-text').innerText = randomFact;
 
