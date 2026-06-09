@@ -196,47 +196,7 @@ const langArr = {
     "blood-seo-h4-1": { "ru": "Что такое резус-фактор (Rh)?", "en": "What is the Rh factor?" },
     "blood-seo-p-2": { "ru": "Резус-фактор — это белок на поверхности эритроцитов. Положительный резус (Rh+) является доминантным признаком, а отрицательный (Rh-) — рецессивным. Важно знать: у двух родителей с положительным резусом вполне может родиться ребенок с отрицательным, если оба скрыто несут рецессивный ген.", "en": "The Rh factor is a protein on the surface of red blood cells. A positive Rh (Rh+) is a dominant trait, and a negative (Rh-) is a recessive one. It is important to know: two parents with a positive Rh can easily have a child with a negative one if both secretly carry the recessive gene." },
     "blood-seo-h4-2": { "ru": "Точность генетического прогноза", "en": "Accuracy of the genetic forecast" },
-    "blood-seo-p-3": { "ru": "Наш онлайн-калькулятор использует классические законы наследования Менделя для расчета вероятностей. Однако биология иногда преподносит сюрпризы: в редких случаях возможны генетические исключения, такие как «бомбейский феномен». Поэтому для медицинских целей и 100% подтверждения всегда требуется лабораторный анализ крови.", "en": "Our online calculator uses classic Mendelian laws of inheritance to calculate probabilities. However, biology sometimes presents surprises: in rare cases, genetic exceptions are possible, such as the 'Bombay phenotype'. Therefore, a laboratory blood test is always required for medical purposes and 100% confirmation." },
-
-    // --- ГИТАРНЫЙ РАЗДЕЛ ---
-    "guitar-menu-title": { "ru": "Гитара | Krexpor", "en": "Guitar | Krexpor" },
-    "guitar-menu-h2": { "ru": "🎸 Гитарный уголок", "en": "🎸 Guitar Corner" },
-    "guitar-menu-desc": { "ru": "Мой путь обучения и полезные утилиты для игры на гитаре.", "en": "My learning path and useful guitar utilities." },
-    "guitar-menu-chords": { "ru": "Справочник базовых аккордов", "en": "Basic Chords Dictionary" },
-    
-    // Справочник аккордов
-    "chords-title": { "ru": "Справочник аккордов | Krexpor", "en": "Chord Dictionary | Krexpor" },
-    "chords-h2": { "ru": "🎸 Базовые аккорды", "en": "🎸 Basic Chords" },
-    "chords-desc": { "ru": "Выберите аккорд, чтобы увидеть правильную постановку пальцев.", "en": "Select a chord to see the correct finger placement." },
-
-    // Текст для справочника аккордов
-    "chords-seo-h3-1": { "ru": "Как читать схемы аккордов?", "en": "How to read chord diagrams?" },
-    "chords-seo-p-1": { "ru": "Аккорды на открытых струнах — это база, с которой начинает каждый гитарист. На схеме выше изображен гриф гитары: вертикальные линии — это струны (от самой толстой 6-й слева до самой тонкой 1-й справа), а горизонтальные — металлические порожки (лады). Красными точками отмечены места, где нужно прижать струну пальцами.", "en": "Open chords are the foundation every guitarist starts with. The diagram above shows a guitar fretboard: the vertical lines are strings (from the thickest 6th on the left to the thinnest 1st on the right), and the horizontal lines are frets. The red dots indicate where you need to press the string with your fingers." },
-    "chords-seo-h4-1": { "ru": "Что значат символы X и O?", "en": "What do the X and O symbols mean?" },
-    "chords-seo-p-2": { "ru": "<strong>Крестик (X)</strong> над струной означает, что она не должна звучать в этом аккорде. Её нужно либо не задевать при игре правой рукой, либо слегка приглушить левой. <br><strong>Нолик (O)</strong> означает «открытую» струну — она должна звучать свободно, не прижатая ни на одном ладу.", "en": "An <strong>X (cross)</strong> above a string means it shouldn't be played in this chord. You should either avoid strumming it or lightly mute it. <br>An <strong>O (circle)</strong> means an 'open' string—it should ring out freely without being fretted." },
-    "chords-seo-h4-2": { "ru": "Советы по постановке пальцев", "en": "Finger placement tips" },
-    "chords-seo-p-3": { "ru": "Старайтесь ставить пальцы почти перпендикулярно грифу (на самые подушечки), чтобы случайно не заглушить соседние струны. Прижимайте струну чуть ближе к нижнему металлическому порожку нужного лада — так звук будет чище, а усилий потребуется гораздо меньше.", "en": "Try to place your fingers almost perpendicular to the fretboard (on the very tips) so you don't accidentally mute adjacent strings. Press the string slightly closer to the lower metal fret line—this will produce a cleaner sound with much less effort." },
-
-    // --- РИТМЫ И БОИ ---
-    "guitar-menu-rhythms": { "ru": "Гитарные бои (Ритмы)", "en": "Strumming Patterns" },
-    "rhythms-title": { "ru": "Гитарные бои | Krexpor", "en": "Strumming Patterns | Krexpor" },
-    "rhythms-h2": { "ru": "🥁 Гитарные бои", "en": "🥁 Strumming Patterns" },
-    "rhythms-sub": { "ru": "Основные рисунки для правой руки. Нажмите Play, чтобы увидеть визуализацию ритма.", "en": "Basic right-hand patterns. Press Play to see the rhythm visualization." },
-    "rhythm-play": { "ru": "▶ Показать ритм", "en": "▶ Show rhythm" },
-    
-    "rhythm-4": { "ru": "Бой «Четверка» (Базовый)", "en": "4/4 Strum (Basic)" },
-    "rhythm-4-desc": { "ru": "Простой и ровный бой для новичков.", "en": "A simple and even strum for beginners." },
-    
-    "rhythm-6": { "ru": "Бой «Шестерка» (Эстрадный)", "en": "Pop Strum (The 'Six')" },
-    "rhythm-6-desc": { "ru": "Самый популярный бой в мире. Подходит для 80% песен.", "en": "The most popular pattern in the world. Fits 80% of songs." },
-    
-    "rhythm-8": { "ru": "Бой «Восьмерка»", "en": "8-Beat Strum" },
-    "rhythm-8-desc": { "ru": "Длинный и красивый рисунок для баллад.", "en": "A long and beautiful pattern for ballads." },
-
-    "rhythms-seo-h3": { "ru": "Как читать стрелочки?", "en": "How to read the arrows?" },
-    "rhythms-seo-p1": { "ru": "Стрелка вниз (↓) означает удар по струнам сверху вниз (от 6-й толстой струны к 1-й тонкой). Стрелка вверх (↑) — возвратное движение снизу вверх.", "en": "A down arrow (↓) means strumming the strings downwards (from the 6th thick string to the 1st thin one). An up arrow (↑) is the upward return stroke." },
-    "rhythms-seo-h4": { "ru": "Паузы и глушение", "en": "Pauses and muting" },
-    "rhythms-seo-p2": { "ru": "Пробелы между стрелочками визуализируют микро-паузу. Ваша рука всегда должна двигаться вверх-вниз как маятник, даже если вы не задеваете струны — это называется «холостой взмах». Именно он помогает держать ровный ритм.", "en": "Spaces between the arrows visualize a micro-pause. Your hand should always move up and down like a pendulum, even if you don't hit the strings—this is called a 'ghost strum'. It's what helps you keep a steady rhythm." }
+    "blood-seo-p-3": { "ru": "Наш онлайн-калькулятор использует классические законы наследования Менделя для расчета вероятностей. Однако биология иногда преподносит сюрпризы: в редких случаях возможны генетические исключения, такие как «бомбейский феномен». Поэтому для медицинских целей и 100% подтверждения всегда требуется лабораторный анализ крови.", "en": "Our online calculator uses classic Mendelian laws of inheritance to calculate probabilities. However, biology sometimes presents surprises: in rare cases, genetic exceptions are possible, such as the 'Bombay phenotype'. Therefore, a laboratory blood test is always required for medical purposes and 100% confirmation." }
 
 };
 
