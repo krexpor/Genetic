@@ -346,8 +346,3 @@ details.faq-item p {
     line-height: 1.6;
     margin-bottom: 0;
 }
-
-.blog-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
-}
