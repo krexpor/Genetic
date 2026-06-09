@@ -8,6 +8,20 @@
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
+    <!-- Захист від "блимання" екрану, ТЕМНА тема за замовчуванням -->
+    <script>
+        (function() {
+            let savedTheme = localStorage.getItem('site-theme');
+            if (!savedTheme) {
+                savedTheme = 'dark';
+            }
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
+    <!-- Підключення глобального стилю -->
+    <link rel="stylesheet" href="tests.css">
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
     <script>
@@ -23,55 +37,24 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="../lang.js" defer></script>
     <script src="../cookies.js" defer></script>
+    <script src="theme.js" defer></script>
 
     <style>
+        /* У файлі залишається ТІЛЬКИ акцентний колір конкретного тесту */
         :root {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #334155;
-            --text-muted: #64748b;
-            --accent-color: #8b5cf6; 
-            --accent-hover: #7c3aed;
-            --border-color: #e2e8f0;
+            --accent-color: #eab308; /* Золотий для естетики */
+            --accent-hover: #ca8a04;
         }
-        
-        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Inter', -apple-system, sans-serif; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; margin: 0; line-height: 1.6; }
-        .lang-switcher { position: absolute; top: 20px; right: 20px; display: flex; gap: 8px; z-index: 10; }
-        .lang-btn { background: transparent; border: 1px solid #cbd5e1; color: #64748b; border-radius: 6px; padding: 4px 8px; font-size: 0.75rem; cursor: pointer; transition: all 0.3s; font-weight: 600; }
-        .lang-btn:hover { background: #e2e8f0; color: #1e293b; }
-        .container { background: var(--card-bg); border-radius: 20px; padding: 40px; width: 100%; max-width: 650px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); border: 1px solid var(--border-color); margin-bottom: 40px; position: relative; }
-        .title-wrapper { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 10px; }
-        h1 { color: #1e293b; margin: 0; font-size: 26px; font-weight: 700; text-align: center; }
-        .subtitle { color: var(--text-muted); font-size: 15px; margin-bottom: 30px; text-align: center; }
-        .question-block { margin-bottom: 35px; }
-        .question-title { display: block; margin-bottom: 15px; color: #1e293b; font-weight: 600; font-size: 16px; }
-        .options-grid { display: grid; gap: 12px; }
-        .option-label { display: block; position: relative; cursor: pointer; }
-        .option-label input { position: absolute; opacity: 0; cursor: pointer; }
-        .option-card { display: flex; align-items: center; padding: 16px 20px; background: #f1f5f9; border: 2px solid transparent; border-radius: 12px; color: var(--text-main); font-size: 15px; transition: all 0.2s ease; }
-        .option-label:hover .option-card { background: #e2e8f0; }
-        /* Акцентный цвет для эстетики (золотой/звездный) */
-        .option-label input:checked ~ .option-card { background: #ffffff; border-color: #eab308; box-shadow: 0 4px 12px rgba(234, 179, 8, 0.15); color: #ca8a04; font-weight: 500; }
-        .btn { width: 100%; padding: 16px; background: #1e293b; color: white; border: none; border-radius: 12px; cursor: pointer; font-weight: 600; font-size: 16px; transition: 0.2s; margin-top: 15px; box-shadow: 0 4px 14px rgba(30, 41, 59, 0.3); }
-        .btn:hover { background: #0f172a; transform: translateY(-2px); }
-        .result-box { margin-top: 30px; background: #f8fafc; border: 1px solid var(--border-color); padding: 30px; border-radius: 16px; display: none; }
-        .result-box h2 { color: #ca8a04; font-size: 20px; margin-top: 20px; margin-bottom: 10px; }
-        .result-box h2:first-child { margin-top: 0; }
-        .loader { color: #ca8a04; text-align: center; font-weight: 500; display: none; margin-top: 20px; animation: pulse 1.5s infinite; }
-        @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
-        .seo-article { width: 100%; max-width: 800px; padding: 20px; color: var(--text-main); }
-        .seo-article h2 { color: #1e293b; font-size: 24px; margin-top: 30px; }
-        .seo-article h3 { color: #334155; font-size: 18px; margin-top: 25px; }
-        .seo-article p, .seo-article ul { color: #475569; font-size: 16px; line-height: 1.8; margin-bottom: 15px; }
-        .seo-article li { margin-bottom: 8px; }
     </style>
 </head>
 <body>
 
-    <div class="lang-switcher">
-        <button onclick="changeLanguage('ru')" class="lang-btn">RU</button>
-        <button onclick="changeLanguage('uk')" class="lang-btn">UK</button>
-        <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+    <!-- Панель керування: Мови + Тема -->
+    <div class="top-controls">
+        <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
+        <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
+        <button onclick="changeLanguage('en')" class="control-btn">EN</button>
+        <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
     </div>
 
     <!-- БЛОК ТЕСТА -->
@@ -80,7 +63,7 @@
         
         <div class="title-wrapper">
             <!-- Іконка іскор/естетики -->
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
             </svg>
             <h1 data-lang="aes-h1">Эстетика вашей души</h1>
