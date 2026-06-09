@@ -8,7 +8,6 @@
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-    <!-- Защита от мерцания, ТЕМНАЯ тема по умолчанию -->
     <script>
         (function() {
             let savedTheme = localStorage.getItem('site-theme');
@@ -19,10 +18,8 @@
         })();
     </script>
 
-    <!-- Подключение глобального стиля -->
     <link rel="stylesheet" href="tests.css">
 
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -31,22 +28,19 @@
       gtag('config', 'G-0WPCS9G55D');
     </script>
 
-    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="../lang.js" defer></script>
     <script src="../cookies.js" defer></script>
-    <script src="../theme.js" defer></script>
+    <script src="theme.js" defer></script>
 
     <style>
-        /* Акцентный цвет (Холодный серый/черный) */
         :root {
             --accent-color: #1e293b; 
             --accent-hover: #0f172a;
         }
 
-        /* Чтобы кнопка выделялась в темной теме, делаем ее светлее */
         [data-theme="dark"] {
             --accent-color: #64748b;
             --accent-hover: #94a3b8;
@@ -55,7 +49,6 @@
 </head>
 <body>
 
-    <!-- Панель управления -->
     <div class="top-controls">
         <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
         <button onclick="changeLanguage('en')" class="control-btn">EN</button>
@@ -63,7 +56,6 @@
         <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
     </div>
 
-    <!-- БЛОК ТЕСТА -->
     <div class="container">
         <a href="../index.html" data-lang="back-home" style="display: inline-block; margin-bottom: 20px; color: var(--text-muted); text-decoration: none; font-weight: 600;">← Вернуться на главную</a>
         
@@ -136,7 +128,7 @@
         <div id="ai-response" class="result-box"></div>
     </div>
 
-    <!-- SEO БЛОК -->
+    <!-- SEO БЛОК С FAQ -->
     <article class="seo-article">
         <h2 data-lang="shad-seo-h2">Что такое Теневая сторона личности?</h2>
         <p data-lang="shad-seo-p1">Концепция "Тени" была введена швейцарским психиатром Карлом Густавом Юнгом. Тень — это бессознательная часть нашей психики, в которой скрыты вытесненные эмоции, страхи, инстинкты и желания, которые мы считаем неприемлемыми для общества или самих себя.</p>
@@ -148,6 +140,27 @@
             <li data-lang="shad-seo-li-3"><strong>Контроль над внутренним критиком:</strong> Поняв истинную причину своего самосаботажа, вы перестаете наказывать себя за малейшие ошибки.</li>
         </ul>
         <p data-lang="shad-seo-p2">Наш искусственный интеллект анализирует ваши ответы на вопросы о социальных масках, подавленных желаниях и внутреннем критике, чтобы помочь вам безопасно заглянуть в свое бессознательное и найти там скрытый потенциал.</p>
+
+        <!-- НОВЫЙ БЛОК FAQ -->
+        <div class="faq-section">
+            <h3 data-lang="shad-faq-title">Часто задаваемые вопросы (FAQ)</h3>
+            
+            <details class="faq-item">
+                <summary data-lang="shad-faq-q1">Что такое «Работа с Тенью» (Shadow Work)?</summary>
+                <p data-lang="shad-faq-a1">Работа с Тенью — это психологическая практика, основанная на идеях Карла Юнга. Её цель — сделать бессознательное (подавленные мысли, травмы, скрытые желания) сознательным. Инструменты ИИ помогают быстрее выявить скрытые паттерны, направляя вас в нужную сторону.</p>
+            </details>
+            
+            <details class="faq-item">
+                <summary data-lang="shad-faq-q2">Является ли моя Теневая сторона чем-то плохим или злым?</summary>
+                <p data-lang="shad-faq-a2">Нет, Тень не является злом по своей природе. Она содержит то, что вы, возможно, подавили из-за социальных норм: гнев, здоровую агрессию или даже креативность и индивидуальность. Интеграция Тени позволяет обрести уверенность и целостность.</p>
+            </details>
+            
+            <details class="faq-item">
+                <summary data-lang="shad-faq-q3">Гарантирована ли безопасность при прохождении этого теста?</summary>
+                <p data-lang="shad-faq-a3">Полностью. Мы не сохраняем ваши ответы. Платформа Krexpor просто выступает мостом между вашими ассоциациями и ИИ. После формирования ответа все данные исчезают.</p>
+            </details>
+        </div>
+
     </article>
 
     <script>
