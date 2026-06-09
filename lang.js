@@ -238,16 +238,7 @@ const langArr = {
     "rhythms-seo-h4": { "ru": "Паузы и глушение", "en": "Pauses and muting" },
     "rhythms-seo-p2": { "ru": "Пробелы между стрелочками визуализируют микро-паузу. Ваша рука всегда должна двигаться вверх-вниз как маятник, даже если вы не задеваете струны — это называется «холостой взмах». Именно он помогает держать ровный ритм.", "en": "Spaces between the arrows visualize a micro-pause. Your hand should always move up and down like a pendulum, even if you don't hit the strings—this is called a 'ghost strum'. It's what helps you keep a steady rhythm." }
 
-    // --- ТЮНЕР ---
-    "menu-tuner": { "ru": "Гитарный тюнер", "en": "Guitar Tuner" },
-    "tuner-title": { "ru": "Тюнер | Krexpor", "en": "Tuner | Krexpor" },
-    "tuner-h2": { "ru": "🎸 Гитарный тюнер", "en": "🎸 Guitar Tuner" },
-    "tuner-select-string": { "ru": "Выберите струну для настройки:", "en": "Select a string to tune:" },
-    "tuner-flat": { "ru": "Низко", "en": "Flat" },
-    "tuner-perfect-label": { "ru": "Точно", "en": "Perfect" },
-    "tuner-sharp": { "ru": "Высоко", "en": "Sharp" },
-    "tuner-start": { "ru": "Включить микрофон 🎙️", "en": "Enable Microphone 🎙️" },
-    "tuner-note": { "ru": "Доступ нужен только для анализа звука в реальном времени.", "en": "Access is only needed to analyze sound in real-time." }
+    
 
 };
 
