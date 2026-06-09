@@ -74,3 +74,58 @@ textarea:focus { outline: none; background: var(--card-bg); border-color: var(--
 .seo-article h3 { font-size: 18px; margin-top: 25px; }
 .seo-article p, .seo-article ul { color: var(--text-muted); font-size: 16px; line-height: 1.8; margin-bottom: 15px; }
 .seo-article li { margin-bottom: 8px; }
+
+/* === Стили для FAQ (Аккордеон) === */
+.faq-section {
+    margin-top: 35px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+.faq-section h3 {
+    color: var(--text-main);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+details.faq-item {
+    background: var(--hover-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    padding: 14px 18px;
+    transition: background 0.3s;
+}
+details.faq-item[open] {
+    background: var(--bg-color);
+    border-color: var(--accent-color, var(--text-muted));
+}
+details.faq-item summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--text-main);
+    outline: none;
+    list-style: none; /* Убираем стандартный треугольник */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+details.faq-item summary::-webkit-details-marker {
+    display: none; /* Для Safari */
+}
+details.faq-item summary::after {
+    content: '+';
+    color: var(--accent-color, #64748b);
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: transform 0.3s;
+}
+details.faq-item[open] summary::after {
+    transform: rotate(45deg); /* Превращаем + в крестик */
+}
+details.faq-item p {
+    margin-top: 12px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
