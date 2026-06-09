@@ -8,7 +8,6 @@
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-    <!-- Защита от мерцания, ТЕМНАЯ тема по умолчанию -->
     <script>
         (function() {
             let savedTheme = localStorage.getItem('site-theme');
@@ -19,10 +18,8 @@
         })();
     </script>
 
-    <!-- Подключение глобального стиля -->
     <link rel="stylesheet" href="tests.css">
 
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -31,16 +28,14 @@
       gtag('config', 'G-0WPCS9G55D');
     </script>
 
-    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="../lang.js" defer></script>
     <script src="../cookies.js" defer></script>
-    <script src="../theme.js" defer></script>
+    <script src="theme.js" defer></script>
 
     <style>
-        /* Акцентный цвет (Розово-красный) */
         :root {
             --accent-color: #e11d48; 
             --accent-hover: #be123c;
@@ -49,7 +44,6 @@
 </head>
 <body>
 
-    <!-- Панель управления -->
     <div class="top-controls">
         <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
         <button onclick="changeLanguage('en')" class="control-btn">EN</button>
@@ -57,7 +51,6 @@
         <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
     </div>
 
-    <!-- БЛОК ТЕСТА -->
     <div class="container">
         <a href="../index.html" data-lang="back-home" style="display: inline-block; margin-bottom: 20px; color: var(--text-muted); text-decoration: none; font-weight: 600;">← Вернуться на главную</a>
         
@@ -130,7 +123,7 @@
         <div id="ai-response" class="result-box"></div>
     </div>
 
-    <!-- SEO БЛОК -->
+    <!-- SEO БЛОК С FAQ -->
     <article class="seo-article">
         <h2 data-lang="rel-seo-h2">Как AI анализирует язык любви и тип привязанности?</h2>
         <p data-lang="rel-seo-p1">Теория привязанности — одна из важнейших концепций в современной психологии. Наш алгоритм использует ваши ответы на ключевые триггерные ситуации, чтобы составить глубокий анализ того, как вы выстраиваете границы и реагируете на близость.</p>
@@ -142,6 +135,26 @@
             <li data-lang="rel-seo-li-3"><strong>Избегающий:</strong> Дистанцирование при малейшей угрозе комфорту, защита через независимость.</li>
         </ul>
         <p data-lang="rel-seo-p2">Сочетая ваш выбор реакции на отдаление партнера, красные флаги и предпочтения в заботе, искусственный интеллект формирует персональную карту ваших эмоциональных потребностей.</p>
+
+        <!-- НОВЫЙ БЛОК FAQ -->
+        <div class="faq-section">
+            <h3 data-lang="rel-faq-title">Часто задаваемые вопросы (FAQ)</h3>
+            
+            <details class="faq-item">
+                <summary data-lang="rel-faq-q1">Основан ли этот тест на реальной психологии?</summary>
+                <p data-lang="rel-faq-a1">Да. В основе лежат принципы «Теории привязанности» Джона Боулби и Мэри Эйнсворт. Однако нейросеть расширяет классический подход, анализируя уникальные комбинации ваших ответов, чтобы выдать более индивидуализированный результат.</p>
+            </details>
+            
+            <details class="faq-item">
+                <summary data-lang="rel-faq-q2">Может ли мой тип привязанности измениться?</summary>
+                <p data-lang="rel-faq-a2">Абсолютно. Ваш тип привязанности не высечен в камне. Благодаря осознанности, работе над собой или длительным отношениям с надежным партнером, люди с тревожным или избегающим типом могут развить так называемую «приобретенную надежную привязанность».</p>
+            </details>
+            
+            <details class="faq-item">
+                <summary data-lang="rel-faq-q3">Сохраняет ли алгоритм мои личные данные?</summary>
+                <p data-lang="rel-faq-a3">Нет. Платформа заботится о вашей приватности. Ваши ответы отправляются в нейросеть в обезличенном виде только на время генерации ответа. Никакие профили или базы данных не сохраняются.</p>
+            </details>
+        </div>
     </article>
 
     <script>
