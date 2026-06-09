@@ -242,8 +242,13 @@ const langArr = {
     "menu-tuner": { "ru": "Гитарный тюнер", "en": "Guitar Tuner" },
     "tuner-title": { "ru": "Тюнер | Krexpor", "en": "Tuner | Krexpor" },
     "tuner-h2": { "ru": "🎸 Гитарный тюнер", "en": "🎸 Guitar Tuner" },
+    "tuner-select-string": { "ru": "Выберите струну для настройки:", "en": "Select a string to tune:" },
+    "tuner-flat": { "ru": "Низко", "en": "Flat" },
+    "tuner-perfect-label": { "ru": "Точно", "en": "Perfect" },
+    "tuner-sharp": { "ru": "Высоко", "en": "Sharp" },
     "tuner-start": { "ru": "Включить микрофон 🎙️", "en": "Enable Microphone 🎙️" },
     "tuner-note": { "ru": "Доступ нужен только для анализа звука в реальном времени.", "en": "Access is only needed to analyze sound in real-time." }
+
 };
 
 // Механизм переключения языков
