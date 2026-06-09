@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang="menu-title">Генетические калькуляторы | Krexpor</title>
-    <link rel="stylesheet" href="/style.css">
     
+    <!-- Защита от мерцания экрана, ТЕМНАЯ тема по умолчанию -->
+    <script>
+        (function() {
+            let savedTheme = localStorage.getItem('site-theme');
+            if (!savedTheme) savedTheme = 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="/style.css">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
     <!-- Open Graph -->
@@ -25,14 +34,15 @@
 
     <script src="/cookies.js" defer></script>
     <script src="/lang.js" defer></script>
+    <script src="/theme.js" defer></script>
 
     <style>
-        /* Стиль для новой кнопки перехода на главную */
+        /* Адаптированный стиль для кнопки перехода на главную */
         .hub-card {
             display: flex;
             align-items: center;
-            background: #111318;
-            border: 1px solid #30363d;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 15px 20px;
             margin-top: 25px;
@@ -40,7 +50,7 @@
             transition: all 0.3s ease;
         }
         .hub-card:hover {
-            border-color: #da3633;
+            border-color: var(--accent);
             transform: translateY(-2px);
         }
         .hub-icon {
@@ -48,23 +58,31 @@
             margin-right: 15px;
         }
         .hub-title {
-            color: #f8fafc;
+            color: var(--text-main);
             font-weight: bold;
             font-size: 1rem;
             margin-bottom: 2px;
         }
         .hub-desc {
-            color: #8b949e;
+            color: var(--text-muted);
             font-size: 0.85rem;
         }
     </style>
 </head>
 <body>
 
+    <!-- Панель управления (Языки + Тема) -->
+    <div class="top-controls">
+        <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
+        <button onclick="changeLanguage('en')" class="control-btn">EN</button>
+        <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
+        <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
+    </div>
+
     <div class="calculator-card">
         
-        <h2 style="text-align: center; margin-top: 0; margin-bottom: 10px;" data-lang="menu-header">🧬 Генетика для каждого</h2>
-        <p style="text-align: center; color: #8b949e; margin-bottom: 30px; font-size: 0.95rem;" data-lang="menu-desc">Узнайте, что передастся по наследству. Выберите инструмент:</p>
+        <h2 style="text-align: center; margin-top: 0; margin-bottom: 10px; color: var(--text-main);" data-lang="menu-header">🧬 Генетика для каждого</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px; font-size: 0.95rem;" data-lang="menu-desc">Узнайте, что передастся по наследству. Выберите инструмент:</p>
 
         <div class="tools-list">
             <!-- БАЗА ЗНАНИЙ (Новая кнопка) -->
@@ -105,8 +123,8 @@
             </a>
         </div>
 
-        <!-- Кнопка Поделиться -->
-        <button class="btn" style="margin-top: 30px; background: #30363d; color: #8b949e;" onclick="navigator.share({title: 'Genetic Calculators', url: window.location.href})" data-lang="btn-share">🔗 Поделиться калькулятором</button>
+        <!-- Кнопка Поделиться (теперь использует класс .share-btn из CSS) -->
+        <button class="btn share-btn" onclick="navigator.share({title: 'Genetic Calculators', url: window.location.href})" data-lang="btn-share">🔗 Поделиться калькулятором</button>
 
         <!-- КРАСИВЫЙ ПЕРЕХОД НА ГЛАВНУЮ -->
         <a href="../index.html" class="hub-card">
