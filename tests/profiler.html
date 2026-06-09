@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Профайлінг: Глибокий аналіз особистості | Krexpor</title>
+    <meta name="description" content="Пройдіть глибокий психологічний тест за допомогою штучного інтелекту. Аналіз патернів поведінки, реакції на стрес та соціальна взаємодія.">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --accent-color: #8b5cf6; 
+            --accent-hover: #7c3aed;
+            --border-color: #e2e8f0;
+        }
+        
+        body { 
+            background-color: var(--bg-color); 
+            color: var(--text-main); 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            padding: 40px 20px;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        /* Блок самого тесту */
+        .container { 
+            background: var(--card-bg); 
+            border-radius: 20px; 
+            padding: 40px; 
+            width: 100%; 
+            max-width: 650px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05); 
+            border: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+
+        /* Блок SEO-статті */
+        .seo-article {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            color: var(--text-main);
+        }
+
+        h1 {
+            color: #1e293b;
+            margin-top: 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        .question-block { margin-bottom: 25px; }
+
+        .question-block label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1e293b;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        textarea { 
+            width: 100%; 
+            padding: 15px; 
+            background: #f1f5f9; 
+            border: 2px solid transparent; 
+            color: var(--text-main); 
+            border-radius: 12px; 
+            box-sizing: border-box; 
+            font-family: inherit;
+            font-size: 15px;
+            resize: vertical;
+            min-height: 90px;
+            transition: 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            background: #ffffff;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+        }
+
+        .btn { 
+            width: 100%; 
+            padding: 16px; 
+            background: var(--accent-color); 
+            color: white; 
+            border: none; 
+            border-radius: 12px; 
+            cursor: pointer; 
+            font-weight: 600; 
+            font-size: 16px;
+            transition: 0.2s; 
+            margin-top: 15px;
+            box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3);
+        }
+
+        .btn:hover { 
+            background: var(--accent-hover); 
+            transform: translateY(-2px);
+        }
+
+        .result-box { 
+            margin-top: 30px;
+            background: #f8fafc; 
+            border: 1px solid var(--border-color); 
+            padding: 30px; 
+            border-radius: 16px; 
+            display: none; 
+        }
+
+        .result-box h2 {
+            color: var(--accent-color);
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .result-box h2:first-child { margin-top: 0; }
+
+        .loader { 
+            color: var(--accent-color); 
+            text-align: center;
+            font-weight: 500;
+            display: none;
+            margin-top: 20px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+
+        /* Стилі для SEO-тексту */
+        .seo-article h2 { color: #1e293b; font-size: 24px; margin-top: 30px; }
+        .seo-article h3 { color: #334155; font-size: 18px; margin-top: 25px; }
+        .seo-article p { color: #475569; font-size: 16px; line-height: 1.8; margin-bottom: 15px; }
+        .seo-article ul { color: #475569; line-height: 1.8; margin-bottom: 20px; }
+        .seo-article li { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="../index.html" style="display: inline-block; margin-bottom: 20px; color: var(--accent-color); text-decoration: none; font-weight: 600;">← На головну</a>
+        
+        <h1>Глибокий аналіз особистості ✨</h1>
+        <p class="subtitle">
+            Дайте щирі відповіді на ці три питання. Наш алгоритм проаналізує їх та створить детальний психологічний портрет вашого характеру.
+        </p>
+
+        <div id="form-container">
+            <div class="question-block">
+                <label>1. Як ви реагуєте, коли ваші плани раптово змінюються через обставини?</label>
+                <textarea id="q1" placeholder="Розкажіть про свої емоції та дії..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <label>2. Що для вас є найбільш виснажливим у спілкуванні з іншими людьми?</label>
+                <textarea id="q2" placeholder="Поділіться своїми думками..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <label>3. Опишіть свій ідеальний стан комфорту та спокою.</label>
+                <textarea id="q3" placeholder="Що вас оточує в цей момент?"></textarea>
+            </div>
+
+            <button class="btn" onclick="generateProfile()">Отримати мій розбір</button>
+            <div id="loading" class="loader">Аналізуємо ваші відповіді... Це займе кілька секунд 🔮</div>
+        </div>
+
+        <div id="ai-response" class="result-box"></div>
+    </div>
+
+    <article class="seo-article">
+        <h2>Що таке AI-профайлінг особистості?</h2>
+        <p>У сучасному світі психологічні тести вийшли далеко за межі стандартних опитувальників із варіантами відповідей «так» або «ні». <strong>AI-профайлінг (аналіз особистості за допомогою штучного інтелекту)</strong> — це інноваційний підхід до самопізнання, який дозволяє отримати глибокий зріз вашого психоемоційного стану на основі вільних відповідей.</p>
+        
+        <p>Замість того, щоб заганяти вас у жорсткі рамки типологій (наприклад, виключно інтроверт або екстраверт), нейромережі аналізують семантику вашого тексту: як ви будуєте речення, які слова обираєте для опису стресу та що саме формує вашу зону комфорту. Це дозволяє створити унікальний психологічний портрет, який враховує всі півтони вашого характеру.</p>
+
+        <h3>Як алгоритми аналізують патерни поведінки</h3>
+        <p>Основою нашого інструменту є технологія обробки природної мови (NLP). Коли ви описуєте свою реакцію на раптову зміну планів або соціальне виснаження, штучний інтелект не просто читає слова. Він розпізнає приховані патерни:</p>
+        <ul>
+            <li><strong>Рівень адаптивності:</strong> наскільки швидко ваша психіка здатна перебудовуватися під нові обставини.</li>
+            <li><strong>Соціальні кордони:</strong> де закінчується ваша толерантність до зовнішніх подразників і починається потреба в ізоляції.</li>
+            <li><strong>Механізми копінгу (подолання стресу):</strong> чи схильні ви до аналізу, чи навпаки — до емоційного відсторонення.</li>
+        </ul>
+
+        <h3>Чому важливо знати свій справжній психотип?</h3>
+        <p>Розуміння своїх глибинних реакцій — це не просто розвага, це потужний інструмент для покращення якості життя. Глибокий аналіз особистості допомагає в кількох ключових сферах:</p>
+        <ul>
+            <li><strong>Профілактика вигоряння:</strong> Знаючи, що саме виснажує вас у соціумі, ви можете свідомо дозувати спілкування і уникати токсичних ситуацій.</li>
+            <li><strong>Побудова кар'єри:</strong> Розуміння своєї реакції на хаос і дедлайни дозволяє обрати той формат роботи, де ви будете максимально ефективними (наприклад, фриланс замість корпоративного опен-спейсу).</li>
+            <li><strong>Гармонія у стосунках:</strong> Коли ви можете чітко артикулювати свої потреби в комфорті (як ви це зробили у третьому питанні тесту), вашим близьким стає набагато простіше вас зрозуміти.</li>
+        </ul>
+
+        <h3>Конфіденційність та безпека даних</h3>
+        <p>Ми розуміємо, що питання психологічного комфорту є глибоко особистими. Цей інструмент працює виключно як транзитний шлюз: ваші текстові відповіді обробляються нейромережею в режимі реального часу для генерації результату і <strong>не зберігаються</strong> на наших серверах. Це гарантує повну анонімність вашого цифрового психоаналізу.</p>
+    </article>
+
+    <script>
+        async function generateProfile() {
+            const a1 = document.getElementById('q1').value;
+            const a2 = document.getElementById('q2').value;
+            const a3 = document.getElementById('q3').value;
+
+            if (!a1 || !a2 || !a3) {
+                alert("Будь ласка, дайте відповідь на всі запитання, щоб отримати точний результат!");
+                return;
+            }
+
+            document.querySelector('.btn').style.display = 'none';
+            document.getElementById('loading').style.display = 'block';
+            const responseBox = document.getElementById('ai-response');
+            responseBox.style.display = 'none';
+
+            const systemPrompt = `
+                Ти — професійний, емпатичний та дуже проникливий психолог. 
+                Твоя мета: на основі відповідей клієнта скласти глибокий, цікавий та естетично оформлений психологічний портрет (мінімум 400 слів). 
+                Пиши м'яко, але дуже влучно. Жодних банальностей. Допоможи людині краще зрозуміти себе, свої сильні сторони та зони росту.
+                
+                Відповіді клієнта:
+                1. Реакція на зміну планів: ${a1}
+                2. Що виснажує в людях: ${a2}
+                3. Ідеальний комфорт: ${a3}
+
+                Структуруй відповідь у форматі Markdown. Використовуй емодзі для заголовків.
+                ## 🌟 Ваш базовий психотип
+                [Детальний та цікавий аналіз]
+                ## 🎭 Взаємодія зі світом
+                [Як людина будує кордони та чому втомлюється]
+                ## 💎 Ваші сильні сторони
+                [Що робить людину унікальною]
+                ## 🌱 Поради для гармонії
+                [3-4 м'які, але дієві поради для покращення якості життя]
+            `;
+
+            try {
+                // ПОСИЛАННЯ НА CLOUDFLARE
+                const workerUrl = 'https://gemini-proxy.krexpor.workers.dev/'; 
+                
+                const response = await fetch(workerUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ prompt: systemPrompt })
+                });
+
+                const data = await response.json();
+                
+                document.getElementById('loading').style.display = 'none';
+                
+                if (data.candidates && data.candidates.length > 0) {
+                    const answer = data.candidates[0].content.parts[0].text;
+                    responseBox.innerHTML = marked.parse(answer);
+                    responseBox.style.display = 'block';
+                } else {
+                    responseBox.innerHTML = "<p style='color:#ef4444'>Виникла помилка. Спробуйте ще раз.</p>";
+                    responseBox.style.display = 'block';
+                    document.querySelector('.btn').style.display = 'block';
+                }
+
+            } catch (error) {
+                document.getElementById('loading').style.display = 'none';
+                responseBox.innerHTML = "<p style='color:#ef4444'>Помилка з'єднання: " + error.message + "</p>";
+                responseBox.style.display = 'block';
+                document.querySelector('.btn').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
