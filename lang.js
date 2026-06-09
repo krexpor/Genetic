@@ -431,13 +431,23 @@ function changeLanguage(lang) {
             if (el.tagName === "TITLE") {
                 document.title = langArr[key][lang];
             } else if (el.tagName === "TEXTAREA" || el.tagName === "INPUT") {
-                // Тепер скрипт вміє перекладати підказки всередині полів для вводу!
                 el.setAttribute('placeholder', langArr[key][lang]);
             } else {
                 el.innerHTML = langArr[key][lang];
             }
         }
     });
+
+    // Оновлення результату в калькуляторах (ФАКТИ ТА РЕЗУЛЬТАТ)
+    const resultBox = document.getElementById("result-box");
+    if (resultBox && resultBox.style.display === "block") {
+        // Шукаємо кнопку, яка запускає розрахунок, і клікаємо її
+        const calcBtn = document.querySelector('button[onclick^="calculate"]');
+        if (calcBtn) {
+            calcBtn.click();
+        }
+    }
+}
 
     // Оновлення результату в калькуляторах (якщо відкритий)
     const resultBox = document.getElementById("result-box");
