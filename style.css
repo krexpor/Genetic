@@ -1,8 +1,34 @@
-/* Темний стиль (Dark Mode) - Оновлений під стиль Krexpor */
+/* Базовые переменные (Светлая тема) */
+:root {
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --hover-bg: #f1f5f9;
+    --accent: #da3633;
+    --accent-hover: #b92b29;
+    --shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+/* Переменные для Темной темы (Krexpor Style) */
+[data-theme="dark"] {
+    --bg-color: #111318;
+    --card-bg: #1a1d24;
+    --text-main: #f8fafc;
+    --text-muted: #8b949e;
+    --border-color: #30363d;
+    --hover-bg: #111318;
+    --accent: #da3633;
+    --accent-hover: #a92422;
+    --shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Глобальные стили */
 body {
     font-family: 'Inter', -apple-system, sans-serif;
-    background-color: #111318; /* Темний фон під головну сторінку */
-    color: #f8fafc;
+    background-color: var(--bg-color);
+    color: var(--text-main);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,28 +36,63 @@ body {
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Картка калькулятора */
+/* Панель управления (Языки + Тема) */
+.top-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.control-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    background: var(--hover-bg);
+    color: var(--text-main);
+    border-color: var(--text-muted);
+}
+
+/* Карточка калькулятора */
 .calculator-card {
-    background-color: #1a1d24; /* Колір картки з головної сторінки */
+    background-color: var(--card-bg);
     padding: 40px;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Глибока тінь */
+    box-shadow: var(--shadow);
     max-width: 450px;
     width: 100%;
     box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 h2 {
-    color: #f8fafc;
+    color: var(--text-main);
     text-align: center;
     margin-top: 0;
     letter-spacing: 1px;
 }
 
 .subtitle {
-    color: #8b949e;
+    color: var(--text-muted);
     text-align: center;
     font-size: 14px;
     margin-bottom: 25px;
@@ -39,7 +100,7 @@ h2 {
 
 hr {
     border: none;
-    border-top: 1px solid #30363d;
+    border-top: 1px solid var(--border-color);
     margin-bottom: 20px;
 }
 
@@ -50,39 +111,39 @@ hr {
 label {
     display: block;
     margin-bottom: 8px;
-    color: #8b949e;
+    color: var(--text-muted);
     font-weight: 600;
     font-size: 14px;
 }
 
-/* Дизайн полів вводу */
+/* Дизайн полей ввода */
 input[type="number"], select {
     width: 100%;
     padding: 14px;
-    background-color: #111318; /* Вдавлений ефект фону */
-    color: #f8fafc;
-    border: 1px solid #30363d;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     box-sizing: border-box;
     font-size: 16px;
     outline: none;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, background-color 0.3s;
     font-family: inherit;
 }
 
 input::placeholder {
-    color: #475569;
+    color: var(--text-muted);
 }
 
 input[type="number"]:focus, select:focus {
-    border-color: #da3633; /* Фірмове червоне підсвічування при введенні */
+    border-color: var(--accent);
 }
 
-/* Головна Кнопка (в самих калькуляторах) */
+/* Главная Кнопка */
 button, .btn {
     width: 100%;
     padding: 15px;
-    background-color: #da3633; 
+    background-color: var(--accent); 
     color: white;
     border: none;
     border-radius: 8px;
@@ -99,72 +160,47 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-    background-color: #a92422; /* Приглушений, темніший червоний */
+    background-color: var(--accent-hover);
 }
 
 button:active, .btn:active {
     transform: scale(0.98);
 }
 
-/* Блок з результатом */
+/* Блок с результатом */
 .result-box {
     margin-top: 25px;
     padding: 20px;
-    background-color: #111318; /* Темний фон під результат */
+    background-color: var(--bg-color);
     border-radius: 8px;
     text-align: center;
     border: none;
-    border-left: 4px solid #da3633; /* Червона акцентна лінія зліва */
+    border-left: 4px solid var(--accent);
     animation: slideUpFade 0.5s ease-out forwards;
+    transition: background-color 0.3s;
 }
 
 .result-box h3 {
     margin-top: 0;
     margin-bottom: 10px;
-    color: #8b949e;
+    color: var(--text-muted);
     font-size: 16px;
 }
 
 .highlight-value {
     font-size: 32px;
     font-weight: bold;
-    color: #da3633; /* Червоний для фінальних цифр */
+    color: var(--accent);
     margin: 10px 0;
 }
 
 .note {
     font-size: 12px;
-    color: #64748b;
+    color: var(--text-muted);
     margin: 0;
 }
 
-/* --- СТИЛІ ДЛЯ СТАРОГО МЕНЮ --- */
-.menu-btn {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    background-color: #111318; /* Спокійний темний фон */
-    color: #f8fafc; /* Світлий текст */
-    text-decoration: none;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: 600;
-    border: 1px solid #30363d; /* Тонка сіра рамка */
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-    font-size: 16px;
-    text-transform: none; /* Примусово відключає КАПСЛОК */
-}
-
-.menu-btn:hover {
-    background-color: #a92422; /* Приглушений, благородний червоний */
-    border-color: #a92422;
-    color: #ffffff;
-    box-shadow: 0 4px 15px rgba(169, 36, 34, 0.3); /* Легке світіння в тон кнопки */
-}
-
-/* --- СТИЛІ ДЛЯ НОВОГО СПИСКУ КАЛЬКУЛЯТОРІВ (МЕНЮ) --- */
+/* СТИЛИ ДЛЯ СПИСКА КАЛЬКУЛЯТОРОВ (МЕНЮ) */
 .tools-list {
     display: flex;
     flex-direction: column;
@@ -176,17 +212,17 @@ button:active, .btn:active {
     display: flex;
     align-items: center;
     background: transparent;
-    border: 1px solid #30363d;
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 14px 20px;
     text-decoration: none;
-    color: #f8fafc;
+    color: var(--text-main);
     transition: all 0.3s ease;
 }
 
 .tool-card:hover {
-    background: #1a1d24;
-    border-color: #8b949e;
+    background: var(--hover-bg);
+    border-color: var(--text-muted);
     transform: translateY(-2px);
 }
 
@@ -200,10 +236,10 @@ button:active, .btn:active {
     font-size: 0.95rem;
 }
 
-/* Посилання "Назад" в калькуляторах */
+/* Ссылка "Назад" в калькуляторах */
 .back-link {
     display: inline-block;
-    color: #8b949e;
+    color: var(--text-muted);
     text-decoration: none;
     font-size: 14px;
     margin-bottom: 20px;
@@ -212,59 +248,37 @@ button:active, .btn:active {
 }
 
 .back-link:hover {
-    color: #f8fafc;
+    color: var(--text-main);
 }
 
-/* Кнопка "Поділитися" */
+/* Кнопка "Поделиться" */
 .share-btn {
     background-color: transparent; 
-    color: #8b949e;
-    border: 1px solid #30363d;
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
     margin-top: 15px;
 }
 
 .share-btn:hover {
-    background-color: #30363d;
-    color: #f8fafc;
+    background-color: var(--hover-bg);
+    color: var(--text-main);
+    border-color: var(--text-muted);
 }
 
-/* --- АНІМАЦІЇ --- */
+/* АНИМАЦИИ */
 @keyframes slideUpFade {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* SEO-блок с описанием для калькуляторов */
+/* SEO-блок с описанием */
 .seo-text-block {
     margin-top: 40px;
     padding-top: 25px;
-    border-top: 1px solid #30363d;
+    border-top: 1px solid var(--border-color);
     text-align: left;
 }
 
-.seo-text-block h3 {
-    color: #f8fafc;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.seo-text-block h4 {
-    color: #f8fafc;
-    font-size: 0.95rem;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.seo-text-block p {
-    color: #8b949e;
-    font-size: 0.85rem;
-    line-height: 1.6;
-    margin-bottom: 12px;
-}
+.seo-text-block h3 { color: var(--text-main); font-size: 1.1rem; margin-bottom: 15px; font-weight: 600; }
+.seo-text-block h4 { color: var(--text-main); font-size: 0.95rem; margin-top: 20px; margin-bottom: 10px; }
+.seo-text-block p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px; }
