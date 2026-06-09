@@ -21,9 +21,9 @@ function updateThemeIcon(theme) {
 document.addEventListener('DOMContentLoaded', () => {
     let savedTheme = localStorage.getItem('site-theme');
     
-    // Якщо користувач ще не обирав тему, перевіряємо налаштування його системи
+    // Якщо користувач ще не обирав тему, ставимо темну за замовчуванням
     if (!savedTheme) {
-        savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        savedTheme = 'dark';
     }
     
     document.documentElement.setAttribute('data-theme', savedTheme);
