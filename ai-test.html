@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Тест | Krexpor</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background-color: #0d1117; color: #c9d1d9; font-family: sans-serif; display: flex; justify-content: center; padding-top: 50px; }
+        .ai-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 25px; width: 100%; max-width: 600px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+        .input-field { width: 100%; padding: 12px; background: #0d1117; border: 1px solid #30363d; color: #f8fafc; border-radius: 6px; box-sizing: border-box; font-size: 16px; margin-bottom: 15px; }
+        .btn { width: 100%; padding: 12px; background: #10b981; color: #000; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.2s; }
+        .btn:hover { background: #0ea5e9; }
+        .ai-output { background: #0d1117; border: 1px solid #30363d; padding: 20px; border-radius: 8px; color: #e5e7eb; min-height: 120px; font-family: monospace; white-space: pre-wrap; line-height: 1.5; }
+        .loader { color: #10b981; font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <div class="ai-card">
+        <h2 style="margin-top: 0; color: #f8fafc;">🧠 Нейромережа Krexpor</h2>
+        <p style="color: #8b949e; margin-bottom: 20px; font-size: 14px;">Прямий зв'язок із Gemini через безпечний шлюз.</p>
+        
+        <input type="text" id="ai-prompt" class="input-field" value="Склади жорсткий план харчування, щоб набрати чисту м'язову масу до 90 кг. Без води, тільки факти." placeholder="Запитай щось...">
+        
+        <button class="btn" onclick="askAI()" style="margin-bottom: 20px;">Відправити запит</button>
+
+        <div id="ai-response" class="ai-output">Тут з'явиться відповідь...</div>
+    </div>
+
+    <script>
+        async function askAI() {
+            const promptText = document.getElementById('ai-prompt').value;
+            const responseBox = document.getElementById('ai-response');
+            
+            if (!promptText) return;
+
+            // Показуємо анімацію завантаження
+            responseBox.innerHTML = '<span class="loader">Синхронізація з сервером... 🔄</span>';
+
+            try {
+                // Твоє посилання на Cloudflare Worker
+                const workerUrl = 'https://gemini-proxy.krexpor.workers.dev/';
+                
+                // Відправляємо POST запит
+                const response = await fetch(workerUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ prompt: promptText })
+                });
+
+                const data = await response.json();
+                
+                // Зчитуємо правильну структуру відповіді від Gemini API
+                if (data.candidates && data.candidates.length > 0) {
+                    const answer = data.candidates[0].content.parts[0].text;
+                    responseBox.innerText = answer;
+                } else if (data.error) {
+                    responseBox.innerText = "Помилка API: " + JSON.stringify(data.error);
+                } else {
+                    responseBox.innerText = "Отримана невідома відповідь: " + JSON.stringify(data);
+                }
+
+            } catch (error) {
+                responseBox.innerText = "Помилка з'єднання: " + error.message;
+            }
+        }
+    </script>
+</body>
+</html>
