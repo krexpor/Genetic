@@ -347,25 +347,7 @@ details.faq-item p {
     margin-bottom: 0;
 }
 
-<!-- БЛОК СТАТЕЙ НА ГОЛОВНІЙ -->
-<div class="blog-section" style="margin-top: 50px;">
-    <h2 data-lang="index-blog-h2" style="text-align: center; margin-bottom: 30px; color: var(--text-main);">Блог та Дослідження</h2>
-    
-    <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-        
-        <!-- Картка статті 1 -->
-        <a href="articles/genetics-myths.html" class="blog-card" style="background: var(--hover-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-decoration: none; transition: transform 0.3s, border-color 0.3s; display: block;">
-            <div class="blog-tag" style="color: var(--accent); font-size: 0.8rem; font-weight: bold; margin-bottom: 10px; text-transform: uppercase;">Генетика</div>
-            <h3 style="color: var(--text-main); font-size: 1.2rem; margin-bottom: 10px;">Міфи та реальність: що ми насправді успадковуємо від батьків?</h3>
-            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">Домінантні гени, полігенне успадкування та чому колір очей — це не просто шкільна задачка з біології.</p>
-        </a>
-
-        <!-- Картка статті 2 (Заглушка на майбутнє) -->
-        <a href="articles/ai-psychology.html" class="blog-card" style="background: var(--hover-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-decoration: none; transition: transform 0.3s, border-color 0.3s; display: block;">
-            <div class="blog-tag" style="color: var(--accent); font-size: 0.8rem; font-weight: bold; margin-bottom: 10px; text-transform: uppercase;">AI & Психологія</div>
-            <h3 style="color: var(--text-main); font-size: 1.2rem; margin-bottom: 10px;">Як алгоритми читають між рядків</h3>
-            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">Відмова від стандартних тестів. Як нейромережі аналізують семантику тексту для створення психологічного портрета.</p>
-        </a>
-
-    </div>
-</div>
+.blog-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
