@@ -8,6 +8,20 @@
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
+    <!-- Защита от "мерцания" экрана, ТЕМНАЯ тема по умолчанию -->
+    <script>
+        (function() {
+            let savedTheme = localStorage.getItem('site-theme');
+            if (!savedTheme) {
+                savedTheme = 'dark';
+            }
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
+    <!-- Подключение глобального стиля -->
+    <link rel="stylesheet" href="tests.css">
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
     <script>
@@ -20,191 +34,37 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
     
-    <!-- Бібліотека для красивого виведення тексту від ШІ -->
+    <!-- Библиотека для красивого вывода текста от ИИ -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     
     <script src="../lang.js" defer></script>
     <script src="../cookies.js" defer></script>
+    <script src="theme.js" defer></script>
 
     <style>
+        /* Уникальный акцентный цвет только для этого теста */
         :root {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #334155;
-            --text-muted: #64748b;
-            --accent-color: #8b5cf6; 
+            --accent-color: #8b5cf6; /* Фиолетовый */
             --accent-hover: #7c3aed;
-            --border-color: #e2e8f0;
         }
-        
-        body { 
-            background-color: var(--bg-color); 
-            color: var(--text-main); 
-            font-family: 'Inter', -apple-system, sans-serif;
-            display: flex; 
-            flex-direction: column;
-            align-items: center; 
-            padding: 40px 20px;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        /* Переключатель языков */
-        .lang-switcher {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 8px;
-            z-index: 10;
-        }
-
-        .lang-btn {
-            background: transparent;
-            border: 1px solid #cbd5e1;
-            color: #64748b;
-            border-radius: 6px;
-            padding: 4px 8px;
-            font-size: 0.75rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 600;
-        }
-
-        .lang-btn:hover {
-            background: #e2e8f0;
-            color: #1e293b;
-        }
-        
-        .container { 
-            background: var(--card-bg); 
-            border-radius: 20px; 
-            padding: 40px; 
-            width: 100%; 
-            max-width: 650px; 
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05); 
-            border: 1px solid var(--border-color);
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        /* Вирівнювання заголовка з іконкою */
-        .title-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 10px;
-        }
-
-        h1 { 
-            color: #1e293b; 
-            margin: 0; 
-            font-size: 28px; 
-            font-weight: 700; 
-        }
-
-        .subtitle { 
-            color: var(--text-muted); 
-            font-size: 15px; 
-            margin-bottom: 30px; 
-            text-align: center;
-        }
-
-        .question-block { margin-bottom: 25px; }
-        .question-block label { display: block; margin-bottom: 8px; color: #1e293b; font-weight: 600; font-size: 15px; }
-
-        textarea { 
-            width: 100%; 
-            padding: 15px; 
-            background: #f1f5f9; 
-            border: 2px solid transparent; 
-            color: var(--text-main); 
-            border-radius: 12px; 
-            box-sizing: border-box; 
-            font-family: inherit;
-            font-size: 15px;
-            resize: vertical;
-            min-height: 90px;
-            transition: 0.3s;
-        }
-
-        textarea:focus {
-            outline: none;
-            background: #ffffff;
-            border-color: var(--accent-color);
-            box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
-        }
-
-        .btn { 
-            width: 100%; 
-            padding: 16px; 
-            background: var(--accent-color); 
-            color: white; 
-            border: none; 
-            border-radius: 12px; 
-            cursor: pointer; 
-            font-weight: 600; 
-            font-size: 16px;
-            transition: 0.2s; 
-            margin-top: 15px;
-            box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3);
-        }
-
-        .btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
-
-        .result-box { 
-            margin-top: 30px;
-            background: #f8fafc; 
-            border: 1px solid var(--border-color); 
-            padding: 30px; 
-            border-radius: 16px; 
-            display: none; 
-        }
-
-        .result-box h2 { color: var(--accent-color); font-size: 20px; margin-top: 20px; margin-bottom: 10px; }
-        .result-box h2:first-child { margin-top: 0; }
-
-        .loader { 
-            color: var(--accent-color); 
-            text-align: center;
-            font-weight: 500;
-            display: none;
-            margin-top: 20px;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
-
-        /* Стилі для SEO блоку */
-        .seo-article {
-            width: 100%;
-            max-width: 800px;
-            padding: 20px;
-            color: var(--text-main);
-        }
-
-        .seo-article h2 { color: #1e293b; font-size: 24px; margin-top: 30px; }
-        .seo-article h3 { color: #334155; font-size: 18px; margin-top: 25px; }
-        .seo-article p, .seo-article ul { color: #475569; font-size: 16px; line-height: 1.8; margin-bottom: 15px; }
-        .seo-article li { margin-bottom: 8px; }
     </style>
 </head>
 <body>
 
-    <!-- Переключатель языков -->
-    <div class="lang-switcher">
-        <button onclick="changeLanguage('ru')" class="lang-btn">RU</button>
-        <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
-        <button onclick="changeLanguage('uk')" class="lang-btn">UK</button>
+    <!-- Панель управления: Языки + Тема -->
+    <div class="top-controls">
+        <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
+        <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
+        <button onclick="changeLanguage('en')" class="control-btn">EN</button>
+        <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
     </div>
 
     <!-- БЛОК ТЕСТА -->
     <div class="container">
-        <a href="../index.html" data-lang="back-home" style="display: inline-block; margin-bottom: 20px; color: var(--accent-color); text-decoration: none; font-weight: 600;">← Вернуться на главную</a>
+        <a href="../index.html" data-lang="back-home" style="display: inline-block; margin-bottom: 20px; color: var(--text-muted); text-decoration: none; font-weight: 600;">← Вернуться на главную</a>
         
         <div class="title-wrapper">
-            <!-- Мінімалістична SVG іконка -->
+            <!-- Минималистичная SVG иконка -->
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
                 <path d="M12 8v4l3 3"></path>
@@ -239,7 +99,7 @@
         <div id="ai-response" class="result-box"></div>
     </div>
 
- <!-- SEO БЛОК -->
+    <!-- SEO БЛОК -->
     <article class="seo-article">
         <h2 data-lang="ai-seo-h2">Что такое AI-профайлинг личности?</h2>
         <p data-lang="ai-seo-p1">В современном мире психологические тесты вышли далеко за пределы стандартных опросников с вариантами ответов «да» или «нет». <strong>AI-профайлинг (анализ личности с помощью искусственного интеллекта)</strong> — это инновационный подход к самопознанию, который позволяет получить глубокий срез вашего психоэмоционального состояния на основе свободных ответов.</p>
@@ -274,11 +134,12 @@
             const a2 = document.getElementById('q2').value;
             const a3 = document.getElementById('q3').value;
             
-            // Получаем текущий выбранный язык сайта
             const currentLang = window.currentLang || 'ru';
 
             if (!a1 || !a2 || !a3) {
-                alert(currentLang === 'en' ? "Please answer all questions!" : "Пожалуйста, ответьте на все вопросы!");
+                alert(currentLang === 'en' ? "Please answer all questions!" : 
+                      currentLang === 'uk' ? "Будь ласка, дайте відповідь на всі питання!" : 
+                      "Пожалуйста, ответьте на все вопросы!");
                 return;
             }
 
@@ -287,10 +148,10 @@
             const responseBox = document.getElementById('ai-response');
             responseBox.style.display = 'none';
 
-            // ИНСТРУКЦИЯ ДЛЯ ИИ
-            const langInstruction = currentLang === 'en' 
-                ? "Write the entire response strictly in English language." 
-                : "Пиши весь ответ строго на русском языке.";
+            // ИНСТРУКЦИЯ ДЛЯ ИИ (поддержка трех языков)
+            let langInstruction = "Пиши весь ответ строго на русском языке.";
+            if(currentLang === 'en') langInstruction = "Write the entire response strictly in English language.";
+            if(currentLang === 'uk') langInstruction = "Пиши всю відповідь виключно українською мовою.";
 
             const systemPrompt = `
                 Ты — профессиональный, эмпатичный и очень проницательный психолог. 
@@ -333,7 +194,7 @@
                     responseBox.innerHTML = marked.parse(answer);
                     responseBox.style.display = 'block';
                 } else {
-                    responseBox.innerHTML = `<p style='color:#ef4444'>${currentLang === 'en' ? 'Error generating profile.' : 'Возникла ошибка генерации.'}</p>`;
+                    responseBox.innerHTML = `<p style='color:#ef4444'>Error generating profile.</p>`;
                     responseBox.style.display = 'block';
                     document.querySelector('.btn').style.display = 'block';
                 }
