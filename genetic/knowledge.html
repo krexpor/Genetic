@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang="know-title">База знаний | Krexpor</title>
+    
+    <!-- Защита от мерцания экрана, ТЕМНАЯ тема по умолчанию -->
+    <script>
+        (function() {
+            let savedTheme = localStorage.getItem('site-theme');
+            if (!savedTheme) savedTheme = 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
     <link rel="stylesheet" href="/style.css">
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -18,36 +28,49 @@
 
     <script src="/cookies.js" defer></script>
     <script src="/lang.js" defer></script>
+    <script src="/theme.js" defer></script>
 
     <style>
+        /* Динамические стили для словаря */
         .dict-item {
-            background: #111318;
-            border-left: 3px solid #da3633;
+            background: var(--hover-bg);
+            border-left: 3px solid var(--accent);
             padding: 15px 20px;
             margin-bottom: 15px;
             border-radius: 0 8px 8px 0;
+            transition: background-color 0.3s;
         }
         .dict-title {
-            color: #f8fafc;
+            color: var(--text-main);
             font-weight: bold;
             font-size: 1.1rem;
             margin-bottom: 5px;
+            transition: color 0.3s;
         }
         .dict-text {
-            color: #8b949e;
+            color: var(--text-muted);
             font-size: 0.95rem;
             line-height: 1.5;
             margin: 0;
+            transition: color 0.3s;
         }
     </style>
 </head>
 <body>
 
+    <!-- Панель управления (Языки + Тема) -->
+    <div class="top-controls">
+        <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
+        <button onclick="changeLanguage('en')" class="control-btn">EN</button>
+        <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
+        <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
+    </div>
+
     <div class="calculator-card">
         <a href="index.html" class="back-link" data-lang="back-menu">← Вернуться в меню</a>
         
-        <h2 style="text-align: center; margin-top: 10px;" data-lang="know-h1">📚 База знаний</h2>
-        <p style="text-align: center; color: #8b949e; margin-bottom: 30px;" data-lang="know-desc">Мини-словарь генетических терминов, которые используются в наших калькуляторах.</p>
+        <h2 style="text-align: center; margin-top: 10px; color: var(--text-main);" data-lang="know-h1">📚 База знаний</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;" data-lang="know-desc">Мини-словарь генетических терминов, которые используются в наших калькуляторах.</p>
 
         <div class="dict-item">
             <div class="dict-title" data-lang="know-t1">ДНК и Гены</div>
