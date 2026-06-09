@@ -236,9 +236,30 @@ const langArr = {
     "rhythms-seo-h3": { "ru": "Как читать стрелочки?", "en": "How to read the arrows?" },
     "rhythms-seo-p1": { "ru": "Стрелка вниз (↓) означает удар по струнам сверху вниз (от 6-й толстой струны к 1-й тонкой). Стрелка вверх (↑) — возвратное движение снизу вверх.", "en": "A down arrow (↓) means strumming the strings downwards (from the 6th thick string to the 1st thin one). An up arrow (↑) is the upward return stroke." },
     "rhythms-seo-h4": { "ru": "Паузы и глушение", "en": "Pauses and muting" },
-    "rhythms-seo-p2": { "ru": "Пробелы между стрелочками визуализируют микро-паузу. Ваша рука всегда должна двигаться вверх-вниз как маятник, даже если вы не задеваете струны — это называется «холостой взмах». Именно он помогает держать ровный ритм.", "en": "Spaces between the arrows visualize a micro-pause. Your hand should always move up and down like a pendulum, even if you don't hit the strings—this is called a 'ghost strum'. It's what helps you keep a steady rhythm." }
+    "rhythms-seo-p2": { "ru": "Пробелы между стрелочками визуализируют микро-паузу. Ваша рука всегда должна двигаться вверх-вниз как маятник, даже если вы не задеваете струны — это называется «холостой взмах». Именно он помогает держать ровный ритм.", "en": "Spaces between the arrows visualize a micro-pause. Your hand should always move up and down like a pendulum, even if you don't hit the strings—this is called a 'ghost strum'. It's what helps you keep a steady rhythm." },
 
+    // --- СИМУЛЯТОР РЕЛОКАЦИИ ---
+    "menu-relo": { "ru": "Калькулятор релокации", "en": "Relocation Simulator" },
+    "relo-title": { "ru": "Симулятор релокации | Krexpor", "en": "Relocation Simulator | Krexpor" },
+    "relo-h2": { "ru": "🌍 Симулятор релокации", "en": "🌍 Relocation Simulator" },
+    "relo-desc": { "ru": "Рассчитайте реальный потенциал накоплений с учетом местных налогов и стоимости жизни.", "en": "Calculate your real savings potential considering local taxes and living costs." },
+    "relo-country": { "ru": "Выберите страну (база MVP):", "en": "Select country (MVP base):" },
+    "relo-opt-dk": { "ru": "Дания", "en": "Denmark" },
+    "relo-opt-de": { "ru": "Германия", "en": "Germany" },
+    "relo-opt-pl": { "ru": "Польша", "en": "Poland" },
+    "relo-salary": { "ru": "Ожидаемая зарплата в месяц (Грязными / Gross):", "en": "Expected monthly salary (Gross):" },
+    "relo-currency-note": { "ru": "*Вводите сумму в Евро (€) для корректного расчета.", "en": "*Enter the amount in Euros (€) for correct calculation." },
+    "relo-btn": { "ru": "Рассчитать остаток", "en": "Calculate Savings" },
     
+    "relo-res-title": { "ru": "Ваш финансовый прогноз:", "en": "Your Financial Forecast:" },
+    "relo-res-gross": { "ru": "Зарплата (Gross):", "en": "Salary (Gross):" },
+    "relo-res-tax": { "ru": "Налоги", "en": "Taxes" },
+    "relo-res-net": { "ru": "На руки (Net):", "en": "Take-home (Net):" },
+    "relo-res-living": { "ru": "Базовые траты (Жилье + Еда):", "en": "Basic Living Costs (Rent + Food):" },
+    "relo-res-savings": { "ru": "Чистые накопления:", "en": "Net Savings:" },
+    
+    "relo-seo-h3": { "ru": "Как работает расчет?", "en": "How does the calculation work?" },
+    "relo-seo-p1": { "ru": "Алгоритм использует усредненные ставки подоходного налога и базовую стоимость проживания (аренда комнаты/студии и базовая продуктовая корзина) для выбранной страны. Это позволяет снять 'розовые очки' и увидеть реальную сумму, которую можно откладывать ежемесячно.", "en": "The algorithm uses average income tax rates and basic living costs (room/studio rent and a basic grocery basket) for the selected country. This helps take off the 'rose-tinted glasses' and see the real amount you can save monthly." }
 
 };
 
