@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="shad-page-title">Теневая сторона личности | Krexpor</title>
+    <meta name="description" content="Психологический AI-тест на выявление теневой стороны, подавленных эмоций и социальных масок.">
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0WPCS9G55D');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="../lang.js" defer></script>
+    <script src="../cookies.js" defer></script>
+
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --accent-color: #8b5cf6; 
+            --accent-hover: #7c3aed;
+            --border-color: #e2e8f0;
+        }
+        
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Inter', -apple-system, sans-serif; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; margin: 0; line-height: 1.6; }
+        .lang-switcher { position: absolute; top: 20px; right: 20px; display: flex; gap: 8px; z-index: 10; }
+        .lang-btn { background: transparent; border: 1px solid #cbd5e1; color: #64748b; border-radius: 6px; padding: 4px 8px; font-size: 0.75rem; cursor: pointer; transition: all 0.3s; font-weight: 600; }
+        .lang-btn:hover { background: #e2e8f0; color: #1e293b; }
+        .container { background: var(--card-bg); border-radius: 20px; padding: 40px; width: 100%; max-width: 650px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); border: 1px solid var(--border-color); margin-bottom: 40px; position: relative; }
+        .title-wrapper { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 10px; }
+        h1 { color: #1e293b; margin: 0; font-size: 26px; font-weight: 700; text-align: center; }
+        .subtitle { color: var(--text-muted); font-size: 15px; margin-bottom: 30px; text-align: center; }
+        .question-block { margin-bottom: 35px; }
+        .question-title { display: block; margin-bottom: 15px; color: #1e293b; font-weight: 600; font-size: 16px; }
+        .options-grid { display: grid; gap: 12px; }
+        .option-label { display: block; position: relative; cursor: pointer; }
+        .option-label input { position: absolute; opacity: 0; cursor: pointer; }
+        .option-card { display: flex; align-items: center; padding: 16px 20px; background: #f1f5f9; border: 2px solid transparent; border-radius: 12px; color: var(--text-main); font-size: 15px; transition: all 0.2s ease; }
+        .option-label:hover .option-card { background: #e2e8f0; }
+        .option-label input:checked ~ .option-card { background: #1e293b; border-color: #1e293b; box-shadow: 0 4px 12px rgba(30, 41, 59, 0.2); color: #ffffff; font-weight: 500; }
+        .btn { width: 100%; padding: 16px; background: #1e293b; color: white; border: none; border-radius: 12px; cursor: pointer; font-weight: 600; font-size: 16px; transition: 0.2s; margin-top: 15px; box-shadow: 0 4px 14px rgba(30, 41, 59, 0.3); }
+        .btn:hover { background: #0f172a; transform: translateY(-2px); }
+        .result-box { margin-top: 30px; background: #f8fafc; border: 1px solid var(--border-color); padding: 30px; border-radius: 16px; display: none; }
+        .result-box h2 { color: #1e293b; font-size: 20px; margin-top: 20px; margin-bottom: 10px; }
+        .result-box h2:first-child { margin-top: 0; }
+        .loader { color: #1e293b; text-align: center; font-weight: 500; display: none; margin-top: 20px; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
+        .seo-article { width: 100%; max-width: 800px; padding: 20px; color: var(--text-main); }
+        .seo-article h2 { color: #1e293b; font-size: 24px; margin-top: 30px; }
+        .seo-article h3 { color: #334155; font-size: 18px; margin-top: 25px; }
+        .seo-article p, .seo-article ul { color: #475569; font-size: 16px; line-height: 1.8; margin-bottom: 15px; }
+        .seo-article li { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+
+    <div class="lang-switcher">
+        <button onclick="changeLanguage('ru')" class="lang-btn">RU</button>
+        <button onclick="changeLanguage('uk')" class="lang-btn">UK</button>
+        <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+    </div>
+
+    <!-- БЛОК ТЕСТА -->
+    <div class="container">
+        <a href="../index.html" data-lang="back-home" style="display: inline-block; margin-bottom: 20px; color: var(--text-muted); text-decoration: none; font-weight: 600;">← Вернуться на главную</a>
+        
+        <div class="title-wrapper">
+            <!-- Іконка місяця/затемнення -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1e293b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <h1 data-lang="shad-h1">Теневая сторона личности</h1>
+        </div>
+
+        <p class="subtitle" data-lang="shad-subtitle">
+            Отвечайте максимально честно, не пытаясь выбрать "правильный" вариант. Алгоритм проанализирует ваши скрытые мотивы и подавленные эмоции.
+        </p>
+
+        <div id="form-container">
+            <!-- Питання 1 -->
+            <div class="question-block">
+                <span class="question-title" data-lang="shad-q1">1. Что вы чаще всего имитируете в компании людей, чтобы казаться "нормальным"?</span>
+                <div class="options-grid">
+                    <label class="option-label"><input type="radio" name="q1" value="A"><div class="option-card" data-lang="shad-q1-a">Позитив и энергию, даже когда внутри абсолютная пустота.</div></label>
+                    <label class="option-label"><input type="radio" name="q1" value="B"><div class="option-card" data-lang="shad-q1-b">Спокойствие и контроль, хотя внутри бушует тревога.</div></label>
+                    <label class="option-label"><input type="radio" name="q1" value="C"><div class="option-card" data-lang="shad-q1-c">Заинтересованность, хотя мне скучно и хочется поскорее уйти.</div></label>
+                    <label class="option-label"><input type="radio" name="q1" value="D"><div class="option-card" data-lang="shad-q1-d">Согласие с большинством, чтобы избежать конфликта и внимания.</div></label>
+                </div>
+            </div>
+
+            <!-- Питання 2 -->
+            <div class="question-block">
+                <span class="question-title" data-lang="shad-q2">2. Какую эмоцию вы бы хотели выплеснуть прямо сейчас, если бы вас никто не осудил?</span>
+                <div class="options-grid">
+                    <label class="option-label"><input type="radio" name="q2" value="A"><div class="option-card" data-lang="shad-q2-a">Ярость и гнев на тех, кто нарушал мои границы или предавал.</div></label>
+                    <label class="option-label"><input type="radio" name="q2" value="B"><div class="option-card" data-lang="shad-q2-b">Глубокую грусть, слезы и желание, чтобы меня просто пожалели.</div></label>
+                    <label class="option-label"><input type="radio" name="q2" value="C"><div class="option-card" data-lang="shad-q2-c">Раздражение от чужой некомпетентности, медлительности и глупости.</div></label>
+                    <label class="option-label"><input type="radio" name="q2" value="D"><div class="option-card" data-lang="shad-q2-d">Усталость и желание сдаться, перестать бороться на какое-то время.</div></label>
+                </div>
+            </div>
+
+            <!-- Питання 3 -->
+            <div class="question-block">
+                <span class="question-title" data-lang="shad-q3">3. Какое главное требование внутреннего критика вы никогда не нарушаете?</span>
+                <div class="options-grid">
+                    <label class="option-label"><input type="radio" name="q3" value="A"><div class="option-card" data-lang="shad-q3-a">«Я должен(на) справляться со всем самостоятельно, просить о помощи — слабость».</div></label>
+                    <label class="option-label"><input type="radio" name="q3" value="B"><div class="option-card" data-lang="shad-q3-b">«Я не должен(на) показывать свою уязвимость, иначе этим воспользуются».</div></label>
+                    <label class="option-label"><input type="radio" name="q3" value="C"><div class="option-card" data-lang="shad-q3-c">«Моя работа и результаты должны быть идеальными, посредственность недопустима».</div></label>
+                    <label class="option-label"><input type="radio" name="q3" value="D"><div class="option-card" data-lang="shad-q3-d">«Я должен(на) быть удобным и полезным для близких, иначе меня разлюбят».</div></label>
+                </div>
+            </div>
+
+            <!-- Питання 4 -->
+            <div class="question-block">
+                <span class="question-title" data-lang="shad-q4">4. Как вы обычно "наказываете" себя за ошибки или провалы?</span>
+                <div class="options-grid">
+                    <label class="option-label"><input type="radio" name="q4" value="A"><div class="option-card" data-lang="shad-q4-a">Жестким внутренним монологом, постоянным прокручиванием ситуации.</div></label>
+                    <label class="option-label"><input type="radio" name="q4" value="B"><div class="option-card" data-lang="shad-q4-b">Лишаю себя отдыха или удовольствий, заставляю работать еще больше.</div></label>
+                    <label class="option-label"><input type="radio" name="q4" value="C"><div class="option-card" data-lang="shad-q4-c">Изолируюсь от людей, потому что чувствую сильный стыд.</div></label>
+                    <label class="option-label"><input type="radio" name="q4" value="D"><div class="option-card" data-lang="shad-q4-d">Делаю вид, что все в порядке, но внутри медленно съедаю себя.</div></label>
+                </div>
+            </div>
+
+            <!-- Питання 5 -->
+            <div class="question-block">
+                <span class="question-title" data-lang="shad-q5">5. Чего вы на самом деле хотите больше всего, но боитесь себе в этом признаться?</span>
+                <div class="options-grid">
+                    <label class="option-label"><input type="radio" name="q5" value="A"><div class="option-card" data-lang="shad-q5-a">Чтобы кто-то пришел, взял всё под контроль и решил мои проблемы.</div></label>
+                    <label class="option-label"><input type="radio" name="q5" value="B"><div class="option-card" data-lang="shad-q5-b">Бросить всё, оборвать старые связи и начать жизнь с чистого листа.</div></label>
+                    <label class="option-label"><input type="radio" name="q5" value="C"><div class="option-card" data-lang="shad-q5-c">Получить абсолютное, безоговорочное признание и восхищение окружающих.</div></label>
+                    <label class="option-label"><input type="radio" name="q5" value="D"><div class="option-card" data-lang="shad-q5-d">Разрешить себе быть эгоистом, "плохим" человеком и перестать стараться для всех.</div></label>
+                </div>
+            </div>
+
+            <button class="btn" onclick="generateProfile()" data-lang="shad-btn">Исследовать свою Тень</button>
+            <div id="loading" class="loader" data-lang="shad-loading">Погружаемся в бессознательное... 🌑</div>
+        </div>
+
+        <div id="ai-response" class="result-box"></div>
+    </div>
+
+    <!-- SEO БЛОК -->
+    <article class="seo-article">
+        <h2 data-lang="shad-seo-h2">Что такое Теневая сторона личности?</h2>
+        <p data-lang="shad-seo-p1">Концепция "Тени" была введена швейцарским психиатром Карлом Густавом Юнгом. Тень — это бессознательная часть нашей психики, в которой скрыты вытесненные эмоции, страхи, инстинкты и желания, которые мы считаем неприемлемыми для общества или самих себя.</p>
+        
+        <h3 data-lang="shad-seo-h3-1">Зачем изучать свою Тень?</h3>
+        <ul>
+            <li data-lang="shad-seo-li-1"><strong>Возврат энергии:</strong> Подавление эмоций (гнева, стыда, грусти) требует колоссальных затрат внутренней энергии. Осознав их, вы высвобождаете ресурс.</li>
+            <li data-lang="shad-seo-li-2"><strong>Снятие масок:</strong> Постоянная имитация спокойствия или позитива приводит к выгоранию. Интеграция тени помогает стать целостным.</li>
+            <li data-lang="shad-seo-li-3"><strong>Контроль над внутренним критиком:</strong> Поняв истинную причину своего самосаботажа, вы перестаете наказывать себя за малейшие ошибки.</li>
+        </ul>
+        <p data-lang="shad-seo-p2">Наш искусственный интеллект анализирует ваши ответы на вопросы о социальных масках, подавленных желаниях и внутреннем критике, чтобы помочь вам безопасно заглянуть в свое бессознательное и найти там скрытый потенциал.</p>
+    </article>
+
+    <script>
+        async function generateProfile() {
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+            const q3 = document.querySelector('input[name="q3"]:checked');
+            const q4 = document.querySelector('input[name="q4"]:checked');
+            const q5 = document.querySelector('input[name="q5"]:checked');
+            
+            const currentLang = window.currentLang || 'ru';
+
+            if (!q1 || !q2 || !q3 || !q4 || !q5) {
+                alert(currentLang === 'en' ? "Please select one answer for each of the 5 questions." : 
+                      currentLang === 'uk' ? "Будь ласка, оберіть по одному варіанту для кожного з 5 питань." : 
+                      "Пожалуйста, выберите один вариант для каждого из 5 вопросов.");
+                return;
+            }
+
+            const a1 = q1.nextElementSibling.innerText;
+            const a2 = q2.nextElementSibling.innerText;
+            const a3 = q3.nextElementSibling.innerText;
+            const a4 = q4.nextElementSibling.innerText;
+            const a5 = q5.nextElementSibling.innerText;
+
+            document.querySelector('.btn').style.display = 'none';
+            document.getElementById('loading').style.display = 'block';
+            const responseBox = document.getElementById('ai-response');
+            responseBox.style.display = 'none';
+
+            let langInstruction = "Пиши весь ответ строго на русском языке.";
+            if(currentLang === 'en') langInstruction = "Write the entire response strictly in English language.";
+            if(currentLang === 'uk') langInstruction = "Пиши всю відповідь виключно українською мовою.";
+
+            const systemPrompt = `
+                Ты — эксперт в юнгианском психоанализе и работе с Тенью (Shadow Work). Клиент прошел тест на выявление подавленных сторон личности.
+                
+                Выбор клиента:
+                1 (Социальная маска): "${a1}"
+                2 (Подавленная эмоция): "${a2}"
+                3 (Требование внутреннего критика): "${a3}"
+                4 (Наказание за провалы): "${a4}"
+                5 (Скрытое желание): "${a5}"
+
+                Твоя задача: проанализировать эту КОМБИНАЦИЮ из 5 ответов и выдать глубокий, честный, слегка таинственный, но исцеляющий психологический разбор (около 400-500 слов). Не осуждай клиента, а покажи ему силу его Тени. Не цитируй ответы напрямую.
+
+                Структурируй в Markdown:
+                ## 🌑 Ваша Теневая сторона
+                [Глубокий анализ того, что клиент скрывает от мира и от себя]
+                ## 🎭 Социальная броня
+                [Анализ маски из первого ответа и почему клиент боится ее снять]
+                ## ⛓️ Природа внутреннего критика
+                [Почему клиент так жесток к себе (на основе 3 и 4 ответа)]
+                ## 🗝️ Интеграция Тени
+                [2-3 практичных, глубоких совета, как высвободить подавленную энергию и принять свое скрытое желание (из 5 ответа)]
+
+                ВАЖНО: ${langInstruction}
+            `;
+
+            try {
+                const workerUrl = 'https://gemini-proxy.krexpor.workers.dev/'; 
+                const response = await fetch(workerUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ prompt: systemPrompt })
+                });
+
+                const data = await response.json();
+                document.getElementById('loading').style.display = 'none';
+                
+                if (data.candidates && data.candidates.length > 0) {
+                    const answer = data.candidates[0].content.parts[0].text;
+                    responseBox.innerHTML = marked.parse(answer);
+                    responseBox.style.display = 'block';
+                } else {
+                    responseBox.innerHTML = `<p style='color:#ef4444'>Error generating result.</p>`;
+                    responseBox.style.display = 'block';
+                    document.querySelector('.btn').style.display = 'block';
+                }
+
+            } catch (error) {
+                document.getElementById('loading').style.display = 'none';
+                responseBox.innerHTML = `<p style='color:#ef4444'>Error: ${error.message}</p>`;
+                responseBox.style.display = 'block';
+                document.querySelector('.btn').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
