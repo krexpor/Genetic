@@ -305,29 +305,6 @@ const langArr = {
     "shad-desc": { "ru": "Анализ подавленных эмоций и масок", "en": "Analysis of repressed emotions and masks", "uk": "Аналіз прихованих емоцій та масок" },
     "aes-desc": { "ru": "Визуальный AI-код вашего внутреннего мира", "en": "Visual AI code of your inner world", "uk": "Візуальний AI-код вашого внутрішнього світу" },
 
-    // --- НОВЫЙ БЛОК "О ПЛАТФОРМЕ" НА ГЛАВНОЙ ---
-    "index-about-h2": { "ru": "О платформе Krexpor", "en": "About Krexpor Platform", "uk": "Про платформу Krexpor" },
-    "index-about-p1": { 
-        "ru": "Krexpor — это интерактивное пространство, где классическая наука встречается с передовым искусственным интеллектом. Мы создаем инструменты для самопознания и анализа.", 
-        "en": "Krexpor is an interactive space where classical science meets advanced artificial intelligence. We create tools for self-discovery and analysis.", 
-        "uk": "Krexpor — це інтерактивний простір, де класична наука зустрічається з передовим штучним інтелектом. Ми створюємо інструменти для самопізнання та аналізу." 
-    },
-    "index-about-li1": { 
-        "ru": "<strong>🧬 Генетика:</strong> Рассчитайте вероятности наследования внешности (рост, цвет глаз, группа крови) на основе биометрических данных.", 
-        "en": "<strong>🧬 Genetics:</strong> Calculate the probabilities of inheriting appearance (height, eye color, blood type) based on biometric data.", 
-        "uk": "<strong>🧬 Генетика:</strong> Розрахуйте ймовірності успадкування зовнішності (зріст, колір очей, група крові) на основі біометричних даних." 
-    },
-    "index-about-li2": { 
-        "ru": "<strong>🧠 AI-Тесты:</strong> Пройдите тесты, в которых нейросети анализируют семантику ваших ответов для создания уникального профиля.", 
-        "en": "<strong>🧠 AI Tests:</strong> Take tests where neural networks analyze the semantics of your answers to create a unique profile.", 
-        "uk": "<strong>🧠 AI-Тести:</strong> Пройдіть тести, в яких нейромережі аналізують семантику ваших відповідей для створення унікального профілю." 
-    },
-    "index-about-li3": { 
-        "ru": "<strong>🔒 Приватность:</strong> Ваши данные не сохраняются. Все алгоритмы работают локально или через безопасные шлюзы.", 
-        "en": "<strong>🔒 Privacy:</strong> Your data is not stored. All algorithms run locally or through secure gateways.", 
-        "uk": "<strong>🔒 Приватність:</strong> Ваші дані не зберігаються. Всі алгоритми працюють локально або через безпечні шлюзи." 
-    },
-
     // --- FAQ: ЭСТЕТИКА ДУШИ ---
     "aes-faq-title": { "ru": "Часто задаваемые вопросы (FAQ)", "en": "Frequently Asked Questions (FAQ)", "uk": "Часті запитання (FAQ)" },
     "aes-faq-q1": { "ru": "Насколько точно алгоритм определяет мою эстетику?", "en": "How accurately does the algorithm determine my aesthetic?", "uk": "Наскільки точно алгоритм визначає мою естетику?" },
@@ -515,7 +492,138 @@ const langArr = {
     "height-seo-h4-2": { "ru": "Ограничения калькулятора", "en": "Calculator limitations", "uk": "Обмеження калькулятора" },
     "height-seo-p-3": { "ru": "Этот онлайн-калькулятор роста предоставляет статистически наиболее вероятный математический прогноз.", "en": "This online height calculator provides a statistically most probable mathematical forecast.", "uk": "Цей онлайн-калькулятор зросту надає статистично найімовірніший математичний прогноз." },
 
-    "btn-blog": { "ru": "📚 Блог и Статьи", "en": "📚 Blog & Articles", "uk": "📚 Блог та Статті" }
+    "btn-blog": { "ru": "📚 Блог и Статьи", "en": "📚 Blog & Articles", "uk": "📚 Блог та Статті" },
+
+    ,
+    // --- СТОРІНКА БЛОГУ ---
+    "blog-meta-title": { 
+        "ru": "Блог и Статьи | Krexpor", 
+        "en": "Blog & Articles | Krexpor", 
+        "uk": "Блог та Статті | Krexpor" 
+    },
+    "blog-h2": { 
+        "ru": "Блог и Исследования", 
+        "en": "Blog & Research", 
+        "uk": "Блог та Дослідження" 
+    },
+    "blog-subtitle": { 
+        "ru": "Статьи о генетике, психологии и искусственном интеллекте", 
+        "en": "Articles on genetics, psychology, and artificial intelligence", 
+        "uk": "Статті про генетику, психологію та штучний інтелект" 
+    },
+    "blog-tag-gen": { 
+        "ru": "Генетика", 
+        "en": "Genetics", 
+        "uk": "Генетика" 
+    },
+    "blog-c1-title": { 
+        "ru": "Мифы и реальность: что мы на самом деле наследуем от родителей?", 
+        "en": "Myths and Reality: What do we actually inherit from our parents?", 
+        "uk": "Міфи та реальність: що ми насправді успадковуємо від батьків?" 
+    },
+    "blog-c1-desc": { 
+        "ru": "Доминантные гены, полигенное наследование и почему цвет глаз — это не просто школьная задачка по биологии.", 
+        "en": "Dominant genes, polygenic inheritance, and why eye color is not just a high school biology problem.", 
+        "uk": "Домінантні гени, полігенне успадкування та чому колір очей — це не просто шкільна задачка з біології." 
+    },
+
+    ,
+    // --- СТАТТЯ: МІФИ ГЕНЕТИКИ ---
+    "back-to-blog": { 
+        "ru": "← Назад в блог", 
+        "en": "← Back to blog", 
+        "uk": "← Назад у блог" 
+    },
+    "art-gen-meta": { 
+        "ru": "Мифы и реальность генетики | Krexpor", 
+        "en": "Myths and reality of genetics | Krexpor", 
+        "uk": "Міфи та реальність генетики | Krexpor" 
+    },
+    "art-gen-h1": { 
+        "ru": "Мифы и реальность: что мы на самом деле наследуем от родителей?", 
+        "en": "Myths and reality: what do we actually inherit from our parents?", 
+        "uk": "Міфи та реальність: що ми насправді успадковуємо від батьків?" 
+    },
+    "art-gen-time": { 
+        "ru": "Время чтения: 4 минуты | Категория: Генетика", 
+        "en": "Reading time: 4 minutes | Category: Genetics", 
+        "uk": "Час читання: 4 хвилини | Категорія: Генетика" 
+    },
+    "art-gen-p1": { 
+        "ru": "Когда мы смотрим в зеркало, мы часто видим отражение наших предков. Мамин нос, папины глаза, дедушкин рост. Кажется, что генетика — это строгий чертеж, жесткий код, который невозможно изменить. Но так ли все однозначно?", 
+        "en": "When we look in the mirror, we often see the reflection of our ancestors. Mom's nose, dad's eyes, grandpa's height. It seems that genetics is a strict blueprint, a hard code that cannot be changed. But is it that simple?", 
+        "uk": "Коли ми дивимося в дзеркало, ми часто бачимо відображення наших предків. Мамин ніс, татові очі, дідусів зріст. Здається, що генетика — це чіткий креслення, суворий код, який неможливо змінити. Але чи дійсно все так однозначно?" 
+    },
+    "art-gen-p2": { 
+        "ru": "Современная наука доказывает: ДНК — это не приговор, а скорее набор вероятностей. Давайте разберем самые популярные мифы о наследственности и выясним, где заканчивается влияние генов и начинается наша собственная ответственность.", 
+        "en": "Modern science proves: DNA is not a life sentence, but rather a set of probabilities. Let's break down the most popular myths about heredity and find out where the influence of genes ends and our own responsibility begins.", 
+        "uk": "Сучасна наука доводить: ДНК — це не вирок, а скоріше набір ймовірностей. Давайте розберемо найпопулярніші міфи про спадковість і з'ясуємо, де закінчується вплив генів і починається наша власна відповідальність." 
+    },
+    "art-gen-h3-1": { 
+        "ru": "Миф 1: Цвет глаз определяется одним геном", 
+        "en": "Myth 1: Eye color is determined by a single gene", 
+        "uk": "Міф 1: Колір очей визначається одним геном" 
+    },
+    "art-gen-p3": { 
+        "ru": "Наверняка вы слышали из школьного курса биологии правило: карий цвет — доминантный, голубой — рецессивный. Согласно этой логике, у двух голубоглазых родителей никогда не может родиться кареглазый ребенок.", 
+        "en": "You have probably heard the rule from high school biology: brown is dominant, blue is recessive. According to this logic, two blue-eyed parents can never have a brown-eyed child.", 
+        "uk": "Напевно, ви чули зі шкільного курсу біології правило: карий колір — домінантний, блакитний — рецесивний. Згідно з цією логікою, у двох блакитнооких батьків ніколи не може народитися кароока дитина." 
+    },
+    "art-gen-p4": { 
+        "ru": "<strong>Реальность:</strong> Это не более чем упрощенная модель. Сегодня известно, что в формировании цвета радужной оболочки участвует до 16 различных генов. Они работают как сложная палитра, смешивая меланин. Поэтому сюрпризы вполне возможны, и у светлоглазых родителей иногда рождаются дети с темными глазами.", 
+        "en": "<strong>Reality:</strong> This is nothing more than a simplified model. Today it is known that up to 16 different genes are involved in forming the color of the iris. They work like a complex palette, mixing melanin. Therefore, surprises are quite possible, and light-eyed parents sometimes have children with dark eyes.", 
+        "uk": "<strong>Реальність:</strong> Це не більше ніж спрощена модель. Сьогодні відомо, що у формуванні кольору райдужної оболонки бере участь до 16 різних генів. Вони працюють як складна палітра, змішуючи меланін. Тому сюрпризи цілком можливі, і у світлооких батьків іноді народжуються діти з темними очима." 
+    },
+    "art-gen-box1": { 
+        "ru": "<strong>Интересно узнать больше?</strong> Воспользуйтесь нашим <a href='../eyes.html' style='color: var(--accent); text-decoration: underline;'>Калькулятором цвета глаз</a>, чтобы рассчитать вероятность для вашего будущего ребенка.", 
+        "en": "<strong>Curious to learn more?</strong> Use our <a href='../eyes.html' style='color: var(--accent); text-decoration: underline;'>Eye Color Calculator</a> to calculate the probability for your future child.", 
+        "uk": "<strong>Цікаво дізнатися більше?</strong> Скористайтеся нашим <a href='../eyes.html' style='color: var(--accent); text-decoration: underline;'>Калькулятором кольору очей</a>, щоб розрахувати ймовірність для вашої майбутньої дитини." 
+    },
+    "art-gen-h3-2": { 
+        "ru": "Миф 2: Рост на 100% зависит от генетики", 
+        "en": "Myth 2: Height is 100% dependent on genetics", 
+        "uk": "Міф 2: Зріст на 100% залежить від генетики" 
+    },
+    "art-gen-p5": { 
+        "ru": "Если родители невысокие, ребенок тоже будет низким. Этот стереотип заставляет многих подростков комплексовать.", 
+        "en": "If the parents are short, the child will also be short. This stereotype makes many teenagers feel insecure.", 
+        "uk": "Якщо батьки невисокі, дитина теж буде низькою. Цей стереотип змушує багатьох підлітків комплексувати." 
+    },
+    "art-gen-p6": { 
+        "ru": "<strong>Реальность:</strong> Генетика действительно задает 'коридор' возможностей (около 80% влияния). Но то, достигнет ли человек своего верхнего предела в этом коридоре, зависит от оставшихся 20%. Сюда входят: сбалансированное питание, физическая активность и полноценный сон, ведь именно во сне вырабатывается соматотропин — гормон роста.", 
+        "en": "<strong>Reality:</strong> Genetics indeed sets a 'corridor' of possibilities (about 80% influence). But whether a person reaches their upper limit in this corridor depends on the remaining 20%. This includes: a balanced diet, physical activity, and adequate sleep, because somatotropin — the growth hormone — is produced during sleep.", 
+        "uk": "<strong>Реальність:</strong> Генетика дійсно задає 'коридор' можливостей (близько 80% впливу). Але те, чи досягне людина своєї верхньої межі в цьому коридорі, залежить від решти 20%. Сюди входять: збалансоване харчування, фізична активність та повноцінний сон, адже саме уві сні виробляється соматотропін — гормон росту." 
+    },
+    "art-gen-h3-3": { 
+        "ru": "Миф 3: Левшой нужно родиться", 
+        "en": "Myth 3: You have to be born left-handed", 
+        "uk": "Міф 3: Шульгою треба народитися" 
+    },
+    "art-gen-p7": { 
+        "ru": "Считается, что если в роду не было левшей, то и ребенок точно будет правшой.", 
+        "en": "It is believed that if there were no left-handers in the family, the child will definitely be right-handed.", 
+        "uk": "Вважається, що якщо в роду не було шульг, то і дитина точно буде правшею." 
+    },
+    "art-gen-p8": { 
+        "ru": "<strong>Реальность:</strong> Леворукость — это сложный полигенный признак, на который влияют более 40 участков ДНК. Но даже у абсолютно идентичных близнецов бывают случаи, когда один — правша, а другой — левша. Это доказывает огромное влияние эпигенетики и случайных факторов.", 
+        "en": "<strong>Reality:</strong> Left-handedness is a complex polygenic trait influenced by over 40 DNA regions. But even identical twins have cases where one is right-handed and the other is left-handed. This proves the huge influence of epigenetics and random factors.", 
+        "uk": "<strong>Реальність:</strong> Ліворукість — це складний полігенний признак, на який впливають понад 40 ділянок ДНК. Але навіть в абсолютно ідентичних близнюків бувають випадки, коли один — правша, а інший — шульга. Це доводить величезний вплив епігенетики та випадкових факторів." 
+    },
+    "art-gen-box2": { 
+        "ru": "<strong>Проверьте генетику:</strong> Есть ли у вас шансы родить левшу? Узнайте в нашем инструменте <a href='../hands.html' style='color: var(--accent); text-decoration: underline;'>Левша или Правша</a>.", 
+        "en": "<strong>Check your genetics:</strong> Do you have a chance of having a left-handed child? Find out in our <a href='../hands.html' style='color: var(--accent); text-decoration: underline;'>Left or Right Handed</a> tool.", 
+        "uk": "<strong>Перевірте генетику:</strong> Чи є у вас шанси народити шульгу? Дізнайтеся у нашому інструменті <a href='../hands.html' style='color: var(--accent); text-decoration: underline;'>Лівша чи Правша</a>." 
+    },
+    "art-gen-h3-4": { 
+        "ru": "Вывод: Мы — больше, чем наша ДНК", 
+        "en": "Conclusion: We are more than our DNA", 
+        "uk": "Висновок: Ми — більше, ніж наша ДНК" 
+    },
+    "art-gen-p9": { 
+        "ru": "Генетика формирует наш фундамент. Она дает нам стартовые карты: предрасположенность к определенным чертам лица, типу волос или группе крови. Однако то, как мы разыграем эти карты, во многом зависит от среды и наших привычек. ДНК пишет сценарий, но режиссером своей жизни остаетесь вы.", 
+        "en": "Genetics forms our foundation. It gives us the starting cards: a predisposition to certain facial features, hair type, or blood type. However, how we play these cards largely depends on the environment and our habits. DNA writes the script, but you remain the director of your life.", 
+        "uk": "Генетика формує наш фундамент. Вона дає нам стартові карти: схильність до певних рис обличчя, типу волосся чи групи крові. Проте те, як ми розіграємо ці карти, багато в чому залежить від середовища та наших звичок. ДНК пише сценарий, але режисером свого життя залишаєтеся ви." 
+    }
 };
 
 // Механизм переключения языков
