@@ -7,6 +7,15 @@
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
+    <!-- Захист від блимання, ТЕМНА тема за замовчуванням -->
+    <script>
+        (function() {
+            let savedTheme = localStorage.getItem('site-theme');
+            if (!savedTheme) savedTheme = 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
     <script>
@@ -16,17 +25,42 @@
       gtag('config', 'G-0WPCS9G55D');
     </script>
 
-    <script src="/cookies.js" defer></script>
-    <script src="/lang.js" defer></script>
+    <script src="cookies.js" defer></script>
+    <script src="lang.js" defer></script>
+    <script src="theme.js" defer></script>
 
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
 
     <style>
+        /* Змінні для Світлої теми */
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --hover-bg: #f1f5f9;
+            --accent: #da3633;
+            --shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+
+        /* Змінні для Темної теми */
+        [data-theme="dark"] {
+            --bg-color: #111318;
+            --card-bg: #1a1d24;
+            --text-main: #f8fafc;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+            --hover-bg: #111318;
+            --accent: #da3633;
+            --shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
         body { 
             font-family: 'Inter', -apple-system, sans-serif; 
-            background: #111318; 
-            color: #f8fafc; 
+            background: var(--bg-color); 
+            color: var(--text-main); 
             line-height: 1.6; 
             padding: 40px 20px; 
             min-height: 100vh;
@@ -34,53 +68,46 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .container { 
-            background: #1a1d24; 
+            background: var(--card-bg); 
             padding: 40px; 
             border-radius: 16px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+            box-shadow: var(--shadow); 
             max-width: 700px; 
             width: 100%; 
             box-sizing: border-box;
+            border: 1px solid var(--border-color);
+            transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
         }
 
-        h1 { 
-            color: #f8fafc; 
-            font-size: 1.8rem; 
-            margin-top: 0;
-            margin-bottom: 25px; 
-            text-align: center;
-        }
+        /* Панель керування */
+        .top-controls { position: absolute; top: 20px; right: 20px; display: flex; gap: 8px; z-index: 10; }
+        .control-btn { background: transparent; border: 1px solid var(--border-color); color: var(--text-muted); border-radius: 6px; padding: 4px 8px; font-size: 0.75rem; cursor: pointer; transition: all 0.3s; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+        .control-btn:hover { background: var(--hover-bg); color: var(--text-main); border-color: var(--text-muted); }
 
-        h2 { 
-            color: #f8fafc; 
-            font-size: 1.2rem; 
-            margin-top: 30px; 
-            margin-bottom: 15px;
-            border-left: 3px solid #da3633; 
-            padding-left: 10px;
-        }
-
-        p { color: #8b949e; margin-bottom: 15px; font-size: 0.95rem; }
+        h1 { font-size: 1.8rem; margin-top: 0; margin-bottom: 25px; text-align: center; }
+        h2 { font-size: 1.2rem; margin-top: 30px; margin-bottom: 15px; border-left: 3px solid var(--accent); padding-left: 10px; }
+        p { color: var(--text-muted); margin-bottom: 15px; font-size: 0.95rem; }
         
-        a { color: #da3633; text-decoration: none; transition: 0.3s; }
+        a { color: var(--accent); text-decoration: none; transition: 0.3s; }
         a:hover { color: #b92b29; text-decoration: underline; }
         
-        .back-btn { 
-            align-self: flex-start;
-            margin-bottom: 20px; 
-            color: #8b949e; 
-            text-decoration: none; 
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .back-btn:hover { color: #f8fafc; }
+        .back-btn { align-self: flex-start; margin-bottom: 20px; color: var(--text-muted); text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .back-btn:hover { color: var(--text-main); }
     </style>
 </head>
 <body>
+
+    <!-- Кнопки перемикання мов та теми -->
+    <div class="top-controls">
+        <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
+        <button onclick="changeLanguage('en')" class="control-btn">EN</button>
+        <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
+        <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
+    </div>
 
     <div style="max-width: 700px; width: 100%;">
         <a href="index.html" class="back-btn" data-lang="back-home">← Вернуться на главную</a>
@@ -90,11 +117,11 @@
         <h1 data-lang="about-h2">О проекте</h1>
         
         <h2 data-lang="about-h3-1">Что такое Krexpor?</h2>
-        <p data-lang="about-p-1">Krexpor — это моя личная цифровая площадка для реализации идей. Сейчас здесь собраны интерактивные генетические утилиты, но проект не стоит на месте. В будущем здесь будут появляться новые сервисы, трекеры, проекты и образовательные форматы. Это живое портфолио, которое растет и развивается.</p>
+        <p data-lang="about-p-1">Krexpor — это моя личная цифровая площадка. Сейчас здесь собраны интерактивные генетические утилиты и глубокие психологические AI-тесты. Проект не стоит на месте — в будущем здесь будут появляться новые инструменты и форматы.</p>
         
-        <h2 data-lang="about-h3-2">Отказ от ответственности (Для калькуляторов)</h2>
-        <p data-lang="about-p-2">Обратите внимание: раздел генетических калькуляторов предоставляется исключительно в образовательных и развлекательных целях. Результаты расчетов базируются на статистических вероятностях и классических законах наследования.</p>
-        <p data-lang="about-p-3">Эти инструменты <strong>не являются заменой профессиональной медицинской диагностики или ДНК-теста</strong>. Природа сложна, и всегда существуют исключения и мутации.</p>
+        <h2 data-lang="about-h3-2">Отказ от ответственности</h2>
+        <p data-lang="about-p-2">Обратите внимание: все инструменты на сайте (калькуляторы и нейросети) предоставляются исключительно в образовательных и развлекательных целях.</p>
+        <p data-lang="about-p-3">Они <strong>не являются заменой профессиональной медицинской диагностики, терапии или ДНК-теста</strong>. Природа и психика сложны, и всегда существуют индивидуальные исключения.</p>
         
         <h2 data-lang="about-h3-3">Связь</h2>
         <p data-lang="about-p-4">Открыт к предложениям, идеям и обратной связи. Вы можете связаться со мной через <a href="https://t.me/krexpor" target="_blank">Telegram</a>.</p>
