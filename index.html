@@ -18,45 +18,80 @@
     <meta property="twitter:image" content="https://krexpor.com/preview.jpg">
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <script>
+        (function() {
+            let savedTheme = localStorage.getItem('site-theme');
+            if (!savedTheme) {
+                savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-0WPCS9G55D');
     </script>
 
-    <!-- ПОДКЛЮЧАЕМ НАШ СЛОВАРЬ -->
     <script src="lang.js" defer></script>
+    <script src="cookies.js" defer></script>
+    <script src="theme.js" defer></script>
 
     <style>
+        /* Змінні для Світлої теми */
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --hover-bg: #f1f5f9;
+            --shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+
+        /* Змінні для Темної теми (Krexpor Style) */
+        [data-theme="dark"] {
+            --bg-color: #111318;
+            --card-bg: #1a1d24;
+            --text-main: #f8fafc;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+            --hover-bg: #111318;
+            --shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
         body { 
             font-family: 'Inter', -apple-system, sans-serif; 
-            background: #111318;
-            color: #f8fafc;
+            background: var(--bg-color);
+            color: var(--text-main);
             display: flex; 
             justify-content: center; 
             align-items: center; 
             min-height: 100vh; 
             margin: 0; 
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .container { 
-            background: #1a1d24;
+            background: var(--card-bg);
             padding: 40px; 
             border-radius: 16px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+            box-shadow: var(--shadow); 
             text-align: center; 
             max-width: 400px; 
             width: 90%; 
             position: relative; 
             overflow: hidden; 
+            border: 1px solid var(--border-color);
+            transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
         }
 
-        /* Переключатель языков */
-        .lang-switcher {
+        /* Панель керування (Мови + Тема) */
+        .top-controls {
             position: absolute;
             top: 20px;
             right: 20px;
@@ -65,10 +100,10 @@
             z-index: 10;
         }
 
-        .lang-btn {
+        .control-btn {
             background: transparent;
-            border: 1px solid #30363d;
-            color: #8b949e;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
             border-radius: 6px;
             padding: 4px 8px;
             font-size: 0.75rem;
@@ -76,15 +111,18 @@
             transition: all 0.3s;
             font-family: 'Inter', sans-serif;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .lang-btn:hover {
-            background: #30363d;
-            color: #f8fafc;
-            border-color: #8b949e;
+        .control-btn:hover {
+            background: var(--hover-bg);
+            color: var(--text-main);
+            border-color: var(--text-muted);
         }
 
-        /* Колибри внутри карточки */
+        /* Колібрі всередині картки */
         .bg-hummingbird {
             position: absolute;
             top: 50%;
@@ -96,13 +134,9 @@
             z-index: 0;
         }
 
-        .content-wrapper {
-            position: relative;
-            z-index: 1;
-        }
-
-        h1 { color: #f8fafc; margin-bottom: 8px; font-size: 1.8rem; }
-        p { color: #8b949e; margin-bottom: 30px; font-size: 0.9rem; }
+        .content-wrapper { position: relative; z-index: 1; }
+        h1 { margin-bottom: 8px; font-size: 1.8rem; }
+        p { color: var(--text-muted); margin-bottom: 30px; font-size: 0.9rem; }
         
         .btn { 
             display: block; 
@@ -115,81 +149,49 @@
             font-weight: 600; 
             transition: all 0.3s ease; 
         }
-        
-        .btn:hover { 
-            background: #b92b29; 
-        }
+        .btn:hover { background: #b92b29; }
 
-        /* Стили для карточек (интегрированы из твоего CSS) */
-        .tools-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
+        .tools-list { display: flex; flex-direction: column; gap: 12px; }
 
         .tool-card {
             display: flex;
             align-items: center;
             background: transparent;
-            border: 1px solid #30363d;
+            border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 14px 20px;
             text-decoration: none;
-            color: #f8fafc;
+            color: var(--text-main);
             transition: all 0.3s ease;
             text-align: left;
         }
 
         .tool-card:hover {
-            background: #1a1d24;
-            border-color: #8b949e;
+            background: var(--hover-bg);
+            border-color: var(--text-muted);
             transform: translateY(-2px);
         }
 
-        .tool-icon {
-            font-size: 1.4rem;
-            margin-right: 15px;
-        }
-
-        .tool-name {
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
+        .tool-icon { font-size: 1.4rem; margin-right: 15px; }
+        .tool-name { font-weight: 500; font-size: 0.95rem; }
         
-        .social-links { 
-            margin-top: 30px; 
-            display: flex; 
-            justify-content: center; 
-            gap: 15px; 
-        }
-
+        .social-links { margin-top: 30px; display: flex; justify-content: center; gap: 15px; }
         .social-link { 
-            color: #8b949e; 
+            color: var(--text-muted); 
             text-decoration: none; 
             font-size: 0.85rem;
             padding: 8px 20px; 
-            border: 1px solid #30363d; 
+            border: 1px solid var(--border-color); 
             border-radius: 8px; 
             transition: all 0.3s; 
         }
-
-        .social-link:hover { 
-            background: #30363d; 
-            color: #fff; 
-        }
+        .social-link:hover { background: var(--hover-bg); color: var(--text-main); }
         
-        .footer { 
-            margin-top: 30px; 
-            font-size: 0.75rem; 
-            color: #475569; 
-            line-height: 1.6; 
-        }
-        .footer a { color: #475569; text-decoration: none; transition: 0.3s; }
-        .footer a:hover { color: #8b949e; }
+        .footer { margin-top: 30px; font-size: 0.75rem; color: var(--text-muted); line-height: 1.6; }
+        .footer a { color: var(--text-muted); text-decoration: none; transition: 0.3s; }
+        .footer a:hover { color: var(--text-main); }
     </style>
     
-    <script src="/cookies.js" defer></script>
-
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
     
 </head>
@@ -197,11 +199,11 @@
 
     <div class="container">
         
-        <!-- Кнопки переключения языков -->
-        <div class="lang-switcher">
-            <button onclick="changeLanguage('ru')" class="lang-btn">RU</button>
-            <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
-            <button onclick="changeLanguage('uk')" class="lang-btn">UK</button>
+        <div class="top-controls">
+            <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
+            <button onclick="changeLanguage('en')" class="control-btn">EN</button>
+            <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
+            <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
         </div>
 
         <svg class="bg-hummingbird" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -214,45 +216,43 @@
             <h1>Krexpor</h1>
             <p data-lang="bio">Проекты и жизнь 20-ти летнего парня</p>
             
-            <!-- Основные кнопки -->
             <a href="genetic/index.html" class="btn" data-lang="btn-genetic">🧬 Генетические калькуляторы</a>
             
-            <!-- НОВА СЕКЦІЯ: AI та Психологія -->
-            <div style="margin-top: 30px; padding-top: 25px; border-top: 1px solid #30363d; text-align: left;">
-                <h3 style="color: #8b949e; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 0; margin-bottom: 15px;" data-lang="tests-title">AI & Психология</h3>
+            <div style="margin-top: 30px; padding-top: 25px; border-top: 1px solid var(--border-color); text-align: left;">
+                <h3 style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 0; margin-bottom: 15px;" data-lang="tests-title">AI & Психология</h3>
                 
                 <div class="tools-list">
                     <a href="tests/profiler.html" class="tool-card">
                         <span class="tool-icon">🔮</span>
                         <div>
                             <div class="tool-name" data-lang="profiler-title">Глубокий анализ личности</div>
-                            <div style="font-size: 0.75rem; color: #8b949e; margin-top: 4px;" data-lang="profiler-desc">Психологический портрет от нейросети</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;" data-lang="profiler-desc">Психологический портрет от нейросети</div>
                         </div>
                     </a>
 
                     <a href="tests/relationship.html" class="tool-card">
-    <span class="tool-icon">❤️</span>
-    <div>
-        <div class="tool-name">Мова стосунків та кордони</div>
-        <div style="font-size: 0.75rem; color: #8b949e; margin-top: 4px;">Тип прив'язаності та емоційні тригери</div>
-    </div>
-</a>
+                        <span class="tool-icon">❤️</span>
+                        <div>
+                            <div class="tool-name">Мова стосунків та кордони</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Тип прив'язаності та емоційні тригери</div>
+                        </div>
+                    </a>
 
                     <a href="tests/shadow.html" class="tool-card">
-    <span class="tool-icon" style="color: #1e293b;">🌑</span>
-    <div>
-        <div class="tool-name">Тіньова сторона особистості</div>
-        <div style="font-size: 0.75rem; color: #8b949e; margin-top: 4px;">Аналіз прихованих емоцій та масок</div>
-    </div>
-</a>
+                        <span class="tool-icon" style="color: #1e293b;">🌑</span>
+                        <div>
+                            <div class="tool-name">Тіньова сторона особистості</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Аналіз прихованих емоцій та масок</div>
+                        </div>
+                    </a>
 
                     <a href="tests/aesthetics.html" class="tool-card">
-    <span class="tool-icon" style="color: #eab308;">✨</span>
-    <div>
-        <div class="tool-name">Естетика вашої душі</div>
-        <div style="font-size: 0.75rem; color: #8b949e; margin-top: 4px;">Візуальний AI-код вашого внутрішнього світу</div>
-    </div>
-</a>
+                        <span class="tool-icon" style="color: #eab308;">✨</span>
+                        <div>
+                            <div class="tool-name">Естетика вашої душі</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Візуальний AI-код вашого внутрішнього світу</div>
+                        </div>
+                    </a>
                 </div>
             </div>
             
@@ -263,7 +263,7 @@
             <div class="footer">
                 © 2026 Krexpor <br>
                 <div style="margin-top: 10px; display: flex; justify-content: center; align-items: center;">
-                    <a href="about.html" style="padding-right: 12px; border-right: 1px solid #475569;" data-lang="footer-about">О проекте</a>
+                    <a href="about.html" style="padding-right: 12px; border-right: 1px solid var(--border-color);" data-lang="footer-about">О проекте</a>
                     <a href="privacy.html" style="padding-left: 12px;" data-lang="privacy">Политика конфиденциальности</a>
                 </div>
             </div>
