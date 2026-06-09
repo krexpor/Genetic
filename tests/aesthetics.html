@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="aes-page-title">Эстетика души | Krexpor</title>
+    <meta name="description" content="Пройдите эстетический AI-тест и узнайте свой внутренний вайб: от Dark Academia до Cyberpunk.">
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0WPCS9G55D');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="../lang.js" defer></script>
+    <script src="../cookies.js" defer></script>
+
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --accent-color: #8b5cf6; 
+            --accent-hover: #7c3aed;
+            --border-color: #e2e8f0;
+        }
+        
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Inter', -apple-system, sans-serif; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; margin: 0; line-height: 1.6; }
+        .lang-switcher { position: absolute; top: 20px; right: 20px; display: flex; gap: 8px; z-index: 10; }
+        .lang-btn { background: transparent; border: 1px solid #cbd5e1; color: #64748b; border-radius: 6px; padding: 4px 8px; font-size: 0.75rem; cursor: pointer; transition: all 0.3s; font-weight: 600; }
+        .lang-btn:hover { background: #e2e8f0; color: #1e293b; }
+        .container { background: var(--card-bg); border-radius: 20px; padding: 40px; width: 100%; max-width: 650px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); border: 1px solid var(--border-color); margin-bottom: 40px; position: relative; }
+        .title-wrapper { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 10px; }
+        h1 { color: #1e293b; margin: 0; font-size: 26px; font-weight: 700; text-align: center; }
+        .subtitle { color: var(--text-muted); font-size: 15px; margin-bottom: 30px; text-align: center; }
+        .question-block { margin-bottom: 35px; }
+        .question-title { display: block; margin-bottom: 15px; color: #1e293b; font-weight: 600; font-size: 16px; }
+        .options-grid { display: grid; gap: 12px; }
+        .option-label { display: block; position: relative; cursor: pointer; }
+        .option-label input { position: absolute; opacity: 0; cursor: pointer; }
+        .option-card { display: flex; align-items: center; padding: 16px 20px; background: #f1f5f9; border: 2px solid transparent; border-radius: 12px; color: var(--text-main); font-size: 15px; transition: all 0.2s ease; }
+        .option-label:hover .option-card { background: #e2e8f0; }
+        /* Акцентный цвет для эстетики (золотой/звездный) */
+        .option-label input:checked ~ .option-card { background: #ffffff; border-color: #eab308; box-shadow: 0 4px 12px rgba(234, 179, 8, 0.15); color: #ca8a04; font-weight: 500; }
+        .btn { width: 100%; padding: 16px; background: #1e293b; color: white; border: none; border-radius: 12px; cursor: pointer; font-weight: 600; font-size: 16px; transition: 0.2s; margin-top: 15px; box-shadow: 0 4px 14px rgba(30, 41, 59, 0.3); }
+        .btn:hover { background: #0f172a; transform: translateY(-2px); }
+        .result-box { margin-top: 30px; background: #f8fafc; border: 1px solid var(--border-color); padding: 30px; border-radius: 16px; display: none; }
+        .result-box h2 { color: #ca8a04; font-size: 20px; margin-top: 20px; margin-bottom: 10px; }
+        .result-box h2:first-child { margin-top: 0; }
+        .loader { color: #ca8a04; text-align: center; font-weight: 500; display: none; margin-top: 20px; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
+        .seo-article { width: 100%; max-width: 800px; padding: 20px; color: var(--text-main); }
+        .seo-article h2 { color: #1e293b; font-size: 24px; margin-top: 30px; }
+        .seo-article h3 { color: #334155; font-size: 18px; margin-top: 25px; }
+        .seo-article p, .seo-article ul { color: #475569; font-size: 16px; line-height: 1.8; margin-bottom: 15px; }
+        .seo-article li { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+
+    <div class="lang-switcher">
+        <button onclick="changeLanguage('ru')" class="lang-btn">RU</button>
+        <button onclick="changeLanguage('uk')" class="lang-btn">UK</button>
+        <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+    </div>
+
+    <!-- БЛОК ТЕСТА -->
+    <div class="container">
+        <a href="../index.html" data-lang="back-home" style="display: inline-block; margin-bottom: 20px; color: var(--text-muted); text-decoration: none; font-weight: 600;">← Вернуться на главную</a>
+        
+        <div class="title-wrapper">
+            <!-- Іконка іскор/естетики -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+            </svg>
+            <h1 data-lang="aes-h1">Эстетика вашей души</h1>
+        </div>
+
+        <p class="subtitle" data-lang="aes-subtitle">
+            Ответьте на 5 вопросов через призму ассоциаций. Алгоритм проанализирует ваши вкусы и определит ваш уникальный внутренний "вайб" (core aesthetic).
+        </p>
+
+        <div id="form-container">
+            <!-- Питання 1 -->
+            <div class="question-block">
+                <span class="question-title" data-lang="aes-q1">1. Если бы ваше внутреннее состояние было комнатой, как бы она выглядела?</span>
+                <div class="options-grid">
+                    <label class="option-label"><input type="radio" name="q1" value="A"><div class="option-card" data-lang="aes-q1-a">Темное дерево, стеллажи со старыми книгами, теплый свет лампы и запах пыли.</div></label>
+                    <label class="option-label"><input type="radio" name="q1" value="B"><div class="option-card" data-lang="aes-q1-b">Абсолютный минимализм, холодный свет, стекло, металл и много свободного пространства.</div></label>
+                    <label class="option-label"><input type="radio" name="q1" value="C"><div class="option-card" data-lang="aes-q1-c">Неоновый свет, хаос из кабелей, экранов и коллекционных фигурок.</div></label>
+                    <label class="option-label"><input type="radio" name="q1" value="D"><div class="option-card" data-lang="aes-q1-d">Много растений, открытые окна, солнечные лучи и светлый лен.</div></label>
+                </div>
+            </div>
+
+            <!-- Питання 2 -->
+            <div class="question-block">
+                <span class="question-title" data-lang="aes-q2">2. Какой саундтрек играл бы на фоне вашей жизни в моменты наивысшего напряжения?</span>
+                <div class="options-grid">
+                    <label class="option-label"><input type="radio" name="q2" value="A"><div class="option-card" data-lang="aes-q2-a">Классическая музыка: тревожные скрипки или надрывное фортепиано.</div></label>
+                    <label class="option-label"><input type="radio" name="q2" value="B"><div class="option-card" data-lang="aes-q2-b">Мощный электронный бит, синтвейв или тяжелый бас.</div></label>
+                    <label class="option-label"><input type="radio" name="q2" value="C"><div class="option-card" data-lang="aes-q2-c">Меланхоличное инди, акустическая гитара или лоу-фай.</div></label>
+                    <label class="option-label"><input type="radio" name="q2" value="D"><div class="option-card" data-lang="aes-q2-d">Абсолютная тишина или звуки природы (шум дождя, свист ветра).</div></label>
+                </div>
+            </div>
+
+            <!-- Питання 3 -->
+            <div class="question-block">
+                <span class="question-title" data-lang="aes-q3">3. Если бы вам пришлось носить одежду только одного стиля всю жизнь, что бы это было?</span>
+                <div class="options-grid">
+                    <label class="option-label"><input type="radio" name="q3" value="A"><div class="option-card" data-lang="aes-q3-a">Тотальный черный, строгие линии, кожа и серебряные аксессуары.</div></label>
+                    <label class="option-label"><input type="radio" name="q3" value="B"><div class="option-card" data-lang="aes-q3-b">Мягкие пастельные тона, оверсайз свитеры и комфортные ткани.</div></label>
+                    <label class="option-label"><input type="radio" name="q3" value="C"><div class="option-card" data-lang="aes-q3-c">Землистые оттенки (коричневый, зеленый), винтаж и многослойность.</div></label>
+                    <label class="option-label"><input type="radio" name="q3" value="D"><div class="option-card" data-lang="aes-q3-d">Яркие контрасты, футуристичный крой или гранж с потертостями.</div></label>
+                </div>
+            </div>
+
+            <!-- Питання 4 -->
+            <div class="question-block">
+                <span class="question-title" data-lang="aes-q4">4. Какая погода за окном идеально отражает вашу зону комфорта?</span>
+                <div class="options-grid">
+                    <label class="option-label"><input type="radio" name="q4" value="A"><div class="option-card" data-lang="aes-q4-a">Сильный проливной дождь и гроза, пока я нахожусь в безопасности дома.</div></label>
+                    <label class="option-label"><input type="radio" name="q4" value="B"><div class="option-card" data-lang="aes-q4-b">Густой утренний туман и прохладный, свежий воздух.</div></label>
+                    <label class="option-label"><input type="radio" name="q4" value="C"><div class="option-card" data-lang="aes-q4-c">Яркое, слепящее полуденное солнце и безоблачное небо.</div></label>
+                    <label class="option-label"><input type="radio" name="q4" value="D"><div class="option-card" data-lang="aes-q4-d">«Золотой час», теплые лучи заката и длинные тени.</div></label>
+                </div>
+            </div>
+
+            <!-- Питання 5 -->
+            <div class="question-block">
+                <span class="question-title" data-lang="aes-q5">5. Какой предмет несет для вас наибольшую эмоциональную ценность?</span>
+                <div class="options-grid">
+                    <label class="option-label"><input type="radio" name="q5" value="A"><div class="option-card" data-lang="aes-q5-a">Старый исписанный дневник или зачитанная до дыр книга.</div></label>
+                    <label class="option-label"><input type="radio" name="q5" value="B"><div class="option-card" data-lang="aes-q5-b">Мой любимый гаджет, ноутбук или фотоаппарат.</div></label>
+                    <label class="option-label"><input type="radio" name="q5" value="C"><div class="option-card" data-lang="aes-q5-c">Коробка со старыми полароидами, билетами и памятными мелочами.</div></label>
+                    <label class="option-label"><input type="radio" name="q5" value="D"><div class="option-card" data-lang="aes-q5-d">Кольцо, кулон или вещь с длинной историей.</div></label>
+                </div>
+            </div>
+
+            <button class="btn" onclick="generateProfile()" data-lang="aes-btn">Узнать свою эстетику</button>
+            <div id="loading" class="loader" data-lang="aes-loading">Генерируем ваш визуальный код... ✨</div>
+        </div>
+
+        <div id="ai-response" class="result-box"></div>
+    </div>
+
+    <!-- SEO БЛОК -->
+    <article class="seo-article">
+        <h2 data-lang="aes-seo-h2">Что такое психологическая эстетика (Core Vibe)?</h2>
+        <p data-lang="aes-seo-p1">В современном интернете визуальные эстетики (такие как Dark Academia, Cottagecore, Cyberpunk, Ethereal, Soft Minimalism) стали новым способом самовыражения. Это не просто стиль одежды, это визуальный язык, который переводит наше внутреннее психологическое состояние в образы, цвета и звуки.</p>
+        
+        <h3 data-lang="aes-seo-h3-1">Как AI определяет ваш стиль?</h3>
+        <ul>
+            <li data-lang="aes-seo-li-1"><strong>Пространственный якорь:</strong> Ваш выбор интерьера (комнаты) показывает, как вы организуете свои мысли — хаотично, структурно или органично.</li>
+            <li data-lang="aes-seo-li-2"><strong>Звуковой профиль:</strong> Музыка при напряжении раскрывает ваши механизмы преодоления стресса (эскапизм, меланхолия или агрессия).</li>
+            <li data-lang="aes-seo-li-3"><strong>Атмосферный комфорт:</strong> Погода и предметы отражают ваши отношения со временем — вы живете прошлым (винтаж/дождь), будущим (гаджеты/неон) или настоящим (растения/солнце).</li>
+        </ul>
+        <p data-lang="aes-seo-p2">Наш алгоритм анализирует пересечение этих 5 визуальных маркеров и находит ту самую "Core" эстетику, которая наиболее точно резонирует с вашей уникальной личностью. Это арт-терапия в формате тестирования.</p>
+    </article>
+
+    <script>
+        async function generateProfile() {
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+            const q3 = document.querySelector('input[name="q3"]:checked');
+            const q4 = document.querySelector('input[name="q4"]:checked');
+            const q5 = document.querySelector('input[name="q5"]:checked');
+            
+            const currentLang = window.currentLang || 'ru';
+
+            if (!q1 || !q2 || !q3 || !q4 || !q5) {
+                alert(currentLang === 'en' ? "Please select one answer for each of the 5 questions." : 
+                      currentLang === 'uk' ? "Будь ласка, оберіть по одному варіанту для кожного з 5 питань." : 
+                      "Пожалуйста, выберите один вариант для каждого из 5 вопросов.");
+                return;
+            }
+
+            const a1 = q1.nextElementSibling.innerText;
+            const a2 = q2.nextElementSibling.innerText;
+            const a3 = q3.nextElementSibling.innerText;
+            const a4 = q4.nextElementSibling.innerText;
+            const a5 = q5.nextElementSibling.innerText;
+
+            document.querySelector('.btn').style.display = 'none';
+            document.getElementById('loading').style.display = 'block';
+            const responseBox = document.getElementById('ai-response');
+            responseBox.style.display = 'none';
+
+            let langInstruction = "Пиши весь ответ строго на русском языке.";
+            if(currentLang === 'en') langInstruction = "Write the entire response strictly in English language.";
+            if(currentLang === 'uk') langInstruction = "Пиши всю відповідь виключно українською мовою.";
+
+            const systemPrompt = `
+                Ты — арт-психолог и профи в современных интернет-эстетиках (Core Aesthetics). Клиент прошел визуально-психологический тест.
+                
+                Выбор клиента:
+                1 (Пространство): "${a1}"
+                2 (Музыка/Стресс): "${a2}"
+                3 (Стиль/Цвет): "${a3}"
+                4 (Погода/Атмосфера): "${a4}"
+                5 (Ценный предмет): "${a5}"
+
+                Твоя задача: на основе этих 5 ассоциативных выборов определить ГЛАВНУЮ эстетику души клиента (например: Dark Academia, Y2K, Goth, Cottagecore, Ethereal, Soft Grunge, Cyberpunk, Old Money, Light Academia, Minimalist и т.д.).
+                Выдай красивый, атмосферный и вдохновляющий разбор (около 350-400 слов).
+
+                Структурируй в Markdown:
+                ## ✨ Ваша Эстетика: [Название эстетики]
+                [Красивое художественное описание вайба клиента. Как выглядит его внутренний мир]
+                ## 🎨 Психологический портрет
+                [Почему клиент выбрал именно эти образы? О чем это говорит в его характере (меланхолия, бунт, потребность в покое и т.д.)]
+                ## 🎬 Мудборд (Ваши символы)
+                [Перечисли 4-5 вещей, запахов или явлений, которые идеально описывают клиента коротким списком]
+
+                ВАЖНО: ${langInstruction}
+            `;
+
+            try {
+                const workerUrl = 'https://gemini-proxy.krexpor.workers.dev/'; 
+                const response = await fetch(workerUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ prompt: systemPrompt })
+                });
+
+                const data = await response.json();
+                document.getElementById('loading').style.display = 'none';
+                
+                if (data.candidates && data.candidates.length > 0) {
+                    const answer = data.candidates[0].content.parts[0].text;
+                    responseBox.innerHTML = marked.parse(answer);
+                    responseBox.style.display = 'block';
+                } else {
+                    responseBox.innerHTML = `<p style='color:#ef4444'>Error generating result.</p>`;
+                    responseBox.style.display = 'block';
+                    document.querySelector('.btn').style.display = 'block';
+                }
+
+            } catch (error) {
+                document.getElementById('loading').style.display = 'none';
+                responseBox.innerHTML = `<p style='color:#ef4444'>Error: ${error.message}</p>`;
+                responseBox.style.display = 'block';
+                document.querySelector('.btn').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
