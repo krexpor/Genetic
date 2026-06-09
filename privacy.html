@@ -7,6 +7,15 @@
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
+    <!-- Захист від блимання, ТЕМНА тема за замовчуванням -->
+    <script>
+        (function() {
+            let savedTheme = localStorage.getItem('site-theme');
+            if (!savedTheme) savedTheme = 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -15,17 +24,41 @@
       gtag('config', 'G-0WPCS9G55D');
     </script>
 
-    <script src="/cookies.js" defer></script>
-
-    <script src="/lang.js" defer></script>
+    <script src="cookies.js" defer></script>
+    <script src="lang.js" defer></script>
+    <script src="theme.js" defer></script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
 
     <style>
+        /* Змінні для Світлої теми */
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --hover-bg: #f1f5f9;
+            --accent: #da3633;
+            --shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+
+        /* Змінні для Темної теми */
+        [data-theme="dark"] {
+            --bg-color: #111318;
+            --card-bg: #1a1d24;
+            --text-main: #f8fafc;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+            --hover-bg: #111318;
+            --accent: #da3633;
+            --shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
         body { 
             font-family: 'Inter', -apple-system, sans-serif; 
-            background: #111318; 
-            color: #f8fafc; 
+            background: var(--bg-color); 
+            color: var(--text-main); 
             line-height: 1.6; 
             padding: 40px 20px; 
             min-height: 100vh;
@@ -33,60 +66,47 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .container { 
-            background: #1a1d24; 
+            background: var(--card-bg); 
             padding: 40px; 
             border-radius: 16px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+            box-shadow: var(--shadow); 
             max-width: 700px; 
             width: 100%; 
             box-sizing: border-box;
+            border: 1px solid var(--border-color);
+            transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
         }
 
-        h1 { 
-            color: #f8fafc; 
-            font-size: 1.8rem; 
-            margin-top: 0;
-            margin-bottom: 5px; 
-            text-align: center;
-        }
+        /* Панель керування */
+        .top-controls { position: absolute; top: 20px; right: 20px; display: flex; gap: 8px; z-index: 10; }
+        .control-btn { background: transparent; border: 1px solid var(--border-color); color: var(--text-muted); border-radius: 6px; padding: 4px 8px; font-size: 0.75rem; cursor: pointer; transition: all 0.3s; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+        .control-btn:hover { background: var(--hover-bg); color: var(--text-main); border-color: var(--text-muted); }
 
-        .subtitle { 
-            color: #8b949e; 
-            text-align: center; 
-            margin-bottom: 30px; 
-            font-size: 0.9rem; 
-        }
-
-        h2 { 
-            color: #f8fafc; 
-            font-size: 1.2rem; 
-            margin-top: 30px; 
-            margin-bottom: 15px;
-            border-left: 3px solid #da3633; 
-            padding-left: 10px;
-        }
-
-        p { color: #8b949e; margin-bottom: 15px; font-size: 0.95rem; }
+        h1 { font-size: 1.8rem; margin-top: 0; margin-bottom: 5px; text-align: center; }
+        .subtitle { color: var(--text-muted); text-align: center; margin-bottom: 30px; font-size: 0.9rem; }
+        h2 { font-size: 1.2rem; margin-top: 30px; margin-bottom: 15px; border-left: 3px solid var(--accent); padding-left: 10px; }
+        p { color: var(--text-muted); margin-bottom: 15px; font-size: 0.95rem; }
         
-        a { color: #da3633; text-decoration: none; transition: 0.3s; }
+        a { color: var(--accent); text-decoration: none; transition: 0.3s; }
         a:hover { color: #b92b29; text-decoration: underline; }
         
-        .back-btn { 
-            align-self: flex-start;
-            margin-bottom: 20px; 
-            color: #8b949e; 
-            text-decoration: none; 
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .back-btn:hover { color: #f8fafc; }
+        .back-btn { align-self: flex-start; margin-bottom: 20px; color: var(--text-muted); text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .back-btn:hover { color: var(--text-main); }
     </style>
 </head>
 <body>
+
+    <!-- Кнопки перемикання мов та теми -->
+    <div class="top-controls">
+        <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
+        <button onclick="changeLanguage('en')" class="control-btn">EN</button>
+        <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
+        <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
+    </div>
 
     <div style="max-width: 700px; width: 100%;">
         <a href="index.html" class="back-btn" data-lang="back-home">← Вернуться на главную</a>
@@ -94,17 +114,17 @@
     
     <div class="container">
         <h1 data-lang="privacy-h1">Политика конфиденциальности</h1>
-        <div class="subtitle" data-lang="privacy-date">Последнее обновление: Июнь 2026 г.</div>
+        <div class="subtitle" data-lang="privacy-date">Последнее обновление: Июль 2026 г.</div>
 
         <h2 data-lang="privacy-h2-1">1. Сбор и обработка информации</h2>
-        <p data-lang="privacy-p-1">Мы с уважением относимся к вашей конфиденциальности. Все данные, которые вы вводите в генетические калькуляторы на сайте <strong>krexpor.com</strong>, обрабатываются исключительно локально в вашем браузере. Мы не собираем, не храним и не передаем эти данные на наши серверы или третьим лицам.</p>
+        <p data-lang="privacy-p-1">Мы с уважением относимся к вашей конфиденциальности. Все данные, которые вы вводите в генетические калькуляторы или психологические AI-тесты на сайте <strong>krexpor.com</strong>, обрабатываются локально или через защищенные транзитные шлюзы. Мы не собираем, не храним и не передаем ваши личные профили на наши серверы.</p>
 
         <h2 data-lang="privacy-h2-2">2. Использование аналитики</h2>
         <p data-lang="privacy-p-2">Для улучшения качества проекта мы используем сервис веб-аналитики Google Analytics. Этот сервис может собирать анонимные данные о вашем взаимодействии с сайтом (просмотренные страницы, время пребывания на сайте, тип устройства). Эти данные собираются с помощью файлов cookie.</p>
 
         <h2 data-lang="privacy-h2-3">3. Реклама и файлы Cookie от Google</h2>
-        <p data-lang="privacy-p-3-1">Мы используем сторонние рекламные компании, включая Google, для показа объявлений во время вашего посещения нашего веб-сайта. Эти компании могут использовать информацию (за исключением вашего имени, адреса, электронной почты или номера телефона) о ваших посещениях этого и других веб-сайтов с целью предоставления наиболее релевантных объявлений о товарах и услугах.</p>
-        <p data-lang="privacy-p-3-2">Google, как сторонний поставщик, использует файлы cookie для показа рекламы на нашем сайте. Использование файлов cookie DART позволяет Google и его партнерам показывать рекламу нашим пользователям на основе их посещений наших и/или других сайтов в Интернете. Вы можете отказаться от использования файлов cookie DART (и персонализированной рекламы в целом), посетив страницу <a href="https://policies.google.com/technologies/ads" target="_blank">политики конфиденциальности рекламной сети Google</a>.</p>
+        <p data-lang="privacy-p-3-1">Мы используем сторонние рекламные компании, включая Google, для показа объявлений во время вашего посещения нашего веб-сайта. Эти компании могут использовать информацию (за исключением вашего имени, адреса, электронной почты или номера телефона) о ваших посещениях этого и других веб-сайтов.</p>
+        <p data-lang="privacy-p-3-2">Вы можете отказаться от использования файлов cookie DART, посетив страницу <a href="https://policies.google.com/technologies/ads" target="_blank">политики конфиденциальности рекламной сети Google</a>.</p>
 
         <h2 data-lang="privacy-h2-4">4. Согласие</h2>
         <p data-lang="privacy-p-4">Используя наш сайт, вы автоматически соглашаетесь с нашей Политикой конфиденциальности и условиями обработки анонимных данных.</p>
