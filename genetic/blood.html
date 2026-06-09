@@ -31,11 +31,9 @@
     <script src="/theme.js" defer></script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
-    
 </head>
 <body>
 
-    <!-- Панель управления (Языки + Тема) -->
     <div class="top-controls">
         <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
         <button onclick="changeLanguage('en')" class="control-btn">EN</button>
@@ -83,7 +81,7 @@
         <div id="result-box" class="result-box" style="display: none;">
             <h3 data-lang="blood-result-title">Возможная группа крови:</h3>
             <div id="blood-result" style="margin-top: 15px; font-size: 16px; font-weight: bold; line-height: 1.8; text-align: left; display: inline-block;">
-                </div>
+            </div>
 
             <div id="fact-box" style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); text-align: left; font-size: 13px; color: var(--text-muted); line-height: 1.5;">
                 <b style="color: var(--accent);" data-lang="blood-fact-title">💡 Интересный факт:</b> <span id="fact-text"></span>
@@ -99,6 +97,23 @@
             
             <h4 data-lang="blood-seo-h4-2">Точность генетического прогноза</h4>
             <p data-lang="blood-seo-p-3">Наш онлайн-калькулятор использует классические законы наследования Менделя для расчета вероятностей. Однако биология иногда преподносит сюрпризы: в редких случаях возможны генетические исключения, такие как «бомбейский феномен». Поэтому для медицинских целей и 100% подтверждения всегда требуется лабораторный анализ крови.</p>
+            
+            <!-- БЛОК FAQ -->
+            <div class="faq-section">
+                <h3 data-lang="blood-faq-title">Часто задаваемые вопросы (FAQ)</h3>
+                <details class="faq-item">
+                    <summary data-lang="blood-faq-q1">Может ли у ребенка быть группа крови, которой нет у родителей?</summary>
+                    <p data-lang="blood-faq-a1">Да, абсолютно! Например, если у одного родителя II (A) группа крови, а у второго III (B), их ребенок может иметь любую из четырех существующих групп крови: I(O), II(A), III(B) или IV(AB).</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-lang="blood-faq-q2">Какая группа крови самая редкая?</summary>
+                    <p data-lang="blood-faq-a2">Самой редкой из основных групп является IV (AB) с отрицательным резус-фактором (Rh-). Она встречается менее чем у 1% населения планеты.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-lang="blood-faq-q3">Что такое резус-конфликт?</summary>
+                    <p data-lang="blood-faq-a3">Это иммунный ответ, который возникает во время беременности, если у матери отрицательный резус-фактор (Rh-), а ребенок унаследовал положительный (Rh+) от отца. Современная медицина легко справляется с этим с помощью специальных инъекций во время беременности.</p>
+                </details>
+            </div>
         </div>
     </div>
 
@@ -168,11 +183,11 @@
             const rhCombo = dadRh + momRh;
 
             const possibleBlood = bloodMatrix[bloodCombo];
-            const possibleRh = rhMatrix[currentLang][rhCombo] || rhMatrix['ru'][rhCombo]; // Fallback to 'ru'
+            const possibleRh = rhMatrix[currentLang] ? rhMatrix[currentLang][rhCombo] : rhMatrix['ru'][rhCombo]; 
 
             document.getElementById("blood-result").innerHTML = 
-                resultLabels[currentLang].group + "<span class='highlight-value' style='font-size: 16px; margin: 0;'>" + possibleBlood + "</span><br>" +
-                resultLabels[currentLang].rh + "<span class='highlight-value' style='font-size: 16px; margin: 0;'>" + possibleRh + "</span>";
+                resultLabels[currentLang] ? resultLabels[currentLang].group : resultLabels['ru'].group + "<span class='highlight-value' style='font-size: 16px; margin: 0;'>" + possibleBlood + "</span><br>" +
+                resultLabels[currentLang] ? resultLabels[currentLang].rh : resultLabels['ru'].rh + "<span class='highlight-value' style='font-size: 16px; margin: 0;'>" + possibleRh + "</span>";
 
             const factsArray = bloodFacts[currentLang] || bloodFacts['ru'];
             const randomFact = factsArray[Math.floor(Math.random() * factsArray.length)];
