@@ -441,19 +441,10 @@ function changeLanguage(lang) {
     // Оновлення результату в калькуляторах (ФАКТИ ТА РЕЗУЛЬТАТ)
     const resultBox = document.getElementById("result-box");
     if (resultBox && resultBox.style.display === "block") {
-        // Шукаємо кнопку, яка запускає розрахунок, і клікаємо її
         const calcBtn = document.querySelector('button[onclick^="calculate"]');
         if (calcBtn) {
             calcBtn.click();
         }
-    }
-}
-
-    // Оновлення результату в калькуляторах (якщо відкритий)
-    const resultBox = document.getElementById("result-box");
-    if (resultBox && resultBox.style.display === "block") {
-        const btn = document.querySelector('button[onclick^="calculate"]');
-        if (btn) btn.click();
     }
 }
 
