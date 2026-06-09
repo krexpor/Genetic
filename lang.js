@@ -692,7 +692,120 @@ const langArr = {
     // Вывод
     "art-gen-concl-h": { "ru": "Вывод: Вы — режиссер, а не просто актер", "en": "Conclusion: You are the director, not just an actor", "uk": "Висновок: Ви — режисер, а не просто актор" },
     "art-gen-concl-p1": { "ru": "Генетика формирует наш биологический фундамент. Она сдает нам стартовые карты в игре под названием «жизнь». Однако мы больше не считаем ДНК жестким фатумом.", "en": "Genetics forms our biological foundation. It deals us the starting cards in the game called 'life'. However, we no longer consider DNA a rigid fate.", "uk": "Генетика формує наш біологічний фундамент. Вона здає нам стартові карти в грі під назвою «життя». Однак ми більше не вважаємо ДНК жорстким фатумом." },
-    "art-gen-concl-p2": { "ru": "Благодаря науке эпигенетике мы знаем, что наш образ жизни, уровень стресса и даже питание могут буквально «включать» или «выключать» определенные гены. ДНК пишет черновик вашего сценария, но финальная версия всегда остается в ваших руках.", "en": "Thanks to the science of epigenetics, we know that our lifestyle, stress levels, and even diet can literally 'turn on' or 'turn off' certain genes. DNA writes the draft of your script, but the final version always remains in your hands.", "uk": "Завдяки науці епігенетиці ми знаємо, що наш спосіб життя, рівень стресу і навіть харчування можуть буквально «вмикати» або «вимикати» певні гени. ДНК пише чернетку вашого сценарію, але фінальна версія завжди залишається у ваших руках." }
+    "art-gen-concl-p2": { "ru": "Благодаря науке эпигенетике мы знаем, что наш образ жизни, уровень стресса и даже питание могут буквально «включать» или «выключать» определенные гены. ДНК пишет черновик вашего сценария, но финальная версия всегда остается в ваших руках.", "en": "Thanks to the science of epigenetics, we know that our lifestyle, stress levels, and even diet can literally 'turn on' or 'turn off' certain genes. DNA writes the draft of your script, but the final version always remains in your hands.", "uk": "Завдяки науці епігенетиці ми знаємо, що наш спосіб життя, рівень стресу і навіть харчування можуть буквально «вмикати» або «вимикати» певні гени. ДНК пише чернетку вашого сценарію, але фінальна версія завжди залишається у ваших руках." },
+
+    ,
+    // --- ВЕЛИКАЯ СТАТЬЯ 2: AI & ПСИХОЛОГИЯ ---
+    "art-ai-meta": { 
+        "ru": "Нейросети вместо Фрейда | Krexpor", 
+        "en": "Neural Networks instead of Freud | Krexpor", 
+        "uk": "Нейромережі замість Фрейда | Krexpor" 
+    },
+    "art-ai-h1": { 
+        "ru": "Нейросети вместо Фрейда: Как алгоритмы читают между строк", 
+        "en": "Neural Networks instead of Freud: How algorithms read between the lines", 
+        "uk": "Нейромережі замість Фрейда: Як алгоритми читають між рядків" 
+    },
+    "art-ai-time": { 
+        "ru": "Время чтения: 8 минут | Категория: AI & Психология", 
+        "en": "Reading time: 8 minutes | Category: AI & Psychology", 
+        "uk": "Час читання: 8 хвилин | Категорія: AI та Психологія" 
+    },
+    "art-ai-intro1": { 
+        "ru": "Представьте себе классический психологический тест. Перед вами шкала от 1 до 5 и вопрос: «Насколько легко вы заводите новые знакомства?». Вы на секунду задумываетесь, вспоминаете последнюю вечеринку, где вполне неплохо пообщались с парой человек, и уверенно ставите «4». Но задумывались ли вы когда-нибудь, насколько честен этот ответ? И отвечаете ли это реальные вы, или та идеальная версия себя, которой вы хотите казаться?", 
+        "en": "Imagine a classic psychological test. You have a scale from 1 to 5 and a question: 'How easily do you make new acquaintances?'. You think for a second, remember the last party where you chatted quite well with a couple of people, and confidently mark '4'. But have you ever wondered how honest this answer is? And is it the real you answering, or the ideal version of yourself that you want to appear to be?", 
+        "uk": "Уявіть собі класичний психологічний тест. Перед вами шкала від 1 до 5 і питання: «Наскільки легко ви заводите нові знайомства?». Ви на секунду замислюєтеся, згадуєте останню вечірку, де цілком непогано поспілкувалися з парою людей, і впевнено ставите «4». Але чи замислювалися ви коли-небудь, наскільки чесна ця відповідь? І чи відповідаєте це реальні ви, чи та ідеальна версія себе, якою ви хочете здаватися?" 
+    },
+    "art-ai-intro2": { 
+        "ru": "В психологии это называется «эффектом социальной желательности». Наш мозг подсознательно выбирает ответы, которые делают нас лучше в собственных глазах. Именно поэтому классические тесты часто дают сбой. На смену им приходит искусственный интеллект и методы обработки естественного языка (NLP), которые анализируют не то, ЧТО вы выбираете в тестах, а то, КАК вы формулируете свои мысли.", 
+        "en": "In psychology, this is called the 'social desirability bias'. Our brain subconsciously chooses answers that make us look better in our own eyes. This is exactly why classic tests often fail. They are being replaced by artificial intelligence and natural language processing (NLP) methods, which analyze not WHAT you choose in tests, but HOW you formulate your thoughts.", 
+        "uk": "У психології це називається «ефектом соціальної бажаності». Наш мозок підсвідомо обирає відповіді, які роблять нас кращими у власних очах. Саме тому класичні тести часто дають збій. На зміну їм приходить штучний інтелект і методи обробки природної мови (NLP), які аналізують не те, ЩО ви обираєте в тестах, а те, ЯК ви формулюєте свої думки." 
+    },
+    "art-ai-h3-1": { 
+        "ru": "Иллюзия выбора: почему старые тесты устарели", 
+        "en": "The illusion of choice: why old tests are outdated", 
+        "uk": "Ілюзія вибору: чому старі тести застаріли" 
+    },
+    "art-ai-p1-1": { 
+        "ru": "Большинство популярных тестов личности (такие как MBTI или Большая пятерка) были созданы десятилетия назад. Их главный недостаток — жесткие рамки. Человеческая психика слишком многогранна, чтобы втиснуть ее в бинарную систему «интроверт/экстраверт» или «логик/эмпат». Мы ведем себя совершенно по-разному в кругу близких друзей, на стрессовом совещании или на свидании.", 
+        "en": "Most popular personality tests (such as MBTI or the Big Five) were created decades ago. Their main drawback is rigid frameworks. The human psyche is too multifaceted to be squeezed into a binary 'introvert/extrovert' or 'logician/empath' system. We behave completely differently among close friends, in a stressful meeting, or on a date.", 
+        "uk": "Більшість популярних тестів особистості (такі як MBTI або Велика п'ятірка) були створені десятиліття тому. Їх головний недолік — жорсткі рамки. Людська психіка занадто багатогранна, щоб втиснути її в бінарну систему «інтроверт/екстраверт» або «логік/емпат». Ми поводимося зовсім по-різному в колі близьких друзів, на стресовій нараді або на побаченні." 
+    },
+    "art-ai-p1-2": { 
+        "ru": "Когда мы ставим галочки в опросниках, мы используем свою рациональную часть мозга (кору головного мозга). Мы анализируем вопрос и подгоняем ответ под свои убеждения. Нейросети же идут другим путем: они лишают вас готовых ответов и просят написать свободный текст. В момент написания текста контроль ослабевает, и на сцену выходит бессознательное.", 
+        "en": "When we tick boxes in questionnaires, we use our rational part of the brain (the cerebral cortex). We analyze the question and tailor the answer to our beliefs. Neural networks take a different path: they deprive you of ready-made answers and ask you to write free text. The moment you write text, control weakens, and the unconscious takes the stage.", 
+        "uk": "Коли ми ставимо галочки в опитувальниках, ми використовуємо свою раціональну частину мозку (кору головного мозку). Ми аналізуємо питання і підганяємо відповідь під свої переконання. Нейромережі ж ідуть іншим шляхом: вони позбавляють вас готових відповідей і просять написати вільний текст. У момент написання тексту контроль слабшає, і на сцену виходить несвідоме." 
+    },
+    "art-ai-h3-2": { 
+        "ru": "Семантический скальпель: как AI препарирует текст", 
+        "en": "Semantic scalpel: how AI dissects text", 
+        "uk": "Семантичний скальпель: як AI препарує текст" 
+    },
+    "art-ai-p2-1": { 
+        "ru": "Когда алгоритм получает ваш ответ на вопрос (например, «Опишите ваш идеальный день»), он не просто ищет ключевые слова. Современные языковые модели анализируют текст на нескольких глубоких слоях:", 
+        "en": "When the algorithm receives your answer to a question (for example, 'Describe your ideal day'), it doesn't just look for keywords. Modern language models analyze text on several deep layers:", 
+        "uk": "Коли алгоритм отримує вашу відповідь на запитання (наприклад, «Опишіть ваш ідеальний день»), він не просто шукає ключові слова. Сучасні мовні моделі аналізують текст на кількох глибоких шарах:" 
+    },
+    "art-ai-ul1-li1": { 
+        "ru": "<strong>Синтаксическая структура:</strong> Длина предложений, количество запятых и использование пассивного залога могут многое сказать о вашем уровне тревожности. Люди в состоянии стресса склонны использовать более короткие, обрывистые фразы или, наоборот, бесконечно сложные конструкции с множеством уточнений.", 
+        "en": "<strong>Syntactic structure:</strong> The length of sentences, the number of commas, and the use of passive voice can say a lot about your anxiety level. People under stress tend to use shorter, abrupt phrases or, conversely, infinitely complex structures with many clarifications.", 
+        "uk": "<strong>Синтаксична структура:</strong> Довжина речень, кількість ком і використання пасивного стану можуть багато сказати про ваш рівень тривожності. Люди в стані стресу схильні використовувати більш короткі, уривчасті фрази або, навпаки, нескінченно складні конструкції з безліччю уточнень." 
+    },
+    "art-ai-ul1-li2": { 
+        "ru": "<strong>Фокус локуса контроля:</strong> Как часто вы используете местоимение «Я» в сравнении с «Мы» или «Они»? Если в тексте преобладают конструкции «так получилось», «обстоятельства заставили» — алгоритм фиксирует внешний локус контроля (склонность перекладывать ответственность). Обилие «Я решил», «Я сделал» говорит о внутреннем локусе.", 
+        "en": "<strong>Locus of control focus:</strong> How often do you use the pronoun 'I' compared to 'We' or 'They'? If the text is dominated by constructions like 'it just happened', 'circumstances forced me' - the algorithm records an external locus of control (a tendency to shift responsibility). An abundance of 'I decided', 'I did' indicates an internal locus.", 
+        "uk": "<strong>Фокус локусу контролю:</strong> Як часто ви використовуєте займенник «Я» в порівнянні з «Ми» або «Вони»? Якщо в тексті переважають конструкції «так вийшло», «обставини змусили» — алгоритм фіксує зовнішній локус контролю (схильність перекладати відповідальність). Велика кількість «Я вирішив», «Я зробив» говорить про внутрішній локус." 
+    },
+    "art-ai-ul1-li3": { 
+        "ru": "<strong>Эмоциональный резонанс:</strong> AI умеет считывать скрытую агрессию, подавленную грусть или неуверенность через подбор синонимов. Разница между словами «устал», «выгорел» и «истощен» колоссальна для алгоритма.", 
+        "en": "<strong>Emotional resonance:</strong> AI can read hidden aggression, suppressed sadness, or uncertainty through the choice of synonyms. The difference between the words 'tired', 'burned out', and 'exhausted' is colossal for the algorithm.", 
+        "uk": "<strong>Емоційний резонанс:</strong> AI вміє зчитувати приховану агресію, пригнічений смуток або невпевненість через підбір синонімів. Різниця між словами «втомився», «вигорів» і «виснажений» колосальна для алгоритму." 
+    },
+    "art-ai-h3-3": { 
+        "ru": "Феномен цифровой откровенности", 
+        "en": "The phenomenon of digital honesty", 
+        "uk": "Феномен цифрової відвертості" 
+    },
+    "art-ai-p3-1": { 
+        "ru": "Почему искусственный интеллект часто оказывается точнее живого психолога на первых этапах знакомства? Ответ кроется в феномене «цифровой откровенности» (Digital Honesty). В кабинете терапевта человек всегда чувствует присутствие другого человека — авторитетной фигуры, которая, как нам кажется, может нас осудить.", 
+        "en": "Why is artificial intelligence often more accurate than a live psychologist in the early stages of getting to know someone? The answer lies in the phenomenon of 'Digital Honesty'. In a therapist's office, a person always feels the presence of another person — an authority figure who, we think, might judge us.", 
+        "uk": "Чому штучний інтелект часто виявляється точнішим за живого психолога на перших етапах знайомства? Відповідь криється у феномені «цифрової відвертості» (Digital Honesty). У кабінеті терапевта людина завжди відчуває присутність іншої людини — авторитетної фігури, яка, як нам здається, може нас засудити." 
+    },
+    "art-ai-p3-2": { 
+        "ru": "Машина же абсолютно беспристрастна. Она не закатит глаза, не тяжело вздохнет и не осудит вас за странные мысли. Зная, что по ту сторону экрана находится лишь код, человек расслабляется и пишет гораздо более откровенные вещи, выплескивая свои настоящие тени и страхи на виртуальную бумагу.", 
+        "en": "A machine, however, is completely impartial. It won't roll its eyes, sigh heavily, or judge you for weird thoughts. Knowing that there is only code on the other side of the screen, a person relaxes and writes much more honest things, pouring their true shadows and fears onto virtual paper.", 
+        "uk": "Машина ж абсолютно неупереджена. Вона не закотить очі, не важко зітхне і не засудить вас за дивні думки. Знаючи, що по той бік екрану знаходиться лише код, людина розслабляється і пише набагато відвертіші речі, випліскуючи свої справжні тіні і страхи на віртуальний папір." 
+    },
+    "art-ai-box1": { 
+        "ru": "🧠 <strong>Готовы узнать о себе больше?</strong> Пройдите наш <a href='../index.html' style='color: var(--accent); text-decoration: underline; font-weight: bold;'>Глубокий AI-анализ личности</a>, где алгоритм составит ваш психологический портрет на основе открытых ответов.", 
+        "en": "🧠 <strong>Ready to learn more about yourself?</strong> Take our <a href='../index.html' style='color: var(--accent); text-decoration: underline; font-weight: bold;'>Deep AI Personality Analysis</a>, where the algorithm will build your psychological portrait based on open-ended answers.", 
+        "uk": "🧠 <strong>Готові дізнатися про себе більше?</strong> Пройдіть наш <a href='../index.html' style='color: var(--accent); text-decoration: underline; font-weight: bold;'>Глибокий AI-аналіз особистості</a>, де алгоритм складе ваш психологічний портрет на основі відкритих відповідей." 
+    },
+    "art-ai-h3-4": { 
+        "ru": "Риски и границы машинной эмпатии", 
+        "en": "Risks and boundaries of machine empathy", 
+        "uk": "Ризики та межі машинної емпатії" 
+    },
+    "art-ai-p4-1": { 
+        "ru": "Конечно, AI — не панацея и не замена клинической терапии. Искусственный интеллект не умеет сопереживать, он лишь мастерски симулирует эмпатию, выявляя математические паттерны в человеческой речи. Машина не заметит, как у вас дрогнул голос, как вы отвели взгляд или сжали кулаки при ответе на определенный вопрос. Поэтому задача AI-профайлинга — не поставить диагноз, а дать человеку «зеркало». Показать ему те слепые зоны, которые он сам отказывается замечать.", 
+        "en": "Of course, AI is not a panacea or a replacement for clinical therapy. Artificial intelligence cannot empathize; it only masterfully simulates empathy by identifying mathematical patterns in human speech. The machine won't notice your voice trembling, you looking away, or clenching your fists when answering a certain question. Therefore, the task of AI profiling is not to make a diagnosis, but to give a person a 'mirror'. To show them the blind spots they refuse to notice themselves.", 
+        "uk": "Звичайно, AI — не панацея і не заміна клінічної терапії. Штучний інтелект не вміє співпереживати, він лише майстерно симулює емпатію, виявляючи математичні патерни в людській мові. Машина не помітить, як у вас здригнувся голос, як ви відвели погляд або стиснули кулаки при відповіді на певне запитання. Тому завдання AI-профайлінгу — не поставити діагноз, а дати людині «дзеркало». Показати їй ті сліпі зони, які вона сама відмовляється помічати." 
+    },
+    "art-ai-concl-h": { 
+        "ru": "Новая эра самопознания", 
+        "en": "A new era of self-discovery", 
+        "uk": "Нова ера самопізнання" 
+    },
+    "art-ai-concl-p1": { 
+        "ru": "Мы стоим на пороге революции в психологии. От жестких таблиц и стандартизированных вопросов мы переходим к инструментам, которые адаптируются под нас в реальном времени. Нейросети не просто классифицируют нас — они пытаются понять контекст нашей жизни.", 
+        "en": "We are on the verge of a revolution in psychology. From rigid tables and standardized questions, we are moving to tools that adapt to us in real time. Neural networks do not just classify us — they try to understand the context of our lives.", 
+        "uk": "Ми стоїмо на порозі революції в психології. Від жорстких таблиць і стандартизованих питань ми переходимо до інструментів, які адаптуються під нас в реальному часі. Нейромережі не просто класифікують нас — вони намагаються зрозуміти контекст нашого життя." 
+    },
+    "art-ai-concl-p2": { 
+        "ru": "В следующий раз, когда вы будете проходить текстовый психологический анализ, помните: алгоритм видит не просто набор символов. Он видит ритм вашего дыхания, отраженный в пунктуации, и ваши скрытые страхи, зашифрованные в выборе глаголов. Возможно, искусственный интеллект — это тот самый объективный наблюдатель, которого нам так не хватало для истинного знакомства с самими собой.", 
+        "en": "The next time you take a text-based psychological analysis, remember: the algorithm sees more than just a set of characters. It sees the rhythm of your breathing reflected in the punctuation, and your hidden fears encrypted in the choice of verbs. Perhaps artificial intelligence is the objective observer we've been missing so much to truly get to know ourselves.", 
+        "uk": "Наступного разу, коли ви будете проходити текстовий психологічний аналіз, пам'ятайте: алгоритм бачить не просто набір символів. Він бачить ритм вашого дихання, відображений у пунктуації, і ваші приховані страхи, зашифровані у виборі дієслів. Можливо, штучний інтелект — це той самий об'єктивний спостерігач, якого нам так не вистачало для справжнього знайомства з самими собою." 
+    }
 };
 
 // Механизм переключения языков
