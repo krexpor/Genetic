@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="rel-page-title">Анализ отношений и границ | Krexpor</title>
+    <meta name="description" content="Психологический AI-тест на тип привязанности, язык любви и личные границы в отношениях.">
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0WPCS9G55D');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="../lang.js" defer></script>
+    <script src="../cookies.js" defer></script>
+
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --accent-color: #8b5cf6; 
+            --accent-hover: #7c3aed;
+            --border-color: #e2e8f0;
+        }
+        
+        body { 
+            background-color: var(--bg-color); 
+            color: var(--text-main); 
+            font-family: 'Inter', -apple-system, sans-serif;
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            padding: 40px 20px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .lang-switcher { position: absolute; top: 20px; right: 20px; display: flex; gap: 8px; z-index: 10; }
+        .lang-btn { background: transparent; border: 1px solid #cbd5e1; color: #64748b; border-radius: 6px; padding: 4px 8px; font-size: 0.75rem; cursor: pointer; transition: all 0.3s; font-weight: 600; }
+        .lang-btn:hover { background: #e2e8f0; color: #1e293b; }
+        
+        .container { 
+            background: var(--card-bg); border-radius: 20px; padding: 40px; 
+            width: 100%; max-width: 650px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); 
+            border: 1px solid var(--border-color); margin-bottom: 40px; position: relative;
+        }
+
+        .title-wrapper { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 10px; }
+        h1 { color: #1e293b; margin: 0; font-size: 26px; font-weight: 700; text-align: center; }
+        .subtitle { color: var(--text-muted); font-size: 15px; margin-bottom: 30px; text-align: center; }
+
+        .question-block { margin-bottom: 35px; }
+        .question-title { display: block; margin-bottom: 15px; color: #1e293b; font-weight: 600; font-size: 16px; }
+
+        /* Стилі для карток з відповідями */
+        .options-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .option-label {
+            display: block;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .option-label input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .option-card {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            background: #f1f5f9;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            color: var(--text-main);
+            font-size: 15px;
+            transition: all 0.2s ease;
+        }
+
+        .option-label:hover .option-card {
+            background: #e2e8f0;
+        }
+
+        /* Підсвічування обраної картки */
+        .option-label input:checked ~ .option-card {
+            background: #ffffff;
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .btn { 
+            width: 100%; padding: 16px; background: var(--accent-color); color: white; 
+            border: none; border-radius: 12px; cursor: pointer; font-weight: 600; 
+            font-size: 16px; transition: 0.2s; margin-top: 15px;
+            box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3);
+        }
+        .btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+
+        .result-box { margin-top: 30px; background: #f8fafc; border: 1px solid var(--border-color); padding: 30px; border-radius: 16px; display: none; }
+        .result-box h2 { color: var(--accent-color); font-size: 20px; margin-top: 20px; margin-bottom: 10px; }
+        .result-box h2:first-child { margin-top: 0; }
+        .loader { color: var(--accent-color); text-align: center; font-weight: 500; display: none; margin-top: 20px; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
+
+        /* SEO блок */
+        .seo-article { width: 100%; max-width: 800px; padding: 20px; color: var(--text-main); }
+        .seo-article h2 { color: #1e293b; font-size: 24px; margin-top: 30px; }
+        .seo-article h3 { color: #334155; font-size: 18px; margin-top: 25px; }
+        .seo-article p, .seo-article ul { color: #475569; font-size: 16px; line-height: 1.8; margin-bottom: 15px; }
+        .seo-article li { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+
+    <div class="lang-switcher">
+        <button onclick="changeLanguage('ru')" class="lang-btn">RU</button>
+        <button onclick="changeLanguage('uk')" class="lang-btn">UK</button>
+        <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+    </div>
+
+    <!-- БЛОК ТЕСТА -->
+    <div class="container">
+        <a href="../index.html" data-lang="back-home" style="display: inline-block; margin-bottom: 20px; color: var(--accent-color); text-decoration: none; font-weight: 600;">← Вернуться на главную</a>
+        
+        <div class="title-wrapper">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <h1 data-lang="rel-h1">Язык отношений и границы</h1>
+        </div>
+
+        <p class="subtitle" data-lang="rel-subtitle">
+            Выберите варианты, которые наиболее точно описывают ваши внутренние реакции. Алгоритм проанализирует ваш тип привязанности.
+        </p>
+
+        <div id="form-container">
+            <!-- Питання 1 -->
+            <div class="question-block">
+                <span class="question-title" data-lang="rel-q1">1. Как вы реагируете, если близкий человек внезапно отдаляется или пишет реже?</span>
+                <div class="options-grid">
+                    <label class="option-label">
+                        <input type="radio" name="q1" value="A">
+                        <div class="option-card" data-lang="rel-q1-a">Даю пространство, но внутри тревожусь и ищу причину в себе.</div>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="q1" value="B">
+                        <div class="option-card" data-lang="rel-q1-b">Отдаляюсь в ответ, чтобы защитить себя от возможной боли.</div>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="q1" value="C">
+                        <div class="option-card" data-lang="rel-q1-c">Сразу иду на диалог, чтобы прямо выяснить, что происходит.</div>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="q1" value="D">
+                        <div class="option-card" data-lang="rel-q1-d">Воспринимаю спокойно, у каждого должно быть личное время.</div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Питання 2 -->
+            <div class="question-block">
+                <span class="question-title" data-lang="rel-q2">2. Что для вас является абсолютным «красным флагом» (недопустимым) в отношениях?</span>
+                <div class="options-grid">
+                    <label class="option-label">
+                        <input type="radio" name="q2" value="A">
+                        <div class="option-card" data-lang="rel-q2-a">Обесценивание моих эмоций и фразы в стиле «ты преувеличиваешь».</div>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="q2" value="B">
+                        <div class="option-card" data-lang="rel-q2-b">Тотальный контроль и попытки нарушить мое личное пространство.</div>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="q2" value="C">
+                        <div class="option-card" data-lang="rel-q2-c">Нечестность и скрытность даже в мелких бытовых вещах.</div>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="q2" value="D">
+                        <div class="option-card" data-lang="rel-q2-d">Эмоциональные качели: сегодня люблю, завтра игнорирую.</div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Питання 3 -->
+            <div class="question-block">
+                <span class="question-title" data-lang="rel-q3">3. Опишите идеальное проявление заботы, когда вы абсолютно истощены:</span>
+                <div class="options-grid">
+                    <label class="option-label">
+                        <input type="radio" name="q3" value="A">
+                        <div class="option-card" data-lang="rel-q3-a">Просто обнять и выслушать, без попыток дать логичный совет.</div>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="q3" value="B">
+                        <div class="option-card" data-lang="rel-q3-b">Практическая помощь: приготовить еду, взять на себя дела.</div>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="q3" value="C">
+                        <div class="option-card" data-lang="rel-q3-c">Оставить меня в тишине и одиночестве, чтобы я мог(ла) восстановиться.</div>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="q3" value="D">
+                        <div class="option-card" data-lang="rel-q3-d">Сделать какой-то приятный сюрприз, чтобы переключить мое внимание.</div>
+                    </label>
+                </div>
+            </div>
+
+            <button class="btn" onclick="generateProfile()" data-lang="rel-btn">Анализировать мой профиль</button>
+            <div id="loading" class="loader" data-lang="rel-loading">Собираем паттерны и формируем анализ... 🔮</div>
+        </div>
+
+        <div id="ai-response" class="result-box"></div>
+    </div>
+
+    <!-- SEO БЛОК -->
+    <article class="seo-article">
+        <h2 data-lang="rel-seo-h2">Как AI анализирует язык любви и тип привязанности?</h2>
+        <p data-lang="rel-seo-p1">Теория привязанности — одна из важнейших концепций в современной психологии. Наш алгоритм использует ваши ответы на ключевые триггерные ситуации, чтобы составить глубокий анализ того, как вы выстраиваете границы и реагируете на близость.</p>
+        
+        <h3 data-lang="rel-seo-h3-1">Типы привязанности в психологии</h3>
+        <ul>
+            <li data-lang="rel-seo-li-1"><strong>Надежный:</strong> Комфортно в близости, нет страха одиночества. Выбор ответов, ориентированных на диалог и уважение пространства.</li>
+            <li data-lang="rel-seo-li-2"><strong>Тревожный:</strong> Сильная потребность в подтверждении чувств, страх быть отвергнутым.</li>
+            <li data-lang="rel-seo-li-3"><strong>Избегающий:</strong> Дистанцирование при малейшей угрозе комфорту, защита через независимость.</li>
+        </ul>
+        <p data-lang="rel-seo-p2">Сочетая ваш выбор реакции на отдаление партнера, красные флаги и предпочтения в заботе, искусственный интеллект формирует персональную карту ваших эмоциональных потребностей.</p>
+    </article>
+
+    <script>
+        async function generateProfile() {
+            // Збираємо обрані радіо-кнопки
+            const q1_checked = document.querySelector('input[name="q1"]:checked');
+            const q2_checked = document.querySelector('input[name="q2"]:checked');
+            const q3_checked = document.querySelector('input[name="q3"]:checked');
+            
+            const currentLang = window.currentLang || 'ru';
+
+            if (!q1_checked || !q2_checked || !q3_checked) {
+                alert(currentLang === 'en' ? "Please select one answer for each question." : 
+                      currentLang === 'uk' ? "Будь ласка, оберіть по одному варіанту для кожного питання." : 
+                      "Пожалуйста, выберите один вариант для каждого вопроса.");
+                return;
+            }
+
+            // Отримуємо сам ТЕКСТ обраного варіанту (з сусіднього div)
+            const a1 = q1_checked.nextElementSibling.innerText;
+            const a2 = q2_checked.nextElementSibling.innerText;
+            const a3 = q3_checked.nextElementSibling.innerText;
+
+            document.querySelector('.btn').style.display = 'none';
+            document.getElementById('loading').style.display = 'block';
+            const responseBox = document.getElementById('ai-response');
+            responseBox.style.display = 'none';
+
+            let langInstruction = "Пиши весь ответ строго на русском языке.";
+            if(currentLang === 'en') langInstruction = "Write the entire response strictly in English language.";
+            if(currentLang === 'uk') langInstruction = "Пиши всю відповідь виключно українською мовою.";
+
+            const systemPrompt = `
+                Ты — эксперт в психологии отношений и теории привязанности. Клиент прошел тест с вариантами ответов.
+                
+                Выбор клиента:
+                1 (Реакция на отдаление): "${a1}"
+                2 (Красный флаг): "${a2}"
+                3 (Идеальная забота): "${a3}"
+
+                Твоя задача: проанализировать эту КОМБИНАЦИЮ ответов и выдать детальный психологический разбор (около 350-400 слов). 
+                Не цитируй ответы клиента напрямую, а делай из них выводы. Напиши эмпатично, но глубоко.
+
+                Структурируй в Markdown:
+                ## ❤️ Ваш тип привязанности
+                [Какой тип преобладает и как он проявляется]
+                ## 🛡 Ваша линия защиты (Границы)
+                [Как клиент защищает себя от боли и почему его пугают указанные красные флаги]
+                ## 🗣 Ваш язык любви
+                [Как клиенту нужно, чтобы его любили, основываясь на 3-м ответе]
+                ## 🌱 Точка роста
+                [2-3 практичных совета для гармоничных отношений]
+
+                ВАЖНО: ${langInstruction}
+            `;
+
+            try {
+                const workerUrl = 'https://gemini-proxy.krexpor.workers.dev/'; 
+                const response = await fetch(workerUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ prompt: systemPrompt })
+                });
+
+                const data = await response.json();
+                document.getElementById('loading').style.display = 'none';
+                
+                if (data.candidates && data.candidates.length > 0) {
+                    const answer = data.candidates[0].content.parts[0].text;
+                    responseBox.innerHTML = marked.parse(answer);
+                    responseBox.style.display = 'block';
+                } else {
+                    responseBox.innerHTML = `<p style='color:#ef4444'>Error generating result.</p>`;
+                    responseBox.style.display = 'block';
+                    document.querySelector('.btn').style.display = 'block';
+                }
+
+            } catch (error) {
+                document.getElementById('loading').style.display = 'none';
+                responseBox.innerHTML = `<p style='color:#ef4444'>Error: ${error.message}</p>`;
+                responseBox.style.display = 'block';
+                document.querySelector('.btn').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
