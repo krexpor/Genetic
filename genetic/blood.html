@@ -118,25 +118,6 @@
     </div>
 
     <script>
-        const bloodMatrix = {
-            "O+O": "I (O)",
-            "O+A": "I (O), II (A)",
-            "A+O": "I (O), II (A)",
-            "O+B": "I (O), III (B)",
-            "B+O": "I (O), III (B)",
-            "O+AB": "II (A), III (B)",
-            "AB+O": "II (A), III (B)",
-            "A+A": "I (O), II (A)",
-            "A+B": "I (O), II (A), III (B), IV (AB)",
-            "B+A": "I (O), II (A), III (B), IV (AB)",
-            "A+AB": "II (A), III (B), IV (AB)",
-            "AB+A": "II (A), III (B), IV (AB)",
-            "B+B": "I (O), III (B)",
-            "B+AB": "II (A), III (B), IV (AB)",
-            "AB+B": "II (A), III (B), IV (AB)",
-            "AB+AB": "II (A), III (B), IV (AB)"
-        };
-
         const rhMatrix = {
             ru: {
                 "++": "Положительный (+) или Отрицательный (-)",
@@ -149,6 +130,12 @@
                 "+-": "Positive (+) or Negative (-)",
                 "-+": "Positive (+) or Negative (-)",
                 "--": "Only Negative (-)"
+            },
+            uk: {
+                "++": "Позитивний (+) або Негативний (-)",
+                "+-": "Позитивний (+) або Негативний (-)",
+                "-+": "Позитивний (+) або Негативний (-)",
+                "--": "Тільки Негативний (-)"
             }
         };
 
@@ -164,12 +151,19 @@
                 "Gourmet mosquitoes: Studies show that people with blood type O are bitten by mosquitoes almost twice as often as people with type A.",
                 "Japanese horoscope (Ketsueki-gata): In Japan, blood type plays the role of a zodiac sign. At a job interview or a date, you might be seriously asked about your blood type.",
                 "Universal donors: People with O- negative blood are universal donors; their blood is suitable for everyone. And people with AB+ can receive any blood."
+            ],
+            uk: [
+                "Золота кров (Rh-null): Це найрідкісніша кров у світі. У ній взагалі немає резус-антигенів. За останні 50 років її знайшли лише у ~40 осіб на всій планеті.",
+                "Комарі-гурмани: Дослідження показують, що людей з першою групою крові (O) комарі кусають майже вдвічі частіше, ніж людей з другою групою (А).",
+                "Японський гороскоп (Ketsueki-gata): В Японії група крові відіграє роль знака зодіаку. На співбесіді або побаченні вас можуть серйозно запитати про вашу групу.",
+                "Універсальні донори: Люди з першою негативною групою (O-) — універсальні донори, їхня кров підходить усім. А люди з AB+ можуть приймати будь-яку кров."
             ]
         };
 
         const resultLabels = {
             ru: { group: "🩸 Группа: ", rh: "🧬 Резус-фактор: " },
-            en: { group: "🩸 Blood Type: ", rh: "🧬 Rh Factor: " }
+            en: { group: "🩸 Blood Type: ", rh: "🧬 Rh Factor: " },
+            uk: { group: "🩸 Група: ", rh: "🧬 Резус-фактор: " }
         };
 
         function calculateBlood() {
