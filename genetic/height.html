@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang="height-title">Калькулятор роста</title>
+    
+    <!-- Защита от мерцания экрана, ТЕМНАЯ тема по умолчанию -->
+    <script>
+        (function() {
+            let savedTheme = localStorage.getItem('site-theme');
+            if (!savedTheme) savedTheme = 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
     <link rel="stylesheet" href="/style.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
@@ -11,20 +21,28 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-0WPCS9G55D');
     </script>
 
    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
     <script src="/cookies.js" defer></script>
-
     <script src="/lang.js" defer></script>
+    <script src="/theme.js" defer></script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
     
 </head>
 <body>
+
+    <!-- Панель управления (Языки + Тема) -->
+    <div class="top-controls">
+        <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
+        <button onclick="changeLanguage('en')" class="control-btn">EN</button>
+        <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
+        <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
+    </div>
+
     <div class="calculator-card">
         <a href="index.html" class="back-link" data-lang="back-menu">⬅ Назад в меню</a>
         
@@ -54,10 +72,10 @@
 
         <div id="result-box" class="result-box" style="display: none;">
             <h3 data-lang="height-result-title">Ожидаемый рост:</h3>
-            <div id="final-height" style="font-size: 24px; font-weight: bold; color: #3b82f6; margin-top: 10px;"></div>
+            <div id="final-height" style="font-size: 24px; font-weight: bold; color: var(--accent); margin-top: 10px;"></div>
             
-            <div id="fact-box" style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed #444; text-align: left; font-size: 13px; color: #a0a0a0; line-height: 1.5;">
-                <b style="color: #10b981;" data-lang="height-fact-title">💡 Интересный факт:</b> <span id="fact-text"></span>
+            <div id="fact-box" style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color); text-align: left; font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+                <b style="color: var(--accent);" data-lang="height-fact-title">💡 Интересный факт:</b> <span id="fact-text"></span>
             </div>
         </div>
 
@@ -74,7 +92,6 @@
     </div>
 
     <script>
-        // Восстанавливаем данные из памяти при загрузке страницы
         document.addEventListener('DOMContentLoaded', () => {
             if (localStorage.getItem('fatherHeight')) document.getElementById('father').value = localStorage.getItem('fatherHeight');
             if (localStorage.getItem('motherHeight')) document.getElementById('mother').value = localStorage.getItem('motherHeight');
@@ -100,7 +117,7 @@
             const fatherHeight = parseFloat(document.getElementById('father').value);
             const motherHeight = parseFloat(document.getElementById('mother').value);
             const gender = document.getElementById('gender').value;
-            const currentLang = window.currentLang || 'ru'; // Берем текущий язык или русский по умолчанию
+            const currentLang = window.currentLang || 'ru'; 
 
             const alertMsg = currentLang === 'en' ? "Please enter correct parents' height!" : "Пожалуйста, введите корректный рост родителей!";
             const cmSuffix = currentLang === 'en' ? " cm" : " см";
@@ -110,7 +127,6 @@
                 return;
             }
 
-            // Сохраняем в память
             localStorage.setItem('fatherHeight', fatherHeight);
             localStorage.setItem('motherHeight', motherHeight);
             localStorage.setItem('childGender', gender);
@@ -124,8 +140,7 @@
 
             document.getElementById('final-height').innerText = predictedHeight.toFixed(1) + cmSuffix;
             
-            // Выбираем случайный факт с учетом языка
-            const factsArray = heightFacts[currentLang];
+            const factsArray = heightFacts[currentLang] ? heightFacts[currentLang] : heightFacts['ru'];
             const randomFact = factsArray[Math.floor(Math.random() * factsArray.length)];
             document.getElementById('fact-text').innerText = randomFact;
 
