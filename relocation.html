@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="relo-title">Симулятор релокации | Krexpor</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0WPCS9G55D');
+    </script>
+    <script src="cookies.js" defer></script>
+    <script src="lang.js" defer></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
+
+    <style>
+        .result-row { display: flex; justify-content: space-between; margin-bottom: 10px; color: #8b949e; font-size: 15px; }
+        .result-row strong { color: #f8fafc; }
+        .result-row.total { font-size: 18px; color: #10b981; border-top: 1px solid #30363d; padding-top: 15px; margin-top: 10px; font-weight: bold; }
+        .expense-minus { color: #da3633; }
+        .tax-info { font-size: 12px; opacity: 0.7; }
+    </style>
+</head>
+<body>
+
+    <div class="calculator-card">
+        <a href="index.html" class="back-link" data-lang="back-home">← Вернуться на главную</a>
+        
+        <h2 data-lang="relo-h2">🌍 Симулятор релокации</h2>
+        <p class="subtitle" data-lang="relo-desc">Рассчитайте реальный потенциал накоплений с учетом местных налогов и стоимости жизни.</p>
+
+        <div class="input-group">
+            <label data-lang="relo-country">Выберите страну (база MVP):</label>
+            <select id="country-select" class="input-field">
+                <option value="denmark" data-lang="relo-opt-dk">Дания</option>
+                <option value="germany" data-lang="relo-opt-de">Германия</option>
+                <option value="poland" data-lang="relo-opt-pl">Польша</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label data-lang="relo-salary">Ожидаемая зарплата в месяц (Грязными / Gross):</label>
+            <input type="number" id="gross-salary" class="input-field" placeholder="Например: 3000" min="0">
+            <p style="font-size: 11px; color: #8b949e; margin-top: 5px;" data-lang="relo-currency-note">*Вводите сумму в Евро (€) для корректного расчета.</p>
+        </div>
+
+        <button class="btn" onclick="calculateRelocation()" data-lang="relo-btn">Рассчитать остаток</button>
+
+        <div id="result-box" class="result-box" style="display: none; text-align: left;">
+            <h3 style="text-align: center; margin-bottom: 20px;" data-lang="relo-res-title">Ваш финансовый прогноз:</h3>
+            
+            <div class="result-row">
+                <span data-lang="relo-res-gross">Зарплата (Gross):</span>
+                <strong id="res-gross">0 €</strong>
+            </div>
+            <div class="result-row expense-minus">
+                <span><span data-lang="relo-res-tax">Налоги</span> <span id="tax-rate" class="tax-info"></span>:</span>
+                <strong id="res-tax">-0 €</strong>
+            </div>
+            <div class="result-row">
+                <span data-lang="relo-res-net">На руки (Net):</span>
+                <strong id="res-net">0 €</strong>
+            </div>
+            <div class="result-row expense-minus">
+                <span data-lang="relo-res-living">Базовые траты (Жилье + Еда):</span>
+                <strong id="res-living">-0 €</strong>
+            </div>
+            <div class="result-row total">
+                <span data-lang="relo-res-savings">Чистые накопления:</span>
+                <strong id="res-savings">0 € / мес</strong>
+            </div>
+        </div>
+
+        <div class="seo-text-block" style="margin-top: 40px;">
+            <h3 data-lang="relo-seo-h3">Как работает расчет?</h3>
+            <p data-lang="relo-seo-p1">Алгоритм использует усредненные ставки подоходного налога и базовую стоимость проживания (аренда комнаты/студии и базовая продуктовая корзина) для выбранной страны. Это позволяет снять "розовые очки" и увидеть реальную сумму, которую можно откладывать ежемесячно.</p>
+        </div>
+    </div>
+
+    <script>
+        // Встроенная база данных (MVP версия)
+        // В будущем эти данные будут тянуться по API
+        const countryData = {
+            denmark: { taxRate: 0.38, livingCost: 1200 }, // Налог ~38%, Жизнь ~1200€
+            germany: { taxRate: 0.35, livingCost: 1000 }, // Налог ~35%, Жизнь ~1000€
+            poland: { taxRate: 0.12, livingCost: 600 }    // Налог ~12%, Жизнь ~600€
+        };
+
+        function calculateRelocation() {
+            const country = document.getElementById('country-select').value;
+            const grossStr = document.getElementById('gross-salary').value;
+            const gross = parseFloat(grossStr);
+
+            if (isNaN(gross) || gross <= 0) {
+                alert(window.currentLang === 'en' ? "Please enter a valid salary amount." : "Пожалуйста, введите корректную сумму зарплаты.");
+                return;
+            }
+
+            const data = countryData[country];
+            
+            // Математика
+            const taxAmount = gross * data.taxRate;
+            const netSalary = gross - taxAmount;
+            let savings = netSalary - data.livingCost;
+            
+            // Если траты превышают зарплату, не уходим в минус в отображении, показываем 0 накоплений (или долг)
+            if (savings < 0) savings = 0; 
+
+            // Обновление интерфейса
+            document.getElementById('res-gross').innerText = gross.toFixed(0) + " €";
+            document.getElementById('tax-rate').innerText = `(~${(data.taxRate * 100).toFixed(0)}%)`;
+            document.getElementById('res-tax').innerText = "-" + taxAmount.toFixed(0) + " €";
+            document.getElementById('res-net').innerText = netSalary.toFixed(0) + " €";
+            document.getElementById('res-living').innerText = "-" + data.livingCost.toFixed(0) + " €";
+            document.getElementById('res-savings').innerText = savings.toFixed(0) + " € / " + (window.currentLang === 'en' ? 'mo' : 'мес');
+
+            document.getElementById('result-box').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
