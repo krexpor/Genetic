@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang="hair-title">Калькулятор волос</title>
     
-    <!-- Защита от мерцания экрана, ТЕМНАЯ тема по умолчанию -->
     <script>
         (function() {
             let savedTheme = localStorage.getItem('site-theme');
@@ -35,7 +34,6 @@
 </head>
 <body>
 
-    <!-- Панель управления (Языки + Тема) -->
     <div class="top-controls">
         <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
         <button onclick="changeLanguage('en')" class="control-btn">EN</button>
@@ -102,11 +100,26 @@
             
             <h4 data-lang="hair-seo-h4-2">Точность расчета</h4>
             <p data-lang="hair-seo-p-3">Наш калькулятор цвета и типа волос опирается на классические вероятностные модели наследования признаков. Однако стоит учитывать, что цвет может меняться со временем: многие дети, рожденные светловолосыми, темнеют в подростковом возрасте из-за возрастной активации генов, отвечающих за выработку пигмента.</p>
+
+            <div class="faq-section">
+                <h3 data-lang="hair-faq-title">Часто задаваемые вопросы (FAQ)</h3>
+                <details class="faq-item">
+                    <summary data-lang="hair-faq-q1">Может ли у двух брюнетов родиться блондин?</summary>
+                    <p data-lang="hair-faq-a1">Да, абсолютно! Если оба темноволосых родителя являются скрытыми носителями рецессивного гена светлых волос (например, унаследованного от своих родителей), существует 25% вероятность того, что их ребенок родится блондином.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-lang="hair-faq-q2">Почему дети часто рождаются светлыми, а потом темнеют?</summary>
+                    <p data-lang="hair-faq-a2">Выработка пигмента эумеланина не всегда активна с рождения. По мере взросления ребенка (особенно в период полового созревания) генетические "переключатели" могут активировать усиленную выработку пигмента, навсегда делая волосы темнее.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-lang="hair-faq-q3">Меняется ли структура волос в течение жизни?</summary>
+                    <p data-lang="hair-faq-a3">Да, структура волос может меняться. Гормональные скачки (подростковый возраст, беременность) могут физически изменить форму волосяного фолликула, превращая прямые волосы в волнистые или наоборот.</p>
+                </details>
+            </div>
         </div>
     </div>
 
     <script>
-        // Матрица цвета (упрощенная модель доминирования)
         const colorRules = {
             ru: {
                 "black+black": "⚫ Черные: 75%<br>🟤 Каштановые: 24%<br>🟡 Светлые/Рыжие: 1%",
@@ -146,7 +159,6 @@
             }
         };
 
-        // Матрица структуры (неполное доминирование)
         const typeRules = {
             ru: {
                 "straight+straight": "〰️ <b>Структура:</b> Прямые (99%)",
@@ -200,11 +212,9 @@
             const colorResult = colorRules[currentLang] ? colorRules[currentLang][colorCombo] : colorRules['ru'][colorCombo];
             const typeResult = typeRules[currentLang] ? typeRules[currentLang][typeCombo] : typeRules['ru'][typeCombo];
 
-            // Собираем результаты вместе
             document.getElementById("hair-result").innerHTML = 
                 colorResult + "<br><br>" + typeResult;
 
-            // Выбираем случайный факт
             const factsArray = hairFacts[currentLang] ? hairFacts[currentLang] : hairFacts['ru'];
             const randomFact = factsArray[Math.floor(Math.random() * factsArray.length)];
             document.getElementById('fact-text').innerText = randomFact;
