@@ -298,7 +298,35 @@ const langArr = {
     "aes-seo-li-1": { "ru": "<strong>Пространственный якорь:</strong> Ваш выбор интерьера показывает, как вы организуете свои мысли — хаотично, структурно или органично.", "en": "<strong>Spatial anchor:</strong> Your choice of interior shows how you organize your thoughts — chaotically, structurally, or organically.", "uk": "<strong>Просторовий якір:</strong> Ваш вибір інтер'єру показує, як ви організовуєте свої думки — хаотично, структурно чи органічно." },
     "aes-seo-li-2": { "ru": "<strong>Звуковой профиль:</strong> Музыка при напряжении раскрывает ваши механизмы преодоления стресса.", "en": "<strong>Sound profile:</strong> Music during tension reveals your stress-coping mechanisms.", "uk": "<strong>Звуковий профіль:</strong> Музика при напрузі розкриває ваші механізми подолання стресу." },
     "aes-seo-li-3": { "ru": "<strong>Атмосферный комфорт:</strong> Погода и предметы отражают ваши отношения со временем.", "en": "<strong>Atmospheric comfort:</strong> Weather and objects reflect your relationship with time.", "uk": "<strong>Атмосферний комфорт:</strong> Погода та предмети відображають ваші відносини з часом." },
-    "aes-seo-p2": { "ru": "Наш алгоритм анализирует пересечение этих 5 визуальных маркеров и находит ту самую 'Core' эстетику, которая наиболее точно резонирует с вашей уникальной личностью.", "en": "Our algorithm analyzes the intersection of these 5 visual markers and finds that very 'Core' aesthetic that most accurately resonates with your unique personality.", "uk": "Наш алгоритм аналізує перетин цих 5 візуальних маркерів і знаходить ту саму 'Core' естетику, яка найбільш точно резонує з вашою унікальною особистістю." }
+    "aes-seo-p2": { "ru": "Наш алгоритм анализирует пересечение этих 5 визуальных маркеров и находит ту самую 'Core' эстетику, которая наиболее точно резонирует с вашей уникальной личностью.", "en": "Our algorithm analyzes the intersection of these 5 visual markers and finds that very 'Core' aesthetic that most accurately resonates with your unique personality.", "uk": "Наш алгоритм аналізує перетин цих 5 візуальних маркерів і знаходить ту саму 'Core' естетику, яка найбільш точно резонує з вашою унікальною особистістю." },
+
+    // --- ПОДЗАГОЛОВКИ КАРТОЧЕК ТЕСТОВ (ГЛАВНАЯ) ---
+    "rel-desc": { "ru": "Тип привязанности и эмоциональные триггеры", "en": "Attachment style and emotional triggers", "uk": "Тип прив'язаності та емоційні тригери" },
+    "shad-desc": { "ru": "Анализ подавленных эмоций и масок", "en": "Analysis of repressed emotions and masks", "uk": "Аналіз прихованих емоцій та масок" },
+    "aes-desc": { "ru": "Визуальный AI-код вашего внутреннего мира", "en": "Visual AI code of your inner world", "uk": "Візуальний AI-код вашого внутрішнього світу" },
+
+    // --- НОВЫЙ БЛОК "О ПЛАТФОРМЕ" НА ГЛАВНОЙ ---
+    "index-about-h2": { "ru": "О платформе Krexpor", "en": "About Krexpor Platform", "uk": "Про платформу Krexpor" },
+    "index-about-p1": { 
+        "ru": "Krexpor — это интерактивное пространство, где классическая наука встречается с передовым искусственным интеллектом. Мы создаем инструменты для самопознания и анализа.", 
+        "en": "Krexpor is an interactive space where classical science meets advanced artificial intelligence. We create tools for self-discovery and analysis.", 
+        "uk": "Krexpor — це інтерактивний простір, де класична наука зустрічається з передовим штучним інтелектом. Ми створюємо інструменти для самопізнання та аналізу." 
+    },
+    "index-about-li1": { 
+        "ru": "<strong>🧬 Генетика:</strong> Рассчитайте вероятности наследования внешности (рост, цвет глаз, группа крови) на основе биометрических данных.", 
+        "en": "<strong>🧬 Genetics:</strong> Calculate the probabilities of inheriting appearance (height, eye color, blood type) based on biometric data.", 
+        "uk": "<strong>🧬 Генетика:</strong> Розрахуйте ймовірності успадкування зовнішності (зріст, колір очей, група крові) на основі біометричних даних." 
+    },
+    "index-about-li2": { 
+        "ru": "<strong>🧠 AI-Тесты:</strong> Пройдите тесты, в которых нейросети анализируют семантику ваших ответов для создания уникального профиля.", 
+        "en": "<strong>🧠 AI Tests:</strong> Take tests where neural networks analyze the semantics of your answers to create a unique profile.", 
+        "uk": "<strong>🧠 AI-Тести:</strong> Пройдіть тести, в яких нейромережі аналізують семантику ваших відповідей для створення унікального профілю." 
+    },
+    "index-about-li3": { 
+        "ru": "<strong>🔒 Приватность:</strong> Ваши данные не сохраняются. Все алгоритмы работают локально или через безопасные шлюзы.", 
+        "en": "<strong>🔒 Privacy:</strong> Your data is not stored. All algorithms run locally or through secure gateways.", 
+        "uk": "<strong>🔒 Приватність:</strong> Ваші дані не зберігаються. Всі алгоритми працюють локально або через безпечні шлюзи." 
+    }
 };
 
 // Механизм переключения языков
