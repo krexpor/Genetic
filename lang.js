@@ -188,7 +188,41 @@ const langArr = {
     "blood-label-mom": { "ru": "Группа крови матери:", "en": "Mother's blood type:", "uk": "Група крові матері:" },
     "blood-btn-calc": { "ru": "Показать возможные варианты", "en": "Show possible variants", "uk": "Показати можливі варіанти" },
     "blood-result-title": { "ru": "Возможная группа крови:", "en": "Possible blood type:", "uk": "Можлива група крові:" },
-    "blood-fact-title": { "ru": "💡 Интересный факт:", "en": "💡 Interesting fact:", "uk": "💡 Цікавий факт:" }
+    "blood-fact-title": { "ru": "💡 Интересный факт:", "en": "💡 Interesting fact:", "uk": "💡 Цікавий факт:" },
+
+    // --- ТЕСТ: СТОСУНКИ ТА КОРДОНИ ---
+    "rel-page-title": { "ru": "Анализ отношений и границ | Krexpor", "en": "Relationship & Boundaries Analysis | Krexpor", "uk": "Аналіз стосунків та кордонів | Krexpor" },
+    "rel-h1": { "ru": "Язык отношений и границы", "en": "Relationship Language & Boundaries", "uk": "Мова стосунків та кордони" },
+    "rel-subtitle": { "ru": "Выберите варианты, которые наиболее точно описывают ваши внутренние реакции. Алгоритм проанализирует ваш тип привязанности.", "en": "Choose the options that most accurately describe your internal reactions. The algorithm will analyze your attachment style.", "uk": "Оберіть варіанти, які найбільш точно описують ваші внутрішні реакції. Алгоритм проаналізує ваш тип прив'язаності." },
+    
+    "rel-q1": { "ru": "1. Как вы реагируете, если близкий человек внезапно отдаляется или пишет реже?", "en": "1. How do you react if a close person suddenly distances themselves or texts less?", "uk": "1. Як ви реагуєте, якщо близька людина раптово віддаляється або пише рідше?" },
+    "rel-q1-a": { "ru": "Даю пространство, но внутри тревожусь и ищу причину в себе.", "en": "I give them space, but worry inside and look for the reason in myself.", "uk": "Даю простір, але всередині тривожуся і шукаю причину в собі." },
+    "rel-q1-b": { "ru": "Отдаляюсь в ответ, чтобы защитить себя от возможной боли.", "en": "I distance myself in response to protect myself from possible pain.", "uk": "Віддаляюся у відповідь, щоб захистити себе від можливого болю." },
+    "rel-q1-c": { "ru": "Сразу иду на диалог, чтобы прямо выяснить, что происходит.", "en": "I immediately start a dialogue to find out directly what is happening.", "uk": "Одразу йду на діалог, щоб прямо з'ясувати, що відбувається." },
+    "rel-q1-d": { "ru": "Воспринимаю спокойно, у каждого должно быть личное время.", "en": "I take it calmly, everyone should have personal time.", "uk": "Сприймаю спокійно, у кожного має бути свій особистий час." },
+
+    "rel-q2": { "ru": "2. Что для вас является абсолютным «красным флагом» (недопустимым) в отношениях?", "en": "2. What is an absolute 'red flag' (unacceptable) for you in a relationship?", "uk": "2. Що для вас є абсолютним «червоним прапорцем» (неприпустимим) у стосунках?" },
+    "rel-q2-a": { "ru": "Обесценивание моих эмоций и фразы в стиле «ты преувеличиваешь».", "en": "Devaluing my emotions and phrases like 'you are exaggerating'.", "uk": "Знецінення моїх емоцій та фрази в стилі «ти перебільшуєш»." },
+    "rel-q2-b": { "ru": "Тотальный контроль и попытки нарушить мое личное пространство.", "en": "Total control and attempts to violate my personal space.", "uk": "Тотальний контроль і спроби порушити мій особистий простір." },
+    "rel-q2-c": { "ru": "Нечестность и скрытность даже в мелких бытовых вещах.", "en": "Dishonesty and secrecy even in small everyday things.", "uk": "Нечесність і скритність навіть у дрібних побутових речах." },
+    "rel-q2-d": { "ru": "Эмоциональные качели: сегодня люблю, завтра игнорирую.", "en": "Emotional swings: love you today, ignore you tomorrow.", "uk": "Емоційні гойдалки: сьогодні люблю, завтра ігнорую." },
+
+    "rel-q3": { "ru": "3. Опишите идеальное проявление заботы, когда вы абсолютно истощены:", "en": "3. Describe the ideal manifestation of care when you are completely exhausted:", "uk": "3. Опишіть ідеальний прояв турботи, коли ви абсолютно виснажені:" },
+    "rel-q3-a": { "ru": "Просто обнять и выслушать, без попыток дать логичный совет.", "en": "Just hug and listen, without trying to give logical advice.", "uk": "Просто обійняти і вислухати, без спроб дати логічну пораду." },
+    "rel-q3-b": { "ru": "Практическая помощь: приготовить еду, взять на себя дела.", "en": "Practical help: cook food, take over chores.", "uk": "Практична допомога: приготувати їжу, взяти на себе справи." },
+    "rel-q3-c": { "ru": "Оставить меня в тишине и одиночестве, чтобы я мог(ла) восстановиться.", "en": "Leave me in silence and alone so I can recover.", "uk": "Залишити мене в тиші наодинці, щоб я зміг/змогла відновитися." },
+    "rel-q3-d": { "ru": "Сделать какой-то приятный сюрприз, чтобы переключить мое внимание.", "en": "Make some pleasant surprise to switch my attention.", "uk": "Зробити якийсь приємний сюрприз, щоб переключити мою увагу." },
+
+    "rel-btn": { "ru": "Анализировать мой профиль", "en": "Analyze my profile", "uk": "Аналізувати мій профіль" },
+    "rel-loading": { "ru": "Собираем паттерны и формируем анализ... 🔮", "en": "Collecting patterns and generating analysis... 🔮", "uk": "Збираємо патерни та формуємо аналіз... 🔮" },
+
+    "rel-seo-h2": { "ru": "Как AI анализирует язык любви и тип привязанности?", "en": "How does AI analyze love language and attachment style?", "uk": "Як AI аналізує мову любові та тип прив'язаності?" },
+    "rel-seo-p1": { "ru": "Теория привязанности — одна из важнейших концепций в современной психологии. Наш алгоритм использует ваши ответы на ключевые триггерные ситуации, чтобы составить глубокий анализ того, как вы выстраиваете границы и реагируете на близость.", "en": "Attachment theory is one of the most important concepts in modern psychology. Our algorithm uses your responses to key trigger situations to provide a deep analysis of how you build boundaries and react to intimacy.", "uk": "Теорія прив'язаності — одна з найважливіших концепцій у сучасній психології. Наш алгоритм використовує ваші відповіді на ключові тригерні ситуації, щоб скласти глибокий аналіз того, як ви вибудовуєте кордони та реагуєте на близькість." },
+    "rel-seo-h3-1": { "ru": "Типы привязанности в психологии", "en": "Attachment styles in psychology", "uk": "Типи прив'язаності в психології" },
+    "rel-seo-li-1": { "ru": "<strong>Надежный:</strong> Комфортно в близости, нет страха одиночества. Выбор ответов, ориентированных на диалог и уважение пространства.", "en": "<strong>Secure:</strong> Comfortable in intimacy, no fear of loneliness. Choosing answers focused on dialogue and respect for space.", "uk": "<strong>Надійний:</strong> Комфортно в близькості, немає страху самотності. Вибір відповідей, орієнтованих на діалог та повагу до простору." },
+    "rel-seo-li-2": { "ru": "<strong>Тревожный:</strong> Сильная потребность в подтверждении чувств, страх быть отвергнутым.", "en": "<strong>Anxious:</strong> Strong need for validation of feelings, fear of rejection.", "uk": "<strong>Тривожний:</strong> Сильна потреба у підтвердженні почуттів, страх бути відкинутим." },
+    "rel-seo-li-3": { "ru": "<strong>Избегающий:</strong> Дистанцирование при малейшей угрозе комфорту, защита через независимость.", "en": "<strong>Avoidant:</strong> Distancing at the slightest threat to comfort, defense through independence.", "uk": "<strong>Уникаючий:</strong> Дистанціювання при найменшій загрозі комфорту, захист через незалежність." },
+    "rel-seo-p2": { "ru": "Сочетая ваш выбор реакции на отдаление партнера, красные флаги и предпочтения в заботе, искусственный интеллект формирует персональную карту ваших эмоциональных потребностей.", "en": "By combining your choice of reaction to partner distancing, red flags, and care preferences, artificial intelligence forms a personal map of your emotional needs.", "uk": "Поєднуючи ваш вибір реакції на віддалення партнера, червоні прапорці та вподобання в турботі, штучний інтелект формує персональну карту ваших емоційних потреб." }
 };
 
 // Механизм переключения языков
