@@ -513,7 +513,9 @@ const langArr = {
     "height-seo-h4-1": { "ru": "Влияние внешних факторов", "en": "Influence of external factors", "uk": "Вплив зовнішніх факторів" },
     "height-seo-p-2": { "ru": "Несмотря на сильную генетическую предрасположенность, оставшиеся 20% зависят от образа жизни, питания и сна.", "en": "Despite a strong genetic predisposition, the remaining 20% depends on lifestyle, nutrition, and sleep.", "uk": "Незважаючи на сильну генетичну схильність, решта 20% залежать від способу життя, харчування та сну." },
     "height-seo-h4-2": { "ru": "Ограничения калькулятора", "en": "Calculator limitations", "uk": "Обмеження калькулятора" },
-    "height-seo-p-3": { "ru": "Этот онлайн-калькулятор роста предоставляет статистически наиболее вероятный математический прогноз.", "en": "This online height calculator provides a statistically most probable mathematical forecast.", "uk": "Цей онлайн-калькулятор зросту надає статистично найімовірніший математичний прогноз." }
+    "height-seo-p-3": { "ru": "Этот онлайн-калькулятор роста предоставляет статистически наиболее вероятный математический прогноз.", "en": "This online height calculator provides a statistically most probable mathematical forecast.", "uk": "Цей онлайн-калькулятор зросту надає статистично найімовірніший математичний прогноз." },
+
+    "btn-blog": { "ru": "📚 Блог и Статьи", "en": "📚 Blog & Articles", "uk": "📚 Блог та Статті" }
 };
 
 // Механизм переключения языков
