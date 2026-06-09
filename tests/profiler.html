@@ -8,21 +8,16 @@
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-    <!-- Защита от "мерцания" экрана, ТЕМНАЯ тема по умолчанию -->
     <script>
         (function() {
             let savedTheme = localStorage.getItem('site-theme');
-            if (!savedTheme) {
-                savedTheme = 'dark';
-            }
+            if (!savedTheme) savedTheme = 'dark';
             document.documentElement.setAttribute('data-theme', savedTheme);
         })();
     </script>
 
-    <!-- Подключение глобального стиля -->
     <link rel="stylesheet" href="tests.css">
 
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -31,40 +26,33 @@
       gtag('config', 'G-0WPCS9G55D');
     </script>
 
-    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
     
-    <!-- Библиотека для красивого вывода текста от ИИ -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    
     <script src="../lang.js" defer></script>
     <script src="../cookies.js" defer></script>
-    <script src="../theme.js" defer></script>
+    <script src="theme.js" defer></script>
 
     <style>
-        /* Уникальный акцентный цвет только для этого теста */
         :root {
-            --accent-color: #8b5cf6; /* Фиолетовый */
+            --accent-color: #8b5cf6;
             --accent-hover: #7c3aed;
         }
     </style>
 </head>
 <body>
 
-    <!-- Панель управления: Языки + Тема -->
     <div class="top-controls">
         <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
-        <button onclick="changeLanguage('en')" class="control-btn">EN</button>
         <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
+        <button onclick="changeLanguage('en')" class="control-btn">EN</button>
         <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
     </div>
 
-    <!-- БЛОК ТЕСТА -->
     <div class="container">
         <a href="../index.html" data-lang="back-home" style="display: inline-block; margin-bottom: 20px; color: var(--text-muted); text-decoration: none; font-weight: 600;">← Вернуться на главную</a>
         
         <div class="title-wrapper">
-            <!-- Минималистичная SVG иконка -->
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
                 <path d="M12 8v4l3 3"></path>
@@ -99,12 +87,11 @@
         <div id="ai-response" class="result-box"></div>
     </div>
 
-    <!-- SEO БЛОК -->
     <article class="seo-article">
         <h2 data-lang="ai-seo-h2">Что такое AI-профайлинг личности?</h2>
         <p data-lang="ai-seo-p1">В современном мире психологические тесты вышли далеко за пределы стандартных опросников с вариантами ответов «да» или «нет». <strong>AI-профайлинг (анализ личности с помощью искусственного интеллекта)</strong> — это инновационный подход к самопознанию, который позволяет получить глубокий срез вашего психоэмоционального состояния на основе свободных ответов.</p>
         
-        <p data-lang="ai-seo-p2">Вместо того чтобы загонять вас в жесткие рамки типологий (например, исключительно интроверт или экстраверт), нейросети анализируют семантику вашего текста: как вы строите предложения, какие слова выбираете для описания стресса и что именно формирует вашу зону комфорта. Это позволяет создать уникальный психологический портрет, учитывающий все тонкости вашего характера.</p>
+        <p data-lang="ai-seo-p2">Вместо того чтобы загонять вас в жесткие рамки типологий (например, исключительно интроверт или экстраверт), нейросети анализируют семантику вашего текста: как вы строите предложения, какие слова выбираете для описания стресса и что именно формирует вашу зону комфорта.</p>
 
         <h3 data-lang="ai-seo-h3-1">Как алгоритмы анализируют паттерны поведения</h3>
         <p data-lang="ai-seo-p3">Основой нашего инструмента является технология обработки естественного языка (NLP). Когда вы описываете свою реакцию на внезапную смену планов или социальную усталость, искусственный интеллект не просто считывает слова. Он распознает скрытые паттерны:</p>
@@ -114,18 +101,25 @@
             <li data-lang="ai-seo-li-3"><strong>Механизмы копинга (преодоления стресса):</strong> склонны ли вы к анализу или, наоборот, к эмоциональному отстранению.</li>
         </ul>
 
-        <h3 data-lang="ai-seo-h3-3">Почему важно знать свой истинный психотип?</h3>
-        <p data-lang="ai-seo-p5">Понимание своих глубинных реакций — это не просто развлечение, а мощный инструмент для улучшения качества жизни. Глубокий анализ личности помогает в нескольких ключевых сферах:</p>
-        <ul>
-            <li data-lang="ai-seo-li-4"><strong>Профилактика выгорания:</strong> Зная, что именно истощает вас в социуме, вы можете сознательно дозировать общение и избегать токсичных ситуаций.</li>
-            <li data-lang="ai-seo-li-5"><strong>Построение карьеры:</strong> Понимание своей реакции на хаос и дедлайны позволяет выбрать тот формат работы, где вы будете максимально эффективны (например, фриланс вместо офиса).</li>
-            <li data-lang="ai-seo-li-6"><strong>Гармония в отношениях:</strong> Когда вы можете четко артикулировать свои потребности в комфорте, вашим близким становится гораздо проще вас понять.</li>
-        </ul>
+        <div class="faq-section">
+            <h3 data-lang="prof-faq-title">Часто задаваемые вопросы (FAQ)</h3>
+            
+            <details class="faq-item">
+                <summary data-lang="prof-faq-q1">Чем AI-профайлинг отличается от обычных тестов?</summary>
+                <p data-lang="prof-faq-a1">Обычные психологические тесты используют жесткие рамки, баллы и заранее заготовленные ответы. Нейросеть же анализирует семантику вашего свободного текста, эмоциональный тон и выбор слов. Это позволяет составить гораздо более глубокий и персонализированный портрет.</p>
+            </details>
+            
+            <details class="faq-item">
+                <summary data-lang="prof-faq-q2">Имеет ли смысл проходить тест несколько раз?</summary>
+                <p data-lang="prof-faq-a2">Безусловно. Наше эмоциональное состояние постоянно меняется, и ответы могут варьироваться в зависимости от жизненного этапа. Мы рекомендуем проходить тест раз в несколько месяцев, чтобы отслеживать, как меняются ваши механизмы преодоления стресса.</p>
+            </details>
+            
+            <details class="faq-item">
+                <summary data-lang="prof-faq-q3">Безопасно ли делиться своими личными мыслями?</summary>
+                <p data-lang="prof-faq-a3">Абсолютно. Платформа Krexpor не собирает и не формирует базы данных пользователей. Нейросеть работает как зеркало: она моментально обрабатывает текст для создания разбора и сразу же "забывает" его.</p>
+            </details>
+        </div>
 
-        <h3 data-lang="ai-seo-h3-2">Конфиденциальность и безопасность данных</h3>
-        <p data-lang="ai-seo-p4">Мы понимаем, что вопросы психологического комфорта являются глубоко личными. Этот инструмент работает исключительно как транзитный шлюз: ваши текстовые ответы обрабатываются нейросетью в режиме реального времени для генерации результата и <strong>не сохраняются</strong> на наших серверах. Это гарантирует полную анонимность вашего цифрового психоанализа.</p>
-        
-        <p data-lang="ai-seo-p6">Безопасность ваших данных — наш приоритет. Мы не собираем и не анализируем ваш профиль для маркетинговых целей, а все данные, введенные вами, удаляются сразу после завершения сеанса обработки. Вы можете быть уверены, что ваши мысли остаются только между вами и алгоритмом.</p>
     </article>
 
     <script>
@@ -148,7 +142,6 @@
             const responseBox = document.getElementById('ai-response');
             responseBox.style.display = 'none';
 
-            // ИНСТРУКЦИЯ ДЛЯ ИИ (поддержка трех языков)
             let langInstruction = "Пиши весь ответ строго на русском языке.";
             if(currentLang === 'en') langInstruction = "Write the entire response strictly in English language.";
             if(currentLang === 'uk') langInstruction = "Пиши всю відповідь виключно українською мовою.";
@@ -177,7 +170,6 @@
             `;
 
             try {
-                // ССЫЛКА НА ТВОЙ СЕРВЕР CLOUDFLARE
                 const workerUrl = 'https://gemini-proxy.krexpor.workers.dev/'; 
                 
                 const response = await fetch(workerUrl, {
