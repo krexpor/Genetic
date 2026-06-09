@@ -239,7 +239,7 @@ const langArr = {
     "rhythms-seo-p2": { "ru": "Пробелы между стрелочками визуализируют микро-паузу. Ваша рука всегда должна двигаться вверх-вниз как маятник, даже если вы не задеваете струны — это называется «холостой взмах». Именно он помогает держать ровный ритм.", "en": "Spaces between the arrows visualize a micro-pause. Your hand should always move up and down like a pendulum, even if you don't hit the strings—this is called a 'ghost strum'. It's what helps you keep a steady rhythm." },
 
     // --- СИМУЛЯТОР РЕЛОКАЦИИ ---
-    "menu-relo": { "ru": "Калькулятор релокации", "en": "Relocation Simulator" },
+    "menu-relo": { "ru": "✈️ Калькулятор релокации", "en": "✈️ Relocation Simulator" },
     "relo-title": { "ru": "Симулятор релокации | Krexpor", "en": "Relocation Simulator | Krexpor" },
     "relo-h2": { "ru": "🌍 Симулятор релокации", "en": "🌍 Relocation Simulator" },
     "relo-desc": { "ru": "Рассчитайте реальный потенциал накоплений с учетом местных налогов и стоимости жизни.", "en": "Calculate your real savings potential considering local taxes and living costs." },
