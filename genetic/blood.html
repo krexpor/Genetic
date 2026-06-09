@@ -179,9 +179,13 @@
             const possibleBlood = bloodMatrix[bloodCombo];
             const possibleRh = rhMatrix[currentLang] ? rhMatrix[currentLang][rhCombo] : rhMatrix['ru'][rhCombo]; 
 
+            // Берем правильные ярлыки (с защитой от ошибок)
+            const labels = resultLabels[currentLang] || resultLabels['ru'];
+
+            // Выводим результат (исправлено склеивание)
             document.getElementById("blood-result").innerHTML = 
-                resultLabels[currentLang] ? resultLabels[currentLang].group : resultLabels['ru'].group + "<span class='highlight-value' style='font-size: 16px; margin: 0;'>" + possibleBlood + "</span><br>" +
-                resultLabels[currentLang] ? resultLabels[currentLang].rh : resultLabels['ru'].rh + "<span class='highlight-value' style='font-size: 16px; margin: 0;'>" + possibleRh + "</span>";
+                labels.group + "<span class='highlight-value' style='font-size: 16px; margin: 0;'>" + possibleBlood + "</span><br>" +
+                labels.rh + "<span class='highlight-value' style='font-size: 16px; margin: 0;'>" + possibleRh + "</span>";
 
             const factsArray = bloodFacts[currentLang] || bloodFacts['ru'];
             const randomFact = factsArray[Math.floor(Math.random() * factsArray.length)];
