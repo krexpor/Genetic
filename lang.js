@@ -1558,6 +1558,21 @@ const langArr = {
         "ru": "ДНК сдает вам стартовые карты в этой игре. Но то, станете ли вы лучшей версией себя, будете ли вы здоровым, сильным и эстетичным — зависит только от того, как виртуозно вы разыграете эту партию. Наука не дает оправданий. Она дает вам инструменты для того, чтобы перестать биться головой о стену и начать тренироваться умно.", 
         "en": "DNA deals your starting cards in this game. But whether you become the best version of yourself, whether you will be healthy, strong, and aesthetic, depends solely on how masterfully you play this hand. Science doesn't provide excuses. It gives you the tools to stop banging your head against the wall and start training smart.", 
         "uk": "ДНК здає вам стартові карти в цій грі. Але те, чи станете ви кращою версією себе, чи будете ви здоровим, сильним і естетичним — залежить тільки від того, як віртуозно ви розіграєте цю партію. Наука не дає виправдань. Вона дає вам інструменти для того, щоб перестати битися головою об стіну і почати тренуватися розумно." 
+    },
+    "blog-tag-body": { 
+        "ru": "Биохакинг и Физиология", 
+        "en": "Biohacking & Physiology", 
+        "uk": "Біохакінг та Фізіологія" 
+    },
+    "blog-c5-title": { 
+        "ru": "Генетика тела: Пределы роста и мифы о метаболизме", 
+        "en": "Body Genetics: Limits of growth and metabolism myths", 
+        "uk": "Генетика тіла: Межі росту та міфи про метаболізм" 
+    },
+    "blog-c5-desc": { 
+        "ru": "Почему не существует эктоморфов, как рассчитать свой генетический потолок и как нервная система блокирует рост мышц.", 
+        "en": "Why ectomorphs don't exist, how to calculate your genetic ceiling, and how the nervous system blocks muscle growth.", 
+        "uk": "Чому не існує ектоморфів, як розрахувати свою генетичну стелю і як нервова система блокує ріст м'язів." 
     }
 };
 
