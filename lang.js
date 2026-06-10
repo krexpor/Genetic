@@ -1327,6 +1327,21 @@ const langArr = {
         "ru": "Вы не можете вернуться в прошлое и изменить то, как ваши родители реагировали на ваши детские страхи. Но будучи взрослым, вы можете стать тем самым надежным, любящим взрослым для самого себя. Архитектуру привязанности можно перестроить. И начинается эта стройка в тот момент, когда вы впервые говорите себе: <em>«Я выбираю безопасность вместо драмы»</em>.", 
         "en": "You cannot go back in time and change how your parents reacted to your childhood fears. But as an adult, you can become that very reliable, loving adult for yourself. The architecture of attachment can be rebuilt. And this construction begins the moment you first say to yourself: <em>'I choose safety over drama'</em>.", 
         "uk": "Ви не можете повернутися в минуле і змінити те, як ваші батьки реагували на ваші дитячі страхи. Але будучи дорослим, ви можете стати тим самим надійним, люблячим дорослим для самого себе. Архітектуру прив'язаності можна перебудувати. І починається це будівництво в той момент, коли ви вперше говорите собі: <em>«Я обираю безпеку замість драми»</em>." 
+    },
+    "blog-tag-att": { 
+        "ru": "Психология Отношений", 
+        "en": "Relationship Psychology", 
+        "uk": "Психологія Стосунків" 
+    },
+    "blog-c4-title": { 
+        "ru": "Архитектура привязанности: Почему мы выбираем не тех", 
+        "en": "The Architecture of Attachment: Why we choose the wrong people", 
+        "uk": "Архітектура прив'язаності: Чому ми обираємо не тих" 
+    },
+    "blog-c4-desc": { 
+        "ru": "Нейробиология любви, гормональные качели и глубокий разбор того, как сломать травматичный сценарий.", 
+        "en": "The neurobiology of love, hormonal swings, and a deep breakdown of how to break a traumatic script.", 
+        "uk": "Нейробіологія кохання, гормональні гойдалки та глибокий розбір того, як зламати травматичний сценарій." 
     }
 };
 
