@@ -346,3 +346,89 @@ details.faq-item p {
     line-height: 1.6;
     margin-bottom: 0;
 }
+
+/* --- ГЕНЕТИЧНИЙ ПАСПОРТ (ЕКСПОРТ) --- */
+.export-card {
+    background: #0f0f11;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 30px;
+    width: 320px; /* Ідеальна ширина для мобільних пристроїв */
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin: 20px auto; /* Центрування */
+    text-align: left;
+}
+
+/* Легке фонове світіння для преміальності */
+.export-card::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(138,43,226,0.08) 0%, transparent 60%);
+    z-index: 0;
+}
+
+.export-content {
+    position: relative;
+    z-index: 1;
+}
+
+.export-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.export-logo {
+    font-weight: 900;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.export-icon {
+    font-size: 1.5rem; /* Тут буде твоя іконка колібрі */
+}
+
+.export-title {
+    font-size: 0.85rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.export-value {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+
+.export-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.export-row span:first-child {
+    color: #888;
+}
+
+.export-footer {
+    margin-top: 35px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #444;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
