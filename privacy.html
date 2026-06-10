@@ -7,7 +7,7 @@
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-    <!-- Захист від блимання, ТЕМНА тема за замовчуванням -->
+    <!-- Защита от мерцания -->
     <script>
         (function() {
             let savedTheme = localStorage.getItem('site-theme');
@@ -16,7 +16,6 @@
         })();
     </script>
 
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -28,12 +27,9 @@
     <script src="cookies.js" defer></script>
     <script src="lang.js" defer></script>
     <script src="theme.js" defer></script>
-
-    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
 
     <style>
-        /* Змінні для Світлої теми */
         :root {
             --bg-color: #f8fafc;
             --card-bg: #ffffff;
@@ -44,8 +40,6 @@
             --accent: #da3633;
             --shadow: 0 10px 40px rgba(0,0,0,0.05);
         }
-
-        /* Змінні для Темної темы */
         [data-theme="dark"] {
             --bg-color: #111318;
             --card-bg: #1a1d24;
@@ -56,7 +50,6 @@
             --accent: #da3633;
             --shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-
         body { 
             font-family: 'Inter', -apple-system, sans-serif; 
             background: var(--bg-color); 
@@ -70,7 +63,6 @@
             align-items: center;
             transition: background-color 0.3s, color 0.3s;
         }
-
         .container { 
             background: var(--card-bg); 
             padding: 40px; 
@@ -82,27 +74,21 @@
             border: 1px solid var(--border-color);
             transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
         }
-
-        /* Панель керування */
         .top-controls { position: absolute; top: 20px; right: 20px; display: flex; gap: 8px; z-index: 10; }
         .control-btn { background: transparent; border: 1px solid var(--border-color); color: var(--text-muted); border-radius: 6px; padding: 4px 8px; font-size: 0.75rem; cursor: pointer; transition: all 0.3s; font-weight: 600; display: flex; align-items: center; justify-content: center; }
         .control-btn:hover { background: var(--hover-bg); color: var(--text-main); border-color: var(--text-muted); }
-
         h1 { font-size: 1.8rem; margin-top: 0; margin-bottom: 5px; text-align: center; }
         .subtitle { color: var(--text-muted); text-align: center; margin-bottom: 30px; font-size: 0.9rem; }
         h2 { font-size: 1.2rem; margin-top: 30px; margin-bottom: 15px; border-left: 3px solid var(--accent); padding-left: 10px; }
         p { color: var(--text-muted); margin-bottom: 15px; font-size: 0.95rem; }
-        
         a { color: var(--accent); text-decoration: none; transition: 0.3s; }
         a:hover { color: #b92b29; text-decoration: underline; }
-        
         .back-btn { align-self: flex-start; margin-bottom: 20px; color: var(--text-muted); text-decoration: none; font-weight: 500; transition: color 0.3s; }
         .back-btn:hover { color: var(--text-main); }
     </style>
 </head>
 <body>
 
-    <!-- Кнопки перемикання мов та теми -->
     <div class="top-controls">
         <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
         <button onclick="changeLanguage('en')" class="control-btn">EN</button>
@@ -138,8 +124,7 @@
         <p data-lang="privacy-p-consent">Используя наш сайт, вы автоматически соглашаетесь с нашей Политикой конфиденциальности и условиями обработки анонимных данных.</p>
 
         <h2 data-lang="privacy-h2-contact">7. Контакты</h2>
-        <p data-lang="privacy-p-contact">По вопросам конфиденциальности или другим темам вы можете связаться со мной через страницу https://krexpor.com/contact.html</span>.</p>
-
+        <p data-lang="privacy-p-contact">По вопросам конфиденциальности или другим темам вы можете связаться со мной через страницу <a href="contact.html">Контактов</a>.</p>
     </div>
 
 </body>
