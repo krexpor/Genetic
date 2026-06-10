@@ -1619,6 +1619,80 @@ const langArr = {
         "ru": "Почему не существует эктоморфов, как рассчитать свой генетический потолок и как нервная система блокирует рост мышц.", 
         "en": "Why ectomorphs don't exist, how to calculate your genetic ceiling, and how the nervous system blocks muscle growth.", 
         "uk": "Чому не існує ектоморфів, як розрахувати свою генетичну стелю і як нервова система блокує ріст м'язів." 
+    },
+
+    // --- ПЕРЕВОДЫ ДЛЯ ОБНОВЛЕННОГО ABOUT.HTML ---
+    "about-p-1": { 
+        "ru": "Krexpor — это моя личная цифровая площадка. Сейчас здесь собраны интерактивные генетические калькуляторы, психологические AI-тесты и масштабные исследовательские статьи на стыке биологии, нейробиологии и психологии. Проект не стоит на месте — в будущем здесь будут появляться новые инструменты и форматы.", 
+        "en": "Krexpor is my personal digital playground. Right now, it features interactive genetic calculators, psychological AI tests, and extensive research articles at the intersection of biology, neurobiology, and psychology. The project isn't standing still — new tools and formats will appear here in the future.", 
+        "uk": "Krexpor — це мій особистий цифровий майданчик. Зараз тут зібрані інтерактивні генетичні калькулятори, психологічні AI-тести та масштабні дослідницькі статті на стику біології, нейробиології та психології. Проєкт не стоїть на місці — в майбутньому тут з'являтимуться нові інструменти та формати." 
+    },
+    "about-h3-mission": { 
+        "ru": "Миссия проекта", 
+        "en": "Project Mission", 
+        "uk": "Місія проєкту" 
+    },
+    "about-p-mission": { 
+        "ru": "Моя главная цель — сделать сложную науку доступной, понятной и интерактивной для каждого. Я верю, что глубокое самопознание с помощью современных алгоритмов должно быть прозрачным процессом, лишенным скучных академических рамок.", 
+        "en": "My main goal is to make complex science accessible, understandable, and interactive for everyone. I believe that deep self-discovery using modern algorithms should be a transparent process, devoid of boring academic frameworks.", 
+        "uk": "Моя головна мета — зробити складну науку доступною, зрозумілою та інтерактивною для кожного. Я вірю, що глибоке самопізнання за допомогою сучасних алгоритмів має бути прозорим процесом, позбавленим нудних академічних рамок." 
+    },
+    "about-p-2": { 
+        "ru": "Обратите внимание: все инструменты и статьи на сайте предоставляются исключительно в образовательных и развлекательных целях.", 
+        "en": "Please note: all tools and articles on the site are provided strictly for educational and entertainment purposes.", 
+        "uk": "Зверніть увагу: всі інструменти та статті на сайті надаються виключно в освітніх та розважальних цілях." 
+    },
+    "about-p-4": { 
+        "ru": "Открыт к предложениям, идей и обратной связи. Вы можете связаться со мной через <a href='https://t.me/krexpor' target='_blank'>Telegram</a> или по электронной почте: <span style='color: var(--accent); font-weight: bold;'>твоя-почта@gmail.com</span>.", 
+        "en": "Open to suggestions, ideas, and feedback. You can contact me via <a href='https://t.me/krexpor' target='_blank'>Telegram</a> or by email: <span style='color: var(--accent); font-weight: bold;'>твоя-почта@gmail.com</span>.", 
+        "uk": "Відкритий до пропозицій, ідей та зворотного зв'язку. Ви можете зв'язатися зі мною через <a href='https://t.me/krexpor' target='_blank'>Telegram</a> або електронною поштою: <span style='color: var(--accent); font-weight: bold;'>твоя-почта@gmail.com</span>." 
+    },
+
+    // --- ПЕРЕВОДЫ ДЛЯ ОБНОВЛЕННОГО PRIVACY.HTML ---
+    "privacy-p-1": { 
+        "ru": "Мы с уважением относимся к вашей конфиденциальности. Все данные, которые вы вводите в генетические калькуляторы, психологические AI-тесты, а также информация, которую вы изучаете в статьях на сайте <strong>krexpor.com</strong>, обрабатываются локально или через защищенные транзитные шлюзы. Мы не собираем и не храним ваши личные профили на наших серверах.", 
+        "en": "We respect your privacy. All data you enter into the genetic calculators, psychological AI tests, as well as the information you explore in articles on the <strong>krexpor.com</strong> website, is processed locally or through secure transit gateways. We do not collect or store your personal profiles on our servers.", 
+        "uk": "Ми з повагою ставимося до вашої конфиденційності. Всі дані, які ви вводите в генетичні калькулятори, психологічні AI-тести, а також інформація, яку ви вивчаєте у статтях на сайті <strong>krexpor.com</strong>, обробляються локально або через захищені транзитні шлюзи. Ми не збираємо і не зберігаємо ваші особисті профілі на наших серверах." 
+    },
+    "privacy-h2-local": { 
+        "ru": "4. Использование локального хранилища", 
+        "en": "4. Use of Local Storage", 
+        "uk": "4. Використання локального сховища" 
+    },
+    "privacy-p-local": { 
+        "ru": "Для вашего удобства мы используем технологию LocalStorage в вашем браузере. Это необходимо исключительно для сохранения ваших пользовательских настроек: выбранного языка интерфейса и цветовой темы (светлая/темная). Эти данные не отслеживают вашу активность и не передаются третьим лицам.", 
+        "en": "For your convenience, we use LocalStorage technology in your browser. This is solely necessary to save your user preferences: selected interface language and color theme (light/dark). This data does not track your activity and is not shared with third parties.", 
+        "uk": "Для вашої зручності ми використовуємо технологію LocalStorage у вашому браузері. Це необхідно виключно для збереження ваших налаштувань: обраної мови інтерфейсу та колірної теми (світла/темна). Ці дані не відстежують вашу активність і не передаються третім особам." 
+    },
+    "privacy-h2-kids": { 
+        "ru": "5. Конфиденциальность детей", 
+        "en": "5. Children's Privacy", 
+        "uk": "5. Конфіденційність дітей" 
+    },
+    "privacy-p-kids": { 
+        "ru": "Наш веб-сайт и предоставляемые на нем материалы предназначены для лиц старше 13 лет. Мы намеренно не собираем личную информацию о детях. Если вы являетесь родителем или опекуном и считаете, что мы могли неумышленно собрать такие данные, свяжитесь с нами.", 
+        "en": "Our website and the tools provided on it are intended for individuals over 13 years of age. We do not knowingly collect personal information from children. If you are a parent or guardian and believe we may have inadvertently collected such data, please contact us.", 
+        "uk": "Наш веб-сайт та інструменти, що на ньому надаються, призначені для осіб старше 13 років. Ми навмисно не збираємо особисту інформацію про дітей. Якщо ви є батьком або опікуном і вважаєте, що ми могли ненавмисно зібрати такі дані, зв'яжіться з нами." 
+    },
+    "privacy-h2-consent": { 
+        "ru": "6. Согласие", 
+        "en": "6. Consent", 
+        "uk": "6. Згода" 
+    },
+    "privacy-p-consent": { 
+        "ru": "Используя наш сайт, вы автоматически соглашаетесь с нашей Политикой конфиденциальности и условиями обработки анонимных данных.", 
+        "en": "By using our site, you automatically consent to our Privacy Policy and the terms of processing anonymous data.", 
+        "uk": "Використовуючи наш сайт, ви автоматично погоджуєтеся з нашою Политикою конфіденційності та умовами обробки анонімних даних." 
+    },
+    "privacy-h2-contact": { 
+        "ru": "7. Контакты", 
+        "en": "7. Contacts", 
+        "uk": "7. Контакти" 
+    },
+    "privacy-p-contact": { 
+        "ru": "Если у вас возникли вопросы относительно данной политики, вы можете связаться со мной через <a href='https://t.me/krexpor' target='_blank'>Telegram</a> или по Email: <strong>твоя-почта@gmail.com</strong>.", 
+        "en": "If you have any questions regarding this policy, you can contact me via <a href='https://t.me/krexpor' target='_blank'>Telegram</a> or by Email: <strong>твоя-почта@gmail.com</strong>.", 
+        "uk": "Якщо у вас виникли запитання щодо цієї політики, ви можете зв'язатися зі мною через <a href='https://t.me/krexpor' target='_blank'>Telegram</a> або по Email: <strong>твоя-почта@gmail.com</strong>." 
     }
 };
 
