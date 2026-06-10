@@ -819,6 +819,223 @@ const langArr = {
         "ru": "Отказ от стандартных тестов. Как нейросети анализируют семантику текста для создания уникального психологического портрета.", 
         "en": "Moving away from standard tests. How neural networks analyze text semantics to create a unique psychological portrait.", 
         "uk": "Відмова від стандартних тестів. Як нейромережі аналізують семантику тексту для створення унікального психологічного портрету." 
+    },
+    // --- ПІЛЛАР-СТАТТЯ (SHADOW WORK) - ЧАСТИНА 1 ---
+    "art-shad-meta": { 
+        "ru": "Работа с Тенью: Полное руководство | Krexpor", 
+        "en": "Shadow Work: The Complete Guide | Krexpor", 
+        "uk": "Робота з Тінню: Повне керівництво | Krexpor" 
+    },
+    "art-shad-h1": { 
+        "ru": "Анатомия скрытого «Я»: Полное практическое руководство по Работе с Тенью", 
+        "en": "The Anatomy of the Hidden Self: A Complete Practical Guide to Shadow Work", 
+        "uk": "Анатомія прихованого «Я»: Повне практичне керівництво з Роботи з Тінню" 
+    },
+    "art-shad-time": { 
+        "ru": "Время чтения: 15 минут | Категория: Глубинная психология", 
+        "en": "Reading time: 15 minutes | Category: Depth Psychology", 
+        "uk": "Час читання: 15 хвилин | Категорія: Глибинна психологія" 
+    },
+    "art-shad-intro1": { 
+        "ru": "Каждый из нас носит маску. Мы надеваем ее утром, выходя из дома, настраиваем ее улыбку для коллег, корректируем тон голоса для близких и тщательно полируем ее для социальных сетей. Мы так долго носим эту маску, что со временем начинаем искренне верить: эта маска — и есть мы.", 
+        "en": "Each of us wears a mask. We put it on in the morning before leaving the house, adjust its smile for colleagues, tweak the tone of voice for loved ones, and carefully polish it for social media. We wear this mask for so long that over time we begin to sincerely believe: this mask is who we are.", 
+        "uk": "Кожен із нас носить маску. Ми надягаємо її вранці, виходячи з дому, налаштовуємо її усмішку для колег, коригуємо тон голосу для близьких і ретельно поліруємо її для соціальних мереж. Ми так довго носимо цю маску, що з часом починаємо щиро вірити: ця маска — і є ми." 
+    },
+    "art-shad-intro2": { 
+        "ru": "Но за фасадом идеального сотрудника, заботливого партнера и «хорошего человека» всегда скрывается нечто большее. Темный, непризнанный резервуар подавленных эмоций, запретных желаний, первобытной агрессии и стыда. В глубинной психологии это называется Тенью. И до тех пор, пока вы игнорируете свою Тень, она будет тайно управлять вашей жизнью, а вы будете называть это «судьбой».", 
+        "en": "But behind the facade of the perfect employee, the caring partner, and the 'good person', there is always something more hiding. A dark, unacknowledged reservoir of repressed emotions, forbidden desires, primal aggression, and shame. In depth psychology, this is called the Shadow. And as long as you ignore your Shadow, it will secretly control your life, and you will call it 'fate'.", 
+        "uk": "Але за фасадом ідеального співробітника, дбайливого партнера і «хорошої людини» завжди ховається щось більше. Темний, невизнаний резервуар пригнічених емоцій, заборонених бажань, первісної агресії та сорому. У глибинній психології це називається Тінню. І доти, доки ви ігноруєте свою Тінь, вона таємно керуватиме вашим життям, а ви називатимете це «долею»." 
+    },
+    "art-shad-ch1-h": { 
+        "ru": "Глава 1. Карл Юнг и архитектура человеческой психики", 
+        "en": "Chapter 1. Carl Jung and the architecture of the human psyche", 
+        "uk": "Глава 1. Карл Юнг і архітектура людської психіки" 
+    },
+    "art-shad-ch1-p1": { 
+        "ru": "Чтобы понять, что такое Тень, нам нужно обратиться к трудам великого швейцарского психиатра Карла Густава Юнга. Он разделил нашу личность на несколько фундаментальных слоев:", 
+        "en": "To understand what the Shadow is, we need to turn to the works of the great Swiss psychiatrist Carl Gustav Jung. He divided our personality into several fundamental layers:", 
+        "uk": "Щоб зрозуміти, що таке Тінь, нам потрібно звернутися до праць великого швейцарського психіатра Карла Густава Юнга. Він розділив нашу особистість на кілька фундаментальних шарів:" 
+    },
+    "art-shad-ul1-li1": { 
+        "ru": "<strong>Персона (Маска):</strong> Это ваш социальный интерфейс. То, какими вы хотите казаться обществу. Персона защищает нас, помогает адаптироваться к правилам морали и этикета.", 
+        "en": "<strong>Persona (Mask):</strong> This is your social interface. How you want to appear to society. The Persona protects us, helps us adapt to the rules of morality and etiquette.", 
+        "uk": "<strong>Персона (Маска):</strong> Це ваш соціальний інтерфейс. Те, якими ви хочете здаватися суспільству. Персона захищає нас, допомагає адаптуватися до правил моралі та етикету." 
+    },
+    "art-shad-ul1-li2": { 
+        "ru": "<strong>Эго:</strong> Ваш сознательный разум. То, что вы называете словом «Я». Эго — это фильтр, который решает, какие мысли и чувства можно выпустить наружу, а какие нужно заблокировать.", 
+        "en": "<strong>Ego:</strong> Your conscious mind. What you call 'I'. The Ego is the filter that decides which thoughts and feelings can be let out, and which must be blocked.", 
+        "uk": "<strong>Его:</strong> Ваш свідомий розум. Те, що ви називаєте словом «Я». Его — це фільтр, який вирішує, які думки і почуття можна випустити назовні, а які потрібно заблокувати." 
+    },
+    "art-shad-ul1-li3": { 
+        "ru": "<strong>Тень:</strong> Подвал вашей психики. Сюда Эго сбрасывает все, что считает неприемлемым, постыдным, злым или «неправильным».", 
+        "en": "<strong>Shadow:</strong> The basement of your psyche. This is where the Ego dumps everything it considers unacceptable, shameful, evil, or 'wrong'.", 
+        "uk": "<strong>Тінь:</strong> Підвал вашої психіки. Сюди Его скидає все, що вважає неприйнятним, ганебним, злим або «неправильним»." 
+    },
+    "art-shad-quote1": { 
+        "ru": "«Фигура Тени олицетворяет собой все то, что субъект не признает в самом себе и что все-таки — напрямую или косвенно — снова и снова всплывает в его сознании». <br><strong style='font-style: normal; color: var(--text-main);'>— Карл Густав Юнг</strong>", 
+        "en": "«The shadow figure personifies everything that the subject refuses to acknowledge about himself and yet is always thrusting itself upon him directly or indirectly». <br><strong style='font-style: normal; color: var(--text-main);'>— Carl Gustav Jung</strong>", 
+        "uk": "«Фігура Тіні уособлює собою все те, що суб'єкт не визнає в самому собі і що все-таки — прямо чи побічно — знову і знову спливає в його свідомості». <br><strong style='font-style: normal; color: var(--text-main);'>— Карл Густав Юнг</strong>" 
+    },
+    "art-shad-ch2-h": { 
+        "ru": "Глава 2. Как формируется ваша Тень: Травмы детства и социальный гипноз", 
+        "en": "Chapter 2. How your Shadow is formed: Childhood trauma and social hypnosis", 
+        "uk": "Глава 2. Як формується ваша Тінь: Травми дитинства і соціальний гіпноз" 
+    },
+    "art-剥-ch2-p1": { 
+        "ru": "Никто не рождается с Тенью. Младенец целостен. Он кричит, когда злится, смеется, когда рад, и абсолютно эгоистично требует удовлетворения своих потребностей. Расщепление личности начинается в процессе воспитания.", 
+        "en": "No one is born with a Shadow. An infant is whole. They cry when they are angry, laugh when they are happy, and absolutely selfishly demand the satisfaction of their needs. The splitting of the personality begins during upbringing.", 
+        "uk": "Ніхто не народжується з Тінню. Немовля цілісне. Воно кричить, коли злиться, сміється, коли раде, і абсолютно егоїстично вимагає задоволення своїх потреб. Розщеплення особистості починається в процесі виховання." 
+    },
+    "art-shad-ch2-p2": { 
+        "ru": "Представьте маленького мальчика, который плачет, потому что разбил коленку. Отец строго говорит ему: <em>«Мужчины не плачут. Перестань ныть, будь сильным»</em>. В этот момент Эго ребенка понимает: уязвимость и грусть — это плохо. Если я буду грустить, папа перестанет меня любить. И мальчик берет свою способность к эмпатии и уязвимости, упаковывает ее в черный пакет и сбрасывает в подвал Тени. Формируется жесткая Персона: «Я всегда сильный».", 
+        "en": "Imagine a little boy crying because he scraped his knee. His father strictly tells him: <em>'Men don't cry. Stop whining, be strong'</em>. At this moment, the child's Ego understands: vulnerability and sadness are bad. If I am sad, dad will stop loving me. So the boy takes his capacity for empathy and vulnerability, packs it into a black bag, and throws it into the basement of the Shadow. A rigid Persona is formed: 'I am always strong'.", 
+        "uk": "Уявіть маленького хлопчика, який плаче, тому що розбив коліно. Батько суворо каже йому: <em>«Чоловіки не плачуть. Перестань нити, будь сильним»</em>. У цей момент Его дитини розуміє: вразливість і смуток — це погано. Якщо я буду сумувати, тато перестане мене любити. І хлопчик бере свою здатність до емпатії та вразливості, пакує її в чорний пакет і скидає в підвал Тіні. Формується жорстка Персона: «Я завжди сильний»." 
+    },
+    "art-shad-ch2-p3": { 
+        "ru": "Или девочка, которая громко и эмоционально отстаивает свою игрушку в песочнице. Мама одергивает ее: <em>«Хорошие девочки так себя не ведут, не будь жадиной, отдай»</em>. Здоровая агрессия, умение защищать свои границы и способность говорить «нет» отправляются в Тень. Формируется Персона: «Удобная и покладистая».", 
+        "en": "Or a little girl who loudly and emotionally defends her toy in the sandbox. Her mother pulls her back: <em>'Good girls don't behave like this, don't be greedy, give it away'</em>. Healthy aggression, the ability to defend one's boundaries, and the ability to say 'no' are sent to the Shadow. A Persona is formed: 'Convenient and compliant'.", 
+        "uk": "Або дівчинка, яка голосно і емоційно відстоює свою іграшку в пісочниці. Мама смикає її: <em>«Хороші дівчатка так себе не поводять, не будь жаднюгою, віддай»</em>. Здорова агресія, вміння захищати свої кордони і здатність говорити «ні» відправляються в Тінь. Формується Персона: «Зручна і поступлива»." 
+    },
+    "art-shad-ch2-p4": { 
+        "ru": "Каждый раз, когда общество, родители или религия навязывали вам ярлыки «плохого», вы отрезали кусок себя и прятали его во тьму. Тень — это не средоточие чистого зла. Это кладбище подавленной жизненной энергии.", 
+        "en": "Every time society, parents, or religion forced the labels of 'bad' onto you, you cut off a piece of yourself and hid it in the dark. The Shadow is not a focus of pure evil. It is a graveyard of repressed life energy.", 
+        "uk": "Щоразу, коли суспільство, батьки чи релігія нав'язували вам ярлики «поганого», ви відрізали шматок себе і ховали його в темряву. Тінь — це не осередок чистого зла. Це кладовище пригніченої життєвої енергії." 
+    },
+    "art-shad-ch3-h": { 
+        "ru": "Глава 3. Механизм Проекции: Почему нас так бесят другие люди", 
+        "en": "Chapter 3. The Mechanism of Projection: Why other people annoy us so much", 
+        "uk": "Глава 3. Механізм Проекції: Чому нас так дратують інші люди" 
+    },
+    "art-shad-ch3-p1": { 
+        "ru": "Тень невозможно уничтожить. Вы можете игнорировать ее годами, но она всегда будет искать выход. И самый частый способ, которым Тень проявляет себя — это <strong>психологическая проекция</strong>.", 
+        "en": "The Shadow cannot be destroyed. You can ignore it for years, but it will always seek a way out. And the most common way the Shadow manifests itself is through <strong>psychological projection</strong>.", 
+        "uk": "Тінь неможливо знищити. Ви можете ігнорувати її роками, але вона завжди шукатиме вихід. І найчастіший спосіб, яким Тінь проявляє себе — це <strong>психологічна проекція</strong>." 
+    },
+    "art-shad-ch3-p2": { 
+        "ru": "Проекция — это защитный механизм мозга, при котором мы бессознательно приписываем свои собственные подавленные качества другим людям. Тень работает как кинопроектор: она транслирует вашу внутреннюю тьму на белый экран окружающих людей.", 
+        "en": "Projection is a defense mechanism of the brain in which we unconsciously attribute our own repressed qualities to other people. The Shadow works like a movie projector: it broadcasts your inner darkness onto the white screen of the people around you.", 
+        "uk": "Проекція — це захисний механізм мозку, при якому ми несвідомо приписуємо свої власні пригнічені якості іншим людям. Тінь працює як кінопроектор: вона транслює вашу внутрішню темряву на білий екран оточуючих людей." 
+    },
+    "art-shad-ex-h": { 
+        "ru": "Классические примеры проекции:", 
+        "en": "Classic examples of projection:", 
+        "uk": "Класичні приклади проекції:" 
+    },
+    "art-shad-ex-1": { 
+        "ru": "🧨 <strong>Вас невероятно раздражают наглые и эгоистичные люди.</strong> Вас трясет, когда кто-то громко требует своего или ставит свои интересы выше других. Скорее всего, в вашей Тени заперт жесткий запрет на здоровый эгоизм. Вы не разрешаете себе отстаивать свои права, поэтому ненавидите тех, кто делает это легко.", 
+        "en": "🧨 <strong>You are incredibly annoyed by arrogant and selfish people.</strong> You shake when someone loudly demands their way or puts their interests above others. Most likely, a strict ban on healthy selfishness is locked in your Shadow. You do not allow yourself to defend your rights, so you hate those who do it easily.", 
+        "uk": "🧨 <strong>Вас неймовірно дратують нахабні та егоїстичні люди.</strong> Вас трясе, коли хтось голосно вимагає свого або ставить свої інтереси вище за інших. Швидше за все, у вашій Тіні замкнена жорстка заборона на здоровий егоїзм. Ви не дозволяєте собі відстоювати свої права, тому ненавидите тих, хто робить це легко." 
+    },
+    "art-shad-ex-2": { 
+        "ru": "🧨 <strong>Вы осуждаете «ленивых» коллег.</strong> Вы работаете по 12 часов, выгорели, но продолжаете тянуть лямку, презирая тех, кто уходит домой ровно в 18:00. Ваша Тень кричит о том, что вы до смерти устали и хотите отдохнуть, но ваше строгое Эго запрещает вам расслабляться.", 
+        "en": "🧨 <strong>You judge 'lazy' colleagues.</strong> You work 12 hours a day, you're burned out, but you keep pulling the yoke, despising those who go home exactly at 6:00 PM. Your Shadow is screaming that you are dead tired and want to rest, but your strict Ego forbids you to relax.", 
+        "uk": "🧨 <strong>Ви засуджуєте «ледачих» колег.</strong> Ви працюєте по 12 годин, вигоріли, але продовжуєте тягнути лямку, зневажаючи тих, хто йде додому рівно о 18:00. Ваша Тінь кричить про те, що ви до смерті втомилися і хочете відпочити, але ваше суворе Его забороняє вам розслаблятися." 
+    },
+    "art-shad-ch3-p3": { 
+        "ru": "Запомните главное правило работы с Тенью: то, что вызывает у вас самую сильную, неконтролируемую и иррациональную эмоциональную реакцию (ненависть, отвращение, зависть) в других людях — почти всегда является вашей собственной подавленной чертой.", 
+        "en": "Remember the main rule of Shadow work: what causes the strongest, most uncontrollable, and irrational emotional reaction (hate, disgust, envy) in you toward other people is almost always your own repressed trait.", 
+        "uk": "Запам'ятайте головне правило роботи з Тінню: те, що викликає у вас найсильнішу, неконтрольовану і ірраціональну емоційну реакцію (ненависть, огиду, заздрість) в інших людях — майже завжди є вашою власною пригніченою рисою." 
+    },
+    "art-shad-ai-box": { 
+        "ru": "🔮 <strong>Готовы заглянуть в свою Тень прямо сейчас?</strong> Искусственный интеллект может проанализировать ваши слова и вытащить скрытые паттерны на поверхность. Пройдите <a href='../index.html' style='color: #8a2be2; text-decoration: underline; font-weight: bold;'>Тест: Теневая сторона личности</a> на главной странице Krexpor.", 
+        "en": "🔮 <strong>Ready to look into your Shadow right now?</strong> Artificial intelligence can analyze your words and pull hidden patterns to the surface. Take the <a href='../index.html' style='color: #8a2be2; text-decoration: underline; font-weight: bold;'>Shadow Self Analysis Test</a> on the Krexpor homepage.", 
+        "uk": "🔮 <strong>Готові зазирнути у свою Тінь прямо зараз?</strong> Штучний інтелект може проаналізувати ваші слова і витягнути приховані патерни на поверхню. Пройдіть <a href='../index.html' style='color: #8a2be2; text-decoration: underline; font-weight: bold;'>Тест: Тіньова сторона особистості</a> на головній сторінці Krexpor." 
+    },
+    // --- ПІЛЛАР-СТАТТЯ (SHADOW WORK) - ЧАСТИНА 2 ---
+    "art-shad-ch4-h": { 
+        "ru": "Глава 4. Цена подавления: Как Тень разрушает вашу жизнь", 
+        "en": "Chapter 4. The Price of Suppression: How the Shadow Destroys Your Life", 
+        "uk": "Глава 4. Ціна пригнічення: Як Тінь руйнує ваше життя" 
+    },
+    "art-shad-ch4-p1": { 
+        "ru": "Удержание Тени в подвале требует колоссального количества психической энергии. Представьте, что вы пытаетесь удержать под водой надувной мяч. Пока вы сосредоточены на этом — все нормально, но стоит вам отвлечься, устать или выпить алкоголь, как мяч с силой вылетает на поверхность.", 
+        "en": "Keeping the Shadow in the basement requires a colossal amount of psychic energy. Imagine trying to hold an inflatable ball under water. As long as you are focused on it, everything is fine, but as soon as you get distracted, tired, or drink alcohol, the ball forcefully flies to the surface.", 
+        "uk": "Утримання Тіні в підвалі вимагає колосальної кількості психічної енергії. Уявіть, що ви намагаєтеся втримати під водою надувний м'яч. Поки ви зосереджені на цьому — все нормально, але варто вам відволіктися, втомитися або випити алкоголь, як м'яч із силою вилітає на поверхню." 
+    },
+    "art-shad-ch4-p2": { 
+        "ru": "Люди, которые категорически отказываются признавать свою Тень, часто сталкиваются с тремя проблемами:", 
+        "en": "People who categorically refuse to acknowledge their Shadow often face three problems:", 
+        "uk": "Люди, які категорично відмовляються визнавати свою Тінь, часто стикаються з трьома проблемами:" 
+    },
+    "art-shad-ul2-li1": { 
+        "ru": "<strong>Хроническое выгорание.</strong> Эго тратит все силы на поддержание идеальной Персоны. На саму жизнь энергии не остается.", 
+        "en": "<strong>Chronic burnout.</strong> The Ego spends all its energy maintaining the perfect Persona. There is no energy left for life itself.", 
+        "uk": "<strong>Хронічне вигоряння.</strong> Его витрачає всі сили на підтримку ідеальної Персони. На саме життя енергії не залишається." 
+    },
+    "art-shad-ul2-li2": { 
+        "ru": "<strong>Взрывы неадекватного гнева.</strong> Тот самый «тихий и добрый» сосед, который однажды срывается и крушит все вокруг. Это прорыв Тени, которую сдерживали десятилетиями.", 
+        "en": "<strong>Explosions of inadequate anger.</strong> That same 'quiet and kind' neighbor who one day snaps and smashes everything around. This is a breakthrough of the Shadow that has been held back for decades.", 
+        "uk": "<strong>Вибухи неадекватного гніву.</strong> Той самий «тихий і добрий» сусід, який одного разу зривається і трощить усе навколо. Це прорив Тіні, яку стримували десятиліттями." 
+    },
+    "art-shad-ul2-li3": { 
+        "ru": "<strong>Психосоматика.</strong> Подавленные эмоции (особенно гнев и страх) физически оседают в теле в виде мышечных зажимов, мигреней и аутоиммунных реакций.", 
+        "en": "<strong>Psychosomatics.</strong> Repressed emotions (especially anger and fear) physically settle in the body in the form of muscle cramps, migraines, and autoimmune reactions.", 
+        "uk": "<strong>Психосоматика.</strong> Пригнічені емоції (особливо гнів і страх) фізично осідають у тілі у вигляді м'язових затискачів, мігреней та аутоімунних реакцій." 
+    },
+    "art-shad-ch5-h": { 
+        "ru": "Глава 5. Золотая Тень: Скрытые таланты во тьме", 
+        "en": "Chapter 5. The Golden Shadow: Hidden talents in the dark", 
+        "uk": "Глава 5. Золота Тінь: Приховані таланти в темряві" 
+    },
+    "art-shad-ch5-p1": { 
+        "ru": "Интеграция Тени — это не значит стать злым или аморальным. Это значит стать <em>целостным</em>. Самое удивительное открытие, которое ждет вас в процессе Shadow Work, заключается в том, что в Тени спрятаны не только демоны, но и огромное количество ресурса — <strong>Золотая Тень</strong>.", 
+        "en": "Integrating the Shadow does not mean becoming evil or immoral. It means becoming <em>whole</em>. The most amazing discovery waiting for you in the process of Shadow Work is that not only demons are hidden in the Shadow, but also a huge amount of resources — the <strong>Golden Shadow</strong>.", 
+        "uk": "Інтеграція Тіні — це не означає стати злим або аморальним. Це означає стати <em>цілісним</em>. Найдивовижніше відкриття, яке чекає на вас у процесі Shadow Work, полягає в тому, що в Тіні заховані не лише демони, а й величезна кількість ресурсу — <strong>Золота Тінь</strong>." 
+    },
+    "art-shad-ch5-p2": { 
+        "ru": "Например, подавленная агрессия, если ее признать и направить в нужное русло, превращается в пробивную силу, амбиции и умение защищать свой бизнес. Подавленный эгоизм становится здоровыми личными границами и любовью к себе. А подавленная сексуальность или «странность» — источником невероятного творчества и харизмы.", 
+        "en": "For example, repressed aggression, if acknowledged and channeled in the right direction, turns into driving force, ambition, and the ability to protect your business. Repressed selfishness becomes healthy personal boundaries and self-love. And repressed sexuality or 'weirdness' becomes a source of incredible creativity and charisma.", 
+        "uk": "Наприклад, пригнічена агресія, якщо її визнати і направити в потрібне русло, перетворюється на пробивну силу, амбіції і вміння захищати свій бізнес. Пригнічений егоїзм стає здоровими особистими кордонами і любов'ю до себе. А пригнічена сексуальність або «дивність» — джерелом неймовірної творчості та харизми." 
+    },
+    "art-shad-ch6-h": { 
+        "ru": "Глава 6. Практика: 3 техники для интеграции Тени", 
+        "en": "Chapter 6. Practice: 3 techniques for integrating the Shadow", 
+        "uk": "Глава 6. Практика: 3 техніки для інтеграції Тіні" 
+    },
+    "art-shad-ch6-p1": { 
+        "ru": "Как же достать эти качества из подвала? Вот три базовых упражнения, с которых стоит начать.", 
+        "en": "How to get these qualities out of the basement? Here are three basic exercises to start with.", 
+        "uk": "Як же дістати ці якості з підвалу? Ось три базові вправи, з яких варто почати." 
+    },
+    "art-shad-prac-1-h": { 
+        "ru": "Техника 1: Дневник триггеров", 
+        "en": "Technique 1: Trigger Journal", 
+        "uk": "Техніка 1: Щоденник тригерів" 
+    },
+    "art-shad-prac-1-p": { 
+        "ru": "В течение недели записывайте все ситуации, когда вас кто-то сильно разозлил или вывел из себя. Запишите имя человека и конкретную черту, которая вас взбесила. А затем задайте себе вопрос: <em>«Где в своей жизни я запрещаю себе проявлять эту черту? В чем мне могло бы помочь немного этой черты прямо сейчас?»</em>", 
+        "en": "For a week, write down all the situations when someone made you really angry or annoyed. Write down the person's name and the specific trait that infuriated you. And then ask yourself: <em>'Where in my life do I forbid myself to show this trait? How could a little bit of this trait help me right now?'</em>", 
+        "uk": "Протягом тижня записуйте всі ситуації, коли вас хтось сильно розлютив або вивів із себе. Запишіть ім'я людини та конкретну рису, яка вас збісила. А потім поставте собі запитання: <em>«Де у своєму житті я забороняю собі проявляти цю рису? У чому мені могла б допомогти трохи цієї риси прямо зараз?»</em>" 
+    },
+    "art-shad-prac-2-h": { 
+        "ru": "Техника 2: Письмо от лица Тени", 
+        "en": "Technique 2: A letter from the Shadow", 
+        "uk": "Техніка 2: Лист від імені Тіні" 
+    },
+    "art-shad-prac-2-p": { 
+        "ru": "Возьмите лист бумаги и ручку. Закройте глаза, сделайте глубокий вдох и представьте ту часть себя, которую вы ненавидите или стыдитесь. Позвольте этой части написать вам письмо. Начинайте со слов: <em>«Я твоя Тень, и я хочу сказать тебе, что...»</em> Не фильтруйте текст, пишите все, что приходит в голову.", 
+        "en": "Take a piece of paper and a pen. Close your eyes, take a deep breath, and imagine the part of yourself that you hate or are ashamed of. Let this part write you a letter. Start with the words: <em>'I am your Shadow, and I want to tell you that...'</em> Do not filter the text, write everything that comes to mind.", 
+        "uk": "Візьміть аркуш паперу та ручку. Закрийте очі, зробіть глибокий вдих і уявіть ту частину себе, яку ви ненавидите або якої соромитеся. Дозвольте цій частині написати вам листа. Починайте зі слів: <em>«Я твоя Тінь, і я хочу сказати тобі, що...»</em> Не фільтруйте текст, пишіть усе, що спадає на думку." 
+    },
+    "art-shad-prac-3-h": { 
+        "ru": "Техника 3: Правило 10%", 
+        "en": "Technique 3: The 10% Rule", 
+        "uk": "Техніка 3: Правило 10%" 
+    },
+    "art-shad-prac-3-p": { 
+        "ru": "Попробуйте проявлять подавленное качество на 10% в безопасной среде. Если вы патологически «удобный» человек — откажите кому-то в мелкой просьбе. Почувствуйте вину, которая поднимется, но не отступайте. Приучайте свою нервную систему к тому, что быть «неидеальным» — безопасно.", 
+        "en": "Try to show the repressed quality by 10% in a safe environment. If you are a pathologically 'convenient' person, refuse someone a small request. Feel the guilt that arises, but do not back down. Train your nervous system to understand that being 'imperfect' is safe.", 
+        "uk": "Спробуйте проявляти пригнічену якість на 10% у безпечному середовищі. Якщо ви патологічно «зручна» людина — відмовте комусь у дрібному проханні. Відчуйте провину, яка підніметься, але не відступайте. Привчайте свою нервову систему до того, що бути «неідеальним» — безпечно." 
+    },
+    "art-shad-concl-h": { 
+        "ru": "Заключение: Стать цельным, а не 'хорошим'", 
+        "en": "Conclusion: To become whole, not 'good'", 
+        "uk": "Висновок: Стати цілісним, а не 'хорошим'" 
+    },
+    "art-shad-concl-p": { 
+        "ru": "Цель жизни — не в том, чтобы стать идеальным, отполированным и святым. Цель в том, чтобы стать цельным. Работа с Тенью — это путь длиною в жизнь. Это процесс возвращения домой тех частей себя, которые вы когда-то оставили на морозе. Когда вы перестаете воевать с самим собой, высвобождается огромное количество энергии, которую наконец-то можно направить на создание жизни своей мечты.", 
+        "en": "The goal of life is not to become perfect, polished, and holy. The goal is to become whole. Shadow work is a lifelong journey. It is the process of bringing home those parts of yourself that you once left out in the cold. When you stop fighting with yourself, a huge amount of energy is released, which can finally be directed towards creating the life of your dreams.", 
+        "uk": "Мета життя — не в тому, щоб стати ідеальним, відполірованим і святим. Мета в тому, щоб стати цілісним. Робота з Тінню — це шлях довжиною в життя. Це процес повернення додому тих частин себе, які ви колись залишили на морозі. Коли ви перестаєте воювати з самим собою, вивільняється величезна кількість енергії, яку нарешті можна направити на створення життя своєї мрії." 
     }
 };
 
