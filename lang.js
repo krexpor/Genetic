@@ -34,9 +34,9 @@ const langArr = {
         "uk": "Зверніть увагу: всі інструменти та статті на сайті надаються виключно в освітніх та розважальних цілях." 
     },
     "about-p-4": { 
-        "ru": "Открыт к предложениям, идей и обратной связи. Вы можете связаться со мной через <a href='https://t.me/krexpor' target='_blank'>Telegram</a> или по электронной почте: <span style='color: var(--accent); font-weight: bold;'>твоя-почта@gmail.com</span>.", 
-        "en": "Open to suggestions, ideas, and feedback. You can contact me via <a href='https://t.me/krexpor' target='_blank'>Telegram</a> or by email: <span style='color: var(--accent); font-weight: bold;'>твоя-почта@gmail.com</span>.", 
-        "uk": "Відкритий до пропозицій, ідей та зворотного зв'язку. Ви можете зв'язатися зі мною через <a href='https://t.me/krexpor' target='_blank'>Telegram</a> або електронною поштою: <span style='color: var(--accent); font-weight: bold;'>твоя-почта@gmail.com</span>." 
+        "ru": "Открыт к предложениям, идеям и обратной связи. Вы можете найти мои актуальные контакты на странице <a href='contact.html' style='color: var(--accent); text-decoration: underline;'>Контакты</a>.", 
+        "en": "Open to suggestions, ideas, and feedback. You can find my current contact details on the <a href='contact.html' style='color: var(--accent); text-decoration: underline;'>Contacts</a> page.", 
+        "uk": "Відкритий до пропозицій, ідей та зворотного зв'язку. Ви можете знайти мої актуальні контакти на сторінці <a href='contact.html' style='color: var(--accent); text-decoration: underline;'>Контакти</a>." 
     },
 
     // --- ПЕРЕВОДЫ ДЛЯ ОБНОВЛЕННОГО PRIVACY.HTML ---
@@ -81,10 +81,10 @@ const langArr = {
         "uk": "7. Контакти" 
     },
     "privacy-p-contact": { 
-        "ru": "Если у вас возникли вопросы относительно данной политики, вы можете связаться со мной через <a href='https://t.me/krexpor' target='_blank'>Telegram</a> или по Email: <strong>твоя-почта@gmail.com</strong>.", 
-        "en": "If you have any questions regarding this policy, you can contact me via <a href='https://t.me/krexpor' target='_blank'>Telegram</a> or by Email: <strong>твоя-почта@gmail.com</strong>.", 
-        "uk": "Якщо у вас виникли запитання щодо цієї політики, ви можете зв'язатися зі мною через <a href='https://t.me/krexpor' target='_blank'>Telegram</a> або по Email: <strong>твоя-почта@gmail.com</strong>." 
-    }
+        "ru": "По вопросам конфиденциальности или другим темам вы можете связаться со мной через страницу <a href='contact.html' style='color: var(--accent);'>Контакты</a>.", 
+        "en": "For privacy concerns or other topics, you can contact me via the <a href='contact.html' style='color: var(--accent);'>Contacts</a> page.", 
+        "uk": "З питань конфіденційності або інших тем ви можете зв'язатися зі мною через сторінку <a href='contact.html' style='color: var(--accent);'>Контакти</a>." 
+    },
 
     // --- ПОМИЛКА 404 ---
     "404-title": { "ru": "Страница не найдена | Krexpor", "en": "Page not found | Krexpor", "uk": "Сторінка не знайдена | Krexpor" },
