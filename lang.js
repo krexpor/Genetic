@@ -1051,6 +1051,282 @@ const langArr = {
         "ru": "Как подавленные эмоции управляют вашей жизнью и почему интеграция своей темной стороны — ключ к свободе.", 
         "en": "How repressed emotions control your life and why integrating your dark side is the key to freedom.", 
         "uk": "Як пригнічені емоції керують вашим життям і чому інтеграція своєї темної сторони — ключ до свободи." 
+    },
+    // --- ПІЛЛАР-СТАТТЯ (ATTACHMENT THEORY) - ПОВНИЙ СЛОВНИК ---
+    "art-att-meta": { 
+        "ru": "Архитектура привязанности | Krexpor", 
+        "en": "The Architecture of Attachment | Krexpor", 
+        "uk": "Архітектура прив'язаності | Krexpor" 
+    },
+    "art-att-h1": { 
+        "ru": "Архитектура привязанности: Почему мы выбираем тех, кто делает нам больно (и как сломать сценарий)", 
+        "en": "The Architecture of Attachment: Why we choose those who hurt us (and how to break the script)", 
+        "uk": "Архітектура прив'язаності: Чому ми обираємо тих, хто робить нам боляче (і як зламати сценарій)" 
+    },
+    "art-att-time": { 
+        "ru": "Время чтения: 20 минут | Категория: Нейробиология и Психология отношений", 
+        "en": "Reading time: 20 minutes | Category: Neurobiology and Relationship Psychology", 
+        "uk": "Час читання: 20 хвилин | Категорія: Нейробіологія та Психологія стосунків" 
+    },
+    "art-att-intro1": { 
+        "ru": "Задумывались ли вы когда-нибудь, почему умные, успешные и абсолютно рациональные во всех остальных сферах жизни люди раз за разом оказываются в разрушительных отношениях? Почему стабильный, заботливый партнер кажется нам «скучным», а холодный, отстраненный человек, который заставляет нас страдать, вызывает непреодолимую тягу и бабочек в животе?", 
+        "en": "Have you ever wondered why smart, successful, and completely rational people in all other areas of life repeatedly find themselves in destructive relationships? Why does a stable, caring partner seem 'boring' to us, while a cold, distant person who makes us suffer causes an irresistible pull and butterflies in our stomach?", 
+        "uk": "Чи замислювалися ви коли-небудь, чому розумні, успішні й абсолютно раціональні в усіх інших сферах життя люди раз по раз опиняються в руйнівних стосунках? Чому стабільний, турботливий партнер здається нам «нудним», а холодна, відсторонена людина, яка змушує нас страждати, викликає непереборний потяг і метеликів у животі?" 
+    },
+    "art-att-intro2": { 
+        "ru": "Мы привыкли называть это «судьбой», «кармой» или «сложным характером». Мы пишем об этом стихи и снимаем драматические фильмы. Но современная наука дает куда более прозаичный, но и более пугающий ответ. Ваш выбор партнера — это не магия. Это холодный, математически выверенный алгоритм вашей нервной системы, сформированный задолго до того, как вы научились говорить. Чтобы понять, почему мы любим тех, кто нас разрушает, нам придется спуститься на уровень нейробиологии и заглянуть в самые темные углы теории привязанности.", 
+        "en": "We are used to calling it 'fate', 'karma', or 'a difficult character'. We write poems and make dramatic movies about it. But modern science gives a much more prosaic, yet scarier answer. Your choice of partner is not magic. It is a cold, mathematically precise algorithm of your nervous system, formed long before you learned to speak. To understand why we love those who destroy us, we will have to descend to the level of neurobiology and look into the darkest corners of attachment theory.", 
+        "uk": "Ми звикли називати це «долею», «кармою» або «складним характером». Ми пишемо про це вірші та знімаємо драматичні фільми. Але сучасна наука дає куди більш прозаїчну, але й більш лякаючу відповідь. Ваш вибір партнера — це не магія. Це холодний, математично вивірений алгоритм вашої нервової системи, сформований задовго до того, як ви навчилися говорити. Щоб зрозуміти, чому ми любимо тих, хто нас руйнує, нам доведеться спуститися на рівень нейробіології та зазирнути в найтемніші кутки теорії прив'язаності." 
+    },
+    
+    // Глава 1
+    "art-att-ch1-h": { 
+        "ru": "Глава 1. Биология любви и гормональные качели", 
+        "en": "Chapter 1. The biology of love and hormonal swings", 
+        "uk": "Глава 1. Біологія кохання та гормональні гойдалки" 
+    },
+    "art-att-ch1-p1": { 
+        "ru": "Чтобы взломать код своих отношений, нужно сначала понять, как работает ваш мозг в состоянии влюбленности. То, что мы называем «любовью» на ранних этапах, — это мощнейший нейрохимический коктейль, который по своему воздействию на центральную нервную систему абсолютно идентичен тяжелым наркотикам.", 
+        "en": "To hack the code of your relationships, you first need to understand how your brain works in a state of falling in love. What we call 'love' in the early stages is a powerful neurochemical cocktail that, in its effect on the central nervous system, is absolutely identical to hard drugs.", 
+        "uk": "Щоб зламати код своїх стосунків, потрібно спочатку зрозуміти, як працює ваш мозок у стані закоханості. Те, що ми називаємо «коханням» на ранніх етапах, — це найпотужніший нейрохімічний коктейль, який за своїм впливом на центральну нервову систему абсолютно ідентичний важким наркотикам." 
+    },
+    "art-att-ch1-p2": { 
+        "ru": "В здоровых, стабильных отношениях мозг постепенно снижает выработку стрессовых гормонов и переходит на окситоцин и вазопрессин — гормоны долгосрочной привязанности, доверия и спокойствия. Вам уютно, безопасно, но... для людей с травмированной психикой это состояние ощущается как мертвая, пугающая пустота.", 
+        "en": "In healthy, stable relationships, the brain gradually reduces the production of stress hormones and switches to oxytocin and vasopressin — hormones of long-term attachment, trust, and calm. You feel cozy, safe, but... for people with a traumatized psyche, this state feels like a dead, frightening emptiness.", 
+        "uk": "У здорових, стабільних стосунках мозок поступово знижує вироблення стресових гормонів і переходить на окситоцин і вазопресин — гормони довгострокової прив'язаності, довіри і спокою. Вам затишно, безпечно, але... для людей з травмованою психікою цей стан відчувається як мертва, лякаюча порожнеча." 
+    },
+    "art-att-ch1-box-h": { 
+        "ru": "Анатомия токсичной зависимости:", 
+        "en": "The anatomy of toxic dependency:", 
+        "uk": "Анатомія токсичної залежності:" 
+    },
+    "art-att-ch1-box-p1": { 
+        "ru": "🧬 <strong>Ловушка Дофамина:</strong> Вопреки популярному мифу, дофамин — это не гормон удовольствия. Это гормон <em>предвкушения</em> и мотивации. Если партнер всегда рядом и доступен, дофамин падает. Но если партнер то приближает вас, то холодно отталкивает — дофаминовая система сходит с ума. Мозг начинает воспринимать партнера как джекпот в казино: вы никогда не знаете, выпадет ли вам сегодня «приз» (его внимание). Этот режим называется «прерывистым подкреплением» (intermittent reinforcement) — именно он формирует самую жесткую зависимость.", 
+        "en": "🧬 <strong>The Dopamine Trap:</strong> Contrary to popular myth, dopamine is not the pleasure hormone. It is the hormone of <em>anticipation</em> and motivation. If a partner is always around and available, dopamine drops. But if a partner brings you closer, then coldly pushes you away — the dopamine system goes crazy. The brain begins to perceive the partner as a casino jackpot: you never know if you'll win the 'prize' (their attention) today. This mode is called 'intermittent reinforcement' — and it forms the most severe addiction.", 
+        "uk": "🧬 <strong>Пастка Дофаміну:</strong> Всупереч популярному міфу, дофамін — це не гормон задоволення. Це гормон <em>передчуття</em> і мотивації. Якщо партнер завжди поруч і доступний, дофамін падає. Але якщо партнер то наближає вас, то холодно відштовхує — дофамінова система божеволіє. Мозок починає сприймати партнера як джекпот у казино: ви ніколи не знаєте, чи випаде вам сьогодні «приз» (його увага). Цей режим називається «переривчастим підкріпленням» (intermittent reinforcement) — саме він формує найжорсткішу залежність." 
+    },
+    "art-att-ch1-box-p2": { 
+        "ru": "🧬 <strong>Кортизол и Адреналин:</strong> Когда вас игнорируют, ваш мозг воспринимает это не как социальную неудачу, а как биологическую угрозу выживанию. Выбрасывается кортизол (гормон стресса) и адреналин. Ваше сердце бьется чаще, вы не можете спать, вас бросает в пот. Вы путаете эту физиологическую панику с «сильной страстью».", 
+        "en": "🧬 <strong>Cortisol and Adrenaline:</strong> When you are ignored, your brain perceives this not as a social failure, but as a biological threat to survival. Cortisol (the stress hormone) and adrenaline are released. Your heart beats faster, you can't sleep, you break out in a sweat. You confuse this physiological panic with 'strong passion'.", 
+        "uk": "🧬 <strong>Кортизол і Адреналін:</strong> Коли вас ігнорують, ваш мозок сприймає це не як соціальну невдачу, а як біологічну загрозу виживанню. Викидається кортизол (гормон стресу) і адреналін. Ваше серце б'ється частіше, ви не можете спати, вас кидає в піт. Ви плутаєте цю фізіологічну паніку з «сильною пристрастю»." 
+    },
+    "art-att-ch1-p3": { 
+        "ru": "В итоге мы попадаем в замкнутый круг: тревога (кортизол) — холодность партнера — отчаянная попытка заслужить любовь — внезапная кроха внимания — резкий выброс дофамина и эндорфина — временное облегчение. Ваш мозг буквально привыкает к тому, что любовь — это боль и спасение в одном флаконе.", 
+        "en": "As a result, we fall into a vicious circle: anxiety (cortisol) — coldness of the partner — a desperate attempt to earn love — a sudden crumb of attention — a sharp release of dopamine and endorphin — temporary relief. Your brain literally gets used to the fact that love is pain and salvation rolled into one.", 
+        "uk": "У результаті ми потрапляємо в замкнуте коло: тривога (кортизол) — холодність партнера — відчайдушна спроба заслужити любов — раптова крихта уваги — різкий викид дофаміну і ендорфіну — тимчасове полегшення. Ваш мозок буквально звикає до того, що любов — це біль і порятунок в одному флаконі." 
+    },
+
+    // Глава 2
+    "art-att-ch2-h": { 
+        "ru": "Глава 2. Жестокие эксперименты: Эволюция теории привязанности", 
+        "en": "Chapter 2. Cruel experiments: The evolution of attachment theory", 
+        "uk": "Глава 2. Жорстокі експерименти: Еволюція теорії прив'язаності" 
+    },
+    "art-att-ch2-p1": { 
+        "ru": "Откуда берется этот сбой в программе? Чтобы ответить на этот вопрос, в 1950-х годах психоаналитик Джон Боулби начал исследовать детей-сирот после Второй мировой войны. Он заметил страшную вещь: дети, которые были сыты и находились в тепле, но были лишены материнских объятий и эмоционального контакта, останавливались в физическом развитии и угасали. Боулби выдвинул революционную гипотезу: <strong>потребность в привязанности — это базовая биологическая функция, более важная для выживания, чем еда.</strong>", 
+        "en": "Where does this glitch in the program come from? To answer this question, in the 1950s, psychoanalyst John Bowlby began studying orphaned children after World War II. He noticed a terrifying thing: children who were fed and kept warm, but were deprived of maternal hugs and emotional contact, stopped physically developing and faded away. Bowlby put forward a revolutionary hypothesis: <strong>the need for attachment is a basic biological function, more important for survival than food.</strong>", 
+        "uk": "Звідки береться цей збій у програмі? Щоб відповісти на це питання, у 1950-х роках психоаналітик Джон Боулбі почав досліджувати дітей-сиріт після Другої світової війни. Він помітив страшну річ: діти, які були ситі і перебували в теплі, але були позбавлені материнських обіймів і емоційного контакту, зупинялися у фізичному розвитку і згасали. Боулбі висунув революційну гіпотезу: <strong>потреба в прив'язаності — це базова біологічна функція, більш важлива для виживання, ніж їжа.</strong>" 
+    },
+    "art-att-quote1": { 
+        "ru": "«Младенец запрограммирован эволюцией на то, чтобы любой ценой удерживать внимание значимого взрослого. Если взрослый холодный — ребенок станет тревожным, чтобы докричаться до него. Если взрослый агрессивный — ребенок отключит свои эмоции, чтобы не провоцировать удар».", 
+        "en": "«An infant is programmed by evolution to keep the attention of a significant adult at any cost. If the adult is cold, the child will become anxious to get through to them. If the adult is aggressive, the child will turn off their emotions so as not to provoke a blow».", 
+        "uk": "«Немовля запрограмоване еволюцією на те, щоб за будь-яку ціну утримувати увагу значущого дорослого. Якщо дорослий холодний — дитина стане тривожною, щоб докричатися до нього. Якщо дорослий агресивний — дитина відключить свої емоції, щоб не провокувати удар»." 
+    },
+    "art-att-ch2-p2": { 
+        "ru": "Эту гипотезу жестко, но блестяще доказал психолог Гарри Харлоу в своем печально известном эксперименте с макаками-резусами. Он забирал новорожденных обезьянок у матерей и помещал их в клетку с двумя «суррогатными мамами». Первая мама была сделана из голой, холодной проволоки, но у нее была бутылочка с молоком. Вторая мама была обтянута мягкой, теплой тканью, но молока не давала.", 
+        "en": "This hypothesis was harshly but brilliantly proven by psychologist Harry Harlow in his infamous experiment with rhesus macaques. He took newborn monkeys away from their mothers and placed them in a cage with two 'surrogate mothers'. The first mother was made of bare, cold wire, but had a bottle of milk. The second mother was covered with soft, warm cloth, but did not give milk.", 
+        "uk": "Цю гіпотезу жорстко, але блискуче довів психолог Гаррі Харлоу у своєму сумнозвісному експерименті з макаками-резусами. Він забирав новонароджених мавпочок у матерів і поміщав їх у клітку з двома «сурогатними мамами». Перша мама була зроблена з голої, холодної проволоки, але у неї була пляшечка з молоком. Друга мама була обтягнута м'якою, теплою тканиною, але молока не давала." 
+    },
+    "art-att-ch2-p3": { 
+        "ru": "Логика бихевиористов того времени гласила, что ребенок любит мать только потому, что она источник еды. Но эксперимент показал обратное: детеныши проводили 22 часа в сутки, прижимаясь к мягкой тканевой маме, и перебегали к проволочной только на пару минут, чтобы не умереть от голода. А когда обезьянок пугали громким звуком, они в панике бежали искать защиты именно у мягкой, не кормящей мамы. <strong>Комфорт и безопасность оказались важнее физического насыщения.</strong>", 
+        "en": "The logic of behaviorists of that time stated that a child loves its mother only because she is a source of food. But the experiment showed the opposite: the babies spent 22 hours a day clinging to the soft cloth mother, and ran to the wire one only for a couple of minutes so as not to starve to death. And when the monkeys were frightened by a loud noise, they ran in panic to seek protection from the soft, non-feeding mother. <strong>Comfort and safety turned out to be more important than physical satiation.</strong>", 
+        "uk": "Логіка біхевіористів того часу стверджувала, що дитина любить матір тільки тому, що вона джерело їжі. Але експеримент показав зворотне: дитинчата проводили 22 години на добу, притискаючись до м'якої тканинної мами, і перебігали до дротяної лише на пару хвилин, щоб не померти від голоду. А коли мавпочок лякали гучним звуком, вони в паніці бігли шукати захисту саме у м'якої, не годуючої мами. <strong>Комфорт і безпека виявилися важливішими за фізичне насичення.</strong>" 
+    },
+    "art-att-ch2-p4": { 
+        "ru": "Ваш стиль привязанности — это стратегия выживания, которую вы выбрали в первые 18 месяцев своей жизни в зависимости от того, какой была ваша «тканевая мама» — доступной, нестабильной или пугающей.", 
+        "en": "Your attachment style is a survival strategy you chose in the first 18 months of your life, depending on what your 'cloth mother' was like — available, unstable, or frightening.", 
+        "uk": "Ваш стиль прив'язаності — це стратегія виживання, яку ви обрали в перші 18 місяців свого життя залежно від того, якою була ваша «тканинна мама» — доступною, нестабільною чи лякаючою." 
+    },
+
+    // Глава 3
+    "art-att-ch3-h": { 
+        "ru": "Глава 3. Всадники отношений: Глубокая анатомия типов привязанности", 
+        "en": "Chapter 3. The Horsemen of Relationships: A deep anatomy of attachment types", 
+        "uk": "Глава 3. Вершники стосунків: Глибока анатомія типів прив'язаності" 
+    },
+    "art-att-ch3-p1": { 
+        "ru": "Опираясь на исследования Боулби и его ученицы Мэри Эйнсворт, современная психология выделяет четыре основных стиля привязанности. Каждый из них — это уникальная оптическая линза, через которую вы смотрите на мир, читаете сообщения в мессенджере и интерпретируете молчание партнера.", 
+        "en": "Based on the research of Bowlby and his student Mary Ainsworth, modern psychology identifies four main attachment styles. Each of them is a unique optical lens through which you look at the world, read messages in a messenger, and interpret your partner's silence.", 
+        "uk": "Спираючись на дослідження Боулбі та його учениці Мері Ейнсворт, сучасна психологія виділяє чотири основні стилі прив'язаності. Кожен із них — це унікальна оптична лінза, через яку ви дивитеся на світ, читаєте повідомлення в месенджері та інтерпретуєте мовчання партнера." 
+    },
+    "art-att-t1-h": { 
+        "ru": "1. Надежный тип (Secure): Архитектура спокойствия", 
+        "en": "1. Secure Type: The Architecture of Calm", 
+        "uk": "1. Надійний тип (Secure): Архітектура спокою" 
+    },
+    "art-att-t1-p1": { 
+        "ru": "<strong>Как формируется:</strong> В детстве их родители были эмоционально доступны. Они предсказуемо реагировали на плач, не наказывали за эмоции и давали ребенку пространство для изучения мира, оставаясь надежным тылом.", 
+        "en": "<strong>How it is formed:</strong> In childhood, their parents were emotionally available. They reacted predictably to crying, did not punish for emotions, and gave the child space to explore the world while remaining a reliable rear.", 
+        "uk": "<strong>Як формується:</strong> У дитинстві їхні батьки були емоційно доступні. Вони передбачувано реагували на плач, не карали за емоції і давали дитині простір для вивчення світу, залишаючись надійним тилом." 
+    },
+    "art-att-t1-p2": { 
+        "ru": "<strong>В отношениях:</strong> Это люди с встроенным внутренним стержнем. Они не боятся близости, но и не впадают в панику от одиночества. Для них отношения — это партнерство, а не поле боя или спасательная операция. Они не играют в игры «кто кому напишет первым». Если надежному типу что-то не нравится, он не будет манипулировать или молча обижаться — он просто скажет об этом вслух.", 
+        "en": "<strong>In relationships:</strong> These are people with a built-in inner core. They are not afraid of intimacy, but neither do they panic about loneliness. For them, relationships are a partnership, not a battlefield or a rescue operation. They don't play 'who texts first' games. If a secure type doesn't like something, they won't manipulate or silently take offense — they will just say it out loud.", 
+        "uk": "<strong>У стосунках:</strong> Це люди з вбудованим внутрішнім стрижнем. Вони не бояться близькості, але і не впадають у паніку від самотності. Для них стосунки — це партнерство, а не поле бою або рятувальна операція. Вони не грають в ігри «хто кому напише першим». Якщо надійному типу щось не подобається, він не буде маніпулювати або мовчки ображатися — він просто скаже про це вголос." 
+    },
+    "art-att-t1-p3": { 
+        "ru": "<strong>Их суперсила:</strong> Умение успокаиваться и успокаивать партнера. Во время конфликта они не бьют по больным местам и не убегают из дома. Для травмированных типов (о которых пойдет речь ниже) надежные партнеры часто кажутся... невыносимо скучными. Тревожному мозгу не хватает привычных дофаминовых качелей и драмы.", 
+        "en": "<strong>Their superpower:</strong> The ability to calm themselves and their partner down. During a conflict, they do not hit sore spots and do not run away from home. For traumatized types (which will be discussed below), secure partners often seem... unbearably boring. The anxious brain lacks the usual dopamine swings and drama.", 
+        "uk": "<strong>Їхня суперсила:</strong> Вміння заспокоюватися і заспокоювати партнера. Під час конфлікту вони не б'ють по хворих місцях і не тікають з дому. Для травмованих типів (про які піде мова нижче) надійні партнери часто здаються... нестерпно нудними. Тривожному мозку не вистачає звичних дофамінових гойдалок і драми." 
+    },
+    "art-att-t2-h": { 
+        "ru": "2. Тревожный тип (Anxious): В вечном поиске подтверждения", 
+        "en": "2. Anxious Type: In an eternal search for validation", 
+        "uk": "2. Тривожний тип (Anxious): У вічному пошуку підтвердження" 
+    },
+    "art-att-t2-p1": { 
+        "ru": "<strong>Как формируется:</strong> Родители были непоследовательны. Сегодня мама нежная и любящая, а завтра — холодная, уставшая или раздраженная. Ребенок никогда не знал, какую реакцию получит. Чтобы выжить и удержать внимание, психика ребенка научилась гипертрофировать свои эмоции (громче плакать, сильнее цепляться).", 
+        "en": "<strong>How it is formed:</strong> Parents were inconsistent. Today mom is tender and loving, and tomorrow — cold, tired, or irritated. The child never knew what reaction they would get. To survive and keep attention, the child's psyche learned to exaggerate its emotions (cry louder, cling stronger).", 
+        "uk": "<strong>Як формується:</strong> Батьки були непослідовні. Сьогодні мама ніжна і любляча, а завтра — холодна, втомлена або роздратована. Дитина ніколи не знала, яку реакцію отримає. Щоб вижити і утримати увагу, психіка дитини навчилася гіпертрофувати свої емоції (голосніше плакати, сильніше чіплятися)." 
+    },
+    "art-att-t2-p2": { 
+        "ru": "<strong>В отношениях:</strong> Тревожный тип — это человек с гиперчувствительным радаром на отвержение. Его миндалевидное тело постоянно сканирует поведение партнера: <em>«Он ответил на сообщение на час позже. Односложно. Без смайлика. Он меня разлюбил!»</em> Тревожный тип не переносит неопределенности. Ему нужны постоянные доказательства любви. Когда им кажется, что партнер отдаляется, они прибегают к <strong>стратегиям активации</strong>: начинают звонить по 10 раз, устраивают скандалы или демонстративно обижаются.", 
+        "en": "<strong>In relationships:</strong> An anxious type is a person with a hypersensitive radar for rejection. Their amygdala constantly scans the partner's behavior: <em>'He replied to the message an hour late. In one word. No emoji. He doesn't love me anymore!'</em> The anxious type cannot stand uncertainty. They need constant proof of love. When it seems to them that the partner is pulling away, they resort to <strong>activation strategies</strong>: they start calling 10 times, make scenes, or demonstratively take offense.", 
+        "uk": "<strong>У стосунках:</strong> Тривожний тип — це людина з гіперчутливим радаром на відкидання. Її мигдалеподібне тіло постійно сканує поведінку партнера: <em>«Він відповів на повідомлення на годину пізніше. Односкладово. Без смайлика. Він мене розлюбив!»</em> Тривожний тип не переносить невизначеності. Йому потрібні постійні докази любові. Коли їм здається, що партнер віддаляється, вони вдаються до <strong>стратегій активації</strong>: починають дзвонити по 10 разів, влаштовують скандали або демонстративно ображаються." 
+    },
+    "art-att-t2-p3": { 
+        "ru": "<strong>Их скрытая боль:</strong> Они свято верят, что недостойны любви сами по себе, и ее нужно постоянно заслуживать или контролировать.", 
+        "en": "<strong>Their hidden pain:</strong> They firmly believe that they are unworthy of love on their own, and it must be constantly earned or controlled.", 
+        "uk": "<strong>Їхній прихований біль:</strong> Вони свято вірять, що негідні любові самі по собі, і її потрібно постійно заслуговувати або контролювати." 
+    },
+    "art-att-t3-h": { 
+        "ru": "3. Избегающий тип (Avoidant): Остров одиночества", 
+        "en": "3. Avoidant Type: Island of Loneliness", 
+        "uk": "3. Уникаючий тип (Avoidant): Острів самотності" 
+    },
+    "art-att-t3-p1": { 
+        "ru": "<strong>Как формируется:</strong> Эти дети росли с эмоционально холодными, отстраненными родителями. Когда ребенок плакал или просил защиты, его игнорировали или ругали за слабость. Мозг ребенка понял страшную истину: <em>никто не придет на помощь</em>. Проявлять эмоции — опасно, рассчитывать на других — больно. Проще отключить потребность в привязанности вообще.", 
+        "en": "<strong>How it is formed:</strong> These children grew up with emotionally cold, detached parents. When the child cried or asked for protection, they were ignored or scolded for weakness. The child's brain understood a terrible truth: <em>no one will come to help</em>. Showing emotions is dangerous, relying on others is painful. It is easier to turn off the need for attachment altogether.", 
+        "uk": "<strong>Як формується:</strong> Ці діти росли з емоційно холодними, відстороненими батьками. Коли дитина плакала або просила захисту, її ігнорували або лаяли за слабкість. Мозок дитини зрозумів страшну істину: <em>ніхто не прийде на допомогу</em>. Проявляти емоції — небезпечно, розраховувати на інших — боляче. Простіше відключити потребу в прив'язаності взагалі." 
+    },
+    "art-att-t3-p2": { 
+        "ru": "<strong>В отношениях:</strong> Для избегающего типа близость равняется потере свободы и удушью. Они могут быть невероятно обаятельны на этапе знакомства, но как только отношения становятся глубокими, включаются <strong>стратегии деактивации</strong>. Они начинают искать в партнере мелкие недостатки, уходят с головой в работу или саботируют совместные планы. Фраза «Нам нужно поговорить о нас» вызывает у них физиологическую реакцию бей-или-беги.", 
+        "en": "<strong>In relationships:</strong> For an avoidant type, intimacy equals loss of freedom and suffocation. They can be incredibly charming during the dating stage, but as soon as the relationship gets deep, <strong>deactivation strategies</strong> kick in. They start looking for minor flaws in the partner, bury themselves in work, or sabotage joint plans. The phrase 'We need to talk about us' triggers a fight-or-flight physiological reaction in them.", 
+        "uk": "<strong>У стосунках:</strong> Для уникаючого типу близькість дорівнює втраті свободи і задусі. Вони можуть бути неймовірно чарівними на етапі знайомства, але щойно стосунки стають глибокими, вмикаються <strong>стратегії деактивації</strong>. Вони починають шукати в партнері дрібні недоліки, йдуть з головою в роботу або саботують спільні плани. Фраза «Нам потрібно поговорити про нас» викликає у них фізіологічну реакцію бий-або-біжи." 
+    },
+    "art-att-t3-p3": { 
+        "ru": "<strong>Их скрытая боль:</strong> Глубоко внутри они так же сильно хотят любви, как и все остальные. Но их броня настолько толстая, что они предпочитают умереть от жажды в пустыне, лишь бы не просить воды, опасаясь, что им откажут.", 
+        "en": "<strong>Their hidden pain:</strong> Deep down, they want love just as much as everyone else. But their armor is so thick that they would rather die of thirst in the desert than ask for water, fearing they will be rejected.", 
+        "uk": "<strong>Їхній прихований біль:</strong> Глибоко всередині вони так само сильно хочуть любові, як і всі інші. Але їхня броня настільки товста, що вони вважають за краще померти від спраги в пустелі, аби тільки не просити води, побоюючись, що їм відмовлять." 
+    },
+    "art-att-t4-h": { 
+        "ru": "4. Тревожно-избегающий / Дезорганизованный: Хаос во тьме", 
+        "en": "4. Fearful-Avoidant / Disorganized: Chaos in the Dark", 
+        "uk": "4. Тривожно-уникаючий / Дезорганізований: Хаос у темряві" 
+    },
+    "art-att-t4-p1": { 
+        "ru": "<strong>Как формируется:</strong> Самый сложный и травматичный стиль. Возникает у детей, которые подвергались физическому или психологическому насилию со стороны родителей. Возникает неразрешимый биологический парадокс: родитель — это единственный источник защиты, но он же — источник главной опасности. Психика ломается.", 
+        "en": "<strong>How it is formed:</strong> The most complex and traumatic style. It occurs in children who were subjected to physical or psychological abuse by their parents. An unsolvable biological paradox arises: the parent is the only source of protection, but they are also the main source of danger. The psyche breaks.", 
+        "uk": "<strong>Як формується:</strong> Найскладніший і найбільш травматичний стиль. Виникає у дітей, які піддавалися фізичному або психологічному насильству з боку батьків. Виникає нерозв'язний біологічний парадокс: батько — це єдине джерело захисту, але він же — джерело головної небезпеки. Психіка ламається." 
+    },
+    "art-att-t4-p2": { 
+        "ru": "<strong>В отношениях:</strong> Это люди, которые живут в режиме «Иди сюда — пошел вон». Они отчаянно жаждут близости (как тревожные), но до смерти боятся ее (как избегающие). Они могут обожествлять партнера сегодня и ненавидеть завтра. Их отношения — это всегда разрушительный вулкан.", 
+        "en": "<strong>In relationships:</strong> These are people who live in a 'Come here — go away' mode. They desperately crave intimacy (like anxious types), but are scared to death of it (like avoidants). They can idolize a partner today and hate them tomorrow. Their relationships are always a destructive volcano.", 
+        "uk": "<strong>У стосунках:</strong> Це люди, які живуть у режимі «Йди сюди — пішов геть». Вони відчайдушно жадають близькості (як тривожні), але до смерті бояться її (як уникаючі). Вони можуть обожнювати партнера сьогодні і ненавидіти завтра. Їхні стосунки — це завжди руйнівний вулкан." 
+    },
+
+    // Глава 4
+    "art-att-ch4-h": { 
+        "ru": "Глава 4. Смертельный танец: Почему Тревожный и Избегающий всегда находят друг друга", 
+        "en": "Chapter 4. The Deadly Dance: Why the Anxious and Avoidant always find each other", 
+        "uk": "Глава 4. Смертельний танець: Чому Тривожний і Уникаючий завжди знаходять один одного" 
+    },
+    "art-att-ch4-p1": { 
+        "ru": "Одна из главных трагедий психологии отношений заключается в том, что Надежные люди строят семьи с Надежными, а Тревожные практически никогда не влюбляются в Тревожных. <strong>Тревожный всегда, как магнитом, притягивает Избегающего.</strong>", 
+        "en": "One of the main tragedies of relationship psychology is that Secure people build families with Secure ones, and Anxious people almost never fall in love with Anxious ones. <strong>An Anxious person is always, like a magnet, drawn to an Avoidant one.</strong>", 
+        "uk": "Одна з головних трагедій психології стосунків полягає в тому, що Надійні люди будують сім'ї з Надійними, а Тривожні практично ніколи не закохуються в Тривожних. <strong>Тривожний завжди, як магнітом, притягує Уникаючого.</strong>" 
+    },
+    "art-att-ch4-p2": { 
+        "ru": "Почему так происходит? Из-за подсознательного подтверждения своих детских травм.", 
+        "en": "Why does this happen? Because of the subconscious confirmation of their childhood traumas.", 
+        "uk": "Чому так відбувається? Через підсвідоме підтвердження своїх дитячих травм." 
+    },
+    "art-att-ch4-ul-1": { 
+        "ru": "Тревожный верит: <em>«Я недостаточно хорош, чтобы меня любили просто так, любовь нужно выпрашивать»</em>. И он находит холодного Избегающего, чье поведение идеально подтверждает эту установку. Тревожный начинает свою героическую миссию по спасению и «растопке льда».", 
+        "en": "The Anxious believes: <em>'I am not good enough to be loved just like that, love must be begged for'</em>. And they find a cold Avoidant whose behavior perfectly confirms this belief. The Anxious begins their heroic mission to rescue and 'melt the ice'.", 
+        "uk": "Тривожний вірить: <em>«Я недостатньо хороший, щоб мене любили просто так, любов потрібно випрошувати»</em>. І він знаходить холодного Уникаючого, чия поведінка ідеально підтверджує цю установку. Тривожний починає свою героїчну місію з порятунку і «розпалювання льоду»." 
+    },
+    "art-att-ch4-ul-2": { 
+        "ru": "Избегающий верит: <em>«Все люди покушаются на мою свободу, они слишком требовательны»</em>. И он находит Тревожного, который липнет к нему, контролирует и скандалит, что дает Избегающему идеальное оправдание снова закрыться в своей раковине с мыслью «Я же говорил, отношения — это тюрьма».", 
+        "en": "The Avoidant believes: <em>'All people encroach on my freedom, they are too demanding'</em>. And they find an Anxious who clings to them, controls, and makes a fuss, which gives the Avoidant the perfect excuse to retreat into their shell again with the thought 'I told you so, relationships are a prison'.", 
+        "uk": "Уникаючий вірить: <em>«Всі люди роблять замах на мою свободу, вони занадто вимогливі»</em>. І він знаходить Тривожного, який липне до нього, контролює і скандалить, що дає Уникаючому ідеальне виправдання знову закритися у своїй мушлі з думкою «Я ж казав, стосунки — це в'язниця»." 
+    },
+    "art-att-ch4-p3": { 
+        "ru": "Этот цикл преследования и отстранения может длиться годами, разрушая нервную систему обоих. И разорвать его можно только одним способом — осознанностью.", 
+        "en": "This cycle of pursuit and withdrawal can last for years, destroying the nervous systems of both. And there is only one way to break it — awareness.", 
+        "uk": "Цей цикл переслідування і відсторонення може тривати роками, руйнуючи нервову систему обох. І розірвати його можна тільки одним способом — усвідомленістю." 
+    },
+
+    // Глава 5 и Практика
+    "art-att-ch5-h": { 
+        "ru": "Глава 5. Нейропластичность: Как переписать свой код (Практический гайд)", 
+        "en": "Chapter 5. Neuroplasticity: How to Rewrite Your Code (Practical Guide)", 
+        "uk": "Глава 5. Нейропластичність: Як переписати свій код (Практичний гайд)" 
+    },
+    "art-att-ch5-p1": { 
+        "ru": "Хорошая новость от нейробиологов: ваш стиль привязанности не высечен в камне. Благодаря нейропластичности мозга, вы можете сформировать <strong>Приобретенный надежный тип (Earned Secure Attachment)</strong>. Это тяжелая работа, но она того стоит. Вот как запустить этот процесс:", 
+        "en": "Good news from neurobiologists: your attachment style is not set in stone. Thanks to brain neuroplasticity, you can form an <strong>Earned Secure Attachment</strong> type. It's hard work, but it's worth it. Here's how to start this process:", 
+        "uk": "Хороша новина від нейробіологів: ваш стиль прив'язаності не висічений у камені. Завдяки нейропластичності мозку, ви можете сформувати <strong>Набутий надійний тип (Earned Secure Attachment)</strong>. Це важка робота, але вона того варта. Ось як запустити цей процес:" 
+    },
+    "art-att-prac-1-h": { 
+        "ru": "Шаг 1: Инвентаризация прошлых ран", 
+        "en": "Step 1: Inventory of Past Wounds", 
+        "uk": "Крок 1: Інвентаризація минулих ран" 
+    },
+    "art-att-prac-1-p": { 
+        "ru": "Вы не сможете изменить паттерн, пока не увидите его в лицо. Возьмите лист бумаги и выпишите всех своих бывших партнеров. Найдите закономерности. Какие общие черты у них были? В какой именно момент вы чувствовали максимальную тревогу или, наоборот, желание сбежать? Признайте свой тип без чувства вины: вы не выбирали эту стратегию в детстве, она спасла вам жизнь. Но сейчас она вас убивает.", 
+        "en": "You cannot change a pattern until you look it in the face. Take a piece of paper and write down all your past partners. Look for patterns. What traits did they have in common? At what exact moment did you feel maximum anxiety or, conversely, the desire to run away? Acknowledge your type without guilt: you didn't choose this strategy in childhood, it saved your life. But now it's killing you.", 
+        "uk": "Ви не зможете змінити патерн, поки не побачите його в обличчя. Візьміть аркуш паперу і випишіть усіх своїх колишніх партнерів. Знайдіть закономірності. Які спільні риси в них були? В який саме момент ви відчували максимальну тривогу або, навпаки, бажання втекти? Визнайте свій тип без почуття провини: ви не обирали цю стратегію в дитинстві, вона врятувала вам життя. Але зараз вона вас вбиває." 
+    },
+    "art-att-prac-2-h": { 
+        "ru": "Шаг 2: Правило паузы (Сброс кортизола)", 
+        "en": "Step 2: The Pause Rule (Cortisol Reset)", 
+        "uk": "Крок 2: Правило паузи (Скидання кортизолу)" 
+    },
+    "art-att-prac-2-p": { 
+        "ru": "Для <strong>Тревожных</strong>: когда партнер не отвечает, ваша симпатическая нервная система бьет тревогу. Вам хочется написать 10 сообщений или устроить скандал. Ваша задача — создать паузу между импульсом и действием. Положите телефон. Дышите квадратом (4 секунды вдох, 4 задержка, 4 выдох, 4 задержка). Скажите себе: <em>«Моя тревога сейчас — это память из прошлого, а не реальная угроза в настоящем»</em>.", 
+        "en": "For the <strong>Anxious</strong>: when your partner doesn't reply, your sympathetic nervous system sounds the alarm. You want to send 10 messages or make a scene. Your task is to create a pause between impulse and action. Put the phone down. Box breathe (4 seconds inhale, 4 hold, 4 exhale, 4 hold). Tell yourself: <em>'My anxiety right now is a memory from the past, not a real threat in the present'</em>.", 
+        "uk": "Для <strong>Тривожних</strong>: коли партнер не відповідає, ваша симпатична нервова система б'є на сполох. Вам хочеться написати 10 повідомлень або влаштувати скандал. Ваше завдання — створити паузу між імпульсом і дією. Покладіть телефон. Дихайте квадратом (4 секунди вдих, 4 затримка, 4 видих, 4 затримка). Скажіть собі: <em>«Моя тривога зараз — це пам'ять з минулого, а не реальна загроза в сьогоденні»</em>." 
+    },
+    "art-att-prac-2-p2": { 
+        "ru": "Для <strong>Избегающих</strong>: когда вам кажется, что партнер вас «душит», и вам хочется резко исчезнуть в туман, не убегайте молча. Навык надежного типа — коммуницировать свои границы. Скажите: <em>«Я сейчас чувствую себя перегруженным. Мне нужно побыть одному два часа, чтобы прийти в себя. Я вернусь, и мы все обсудим»</em>.", 
+        "en": "For the <strong>Avoidant</strong>: when it seems to you that your partner is 'suffocating' you, and you want to suddenly disappear into the fog, don't run away silently. The skill of a secure type is to communicate their boundaries. Say: <em>'I feel overwhelmed right now. I need to be alone for two hours to recover. I will be back, and we will discuss everything'</em>.", 
+        "uk": "Для <strong>Уникаючих</strong>: коли вам здається, що партнер вас «душить», і вам хочеться різко зникнути в туман, не тікайте мовчки. Навичка надійного типу — комунікувати свої кордони. Скажіть: <em>«Я зараз відчуваю себе перевантаженим. Мені потрібно побути одному дві години, щоб прийти до тями. Я повернуся, і ми все обговоримо»</em>." 
+    },
+    "art-att-prac-3-h": { 
+        "ru": "Шаг 3: Выбор «скучных» партнеров", 
+        "en": "Step 3: Choosing 'Boring' Partners", 
+        "uk": "Крок 3: Вибір «нудних» партнерів" 
+    },
+    "art-att-prac-3-p": { 
+        "ru": "Если вы привыкли к травматичным отношениям, здоровый, Надежный партнер сначала покажется вам пресным. В отношениях с ним не будет адреналиновых взрывов, ночных истерик и сладких примирений. Ваша задача — осознанно переучить свой мозг. Дайте шанс человеку, который последователен, держит слово и не играет в игры. Со временем ваш мозг поймет, что покой — это не скука, покой — это дом.", 
+        "en": "If you are used to traumatic relationships, a healthy, Secure partner will at first seem bland to you. In a relationship with them, there will be no adrenaline explosions, night hysterics, and sweet reconciliations. Your task is to consciously retrain your brain. Give a chance to a person who is consistent, keeps their word, and does not play games. Over time, your brain will understand that peace is not boredom, peace is home.", 
+        "uk": "Якщо ви звикли до травматичних стосунків, здоровий, Надійний партнер спочатку здасться вам прісним. У стосунках з ним не буде адреналінових вибухів, нічних істерик і солодких примирень. Ваше завдання — усвідомлено перевчити свій мозок. Дайте шанс людині, яка послідовна, тримає слово і не грає в ігри. Згодом ваш мозок зрозуміє, що спокій — це не нудьга, спокій — це дім." 
+    },
+    "art-att-ai-box": { 
+        "ru": "❤️ <strong>Хотите узнать свой язык отношений и скрытые триггеры?</strong> Пройдите AI-анализ <a href='../index.html' style='color: #ff4b4b; text-decoration: underline; font-weight: bold;'>Relationship Language & Boundaries</a> на нашей платформе, чтобы получить глубокий персональный профиль вашей привязанности.", 
+        "en": "❤️ <strong>Want to know your relationship language and hidden triggers?</strong> Take the <a href='../index.html' style='color: #ff4b4b; text-decoration: underline; font-weight: bold;'>Relationship Language & Boundaries</a> AI analysis on our platform to get a deep personal profile of your attachment.", 
+        "uk": "❤️ <strong>Хочете дізнатися свою мову стосунків і приховані тригери?</strong> Пройдіть AI-аналіз <a href='../index.html' style='color: #ff4b4b; text-decoration: underline; font-weight: bold;'>Relationship Language & Boundaries</a> на нашій платформі, щоб отримати глибокий персональний профіль вашої прив'язаності." 
+    },
+    "art-att-concl-h": { 
+        "ru": "Вывод: Ваш сценарий — не приговор", 
+        "en": "Conclusion: Your script is not a life sentence", 
+        "uk": "Висновок: Ваш сценарій — не вирок" 
+    },
+    "art-att-concl-p": { 
+        "ru": "Вы не можете вернуться в прошлое и изменить то, как ваши родители реагировали на ваши детские страхи. Но будучи взрослым, вы можете стать тем самым надежным, любящим взрослым для самого себя. Архитектуру привязанности можно перестроить. И начинается эта стройка в тот момент, когда вы впервые говорите себе: <em>«Я выбираю безопасность вместо драмы»</em>.", 
+        "en": "You cannot go back in time and change how your parents reacted to your childhood fears. But as an adult, you can become that very reliable, loving adult for yourself. The architecture of attachment can be rebuilt. And this construction begins the moment you first say to yourself: <em>'I choose safety over drama'</em>.", 
+        "uk": "Ви не можете повернутися в минуле і змінити те, як ваші батьки реагували на ваші дитячі страхи. Але будучи дорослим, ви можете стати тим самим надійним, люблячим дорослим для самого себе. Архітектуру прив'язаності можна перебудувати. І починається це будівництво в той момент, коли ви вперше говорите собі: <em>«Я обираю безпеку замість драми»</em>." 
     }
 };
 
