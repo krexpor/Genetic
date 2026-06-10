@@ -881,7 +881,7 @@ const langArr = {
         "en": "Chapter 2. How your Shadow is formed: Childhood trauma and social hypnosis", 
         "uk": "Глава 2. Як формується ваша Тінь: Травми дитинства і соціальний гіпноз" 
     },
-    "art-剥-ch2-p1": { 
+    "art-shad-ch2-p1": { 
         "ru": "Никто не рождается с Тенью. Младенец целостен. Он кричит, когда злится, смеется, когда рад, и абсолютно эгоистично требует удовлетворения своих потребностей. Расщепление личности начинается в процессе воспитания.", 
         "en": "No one is born with a Shadow. An infant is whole. They cry when they are angry, laugh when they are happy, and absolutely selfishly demand the satisfaction of their needs. The splitting of the personality begins during upbringing.", 
         "uk": "Ніхто не народжується з Тінню. Немовля цілісне. Воно кричить, коли злиться, сміється, коли раде, і абсолютно егоїстично вимагає задоволення своїх потреб. Розщеплення особистості починається в процесі виховання." 
