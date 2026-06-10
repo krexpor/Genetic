@@ -694,7 +694,6 @@ const langArr = {
     "art-gen-concl-p1": { "ru": "Генетика формирует наш биологический фундамент. Она сдает нам стартовые карты в игре под названием «жизнь». Однако мы больше не считаем ДНК жестким фатумом.", "en": "Genetics forms our biological foundation. It deals us the starting cards in the game called 'life'. However, we no longer consider DNA a rigid fate.", "uk": "Генетика формує наш біологічний фундамент. Вона здає нам стартові карти в грі під назвою «життя». Однак ми більше не вважаємо ДНК жорстким фатумом." },
     "art-gen-concl-p2": { "ru": "Благодаря науке эпигенетике мы знаем, что наш образ жизни, уровень стресса и даже питание могут буквально «включать» или «выключать» определенные гены. ДНК пишет черновик вашего сценария, но финальная версия всегда остается в ваших руках.", "en": "Thanks to the science of epigenetics, we know that our lifestyle, stress levels, and even diet can literally 'turn on' or 'turn off' certain genes. DNA writes the draft of your script, but the final version always remains in your hands.", "uk": "Завдяки науці епігенетиці ми знаємо, що наш спосіб життя, рівень стресу і навіть харчування можуть буквально «вмикати» або «вимикати» певні гени. ДНК пише чернетку вашого сценарію, але фінальна версія завжди залишається у ваших руках." },
 
-    ,
     // --- ВЕЛИКАЯ СТАТЬЯ 2: AI & ПСИХОЛОГИЯ ---
     "art-ai-meta": { 
         "ru": "Нейросети вместо Фрейда | Krexpor", 
