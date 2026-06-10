@@ -12,80 +12,69 @@ const langArr = {
     "cookie-btn-accept": { "ru": "Ок, понятно", "en": "Got it", "uk": "Ок, зрозуміло" },
     "cookie-link": { "ru": "Подробнее", "en": "Learn more", "uk": "Детальніше" },
 
-    // --- ПЕРЕВОДЫ ДЛЯ ОБНОВЛЕННОГО ABOUT.HTML ---
+// --- ПРО ПРОЄКТ (ABOUT) ---
+    "footer-about": { "ru": "Обо мне", "en": "About Me", "uk": "Про мене" },
+    "about-title": { "ru": "Обо мне | Krexpor", "en": "About Me | Krexpor", "uk": "Про мене | Krexpor" },
+    "about-h2": { "ru": "Обо мне", "en": "About Me", "uk": "Про мене" },
+    "about-h3-1": { "ru": "Что такое Krexpor?", "en": "What is Krexpor?", "uk": "Що таке Krexpor?" },
     "about-p-1": { 
-        "ru": "Krexpor — это моя личная цифровая площадка. Сейчас здесь собраны интерактивные генетические калькуляторы, психологические AI-тесты и масштабные исследовательские статьи на стыке биологии, нейробиологии и психологии. Проект не стоит на месте — в будущем здесь будут появляться новые инструменты и форматы.", 
-        "en": "Krexpor is my personal digital playground. Right now, it features interactive genetic calculators, psychological AI tests, and extensive research articles at the intersection of biology, neurobiology, and psychology. The project isn't standing still — new tools and formats will appear here in the future.", 
-        "uk": "Krexpor — це мій особистий цифровий майданчик. Зараз тут зібрані інтерактивні генетичні калькулятори, психологічні AI-тести та масштабні дослідницькі статті на стику біології, нейробиології та психології. Проєкт не стоїть на місці — в майбутньому тут з'являтимуться нові інструменти та формати." 
+        "ru": "Krexpor — это моя личная цифровая площадка. Сейчас здесь собраны интерактивные генетические калькуляторы, психологические AI-тесты и масштабные исследовательские статьи на стыке биологии, нейробиологии и психологии. Проект не стоит на месте — в будущем здесь будут появляться новые инструменты.", 
+        "en": "Krexpor is my personal digital playground. Right now, it features interactive genetic calculators, psychological AI tests, and extensive research articles at the intersection of biology, neurobiology, and psychology. The project isn't standing still — new tools will appear here in the future.", 
+        "uk": "Krexpor — це мій особистий цифровий майданчик. Зараз тут зібрані інтерактивні генетичні калькулятори, психологічні AI-тести та масштабні дослідницькі статті на стику біології, нейробіології та психології. Проєкт не стоїть на місці — в майбутньому тут з'являтимуться нові інструменти." 
     },
-    "about-h3-mission": { 
-        "ru": "Миссия проекта", 
-        "en": "Project Mission", 
-        "uk": "Місія проєкту" 
-    },
+    "about-h3-mission": { "ru": "Миссия проекта", "en": "Project Mission", "uk": "Місія проєкту" },
     "about-p-mission": { 
         "ru": "Моя главная цель — сделать сложную науку доступной, понятной и интерактивной для каждого. Я верю, что глубокое самопознание с помощью современных алгоритмов должно быть прозрачным процессом, лишенным скучных академических рамок.", 
         "en": "My main goal is to make complex science accessible, understandable, and interactive for everyone. I believe that deep self-discovery using modern algorithms should be a transparent process, devoid of boring academic frameworks.", 
         "uk": "Моя головна мета — зробити складну науку доступною, зрозумілою та інтерактивною для кожного. Я вірю, що глибоке самопізнання за допомогою сучасних алгоритмів має бути прозорим процесом, позбавленим нудних академічних рамок." 
     },
-    "about-p-2": { 
-        "ru": "Обратите внимание: все инструменты и статьи на сайте предоставляются исключительно в образовательных и развлекательных целях.", 
-        "en": "Please note: all tools and articles on the site are provided strictly for educational and entertainment purposes.", 
-        "uk": "Зверніть увагу: всі інструменти та статті на сайті надаються виключно в освітніх та розважальних цілях." 
-    },
+    "about-h3-2": { "ru": "Отказ от ответственности", "en": "Medical Disclaimer", "uk": "Відмова від відповідальності" },
+    "about-p-2": { "ru": "Обратите внимание: все инструменты и статьи на сайте предоставляются исключительно в образовательных и развлекательных целях.", "en": "Please note: all tools and articles on the site are provided strictly for educational and entertainment purposes.", "uk": "Зверніть увагу: всі інструменти та статті на сайті надаються виключно в освітніх та розважальних цілях." },
+    "about-p-3": { "ru": "Они <strong>не являются заменой профессиональной медицинской диагностики, терапии или ДНК-теста</strong>. Природа и психика сложны, и всегда существуют индивидуальные исключения.", "en": "They <strong>are not a substitute for professional medical diagnosis, therapy, or DNA testing</strong>. Nature and the psyche are complex, and individual exceptions always exist.", "uk": "Вони <strong>не є заміною професійної медичної діагностики, терапії або ДНК-тесту</strong>. Природа і психіка складні, і завжди існують індивідуальні винятки." },
+    "about-h3-3": { "ru": "Связь", "en": "Contact", "uk": "Зв'язок" },
     "about-p-4": { 
-        "ru": "Открыт к предложениям, идеям и обратной связи. Вы можете найти мои актуальные контакты на странице <a href='contact.html' style='color: var(--accent); text-decoration: underline;'>Контакты</a>.", 
+        "ru": "Открыт к предложениям, идеям и обратной связи. Вы можете найти мои актуальные контакты на странице <a href='contact.html' style='color: var(--accent); text-decoration: underline;'>Контактов</a>.", 
         "en": "Open to suggestions, ideas, and feedback. You can find my current contact details on the <a href='contact.html' style='color: var(--accent); text-decoration: underline;'>Contacts</a> page.", 
-        "uk": "Відкритий до пропозицій, ідей та зворотного зв'язку. Ви можете знайти мої актуальні контакти на сторінці <a href='contact.html' style='color: var(--accent); text-decoration: underline;'>Контакти</a>." 
+        "uk": "Відкритий до пропозицій, ідей та зворотного зв'язку. Ви можете знайти мої актуальні контакти на сторінці <a href='contact.html' style='color: var(--accent); text-decoration: underline;'>Контактів</a>." 
     },
 
-    // --- ПЕРЕВОДЫ ДЛЯ ОБНОВЛЕННОГО PRIVACY.HTML ---
+    // --- ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ (PRIVACY) ---
+    "privacy": { "ru": "Политика конфиденциальности", "en": "Privacy Policy", "uk": "Політика конфіденційності" },
+    "privacy-title": { "ru": "Политика конфиденциальности | Krexpor", "en": "Privacy Policy | Krexpor", "uk": "Політика конфіденційності | Krexpor" },
+    "privacy-h1": { "ru": "Политика конфиденциальности", "en": "Privacy Policy", "uk": "Політика конфіденційності" },
+    "privacy-date": { "ru": "Последнее обновление: Июль 2026 г.", "en": "Last updated: July 2026", "uk": "Останнє оновлення: Липень 2026 р." },
+    "privacy-h2-1": { "ru": "1. Сбор и обработка информации", "en": "1. Information Collection and Processing", "uk": "1. Збір та обробка інформації" },
     "privacy-p-1": { 
         "ru": "Мы с уважением относимся к вашей конфиденциальности. Все данные, которые вы вводите в генетические калькуляторы, психологические AI-тесты, а также информация, которую вы изучаете в статьях на сайте <strong>krexpor.com</strong>, обрабатываются локально или через защищенные транзитные шлюзы. Мы не собираем и не храним ваши личные профили на наших серверах.", 
         "en": "We respect your privacy. All data you enter into the genetic calculators, psychological AI tests, as well as the information you explore in articles on the <strong>krexpor.com</strong> website, is processed locally or through secure transit gateways. We do not collect or store your personal profiles on our servers.", 
-        "uk": "Ми з повагою ставимося до вашої конфиденційності. Всі дані, які ви вводите в генетичні калькулятори, психологічні AI-тести, а також інформація, яку ви вивчаєте у статтях на сайті <strong>krexpor.com</strong>, обробляються локально або через захищені транзитні шлюзи. Ми не збираємо і не зберігаємо ваші особисті профілі на наших серверах." 
+        "uk": "Ми з повагою ставимося до вашої конфіденційності. Всі дані, які ви вводите в генетичні калькулятори, психологічні AI-тести, а також інформація, яку ви вивчаєте у статтях на сайті <strong>krexpor.com</strong>, обробляються локально або через захищені транзитні шлюзи. Ми не збираємо і не зберігаємо ваші особисті профілі на наших серверах." 
     },
-    "privacy-h2-local": { 
-        "ru": "4. Использование локального хранилища", 
-        "en": "4. Use of Local Storage", 
-        "uk": "4. Використання локального сховища" 
-    },
+    "privacy-h2-2": { "ru": "2. Использование аналитики", "en": "2. Use of Analytics", "uk": "2. Використання аналітики" },
+    "privacy-p-2": { "ru": "Для улучшения качества проекта мы используем сервис веб-аналитики Google Analytics. Этот сервис может собирать анонимные данные о вашем взаимодействии с сайтом (просмотренные страницы, время пребывания на сайте, тип устройства). Эти данные собираются с помощью файлов cookie.", "en": "To improve the quality of the project, we use the Google Analytics web analytics service. This service may collect anonymous data about your interaction with the site (pages viewed, time spent on the site, device type). This data is collected using cookies.", "uk": "Для покращення якості проєкту ми використовуємо сервіс веб-аналітики Google Analytics. Цей сервіс може збирати анонімні дані про вашу взаємодію з сайтом (переглянуті сторінки, час перебування на сайті, тип пристрою). Ці дані збираються за допомогою файлів cookie." },
+    "privacy-h2-3": { "ru": "3. Реклама и файлы Cookie от Google", "en": "3. Advertising and Google Cookies", "uk": "3. Реклама та файли Cookie від Google" },
+    "privacy-p-3-1": { "ru": "Мы используем сторонние рекламные компании, включая Google, для показа объявлений во время вашего посещения нашего веб-сайта. Эти компании могут использовать информацию (за исключением вашего имени, адреса, электронной почты или номера телефона) о ваших посещениях этого и других веб-сайтов.", "en": "We use third-party advertising companies, including Google, to serve ads when you visit our website. These companies may use information (not including your name, address, email address, or telephone number) about your visits to this and other websites.", "uk": "Ми використовуємо сторонні рекламні компанії, включаючи Google, для показу оголошень під час вашого відвідування нашого веб-сайту. Ці компанії можуть використовувати інформацію (за винятком вашого імені, адреси, електронної пошти або номера телефону) про ваші відвідування цього та інших веб-сайтів." },
+    "privacy-p-3-2": { "ru": "Вы можете отказаться от использования файлов cookie DART, посетив страницу <a href='https://policies.google.com/technologies/ads' target='_blank'>политики конфиденциальности рекламной сети Google</a>.", "en": "You may opt out of the use of the DART cookie by visiting the <a href='https://policies.google.com/technologies/ads' target='_blank'>Google ad and content network privacy policy</a>.", "uk": "Ви можете відмовитися від використання файлів cookie DART, відвідавши сторінку <a href='https://policies.google.com/technologies/ads' target='_blank'>політики конфіденційності рекламної мережі Google</a>." },
+    "privacy-h2-local": { "ru": "4. Использование локального хранилища", "en": "4. Use of Local Storage", "uk": "4. Використання локального сховища" },
     "privacy-p-local": { 
         "ru": "Для вашего удобства мы используем технологию LocalStorage в вашем браузере. Это необходимо исключительно для сохранения ваших пользовательских настроек: выбранного языка интерфейса и цветовой темы (светлая/темная). Эти данные не отслеживают вашу активность и не передаются третьим лицам.", 
         "en": "For your convenience, we use LocalStorage technology in your browser. This is solely necessary to save your user preferences: selected interface language and color theme (light/dark). This data does not track your activity and is not shared with third parties.", 
         "uk": "Для вашої зручності ми використовуємо технологію LocalStorage у вашому браузері. Це необхідно виключно для збереження ваших налаштувань: обраної мови інтерфейсу та колірної теми (світла/темна). Ці дані не відстежують вашу активність і не передаються третім особам." 
     },
-    "privacy-h2-kids": { 
-        "ru": "5. Конфиденциальность детей", 
-        "en": "5. Children's Privacy", 
-        "uk": "5. Конфіденційність дітей" 
-    },
+    "privacy-h2-kids": { "ru": "5. Конфиденциальность детей", "en": "5. Children's Privacy", "uk": "5. Конфіденційність дітей" },
     "privacy-p-kids": { 
         "ru": "Наш веб-сайт и предоставляемые на нем материалы предназначены для лиц старше 13 лет. Мы намеренно не собираем личную информацию о детях. Если вы являетесь родителем или опекуном и считаете, что мы могли неумышленно собрать такие данные, свяжитесь с нами.", 
-        "en": "Our website and the tools provided on it are intended for individuals over 13 years of age. We do not knowingly collect personal information from children. If you are a parent or guardian and believe we may have inadvertently collected such data, please contact us.", 
-        "uk": "Наш веб-сайт та інструменти, що на ньому надаються, призначені для осіб старше 13 років. Ми навмисно не збираємо особисту інформацію про дітей. Якщо ви є батьком або опікуном і вважаєте, що ми могли ненавмисно зібрати такі дані, зв'яжіться з нами." 
+        "en": "Our website and the materials provided on it are intended for individuals over 13 years of age. We do not knowingly collect personal information from children. If you are a parent or guardian and believe we may have inadvertently collected such data, please contact us.", 
+        "uk": "Наш веб-сайт та матеріали, що на ньому надаються, призначені для осіб старше 13 років. Ми навмисно не збираємо особисту інформацію про дітей. Якщо ви є батьком або опікуном і вважаєте, що ми могли ненавмисно зібрати такі дані, зв'яжіться з нами." 
     },
-    "privacy-h2-consent": { 
-        "ru": "6. Согласие", 
-        "en": "6. Consent", 
-        "uk": "6. Згода" 
-    },
-    "privacy-p-consent": { 
-        "ru": "Используя наш сайт, вы автоматически соглашаетесь с нашей Политикой конфиденциальности и условиями обработки анонимных данных.", 
-        "en": "By using our site, you automatically consent to our Privacy Policy and the terms of processing anonymous data.", 
-        "uk": "Використовуючи наш сайт, ви автоматично погоджуєтеся з нашою Политикою конфіденційності та умовами обробки анонімних даних." 
-    },
-    "privacy-h2-contact": { 
-        "ru": "7. Контакты", 
-        "en": "7. Contacts", 
-        "uk": "7. Контакти" 
-    },
+    "privacy-h2-consent": { "ru": "6. Согласие", "en": "6. Consent", "uk": "6. Згода" },
+    "privacy-p-consent": { "ru": "Используя наш сайт, вы автоматически соглашаетесь с нашей Политикой конфиденциальности и условиями обработки анонимных данных.", "en": "By using our site, you automatically consent to our Privacy Policy and the terms of processing anonymous data.", "uk": "Використовуючи наш сайт, ви автоматично погоджуєтеся з нашою Політикою конфіденційності та умовами обробки анонімних даних." },
+    "privacy-h2-contact": { "ru": "7. Контакты", "en": "7. Contacts", "uk": "7. Контакти" },
     "privacy-p-contact": { 
-        "ru": "По вопросам конфиденциальности или другим темам вы можете связаться со мной через страницу <a href='contact.html' style='color: var(--accent);'>Контакты</a>.", 
+        "ru": "По вопросам конфиденциальности или другим темам вы можете связаться со мной через страницу <a href='contact.html' style='color: var(--accent);'>Контактов</a>.", 
         "en": "For privacy concerns or other topics, you can contact me via the <a href='contact.html' style='color: var(--accent);'>Contacts</a> page.", 
-        "uk": "З питань конфіденційності або інших тем ви можете зв'язатися зі мною через сторінку <a href='contact.html' style='color: var(--accent);'>Контакти</a>." 
+        "uk": "З питань конфіденційності або інших тем ви можете зв'язатися зі мною через сторінку <a href='contact.html' style='color: var(--accent);'>Контактів</a>." 
     },
-
+    
     // --- ПОМИЛКА 404 ---
     "404-title": { "ru": "Страница не найдена | Krexpor", "en": "Page not found | Krexpor", "uk": "Сторінка не знайдена | Krexpor" },
     "404-h1": { "ru": "Тупик", "en": "Dead End", "uk": "Глухий кут" },
