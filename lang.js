@@ -1342,6 +1342,222 @@ const langArr = {
         "ru": "Нейробиология любви, гормональные качели и глубокий разбор того, как сломать травматичный сценарий.", 
         "en": "The neurobiology of love, hormonal swings, and a deep breakdown of how to break a traumatic script.", 
         "uk": "Нейробіологія кохання, гормональні гойдалки та глибокий розбір того, як зламати травматичний сценарій." 
+    },
+    // --- СТАТТЯ: АНАТОМІЯ МЕЖІ (ГЕНЕТИКА ТІЛА) ---
+    "art-body-meta": { 
+        "ru": "Генетика тела: Пределы роста и биохакинг | Krexpor", 
+        "en": "Body Genetics: Limits of Growth and Biohacking | Krexpor", 
+        "uk": "Генетика тіла: Межі росту та біохакінг | Krexpor" 
+    },
+    "art-body-h1": { 
+        "ru": "Анатомия предела: Как генетика, ЦНС и гормоны диктуют правила вашему телу", 
+        "en": "The Anatomy of the Limit: How genetics, CNS, and hormones dictate the rules to your body", 
+        "uk": "Анатомія межі: Як генетика, ЦНС і гормони диктують правила вашому тілу" 
+    },
+    "art-body-time": { 
+        "ru": "Время чтения: 25 минут | Категория: Физиология, Генетика, Биохакинг", 
+        "en": "Reading time: 25 minutes | Category: Physiology, Genetics, Biohacking", 
+        "uk": "Час читання: 25 хвилин | Категорія: Фізіологія, Генетика, Біохакінг" 
+    },
+    "art-body-intro1": { 
+        "ru": "Зал полон фундаментальной, биологической несправедливости. Вы наверняка видели это: один парень наращивает мышечную массу, просто изредка заглядывая на тренировки и питаясь фастфудом, в то время как другой методично взвешивает каждый грамм риса, ведет дневник тренировок, ложится спать ровно в 22:00, но месяцами не видит изменений в зеркале.", 
+        "en": "The gym is full of fundamental, biological injustice. You have probably seen it: one guy builds muscle mass just by occasionally dropping in for workouts and eating fast food, while another methodically weighs every gram of rice, keeps a training diary, goes to bed exactly at 10:00 PM, but doesn't see changes in the mirror for months.", 
+        "uk": "Зал сповнений фундаментальної, біологічної несправедливості. Ви напевно бачили це: один хлопець нарощує м'язову масу, просто зрідка заглядаючи на тренування і харчуючись фастфудом, у той час як інший методично зважує кожен грам рису, веде щоденник тренувань, лягає спати рівно о 22:00, але місяцями не бачить змін у дзеркалі." 
+    },
+    "art-body-intro2": { 
+        "ru": "Фитнес-индустрия десятилетиями продавала нам красивую, но насквозь лживую идею: <em>«Просто работай усерднее, пей наш протеин, и ты достигнешь любых результатов»</em>. Глянцевые журналы и фитнес-блогеры убеждают нас, что единственное препятствие на пути к телу греческого бога — это ваша лень.", 
+        "en": "The fitness industry has for decades sold us a beautiful but thoroughly false idea: <em>'Just work harder, drink our protein, and you will achieve any results'</em>. Glossy magazines and fitness bloggers convince us that the only obstacle on the way to the body of a Greek god is your laziness.", 
+        "uk": "Фітнес-індустрія десятиліттями продавала нам красиву, але наскрізь брехливу ідею: <em>«Просто працюй старанніше, пий наш протеїн, і ти досягнеш будь-яких результатів»</em>. Глянцеві журнали і фітнес-блогери переконують нас, що єдина перешкода на шляху до тіла грецького бога — це ваша лінь." 
+    },
+    "art-body-intro3": { 
+        "ru": "Но наука неумолима. Ваша ДНК — это жесткий архитектурный чертеж. Она определяет количество мышечных волокон, которое закладывается еще в утробе матери, то, как ваш организм распределяет жир, и где находится ваш непреодолимый биологический потолок. Чтобы перестать воевать со своим телом и начать с ним сотрудничать, нам придется спуститься на клеточный уровень и разобрать суровую биохимию.", 
+        "en": "But science is inexorable. Your DNA is a rigid architectural blueprint. It determines the number of muscle fibers laid down in the womb, how your body distributes fat, and where your insurmountable biological ceiling is located. To stop fighting your body and start cooperating with it, we will have to descend to the cellular level and analyze the harsh biochemistry.", 
+        "uk": "Але наука невблаганна. Ваша ДНК — це жорстке архітектурне креслення. Вона визначає кількість м'язових волокон, яка закладається ще в утробі матері, те, як ваш організм розподіляє жир, і де знаходиться ваша непереборна біологічна стеля. Щоб перестати воювати зі своїм тілом і почати з ним співпрацювати, нам доведеться спуститися на клітинний рівень і розібрати сувору біохімію." 
+    },
+    "art-body-ch1-h": { 
+        "ru": "Глава 1. Иллюзия соматотипов: Почему вы не «эктоморф»", 
+        "en": "Chapter 1. The Illusion of Somatotypes: Why you are not an 'ectomorph'", 
+        "uk": "Глава 1. Ілюзія соматотипів: Чому ви не «ектоморф»" 
+    },
+    "art-body-ch1-p1": { 
+        "ru": "Почти каждый, кто когда-либо искал программу тренировок в интернете, сталкивался с теорией Уильяма Шелдона. Она делит людей на три категории: эктоморфы (вечно худые, с трудом набирающие вес), мезоморфы (атлеты от природы) и эндоморфы (люди, склонные к полноте). Люди до сих пор гуглят «лучшие диеты для эндоморфов» и строят на этом свой режим.", 
+        "en": "Almost everyone who has ever searched for a workout program online has encountered William Sheldon's theory. It divides people into three categories: ectomorphs (eternally thin, struggling to gain weight), mesomorphs (natural athletes), and endomorphs (people prone to obesity). People still google 'best diets for endomorphs' and build their regimen on this.", 
+        "uk": "Майже кожен, хто коли-небудь шукав програму тренувань в інтернеті, стикався з теорією Вільяма Шелдона. Вона ділить людей на три категорії: ектоморфи (вічно худі, які насилу набирають вагу), мезоморфи (атлети від природи) і ендоморфи (люди, схильні до повноти). Люди досі гуглять «найкращі дієти для ендоморфів» і будують на цьому свій режим." 
+    },
+    "art-body-ch1-p2": { 
+        "ru": "<strong>Что не так с этой теорией? Всё.</strong> Уильям Шелдон был психологом, а не физиологом. В 1940-х годах он пытался найти связь между формой тела человека, его темпераментом и склонностью к совершению преступлений. Его теория давно признана антинаучной. Ваше телосложение — это не застывший «тип», а динамический результат взаимодействия трех реальных генетических переменных:", 
+        "en": "<strong>What is wrong with this theory? Everything.</strong> William Sheldon was a psychologist, not a physiologist. In the 1940s, he tried to find a connection between a person's body shape, temperament, and propensity to commit crimes. His theory has long been recognized as pseudoscientific. Your physique is not a frozen 'type', but a dynamic result of the interaction of three real genetic variables:", 
+        "uk": "<strong>Що не так із цією теорією? Все.</strong> Вільям Шелдон був психологом, а не фізіологом. У 1940-х роках він намагався знайти зв'язок між формою тіла людини, її темпераментом і схильністю до скоєння злочинів. Його теорія давно визнана антинауковою. Ваша статура — це не застиглий «тип», а динамічний результат взаємодії трьох реальних генетичних змінних:" 
+    },
+    "art-body-ch1-ul-1": { 
+        "ru": "<strong>Толщина костей и ширина ключиц:</strong> Это ваш каркас. Если у вас генетически узкие ключицы, тонкие запястья и лодыжки, вы визуально всегда будете казаться меньше, даже набрав 10 кг чистой мышечной массы. Костную структуру изменить невозможно никакими тренировками.", 
+        "en": "<strong>Bone thickness and clavicle width:</strong> This is your framework. If you have genetically narrow collarbones, thin wrists, and ankles, you will visually always appear smaller, even after gaining 10 kg of lean muscle mass. Bone structure cannot be changed by any training.", 
+        "uk": "<strong>Товщина кісток і ширина ключиць:</strong> Це ваш каркас. Якщо у вас генетично вузькі ключиці, тонкі зап'ястя і щиколотки, ви візуально завжди будете здаватися меншими, навіть набравши 10 кг чистої м'язової маси. Кісткову структуру змінити неможливо жодними тренуваннями." 
+    },
+    "art-body-ch1-ul-2": { 
+        "ru": "<strong>Длина мышечных брюшек:</strong> Критически важный фактор эстетики. Мышца крепится к кости с помощью сухожилий. У некоторых людей сухожилия длинные, а сами мышечные волокна — короткие (яркий пример — «высокие» икроножные мышцы или короткий бицепс с большим зазором у локтя). Такую мышцу физически невозможно накачать до пиковых, шарообразных объемов, так как потенциал для роста (гипертрофии) ограничен длиной самого волокна.", 
+        "en": "<strong>Muscle belly length:</strong> A critical aesthetic factor. The muscle attaches to the bone via tendons. Some people have long tendons and short muscle fibers (a prime example is 'high' calves or a short bicep with a large gap at the elbow). It is physically impossible to pump such a muscle to peak, spherical volumes, since the potential for growth (hypertrophy) is limited by the length of the fiber itself.", 
+        "uk": "<strong>Довжина м'язових черевець:</strong> Критично важливий фактор естетики. М'яз кріпиться до кістки за допомогою сухожиль. У деяких людей сухожилля довгі, а самі м'язові волокна — короткі (яскравий приклад — «високі» литкові м'язи або короткий біцепс з великим зазором біля ліктя). Такий м'яз фізично неможливо накачати до пікових, кулястих обсягів, оскільки потенціал для росту (гіпертрофії) обмежений довжиною самого волокна." 
+    },
+    "art-body-ch1-ul-3": { 
+        "ru": "<strong>Мутации гена миостатина:</strong> Миостатин — это белок-ингибитор. Он циркулирует в вашей крови и буквально говорит рецепторам: <em>«Остановите рост мышц, они потребляют слишком много драгоценной энергии!»</em>. У генетических уникумов, легко набирающих массу, от природы снижена выработка миостатина. Их мышцы растут без жестких эволюционных тормозов.", 
+        "en": "<strong>Myostatin gene mutations:</strong> Myostatin is an inhibitor protein. It circulates in your blood and literally tells the receptors: <em>'Stop muscle growth, they consume too much precious energy!'</em>. Genetic outliers who gain mass easily have a naturally reduced production of myostatin. Their muscles grow without harsh evolutionary brakes.", 
+        "uk": "<strong>Мутації гена міостатину:</strong> Міостатин — це білок-інгібітор. Він циркулює у вашій крові і буквально каже рецепторам: <em>«Зупиніть ріст м'язів, вони споживають занадто багато дорогоцінної енергії!»</em>. У генетичних унікумів, які легко набирають масу, від природи знижене вироблення міостатину. Їхні м'язи ростуть без жорстких еволюційних гальм." 
+    },
+    "art-body-ch2-h": { 
+        "ru": "Глава 2. Сухая математика предела: Индекс FFMI", 
+        "en": "Chapter 2. The Dry Mathematics of the Limit: The FFMI Index", 
+        "uk": "Глава 2. Суха математика межі: Індекс FFMI" 
+    },
+    "art-body-ch2-p1": { 
+        "ru": "Если генетика ставит рамки, то как понять, где находится ваш личный потолок? Для этого спортивные физиологи разработали индекс FFMI (Fat-Free Mass Index — индекс обезжиренной массы тела). В отличие от устаревшего ИМТ (Индекс массы тела), FFMI учитывает процент подкожного жира и показывает, сколько чистых мышц вы можете носить на своем скелете.", 
+        "en": "If genetics sets the framework, how do you understand where your personal ceiling is? To do this, sports physiologists have developed the FFMI index (Fat-Free Mass Index). Unlike the outdated BMI (Body Mass Index), FFMI takes into account body fat percentage and shows how much lean muscle you can carry on your skeleton.", 
+        "uk": "Якщо генетика ставить рамки, то як зрозуміти, де знаходиться ваша особиста стеля? Для цього спортивні фізіологи розробили індекс FFMI (Fat-Free Mass Index — індекс знежиреної маси тіла). На відміну від застарілого ІМТ (Індекс маси тіла), FFMI враховує відсоток підшкірного жиру і показує, скільки чистих м'язів ви можете носити на своєму скелеті." 
+    },
+    "art-body-ch2-quote": { 
+        "ru": "«Исследования, проведенные на элитных бодибилдерах "Золотой эры" (до массового распространения анаболических стероидов), показали непреложный факт: абсолютный генетический предел для мужчины-натурала находится на отметке FFMI около 25. Все, что выше 26 — это результат фармакологии».", 
+        "en": "«Studies conducted on elite bodybuilders of the 'Golden Era' (before the mass spread of anabolic steroids) showed an indisputable fact: the absolute genetic limit for a natural male is at an FFMI mark of about 25. Anything above 26 is the result of pharmacology».", 
+        "uk": "«Дослідження, проведені на елітних бодібілдерах "Золотої ери" (до масового поширення анаболічних стероїдів), показали незаперечний факт: абсолютна генетична стеля для чоловіка-натурала знаходиться на позначці FFMI близько 25. Все, що вище 26 — це результат фармакології»." 
+    },
+    "art-body-ch2-p2": { 
+        "ru": "<strong>Проклятие высоких людей:</strong> Разберем математику роста. Допустим, у нас есть парень ростом 196 см и весом 83 кг. При таком росте это весьма худощавое телосложение. Его цель — стать мощным и весить 90 кг.", 
+        "en": "<strong>The Curse of Tall People:</strong> Let's analyze the math of growth. Suppose we have a guy who is 196 cm tall and weighs 83 kg. At this height, this is a very skinny physique. His goal is to become powerful and weigh 90 kg.", 
+        "uk": "<strong>Прокляття високих людей:</strong> Розберемо математику росту. Припустимо, у нас є хлопець зростом 196 см і вагою 83 кг. При такому зрості це досить худорлява статура. Його мета — стати потужним і важити 90 кг." 
+    },
+    "art-body-ch2-p3": { 
+        "ru": "Проблема заключается в законах геометрии: каждый набранный килограмм мышц буквально «размазывается» по длинным рычагам конечностей. Если парень ростом 170 см наберет 7 кг сухих мышц — он визуально превратится в Халка. Если те же 7 кг наберет наш атлет с ростом 196 см (увеличив вес с 83 до 90 кг), окружающие могут даже не заметить разницы, пока он не снимет футболку.", 
+        "en": "The problem lies in the laws of geometry: every kilogram of muscle gained is literally 'smeared' over the long levers of the limbs. If a 170 cm tall guy gains 7 kg of lean muscle, he visually turns into the Hulk. If the same 7 kg is gained by our athlete with a height of 196 cm (increasing weight from 83 to 90 kg), those around him might not even notice the difference until he takes off his shirt.", 
+        "uk": "Проблема полягає в законах геометрії: кожен набраний кілограм м'язів буквально «розмазується» по довгих важелях кінцівок. Якщо хлопець зростом 170 см набере 7 кг сухих м'язів — він візуально перетвориться на Халка. Якщо ті ж 7 кг набере наш атлет зі зростом 196 см (збільшивши вагу з 83 до 90 кг), оточуючі можуть навіть не помітити різниці, поки він не зніме футболку." 
+    },
+    "art-body-ch2-p4": { 
+        "ru": "Хорошая новость для высоких людей: ваш абсолютный генетический предел в килограммах гораздо выше. При росте 196 см и идеальных 10-12% жира ваш потолок (FFMI ~24.5) может составлять монументальные 100-105 кг чистой массы. Плохая новость: чтобы заполнить этот каркас, вам потребуются годы тренировок и колоссальный профицит калорий.", 
+        "en": "Good news for tall people: your absolute genetic limit in kilograms is much higher. At a height of 196 cm and an ideal 10-12% body fat, your ceiling (FFMI ~24.5) can be a monumental 100-105 kg of lean mass. The bad news is: to fill this frame, you will need years of training and a colossal calorie surplus.", 
+        "uk": "Хороша новина для високих людей: ваша абсолютна генетична стеля в кілограмах набагато вища. При зрості 196 см і ідеальних 10-12% жиру ваша стеля (FFMI ~24.5) може становити монументальні 100-105 кг чистої маси. Погана новина: щоб заповнити цей каркас, вам знадобляться роки тренувань і колосальний профіцит калорій." 
+    },
+    "art-body-ch3-h": { 
+        "ru": "Глава 3. Великий обман метаболизма: Почему вы на самом деле не худеете", 
+        "en": "Chapter 3. The Great Metabolism Hoax: Why you are actually not losing weight", 
+        "uk": "Глава 3. Великий обман метаболізму: Чому ви насправді не худнете" 
+    },
+    "art-body-ch3-p1": { 
+        "ru": "<em>«Я толстею от одного взгляда на пончик, у меня убитый метаболизм»</em>. Это самая частая фраза в кабинетах диетологов.", 
+        "en": "<em>'I gain weight just looking at a donut, my metabolism is dead'</em>. This is the most common phrase in nutritionists' offices.", 
+        "uk": "<em>«Я товстішаю від одного погляду на пончик, у мене вбитий метаболізм»</em>. Це найчастіша фраза в кабінетах дієтологів." 
+    },
+    "art-body-ch3-p2": { 
+        "ru": "Давайте обратимся к цифрам. Базовый обмен веществ (BMR) — это энергия, которую тело тратит в коме. Работа сердца, печени, легких и мозга. Научные исследования с использованием непрямой калориметрии доказывают: у двух людей одного пола, возраста, веса и процента жира BMR отличается максимум на 200-300 килокалорий. Это одно яблоко с ложкой арахисовой пасты. Вы физиологически не можете страдать от лишнего веса исключительно из-за «медленного метаболизма».", 
+        "en": "Let's turn to the numbers. Basal Metabolic Rate (BMR) is the energy the body spends while in a coma. The work of the heart, liver, lungs, and brain. Scientific studies using indirect calorimetry prove: for two people of the same sex, age, weight, and fat percentage, BMR differs by a maximum of 200-300 kilocalories. That's one apple with a spoonful of peanut butter. You physiologically cannot suffer from excess weight solely due to a 'slow metabolism'.", 
+        "uk": "Давайте звернемося до цифр. Базовий обмін речовин (BMR) — це енергія, яку тіло витрачає в комі. Робота серця, печінки, легенів і мозку. Наукові дослідження з використанням непрямої калориметрії доводять: у двох людей однієї статі, віку, ваги і відсотка жиру BMR відрізняється максимум на 200-300 кілокалорій. Це одне яблуко з ложкою арахісової пасти. Ви фізіологічно не можете страждати від зайвої ваги виключно через «повільний метаболізм»." 
+    },
+    "art-body-ch3-box-h": { 
+        "ru": "Секрет худых \"ведьм\" — это NEAT", 
+        "en": "The secret of skinny \"witches\" is NEAT", 
+        "uk": "Секрет худих \"відьом\" — це NEAT" 
+    },
+    "art-body-ch3-box-p": { 
+        "ru": "Секрет людей, которые едят всё подряд и не толстеют, называется <strong>NEAT</strong> (Non-Exercise Activity Thermogenesis — термогенез внетренировочной активности). Это калории, которые вы сжигаете неосознанно: жестикуляция во время разговора, покачивание ногой под столом, поддержание прямой осанки, прогулки по офису во время раздумий. <br><br> У худых от природы людей гиперактивная нервная система. Стоит им переесть в профицит, как их мозг автоматически включает \"режим сброса энергии\": они начинают больше ерзать, активнее говорить, чаще вставать. Их NEAT может сжигать до 800-1000 ккал в день абсолютно незаметно для них самих. Тело людей, склонных к полноте, эволюционно запрограммировано иначе: при профиците калорий оно впадает в энергосберегающий режим (летаргию), заставляя человека прилечь на диван, чтобы надежно запасти энергию в виде жира.", 
+        "en": "The secret of people who eat everything and don't get fat is called <strong>NEAT</strong> (Non-Exercise Activity Thermogenesis). These are calories you burn unconsciously: gesturing while talking, swinging your leg under the table, maintaining a straight posture, pacing around the office while thinking. <br><br> Naturally thin people have a hyperactive nervous system. As soon as they overeat into a surplus, their brain automatically turns on the 'energy dumping mode': they start fidgeting more, talking more actively, getting up more often. Their NEAT can burn up to 800-1000 kcal a day completely unnoticed by them. The body of people prone to being overweight is evolutionarily programmed differently: in a calorie surplus, it falls into an energy-saving mode (lethargy), forcing the person to lie down on the couch to reliably store energy as fat.", 
+        "uk": "Секрет людей, які їдять усе підряд і не товстішають, називається <strong>NEAT</strong> (Non-Exercise Activity Thermogenesis — термогенез позатренувальної активності). Це калорії, які ви спалюєте несвідомо: жестикуляція під час розмови, погойдування ногою під столом, підтримання прямої постави, прогулянки по офісу під час роздумів. <br><br> У худих від природи людей гіперактивна нервова система. Варто їм переїсти в профіцит, як їхній мозок автоматично вмикає \"режим скидання енергії\": вони починають більше соватися, активніше говорити, частіше вставати. Їхній NEAT може спалювати до 800-1000 ккал на день абсолютно непомітно для них самих. Тіло людей, схильних до повноти, еволюційно запрограмоване інакше: при профіциті калорій воно впадає в енергозберігаючий режим (летаргію), змушуючи людину прилягти на диван, щоб надійно запасти енергію у вигляді жиру." 
+    },
+    "art-body-ch4-h": { 
+        "ru": "Глава 4. Внутри мышцы: Спринтеры против марафонцев", 
+        "en": "Chapter 4. Inside the Muscle: Sprinters vs. Marathon Runners", 
+        "uk": "Глава 4. Всередині м'яза: Спринтери проти марафонців" 
+    },
+    "art-body-ch4-p1": { 
+        "ru": "Подойдите к стойке с гантелями. Почему один человек может пожать 40 кг на 5 раз, но сдувается на 6-м повторении, а другой не может поднять больше 20 кг, зато жмет их 30 раз подряд? Ответ заложен в композиции ваших мышечных волокон. Это распределение формируется внутриутробно и остается с вами на всю жизнь.", 
+        "en": "Walk over to the dumbbell rack. Why can one person press 40 kg for 5 reps but deflates on the 6th, while another can't lift more than 20 kg but presses them 30 times in a row? The answer lies in the composition of your muscle fibers. This distribution is formed in utero and stays with you for life.", 
+        "uk": "Підійдіть до стійки з гантелями. Чому одна людина може потиснути 40 кг на 5 разів, але здувається на 6-му повторенні, а інша не може підняти більше 20 кг, зате тисне їх 30 разів поспіль? Відповідь закладена в композиції ваших м'язових волокон. Цей розподіл формується внутрішньоутробно і залишається з вами на все життя." 
+    },
+    "art-body-ch4-ul-1": { 
+        "ru": "<strong>Тип I (Медленные / Красные волокна):</strong> Обильно снабжаются кровью (поэтому красные). Они используют кислород и жиры как топливо. Они очень тонкие и практически не способны к росту (гипертрофии), зато могут сокращаться часами без усталости. Это генетика элитных марафонцев и триатлонистов.", 
+        "en": "<strong>Type I (Slow / Red fibers):</strong> Abundantly supplied with blood (hence red). They use oxygen and fats as fuel. They are very thin and practically incapable of growth (hypertrophy), but can contract for hours without fatigue. This is the genetics of elite marathon runners and triathletes.", 
+        "uk": "<strong>Тип I (Повільні / Червоні волокна):</strong> Рясно постачаються кров'ю (тому червоні). Вони використовують кисень і жири як паливо. Вони дуже тонкі і практично не здатні до росту (гіпертрофії), зате можуть скорочуватися годинами без втоми. Це генетика елітних марафонців і тріатлоністів." 
+    },
+    "art-body-ch4-ul-2": { 
+        "ru": "<strong>Тип IIa и IIx (Быстрые / Белые волокна):</strong> Это волокна огромного размера и взрывной силы. Они работают на бескислородном топливе (гликогене и креатинфосфате), но стремительно накапливают молочную кислоту и отказывают за 10-30 секунд работы. Именно они дают визуальный объем. Это генетика спринтеров, бодибилдеров и тяжелоатлетов.", 
+        "en": "<strong>Type IIa and IIx (Fast / White fibers):</strong> These are fibers of enormous size and explosive power. They run on anaerobic fuel (glycogen and creatine phosphate), but rapidly accumulate lactic acid and fail within 10-30 seconds of work. They are the ones that provide visual volume. This is the genetics of sprinters, bodybuilders, and weightlifters.", 
+        "uk": "<strong>Тип IIa і IIx (Швидкі / Білі волокна):</strong> Це волокна величезного розміру і вибухової сили. Вони працюють на безкисневому паливі (глікогені і креатинфосфаті), але стрімко накопичують молочну кислоту і відмовляють за 10-30 секунд роботи. Саме вони дають візуальний об'єм. Це генетика спринтерів, бодібілдерів і важкоатлетів." 
+    },
+    "art-body-ch4-p2": { 
+        "ru": "<strong>Суровый факт:</strong> Вы не можете тренировками превратить волокна Типа I в волокна Типа II. Если ваша генетическая лотерея выдала вам 75% медленных волокон, вы никогда не станете Мистером Олимпия и не пожмете 200 кг, сколько бы синтола или стероидов ни использовали. Зато вы можете стать выдающимся кроссфитером или легкоатлетом.", 
+        "en": "<strong>Harsh fact:</strong> You cannot train to turn Type I fibers into Type II fibers. If your genetic lottery gave you 75% slow fibers, you will never become Mr. Olympia and will not bench press 200 kg, no matter how much synthol or steroids you use. But you can become an outstanding crossfitter or track athlete.", 
+        "uk": "<strong>Суворий факт:</strong> Ви не можете тренуваннями перетворити волокна Типу I на волокна Типу II. Якщо ваша генетична лотерея видала вам 75% повільних волокон, ви ніколи не станете Містером Олімпія і не потиснете 200 кг, скільки б синтолу чи стероїдів не використовували. Зате ви можете стати видатним кросфітером або легкоатлетом." 
+    },
+    "art-body-ch5-h": { 
+        "ru": "Глава 5. Нутригеномика: Почему одна диета не работает для всех", 
+        "en": "Chapter 5. Nutrigenomics: Why one diet does not work for everyone", 
+        "uk": "Глава 5. Нутрігеноміка: Чому одна дієта не працює для всіх" 
+    },
+    "art-body-ch5-p1": { 
+        "ru": "Спор о том, что лучше — высокоуглеводная диета или кето (высокие жиры) — бессмысленен без учета генетики. Как ваш организм реагирует на тарелку риса или макарон?", 
+        "en": "The debate over what is better — a high-carb diet or keto (high fat) — is meaningless without considering genetics. How does your body react to a plate of rice or pasta?", 
+        "uk": "Суперечка про те, що краще — високовуглеводна дієта чи кето (високі жири) — безглузда без урахування генетики. Як ваш організм реагує на тарілку рису або макаронів?" 
+    },
+    "art-body-ch5-p2": { 
+        "ru": "Всё зависит от вашей <strong>углеводной толерантности</strong> и гена <em>AMY1</em>. Этот ген кодирует выработку фермента амилазы в слюне, который начинает расщеплять сложные углеводы еще во рту.", 
+        "en": "Everything depends on your <strong>carbohydrate tolerance</strong> and the <em>AMY1</em> gene. This gene encodes the production of the amylase enzyme in saliva, which begins breaking down complex carbohydrates right in the mouth.", 
+        "uk": "Все залежить від вашої <strong>вуглеводної толерантності</strong> і гена <em>AMY1</em>. Цей ген кодує вироблення ферменту амілази в слині, який починає розщеплювати складні вуглеводи ще в роті." 
+    },
+    "art-body-ch5-p3": { 
+        "ru": "Некоторые люди (особенно потомки земледельческих культур) имеют до 15-20 копий гена AMY1. Они обладают высокой углеводной толерантностью. Их клетки невероятно чувствительны к инсулину: после порции углеводов сахар в крови быстро доставляется прямо в мышцы в виде гликогена. Эти люди могут есть по 400 граммов углеводов в день, оставаться сухими и энергичными.", 
+        "en": "Some people (especially descendants of agricultural cultures) have up to 15-20 copies of the AMY1 gene. They have a high carbohydrate tolerance. Their cells are incredibly sensitive to insulin: after a portion of carbs, blood sugar is quickly delivered right into the muscles as glycogen. These people can eat 400 grams of carbohydrates a day, remain lean and energetic.", 
+        "uk": "Деякі люди (особливо нащадки землеробських культур) мають до 15-20 копій гена AMY1. Вони мають високу вуглеводну толерантність. Їхні клітини неймовірно чутливі до інсуліну: після порції вуглеводів цукор у крові швидко доставляється прямо в м'язи у вигляді глікогену. Ці люди можуть їсти по 400 грамів вуглеводів на день, залишатися сухими та енергійними." 
+    },
+    "art-body-ch5-p4": { 
+        "ru": "У других людей всего 2-4 копии этого гена. Для них даже 150 граммов углеводов вызывают резкий скачок сахара в крови, массивный выброс инсулина и последующий \"сахарный крах\" (сонливость после еды). При низкой чувствительности к инсулину энергия отправляется не в мышцы, а напрямую в жировые депо. Для таких людей низкоуглеводные протоколы (LCHF) — это не дань моде, а биологическая необходимость.", 
+        "en": "Other people have only 2-4 copies of this gene. For them, even 150 grams of carbs cause a sharp spike in blood sugar, a massive release of insulin, and a subsequent 'sugar crash' (sleepiness after eating). With low insulin sensitivity, energy is sent not to the muscles, but directly to fat stores. For such people, low-carb protocols (LCHF) are not a tribute to fashion, but a biological necessity.", 
+        "uk": "В інших людей всього 2-4 копії цього гена. Для них навіть 150 грамів вуглеводів викликають різкий стрибок цукру в крові, масивний викид інсуліну і подальший \"цукровий крах\" (сонливість після їжі). При низькій чутливості до інсуліну енергія відправляється не в м'язи, а безпосередньо в жирові депо. Для таких людей низьковуглеводні протоколи (LCHF) — це не данина моді, а біологічна необхідність." 
+    },
+    "art-body-ch6-h": { 
+        "ru": "Глава 6. Невидимый лимит: Центральная Нервная Система (ЦНС)", 
+        "en": "Chapter 6. The Invisible Limit: Central Nervous System (CNS)", 
+        "uk": "Глава 6. Невидимий ліміт: Центральна Нервова Система (ЦНС)" 
+    },
+    "art-body-ch6-p1": { 
+        "ru": "Самая большая ошибка новичков — думать, что на тренировке работают только мышцы. На самом деле, вес поднимает ваша нервная система.", 
+        "en": "The biggest mistake beginners make is thinking that only muscles work during training. In reality, your nervous system lifts the weight.", 
+        "uk": "Найбільша помилка новачків — думати, що на тренуванні працюють тільки м'язи. Насправді, вагу піднімає ваша нервова система." 
+    },
+    "art-body-ch6-p2": { 
+        "ru": "Чтобы бицепс сократился, моторная кора вашего головного мозга должна послать электрический сигнал (потенциал действия) через спинной мозг к нейромышечным синапсам. Тренировки с тяжелыми весами \"до отказа\" истощают не только гликоген в мышцах, но и запасы нейромедиаторов (дофамина и ацетилхолина) в мозге.", 
+        "en": "For a bicep to contract, the motor cortex of your brain must send an electrical signal (action potential) down the spinal cord to the neuromuscular synapses. Training with heavy weights 'to failure' depletes not only muscle glycogen but also the reserves of neurotransmitters (dopamine and acetylcholine) in the brain.", 
+        "uk": "Щоб біцепс скоротився, моторна кора вашого головного мозку повинна послати електричний сигнал (потенціал дії) через спинний мозок до нейром'язових синапсів. Тренування з важкими вагами \"до відмови\" виснажують не тільки глікоген у м'язах, а й запаси нейромедіаторів (дофаміну і ацетилхоліну) в мозку." 
+    },
+    "art-body-ch6-p3": { 
+        "ru": "Мышца (локально) может восстановиться за 48-72 часа. А вот перегруженная ЦНС (системно) может восстанавливаться до двух недель! И снова высокие спортсмены находятся в зоне риска: путь электрического импульса по длинным нервным волокнам (от спинного мозга до икроножной мышцы при росте 196 см) требует более мощного сигнала. Высокие атлеты \"перегорают\" быстрее.", 
+        "en": "A muscle (locally) can recover in 48-72 hours. But an overloaded CNS (systemically) can take up to two weeks to recover! And again, tall athletes are at risk: the path of the electrical impulse along long nerve fibers (from the spinal cord to the calf muscle at a height of 196 cm) requires a more powerful signal. Tall athletes 'burn out' faster.", 
+        "uk": "М'яз (локально) може відновитися за 48-72 години. А ось перевантажена ЦНС (системно) може відновлюватися до двох тижнів! І знову високі спортсмени перебувають у зоні ризику: шлях електричного імпульсу по довгих нервових волокнах (від спинного мозку до литкового м'яза при зрості 196 см) вимагає більш потужного сигналу. Високі атлети \"перегорають\" швидше." 
+    },
+    "art-body-ch6-p4": { 
+        "ru": "Если вы не спите по 8 часов в полной темноте, находитесь в хроническом стрессе на работе и злоупотребляете стимуляторами (кофеином, предтренировочными комплексами, никотином), ваша ЦНС блокирует мышечный рост. Тело воспринимает стресс как угрозу выживанию, повышает кортизол и переходит в катаболический (разрушающий мышцы) режим. Мышцы растут только в фазе глубокого сна.", 
+        "en": "If you are not sleeping 8 hours in complete darkness, are under chronic stress at work, and abuse stimulants (caffeine, pre-workouts, nicotine), your CNS blocks muscle growth. The body perceives stress as a threat to survival, raises cortisol, and shifts into a catabolic (muscle-destroying) mode. Muscles grow only in the deep sleep phase.", 
+        "uk": "Якщо ви не спите по 8 годин у повній темряві, перебуваєте в хронічному стресі на роботі і зловживаєте стимуляторами (кофеїном, передтренувальними комплексами, нікотином), ваша ЦНС блокує м'язовий ріст. Тіло сприймає стрес як загрозу виживанню, підвищує кортизол і переходить у катаболічний (що руйнує м'язи) режим. М'язи ростуть тільки у фазі глибокого сну." 
+    },
+    "art-body-concl-h": { 
+        "ru": "Вывод: Эпигенетика и ваша ответственность", 
+        "en": "Conclusion: Epigenetics and your responsibility", 
+        "uk": "Висновок: Епігенетика та ваша відповідальність" 
+    },
+    "art-body-concl-p1": { 
+        "ru": "Означает ли всё вышесказанное, что генетика — это приговор, и если вы не родились с идеальными пропорциями и низким миостатином, то вам никогда не построить красивое тело?", 
+        "en": "Does all of the above mean that genetics is a life sentence, and if you weren't born with perfect proportions and low myostatin, you will never build a beautiful body?", 
+        "uk": "Чи означає все вищесказане, що генетика — це вирок, і якщо ви не народилися з ідеальними пропорціями і низьким міостатином, то вам ніколи не побудувати красиве тіло?" 
+    },
+    "art-body-concl-p2": { 
+        "ru": "<strong>Абсолютно нет. И вот почему:</strong>", 
+        "en": "<strong>Absolutely not. And here is why:</strong>", 
+        "uk": "<strong>Абсолютно ні. І ось чому:</strong>" 
+    },
+    "art-body-concl-p3": { 
+        "ru": "Генетика действительно определяет ваш абсолютный, финальный потолок. Но правда заключается в том, что 99% людей даже близко не подбираются к этому потолку. Большинство останавливается на 30-40% своего потенциала из-за нерегулярных тренировок, безграмотного питания, лени и алкоголя по выходным.", 
+        "en": "Genetics does determine your absolute, final ceiling. But the truth is that 99% of people don't even come close to this ceiling. The majority stop at 30-40% of their potential due to irregular training, poor nutrition, laziness, and alcohol on weekends.", 
+        "uk": "Генетика дійсно визначає вашу абсолютну, фінальну стелю. Але правда полягає в тому, що 99% людей навіть близько не підбираються до цієї стелі. Більшість зупиняється на 30-40% свого потенціалу через нерегулярні тренування, безграмотне харчування, лінь і алкоголь у вихідні." 
+    },
+    "art-body-concl-p4": { 
+        "ru": "ДНК сдает вам стартовые карты в этой игре. Но то, станете ли вы лучшей версией себя, будете ли вы здоровым, сильным и эстетичным — зависит только от того, как виртуозно вы разыграете эту партию. Наука не дает оправданий. Она дает вам инструменты для того, чтобы перестать биться головой о стену и начать тренироваться умно.", 
+        "en": "DNA deals your starting cards in this game. But whether you become the best version of yourself, whether you will be healthy, strong, and aesthetic, depends solely on how masterfully you play this hand. Science doesn't provide excuses. It gives you the tools to stop banging your head against the wall and start training smart.", 
+        "uk": "ДНК здає вам стартові карти в цій грі. Але те, чи станете ви кращою версією себе, чи будете ви здоровим, сильним і естетичним — залежить тільки від того, як віртуозно ви розіграєте цю партію. Наука не дає виправдань. Вона дає вам інструменти для того, щоб перестати битися головою об стіну і почати тренуватися розумно." 
     }
 };
 
