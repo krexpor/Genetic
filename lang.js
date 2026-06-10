@@ -1036,6 +1036,21 @@ const langArr = {
         "ru": "Цель жизни — не в том, чтобы стать идеальным, отполированным и святым. Цель в том, чтобы стать цельным. Работа с Тенью — это путь длиною в жизнь. Это процесс возвращения домой тех частей себя, которые вы когда-то оставили на морозе. Когда вы перестаете воевать с самим собой, высвобождается огромное количество энергии, которую наконец-то можно направить на создание жизни своей мечты.", 
         "en": "The goal of life is not to become perfect, polished, and holy. The goal is to become whole. Shadow work is a lifelong journey. It is the process of bringing home those parts of yourself that you once left out in the cold. When you stop fighting with yourself, a huge amount of energy is released, which can finally be directed towards creating the life of your dreams.", 
         "uk": "Мета життя — не в тому, щоб стати ідеальним, відполірованим і святим. Мета в тому, щоб стати цілісним. Робота з Тінню — це шлях довжиною в життя. Це процес повернення додому тих частин себе, які ви колись залишили на морозі. Коли ви перестаєте воювати з самим собою, вивільняється величезна кількість енергії, яку нарешті можна направити на створення життя своєї мрії." 
+    },
+    "blog-tag-shadow": { 
+        "ru": "Глубинная психология", 
+        "en": "Depth Psychology", 
+        "uk": "Глибинна психологія" 
+    },
+    "blog-c3-title": { 
+        "ru": "Работа с Тенью: Полное практическое руководство", 
+        "en": "Shadow Work: A Complete Practical Guide", 
+        "uk": "Робота з Тінню: Повне практичне керівництво" 
+    },
+    "blog-c3-desc": { 
+        "ru": "Как подавленные эмоции управляют вашей жизнью и почему интеграция своей темной стороны — ключ к свободе.", 
+        "en": "How repressed emotions control your life and why integrating your dark side is the key to freedom.", 
+        "uk": "Як пригнічені емоції керують вашим життям і чому інтеграція своєї темної сторони — ключ до свободи." 
     }
 };
 
