@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang="about-title">О проекте | Krexpor</title>
+    <title data-lang="about-title">Обо мне | Krexpor</title>
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-    <!-- Защита от мерцания экрана, ТЕМНАЯ тема по умолчанию -->
+    <!-- Защита от мерцания, ТЕМНАЯ тема по умолчанию -->
     <script>
         (function() {
             let savedTheme = localStorage.getItem('site-theme');
@@ -33,7 +33,6 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
 
     <style>
-        /* Зменні для Світлої теми */
         :root {
             --bg-color: #f8fafc;
             --card-bg: #ffffff;
@@ -44,8 +43,6 @@
             --accent: #da3633;
             --shadow: 0 10px 40px rgba(0,0,0,0.05);
         }
-
-        /* Змінні для Темної теми */
         [data-theme="dark"] {
             --bg-color: #111318;
             --card-bg: #1a1d24;
@@ -83,7 +80,6 @@
             transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
         }
 
-        /* Панель керування */
         .top-controls { position: absolute; top: 20px; right: 20px; display: flex; gap: 8px; z-index: 10; }
         .control-btn { background: transparent; border: 1px solid var(--border-color); color: var(--text-muted); border-radius: 6px; padding: 4px 8px; font-size: 0.75rem; cursor: pointer; transition: all 0.3s; font-weight: 600; display: flex; align-items: center; justify-content: center; }
         .control-btn:hover { background: var(--hover-bg); color: var(--text-main); border-color: var(--text-muted); }
@@ -101,7 +97,6 @@
 </head>
 <body>
 
-    <!-- Кнопки перемикання мов та теми -->
     <div class="top-controls">
         <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
         <button onclick="changeLanguage('en')" class="control-btn">EN</button>
@@ -114,7 +109,7 @@
     </div>
     
     <div class="container">
-        <h1 data-lang="about-h2">О проекте</h1>
+        <h1 data-lang="about-h2">Обо мне</h1>
         
         <h2 data-lang="about-h3-1">Что такое Krexpor?</h2>
         <p data-lang="about-p-1">Krexpor — это моя личная цифровая площадка. Сейчас здесь собраны интерактивные генетические калькуляторы, глубокие психологические AI-тесты и масштабные исследовательские статьи на стыке биологии, нейробиологии и психологии. Проект не стоит на месте — в будущем здесь будут появляться новые инструменты и форматы.</p>
@@ -125,9 +120,9 @@
         <h2 data-lang="about-h3-2">Отказ от ответственности</h2>
         <p data-lang="about-p-2">Обратите внимание: все инструменты и статьи на сайте предоставляются исключительно в образовательных и развлекательных целях.</p>
         <p data-lang="about-p-3">Они <strong>не являются заменой профессиональной медицинской диагностики, терапии или ДНК-теста</strong>. Природа и психика сложны, и всегда существуют индивидуальные исключения.</p>
-
+        
         <h2 data-lang="about-h3-3">Связь</h2>
-        <p data-lang="about-p-4">Если у вас есть предложения или вопросы, вы можете найти мои актуальные контакты на странице https://krexpor.com/contact.html</span>.</p>
+        <p data-lang="about-p-4">Открыт к предложениям, идеям и обратной связи. Вы можете найти мои актуальные контакты на странице <a href="contact.html">Контактов</a>.</p>
     </div>
 
 </body>
