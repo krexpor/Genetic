@@ -29,3 +29,40 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
 });
+
+// --- КНОПКА ПЛАВНОГО СКРОЛЛА НАВЕРХ ---
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Создаем кнопку динамически
+    const scrollBtn = document.createElement('button');
+    scrollBtn.id = 'scrollToTopBtn';
+    scrollBtn.className = 'scroll-to-top';
+    scrollBtn.setAttribute('aria-label', 'Вернуться наверх');
+    
+    // Вставляем красивую минималистичную SVG-стрелочку
+    scrollBtn.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    `;
+    
+    // Добавляем кнопку на страницу
+    document.body.appendChild(scrollBtn);
+
+    // 2. Отслеживаем скролл, чтобы показывать/скрывать кнопку
+    window.addEventListener('scroll', () => {
+        // Если прокрутили больше 300 пикселей вниз — показываем кнопку
+        if (window.scrollY > 300) {
+            scrollBtn.classList.add('show');
+        } else {
+            scrollBtn.classList.remove('show');
+        }
+    });
+
+    // 3. Плавный скролл наверх при клике
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
