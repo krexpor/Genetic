@@ -346,3 +346,36 @@ details.faq-item p {
     line-height: 1.6;
     margin-bottom: 0;
 }
+
+/* --- Кнопки мови та теми (перебиваємо стандартний червоний стиль) --- */
+.top-controls { 
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    display: flex; 
+    gap: 8px; 
+    z-index: 10; 
+}
+
+button.control-btn { 
+    background: transparent; 
+    border: 1px solid var(--border-color); 
+    color: var(--text-muted); 
+    border-radius: 6px; 
+    padding: 4px 10px; 
+    font-size: 0.75rem; 
+    cursor: pointer; 
+    transition: all 0.3s; 
+    font-weight: 600; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: auto; /* Забороняємо кнопці розтягуватися на 100% */
+    margin: 0;
+}
+
+button.control-btn:hover { 
+    background: var(--hover-bg); 
+    color: var(--text-main); 
+    border-color: var(--text-muted); 
+}
