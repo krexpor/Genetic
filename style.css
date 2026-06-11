@@ -389,6 +389,9 @@ details.faq-item p {
     }
 }
 
+/* =========================================
+   КНОПКА "НАВЕРХ" (ЗАЩИТА ОТ КВАДРАТОВ И РАМОК)
+   ========================================= */
 button.scroll-to-top {
     position: fixed !important;
     bottom: 30px !important;
@@ -408,9 +411,23 @@ button.scroll-to-top {
     transform: translateY(20px);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
     z-index: 9999 !important;
-    box-shadow: var(--shadow) !important;
+    
+    /* 👇 НОВЫЕ СТРОКИ: УБИВАЕМ БЕЛЫЙ КВАДРАТ 👇 */
+    outline: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    box-shadow: none !important;
+    
     padding: 0 !important;
     margin: 0 !important;
+}
+
+/* Жестко убираем квадратную рамку даже при активном клике */
+button.scroll-to-top:focus,
+button.scroll-to-top:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 button.scroll-to-top.show {
