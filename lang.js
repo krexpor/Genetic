@@ -1650,6 +1650,146 @@ const langArr = {
         "ru": "Контакты", 
         "en": "Contacts", 
         "uk": "Контакти" 
+    },
+
+    // --- АДАПТАЦИЯ И СТРЕСС (STRESS.HTML) ---
+    "stress-title": { 
+        "ru": "Адаптация и Стресс | Krexpor", 
+        "en": "Adaptation & Stress | Krexpor", 
+        "uk": "Адаптація та Стрес | Krexpor" 
+    },
+    "stress-h1": { 
+        "ru": "Уровень адаптации", 
+        "en": "Adaptation Level", 
+        "uk": "Рівень адаптації" 
+    },
+    "stress-subtitle": { 
+        "ru": "Анализ ваших копинг-стратегий и реакции на тотальную неопределенность.", 
+        "en": "Analysis of your coping strategies and reaction to total uncertainty.", 
+        "uk": "Аналіз ваших копінг-стратегій та реакції на тотальну невизначеність." 
+    },
+    "stress-q1": { 
+        "ru": "1. Представьте, что вы радикально сменили среду: переехали в новую страну или город, где всё работает по чужим правилам и у вас нет связей. Что вызывает наибольшее внутреннее сопротивление и каким будет ваш первый шаг?", 
+        "en": "1. Imagine that you radically changed your environment: moved to a new country or city where everything works by different rules and you have no connections. What causes the greatest internal resistance, and what will be your first step?", 
+        "uk": "1. Уявіть, що ви радикально змінили середовище: переїхали в нову країну або місто, де все працює за чужими правилами і у вас немає зв'язків. Що викликає найбільший внутрішній спротив і яким буде ваш перший крок?" 
+    },
+    "stress-ph1": { 
+        "ru": "Опишите свои эмоции и стратегию действий...", 
+        "en": "Describe your emotions and action strategy...", 
+        "uk": "Опишіть свої емоції та стратегію дій..." 
+    },
+    "stress-q2": { 
+        "ru": "2. Вы выстроили безупречный, детальный план для критически важного проекта, но в последнюю минуту внешние обстоятельства полностью его разрушают. Как вы перевариваете эту неудачу и реорганизуете свои действия?", 
+        "en": "2. You have built a flawless, detailed plan for a critically important project, but at the last minute, external circumstances completely destroy it. How do you process this failure and reorganize your actions?", 
+        "uk": "2. Ви вибудували бездоганний, детальний план для критично важливого проєкту, але в останню хвилину зовнішні обставини повністю його руйнують. Як ви перетравлюєте цю невдачу і реорганізуєте свої дії?" 
+    },
+    "stress-ph2": { 
+        "ru": "Как вы справляетесь с потерей контроля?", 
+        "en": "How do you deal with the loss of control?", 
+        "uk": "Як ви справляєтеся з втратою контролю?" 
+    },
+    "stress-q3": { 
+        "ru": "3. Вы вынуждены взаимодействовать с высокодинамичной, хаотичной и требующей внимания средой (или группой людей), чтобы достичь своей цели. Как вы защищаете свою «внутреннюю батарейку», чтобы не выгореть?", 
+        "en": "3. You are forced to interact with a highly dynamic, chaotic, and demanding environment (or group of people) to achieve your goal. How do you protect your 'internal battery' so as not to burn out?", 
+        "uk": "3. Ви змушені взаємодіяти з високодинамічним, хаотичним середовищем (або групою людей), що вимагає уваги, аби досягти своєї мети. Як ви захищаєте свою «внутрішню батарейку», щоб не вигоріти?" 
+    },
+    "stress-ph3": { 
+        "ru": "Опишите ваши методы сохранения энергии...", 
+        "en": "Describe your methods of energy conservation...", 
+        "uk": "Опишіть ваші методи збереження енергії..." 
+    },
+    "stress-btn": { 
+        "ru": "Проанализировать мой профиль", 
+        "en": "Analyze my profile", 
+        "uk": "Проаналізувати мій профіль" 
+    },
+    "stress-loading": { 
+        "ru": "Нейросеть оценивает уровень адаптивности...", 
+        "en": "The neural network is assessing the level of adaptability...", 
+        "uk": "Нейромережа оцінює рівень адаптивності..." 
+    },
+    "stress-seo-h3": { 
+        "ru": "Что такое нейроанализ адаптивности?", 
+        "en": "What is neuroanalysis of adaptability?", 
+        "uk": "Що таке нейроаналіз адаптивності?" 
+    },
+    "stress-seo-p1": { 
+        "ru": "Стрессоустойчивость — это не врожденный щит, отбивающий любые проблемы, а гибкость психики. То, насколько быстро ваша нервная система способна перестроиться при столкновении с новыми, непредсказуемыми переменными среды. Будь то переезд, смена деятельности или разрушение привычных планов.", 
+        "en": "Stress resistance is not an innate shield that repels any problems, but mental flexibility. It's how quickly your nervous system can adapt when faced with new, unpredictable environmental variables. Whether it's moving, changing jobs, or the destruction of familiar plans.", 
+        "uk": "Стресостійкість — це не вроджений щит, що відбиває будь-які проблеми, а гнучкість психіки. Те, наскільки швидко ваша нервова система здатна перебудуватися при зіткненні з новими, непередбачуваними змінними середовища. Будь то переїзд, зміна діяльності або руйнування звичних планів." 
+    },
+    "stress-seo-p2": { 
+        "ru": "Алгоритм анализирует семантику ваших ответов: как вы относитесь к потере контроля, склонны ли вы к жесткому перфекционизму, который ломается при первом же форс-мажоре, и какие паттерны изоляции или открытости вы используете для восстановления ресурсов.", 
+        "en": "The algorithm analyzes the semantics of your answers: how you relate to the loss of control, whether you are prone to rigid perfectionism that breaks at the first force majeure, and what patterns of isolation or openness you use to restore resources.", 
+        "uk": "Алгоритм аналізує семантику ваших відповідей: як ви ставитеся до втрати контролю, чи схильні ви до жорсткого перфекціонізму, який ламається при першому ж форс-мажорі, і які патерни ізоляції або відкритості ви використовуєте для відновлення ресурсів." 
+    },
+
+    "stress-seo-h4-1": { 
+        "ru": "Биология стресса: бей, беги или замри", 
+        "en": "The biology of stress: fight, flight, or freeze", 
+        "uk": "Біологія стресу: бий, біжи або замри" 
+    },
+    "stress-seo-p3": { 
+        "ru": "В критических ситуациях наш мозг активирует древние механизмы выживания. Кортизол и адреналин перестраивают работу организма, а психика выбирает один из базовых путей: активное противостояние (бей), избегание (беги) или ступор (замри). Ваш выбор слов и реакций в ответах позволяет алгоритму определить ваш доминирующий механизм.", 
+        "en": "In critical situations, our brain activates ancient survival mechanisms. Cortisol and adrenaline restructure the body's functioning, and the psyche chooses one of the basic paths: active resistance (fight), avoidance (flight), or stupor (freeze). Your choice of words and reactions allows the algorithm to determine your dominant mechanism.", 
+        "uk": "У критичних ситуаціях наш мозок активує стародавні механізми виживання. Кортизол і адреналін перебудовують роботу організму, а психіка обирає один із базових шляхів: активне протистояння (бий), уникнення (біжи) або ступор (замри). Ваш вибір слів і реакцій дозволяє алгоритму визначити ваш домінуючий механізм." 
+    },
+    "stress-seo-h4-2": { 
+        "ru": "Нейропластичность как ключ к выживанию", 
+        "en": "Neuroplasticity as the key to survival", 
+        "uk": "Нейропластичність як ключ до виживання" 
+    },
+    "stress-seo-p4": { 
+        "ru": "Способность переписывать свои привычки и мышление под давлением среды называется нейропластичностью. Высокая адаптивность означает, что ваш мозг не тратит энергию на сожаления о рухнувших планах, а мгновенно строит новые нейронные связи для решения задачи.", 
+        "en": "The ability to rewrite your habits and thinking under environmental pressure is called neuroplasticity. High adaptability means your brain doesn't waste energy regretting ruined plans but instantly builds new neural connections to solve the problem.", 
+        "uk": "Здатність переписувати свої звички та мислення під тиском середовища називається нейропластичністю. Висока адаптивність означає, що ваш мозок не витрачає енергію на жаль про зруйновані плани, а миттєво будує нові нейронні зв'язки для вирішення завдання." 
+    },
+    "stress-faq-title": { 
+        "ru": "Часто задаваемые вопросы (FAQ)", 
+        "en": "Frequently Asked Questions (FAQ)", 
+        "uk": "Часті запитання (FAQ)" 
+    },
+    "stress-faq-q1": { 
+        "ru": "Может ли стресс быть полезным?", 
+        "en": "Can stress be beneficial?", 
+        "uk": "Чи може стрес бути корисним?" 
+    },
+    "stress-faq-a1": { 
+        "ru": "Да, кратковременный контролируемый стресс (эустресс) работает как тренировка для психики. Он мобилизует ресурсы, повышает концентрацию и стимулирует развитие. Разрушительным является только хронический стресс (дистресс), когда у вас нет фазы восстановления.", 
+        "en": "Yes, short-term controlled stress (eustress) works as a workout for the psyche. It mobilizes resources, increases concentration, and stimulates development. Only chronic stress (distress) is destructive, when you have no recovery phase.", 
+        "uk": "Так, короткочасний контрольований стрес (еустрес) працює як тренування для психіки. Він мобілізує ресурси, підвищує концентрацію та стимулює розвиток. Руйнівним є лише хронічний стрес (дистрес), коли у вас немає фази відновлення." 
+    },
+    "stress-faq-q2": { 
+        "ru": "Как ИИ отличает временную усталость от глубокого выгорания?", 
+        "en": "How does the AI differentiate temporary fatigue from deep burnout?", 
+        "uk": "Як ШІ відрізняє тимчасову втому від глибокого вигорання?" 
+    },
+    "stress-faq-a2": { 
+        "ru": "Нейросеть обращает внимание на семантические маркеры. Усталый человек описывает потребность в отдыхе («мне нужно поспать», «возьму паузу»), в то время как человек в стадии выгорания использует маркеры цинизма, изоляции и потери смысла.", 
+        "en": "The neural network pays attention to semantic markers. A tired person describes the need for rest ('I need to sleep,' 'I'll take a break'), while a person in the burnout stage uses markers of cynicism, isolation, and loss of meaning.", 
+        "uk": "Нейромережа звертає увагу на семантичні маркери. Втомлена людина описує потребу у відпочинку («мені потрібно поспати», «візьму паузу»), тоді як людина на стадії вигорання використовує маркери цинізму, ізоляції та втрати сенсу." 
+    },
+    "stress-faq-q3": { 
+        "ru": "Можно ли прокачать свою адаптивность?", 
+        "en": "Is it possible to level up your adaptability?", 
+        "uk": "Чи можна прокачати свою адаптивність?" 
+    },
+    "stress-faq-a3": { 
+        "ru": "Абсолютно. Адаптивность — это навык. Вы можете тренировать его, искусственно создавая микро-стрессовые ситуации, приучая мозг не паниковать при столкновении с неизвестностью и быстрее переходить от эмоций к конструктивному анализу.", 
+        "en": "Absolutely. Adaptability is a skill. You can train it by artificially creating micro-stressful situations, teaching your brain not to panic when faced with the unknown and to move more quickly from emotions to constructive analysis.", 
+        "uk": "Абсолютно. Адаптивність — це навичка. Ви можете тренувати її, штучно створюючи мікростресові ситуації, привчаючи мозок не панікувати при зіткненні з невідомістю і швидше переходити від емоцій до конструктивного аналізу." 
+    },
+
+    // --- ДЛЯ МЕНЮ (ИНДЕКСНАЯ СТРАНИЦА) ---
+    "menu-stress-title": { 
+        "ru": "Уровень адаптации", 
+        "en": "Adaptation Level", 
+        "uk": "Рівень адаптації" 
+    },
+    "menu-stress-desc": { 
+        "ru": "Реакция психики на хаос и неопределенность", 
+        "en": "Psyche's reaction to chaos and uncertainty", 
+        "uk": "Реакція психіки на хаос та невизначеність" 
     }
 };
 
