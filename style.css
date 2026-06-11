@@ -390,9 +390,9 @@ details.faq-item p {
 }
 
 /* =========================================
-   КНОПКА "НАВЕРХ" (ЗАЩИТА ОТ КВАДРАТОВ И РАМОК)
+   КНОПКА "НАВЕРХ" (БРОНЕБОЙНАЯ ВЕРСИЯ ПО ID)
    ========================================= */
-button.scroll-to-top {
+#scrollToTopBtn {
     position: fixed !important;
     bottom: 30px !important;
     right: 30px !important;
@@ -401,7 +401,7 @@ button.scroll-to-top {
     background-color: var(--card-bg) !important;
     color: var(--text-muted) !important;
     border: 1px solid var(--border-color) !important;
-    border-radius: 50% !important;
+    border-radius: 50px !important; /* 50px лучше скругляет, чем 50% */
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -409,48 +409,42 @@ button.scroll-to-top {
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
-    z-index: 9999 !important;
+    transition: all 0.3s ease !important;
+    z-index: 999999 !important;
     
-    /* 👇 НОВЫЕ СТРОКИ: УБИВАЕМ БЕЛЫЙ КВАДРАТ 👇 */
+    /* Убиваем рамки и квадраты */
     outline: none !important;
     -webkit-appearance: none !important;
     appearance: none !important;
     -webkit-tap-highlight-color: transparent !important;
-    box-shadow: none !important;
-    
-    padding: 0 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
     margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important; /* Срезает любые углы */
 }
 
-/* Жестко убираем квадратную рамку даже при активном клике */
-button.scroll-to-top:focus,
-button.scroll-to-top:active {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-button.scroll-to-top.show {
+#scrollToTopBtn.show {
     opacity: 1 !important;
     visibility: visible !important;
     transform: translateY(0) !important;
 }
 
-button.scroll-to-top:hover {
+#scrollToTopBtn:hover {
     background-color: var(--hover-bg) !important;
     color: var(--accent) !important;
     border-color: var(--accent) !important;
     transform: translateY(-3px) !important;
 }
 
-button.scroll-to-top svg {
+#scrollToTopBtn svg {
     width: 22px !important;
     height: 22px !important;
     margin: 0 !important;
+    fill: none !important;
 }
 
 @media (max-width: 768px) {
-    button.scroll-to-top {
+    #scrollToTopBtn {
         bottom: 20px !important;
         right: 20px !important;
         width: 40px !important;
