@@ -220,6 +220,67 @@
         .footer { margin-top: 30px; font-size: 0.75rem; color: var(--text-muted); line-height: 1.6; }
         .footer a { color: var(--text-muted); text-decoration: none; transition: 0.3s; }
         .footer a:hover { color: var(--text-main); }
+
+        /* =========================================
+   КНОПКА "НАВЕРХ" (БРОНЕБОЙНАЯ ВЕРСИЯ ПО ID)
+   ========================================= */
+#scrollToTopBtn {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    width: 45px !important;
+    height: 45px !important;
+    background-color: var(--card-bg) !important;
+    color: var(--text-muted) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 50px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease !important;
+    z-index: 999999 !important;
+    outline: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+#scrollToTopBtn.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+#scrollToTopBtn:hover {
+    background-color: var(--hover-bg) !important;
+    color: var(--accent) !important;
+    border-color: var(--accent) !important;
+    transform: translateY(-3px) !important;
+}
+
+#scrollToTopBtn svg {
+    width: 22px !important;
+    height: 22px !important;
+    margin: 0 !important;
+    fill: none !important;
+}
+
+@media (max-width: 768px) {
+    #scrollToTopBtn {
+        bottom: 20px !important;
+        right: 20px !important;
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
     </style>
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441784725346884" crossorigin="anonymous"></script>
