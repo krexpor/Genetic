@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="stress-title">Адаптация и Стресс | Krexpor</title>
+    
+    <script>
+        (function() {
+            let savedTheme = localStorage.getItem('site-theme');
+            if (!savedTheme) savedTheme = 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="/style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPCS9G55D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0WPCS9G55D');
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <script src="/cookies.js" defer></script>
+    <script src="/lang.js" defer></script>
+    <script src="/theme.js" defer></script>
+
+    <style>
+        .textarea-group { margin-bottom: 25px; }
+        .textarea-group label { display: block; margin-bottom: 10px; color: var(--text-main); font-weight: 600; font-size: 0.95rem; line-height: 1.4; }
+        textarea { width: 100%; height: 120px; padding: 15px; background-color: var(--bg-color); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 8px; box-sizing: border-box; font-size: 0.95rem; resize: vertical; outline: none; transition: border-color 0.3s; font-family: inherit; line-height: 1.5; }
+        textarea:focus { border-color: var(--accent); }
+        .loading-text { text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 15px; display: none; }
+        .spinner { display: inline-block; width: 20px; height: 20px; border: 2px solid var(--border-color); border-radius: 50%; border-top-color: var(--accent); animation: spin 1s linear infinite; vertical-align: middle; margin-right: 10px; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+    <div class="calculator-card" style="max-width: 800px;">
+        <div class="top-controls">
+            <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
+            <button onclick="changeLanguage('en')" class="control-btn">EN</button>
+            <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
+            <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
+        </div>
+
+        <a href="/index.html" class="back-link" data-lang="back-home">← Вернуться на главную</a>
+        
+        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+            <span style="font-size: 2rem; margin-right: 15px;">🌊</span>
+            <h1 style="margin: 0; color: var(--text-main); font-size: 2rem;" data-lang="stress-h1">Уровень адаптации</h1>
+        </div>
+        <p class="subtitle" data-lang="stress-subtitle">Анализ ваших копинг-стратегий и реакции на тотальную неопределенность.</p>
+        
+        <div style="margin-top: 30px;">
+            <div class="textarea-group">
+                <label data-lang="stress-q1">1. Представьте, что вы радикально сменили среду: переехали в новую страну или город, где всё работает по чужим правилам и у вас нет связей. Что вызывает наибольшее внутреннее сопротивление и каким будет ваш первый шаг?</label>
+                <textarea id="ans1" data-placeholder="stress-ph1" placeholder="Опишите свои эмоции и стратегию действий..."></textarea>
+            </div>
+
+            <div class="textarea-group">
+                <label data-lang="stress-q2">2. Вы выстроили безупречный, детальный план для критически важного проекта, но в последнюю минуту внешние обстоятельства полностью его разрушают. Как вы перевариваете эту неудачу и реорганизуете свои действия?</label>
+                <textarea id="ans2" data-placeholder="stress-ph2" placeholder="Как вы справляетесь с потерей контроля?"></textarea>
+            </div>
+
+            <div class="textarea-group">
+                <label data-lang="stress-q3">3. Вы вынуждены взаимодействовать с высокодинамичной, хаотичной и требующей внимания средой (или группой людей), чтобы достичь своей цели. Как вы защищаете свою «внутреннюю батарейку», чтобы не выгореть?</label>
+                <textarea id="ans3" data-placeholder="stress-ph3" placeholder="Опишите ваши методы сохранения энергии..."></textarea>
+            </div>
+
+            <button id="analyze-btn" onclick="startAnalysis()" data-lang="stress-btn">Проанализировать мой профиль</button>
+            
+            <div id="loading" class="loading-text">
+                <span class="spinner"></span> <span data-lang="stress-loading">Нейросеть оценивает уровень стрессоустойчивости...</span>
+            </div>
+        </div>
+        
+        <div class="seo-text-block" style="margin-top: 50px;">
+            <h3 data-lang="stress-seo-h3">Что такое нейроанализ адаптивности?</h3>
+            <p data-lang="stress-seo-p1">Стрессоустойчивость — это не врожденный щит, отбивающий любые проблемы, а гибкость психики. То, насколько быстро ваша нервная система способна перестроиться при столкновении с новыми, непредсказуемыми переменными среды. Будь то переезд, смена деятельности или разрушение привычных планов.</p>
+            <p data-lang="stress-seo-p2">Алгоритм анализирует семантику ваших ответов: как вы относитесь к потере контроля, склонны ли вы к жесткому перфекционизму, который ломается при первом же форс-мажоре, и какие паттерны изоляции или открытости вы используете для восстановления ресурсов.</p>
+            
+            <h4 data-lang="stress-seo-h4-1">Биология стресса: бей, беги или замри</h4>
+            <p data-lang="stress-seo-p3">В критических ситуациях наш мозг активирует древние механизмы выживания. Кортизол и адреналин перестраивают работу организма, а психика выбирает один из базовых путей: активное противостояние (бей), избегание (беги) или ступор (замри). Ваш выбор слов и реакций в ответах позволяет алгоритму определить ваш доминирующий механизм.</p>
+
+            <h4 data-lang="stress-seo-h4-2">Нейропластичность как ключ к выживанию</h4>
+            <p data-lang="stress-seo-p4">Способность переписывать свои привычки и мышление под давлением среды называется нейропластичностью. Высокая адаптивность означает, что ваш мозг не тратит энергию на сожаления о рухнувших планах, а мгновенно строит новые нейронные связи для решения задачи.</p>
+
+            <!-- БЛОК FAQ -->
+            <div class="faq-section">
+                <h3 data-lang="stress-faq-title">Часто задаваемые вопросы (FAQ)</h3>
+                <details class="faq-item">
+                    <summary data-lang="stress-faq-q1">Может ли стресс быть полезным?</summary>
+                    <p data-lang="stress-faq-a1">Да, кратковременный контролируемый стресс (эустресс) работает как тренировка для психики. Он мобилизует ресурсы, повышает концентрацию и стимулирует развитие. Разрушительным является только хронический стресс (дистресс), когда у вас нет фазы восстановления.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-lang="stress-faq-q2">Как ИИ отличает временную усталость от глубокого выгорания?</summary>
+                    <p data-lang="stress-faq-a2">Нейросеть обращает внимание на семантические маркеры. Усталый человек описывает потребность в отдыхе («мне нужно поспать», «возьму паузу»), в то время как человек в стадии выгорания использует маркеры цинизма, изоляции и потери смысла.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-lang="stress-faq-q3">Можно ли прокачать свою адаптивность?</summary>
+                    <p data-lang="stress-faq-a3">Абсолютно. Адаптивность — это навык. Вы можете тренировать его, искусственно создавая микро-стрессовые ситуации, приучая мозг не паниковать при столкновении с неизвестностью и быстрее переходить от эмоций к конструктивному анализу.</p>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function startAnalysis() {
+            const btn = document.getElementById('analyze-btn');
+            const loading = document.getElementById('loading');
+            
+            // Робимо кнопку неактивною, як я радив у минулому повідомленні!
+            btn.disabled = true;
+            btn.style.opacity = '0.5';
+            loading.style.display = 'block';
+
+            // Імітація роботи алгоритму
+            setTimeout(() => {
+                alert("Функция генерации результата находится в разработке. Подключение API.");
+                btn.disabled = false;
+                btn.style.opacity = '1';
+                loading.style.display = 'none';
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
