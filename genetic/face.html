@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang="face-title">Конструктор лица</title>
     
-    <!-- Защита от мерцания экрана, ТЕМНАЯ тема по умолчанию -->
     <script>
         (function() {
             let savedTheme = localStorage.getItem('site-theme');
@@ -35,14 +34,14 @@
 </head>
 <body>
 
-    <div class="top-controls">
-        <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
-        <button onclick="changeLanguage('en')" class="control-btn">EN</button>
-        <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
-        <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
-    </div>
-
     <div class="calculator-card">
+        <div class="top-controls">
+            <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
+            <button onclick="changeLanguage('en')" class="control-btn">EN</button>
+            <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
+            <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
+        </div>
+
         <a href="index.html" class="back-link" data-lang="back-menu">⬅ Назад в меню</a>
         
         <h2 data-lang="face-h2">Конструктор лица</h2>
@@ -114,7 +113,6 @@
             <h4 data-lang="face-seo-h4-2">Полигенное наследование</h4>
             <p data-lang="face-seo-p-3">Этот калькулятор черт лица использует базовые принципы наследования аутосомно-доминантных признаков. На практике на формирование внешности влияет множество генов-модификаторов, поэтому даже у родителей с ярко выраженными ямочками может родиться ребенок без них, если сыграет роль скрытая рецессивная генетика.</p>
 
-            <!-- БЛОК FAQ -->
             <div class="faq-section">
                 <h3 data-lang="face-faq-title">Часто задаваемые вопросы (FAQ)</h3>
                 <details class="faq-item">
@@ -136,14 +134,21 @@
     <script>
         function getProbability(dad, mom, lang) {
             if (dad === 'yes' && mom === 'yes') {
-                return lang === 'en' ? "<span style='color: #10b981;'>High (75-100%)</span>" : "<span style='color: #10b981;'>Высокая (75-100%)</span>";
+                if (lang === 'en') return "<span style='color: #10b981;'>High (75-100%)</span>";
+                if (lang === 'uk') return "<span style='color: #10b981;'>Висока (75-100%)</span>";
+                return "<span style='color: #10b981;'>Высокая (75-100%)</span>";
             }
             if (dad === 'yes' || mom === 'yes') {
-                return lang === 'en' ? "<span style='color: #f59e0b;'>Medium (50%)</span>" : "<span style='color: #f59e0b;'>Средняя (50%)</span>";
+                if (lang === 'en') return "<span style='color: #f59e0b;'>Medium (50%)</span>";
+                if (lang === 'uk') return "<span style='color: #f59e0b;'>Середня (50%)</span>";
+                return "<span style='color: #f59e0b;'>Средняя (50%)</span>";
             }
-            return lang === 'en' ? "<span style='color: #ef4444;'>Low (< 5%)</span>" : "<span style='color: #ef4444;'>Низкая (< 5%)</span>";
+            if (lang === 'en') return "<span style='color: #ef4444;'>Low (< 5%)</span>";
+            if (lang === 'uk') return "<span style='color: #ef4444;'>Низька (< 5%)</span>";
+            return "<span style='color: #ef4444;'>Низкая (< 5%)</span>";
         }
 
+        // ДОДАНО УКРАЇНСЬКІ ФАКТИ!
         const faceFacts = {
             ru: [
                 "Анатомически ямочки на щеках — это генетический дефект! Они появляются из-за раздвоения большой скуловой мышцы (Zygomaticus major). При улыбке кожа проваливается между двумя пучками этой мышцы.",
@@ -156,12 +161,20 @@
                 "No child in the world is born with freckles. They appear only after the skin is first exposed to ultraviolet (sun) rays.",
                 "A cleft chin is formed at the embryonic stage when the left and right halves of the jawbone (or muscle) do not fuse completely. This is an absolutely safe and very beautiful feature.",
                 "Dominant genes do not necessarily mean they are the most common. For example, having six fingers is a dominant gene, but it is extremely rare as it is almost absent in the population."
+            ],
+            uk: [
+                "Анатомічно ямочки на щоках — це генетичний дефект! Вони з'являються через роздвоєння великого виличного м'яза (Zygomaticus major). При усмішці шкіра провалюється між двома пучками цього м'яза.",
+                "Жодна дитина у світі не народжується з веснянками. Вони проявляються лише після того, як шкіра вперше піддається впливу ультрафіолетових променів (сонця).",
+                "Ямочка на підборідді утворюється ще на стадії ембріона, коли ліва і права половини щелепної кістки (або м'яза) не зростаються до кінця. Це абсолютно безпечна і дуже красива особливість.",
+                "Домінантні гени не обов'язково означають, що вони найчастіші. Наприклад, наявність шести пальців — це домінантний ген, але він зустрічається вкрай рідко, оскільки його майже немає в популяції."
             ]
         };
 
+        // ДОДАНО УКРАЇНСЬКИЙ ПЕРЕКЛАД РЕЗУЛЬТАТІВ!
         const resultLabels = {
             ru: { dimples: "😊 <b>Ямочки на щеках:</b> ", freckles: "☀️ <b>Веснушки:</b> ", chin: "🦸‍♂️ <b>Ямочка на подбородке:</b> " },
-            en: { dimples: "😊 <b>Cheek dimples:</b> ", freckles: "☀️ <b>Freckles:</b> ", chin: "🦸‍♂️ <b>Cleft chin:</b> " }
+            en: { dimples: "😊 <b>Cheek dimples:</b> ", freckles: "☀️ <b>Freckles:</b> ", chin: "🦸‍♂️ <b>Cleft chin:</b> " },
+            uk: { dimples: "😊 <b>Ямочки на щоках:</b> ", freckles: "☀️ <b>Веснянки:</b> ", chin: "🦸‍♂️ <b>Ямочка на підборідді:</b> " }
         };
 
         function calculateFace() {
@@ -180,12 +193,15 @@
             const resFreckles = getProbability(dFreckles, mFreckles, currentLang);
             const resChin = getProbability(dChin, mChin, currentLang);
 
-            document.getElementById("face-result").innerHTML = 
-                resultLabels[currentLang].dimples + resDimples + "<br>" +
-                resultLabels[currentLang].freckles + resFreckles + "<br>" +
-                resultLabels[currentLang].chin + resChin;
+            // Використовуємо захист, якщо раптом currentLang визначиться неправильно
+            const labels = resultLabels[currentLang] || resultLabels['ru'];
 
-            const factsArray = faceFacts[currentLang] ? faceFacts[currentLang] : faceFacts['ru'];
+            document.getElementById("face-result").innerHTML = 
+                labels.dimples + resDimples + "<br>" +
+                labels.freckles + resFreckles + "<br>" +
+                labels.chin + resChin;
+
+            const factsArray = faceFacts[currentLang] || faceFacts['ru'];
             const randomFact = factsArray[Math.floor(Math.random() * factsArray.length)];
             document.getElementById('fact-text').innerText = randomFact;
 
