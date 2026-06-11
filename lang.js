@@ -92,21 +92,7 @@ const langArr = {
     "menu-face": { "ru": "Конструктор лица (Особые черты)", "en": "Face Constructor (Special Traits)", "uk": "Конструктор обличчя (Особливі риси)" },
     "menu-hands": { "ru": "Левша или Правша?", "en": "Left-handed or Right-handed?", "uk": "Шульга чи Правша?" },
     "btn-share": { "ru": "🔗 Поделиться калькулятором", "en": "🔗 Share Calculator", "uk": "🔗 Поділитися калькулятором" },
-    "menu-knowledge": { "ru": "База знаний (Словарь)", "en": "Knowledge Base (Dictionary)", "uk": "База знань (Словник)" },
     "hub-desc": { "ru": "Все проекты и личный блог", "en": "All projects and personal blog", "uk": "Всі проєкти та особистий блог" },
-
-    // --- БАЗА ЗНАНЬ ---
-    "know-title": { "ru": "База знаний | Krexpor", "en": "Knowledge Base | Krexpor", "uk": "База знань | Krexpor" },
-    "know-h1": { "ru": "📚 База знаний", "en": "📚 Knowledge Base", "uk": "📚 База знань" },
-    "know-desc": { "ru": "Мини-словарь генетических терминов.", "en": "A mini-dictionary of genetic terms.", "uk": "Міні-словник генетичних термінів." },
-    "know-t1": { "ru": "ДНК и Гены", "en": "DNA and Genes", "uk": "ДНК та Гени" },
-    "know-d1": { "ru": "Ген — это участок ДНК, который содержит инструкцию по созданию определенного признака.", "en": "A gene is a segment of DNA that contains instructions for a specific trait.", "uk": "Ген — це ділянка ДНК, яка містить інструкцію щодо створення певного признаку." },
-    "know-t2": { "ru": "Доминантный ген", "en": "Dominant Gene", "uk": "Домінантний ген" },
-    "know-d2": { "ru": "Сильный ген. Этот признак обязательно проявится, подавив более слабый ген.", "en": "A strong gene. This trait will manifest, suppressing the weaker gene.", "uk": "Сильний ген. Цей признак обов'язково проявиться, пригнічуючи більш слабкий ген." },
-    "know-t3": { "ru": "Рецессивный ген", "en": "Recessive Gene", "uk": "Рецесивний ген" },
-    "know-d3": { "ru": "Слабый (скрытый) ген.", "en": "A weak (hidden) gene.", "uk": "Слабкий (прихований) ген." },
-    "know-t4": { "ru": "Генотип и Фенотип", "en": "Genotype and Phenotype", "uk": "Генотип і Фенотип" },
-    "know-d4": { "ru": "Генотип — скрытый набор генов. Фенотип — внешнее проявление.", "en": "Genotype is hidden set of genes. Phenotype is physical manifestation.", "uk": "Генотип — прихований набір генів. Фенотип — зовнішній прояв." },
 
     // --- AI ТА ПСИХОЛОГІЯ ---
     "tests-title": { "ru": "AI & Психология", "en": "AI & Psychology", "uk": "AI та Психологія" },
