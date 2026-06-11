@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang="blood-title">Калькулятор группы крови</title>
     
-    <!-- Защита от мерцания экрана, ТЕМНАЯ тема по умолчанию -->
     <script>
         (function() {
             let savedTheme = localStorage.getItem('site-theme');
@@ -34,14 +33,14 @@
 </head>
 <body>
 
-    <div class="top-controls">
-        <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
-        <button onclick="changeLanguage('en')" class="control-btn">EN</button>
-        <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
-        <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
-    </div>
-
     <div class="calculator-card">
+        <div class="top-controls">
+            <button onclick="changeLanguage('ru')" class="control-btn">RU</button>
+            <button onclick="changeLanguage('en')" class="control-btn">EN</button>
+            <button onclick="changeLanguage('uk')" class="control-btn">UK</button>
+            <button onclick="toggleTheme()" class="control-btn" id="theme-icon">🌙</button>
+        </div>
+
         <a href="index.html" class="back-link" data-lang="back-menu">⬅ Назад в меню</a>
         
         <h2 data-lang="blood-h2">Группа крови</h2>
@@ -98,7 +97,6 @@
             <h4 data-lang="blood-seo-h4-2">Точность генетического прогноза</h4>
             <p data-lang="blood-seo-p-3">Наш онлайн-калькулятор использует классические законы наследования Менделя для расчета вероятностей. Однако биология иногда преподносит сюрпризы: в редких случаях возможны генетические исключения, такие как «бомбейский феномен». Поэтому для медицинских целей и 100% подтверждения всегда требуется лабораторный анализ крови.</p>
             
-            <!-- БЛОК FAQ -->
             <div class="faq-section">
                 <h3 data-lang="blood-faq-title">Часто задаваемые вопросы (FAQ)</h3>
                 <details class="faq-item">
@@ -118,6 +116,26 @@
     </div>
 
     <script>
+        // ВІДНОВЛЕНО МАТРИЦЮ ДЛЯ ГРУПИ КРОВІ
+        const bloodMatrix = {
+            "O+O": "I (O)",
+            "O+A": "I (O) или II (A)",
+            "O+B": "I (O) или III (B)",
+            "O+AB": "II (A) или III (B)",
+            "A+O": "I (O) или II (A)",
+            "A+A": "I (O) или II (A)",
+            "A+B": "I (O), II (A), III (B) или IV (AB)",
+            "A+AB": "II (A), III (B) или IV (AB)",
+            "B+O": "I (O) или III (B)",
+            "B+A": "I (O), II (A), III (B) или IV (AB)",
+            "B+B": "I (O) или III (B)",
+            "B+AB": "II (A), III (B) или IV (AB)",
+            "AB+O": "II (A) или III (B)",
+            "AB+A": "II (A), III (B) или IV (AB)",
+            "AB+B": "II (A), III (B) или IV (AB)",
+            "AB+AB": "II (A), III (B) или IV (AB)"
+        };
+
         const rhMatrix = {
             ru: {
                 "++": "Положительный (+) или Отрицательный (-)",
@@ -179,10 +197,8 @@
             const possibleBlood = bloodMatrix[bloodCombo];
             const possibleRh = rhMatrix[currentLang] ? rhMatrix[currentLang][rhCombo] : rhMatrix['ru'][rhCombo]; 
 
-            // Берем правильные ярлыки (с защитой от ошибок)
             const labels = resultLabels[currentLang] || resultLabels['ru'];
 
-            // Выводим результат (исправлено склеивание)
             document.getElementById("blood-result").innerHTML = 
                 labels.group + "<span class='highlight-value' style='font-size: 16px; margin: 0;'>" + possibleBlood + "</span><br>" +
                 labels.rh + "<span class='highlight-value' style='font-size: 16px; margin: 0;'>" + possibleRh + "</span>";
